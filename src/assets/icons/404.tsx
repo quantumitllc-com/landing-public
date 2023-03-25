@@ -7,7 +7,7 @@ export const Icon404 = () => {
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 		>
-			<g clip-path='url(#clip0_45_697)'>
+			<g clipPath='url(#clip0_45_697)'>
 				<path
 					d='M718.4 196.5C701.5 119.7 642.7 59.1 562.6 38.8C541.5 33.5 519.1 30.8 496.9 33.1C405.8 42.5 297.1 103.8 240.8 116.6C184.4 129.5 118.3 78.1 43.2997 157C-31.7003 235.9 -14.4003 418.6 135.6 454.4C285.5 490.2 369 402.1 435.6 421.4C502.2 440.7 621.4 432.4 691.8 375.5C733.4 341.7 733.1 263.1 718.4 196.5Z'
 					fill='#92E3A9'
@@ -105,121 +105,121 @@ export const Icon404 = () => {
 					d='M83.3002 206.1H3.7002V193.1H76.8002V5H89.8002V199.7C89.8002 203.2 86.9002 206.1 83.3002 206.1Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M686.3 0.5V74.9H89.5V87.9H665.4V402.1H511.8C508.2 402.1 505.3 405 505.3 408.6V456.5H518.3V415.1H665.4V459.1H678.4V87.9H692.8C696.4 87.9 699.3 85 699.3 81.4V0.5H686.3Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M699.2 40.6H686.5V46.5H699.2V40.6Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M564.233 415.039V402.339H558.333V415.039H564.233Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M577.081 414.991V402.291H571.181V414.991H577.081Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M231.6 425.8H22V438.8H231.6V425.8Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M231.6 407.9H22V420.9H231.6V407.9Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M120.5 408.2H111.5V420.8H120.5V408.2Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M139.2 408.2H130.2V420.8H139.2V408.2Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M120.5 426.1H111.5V438.7H120.5V426.1Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M139.2 426.1H130.2V438.7H139.2V426.1Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M260.2 165.2V148.1H249.8C249.3 145.2 248.6 142.4 247.6 139.8L256.6 134.6L248 119.8L239 125C237.1 122.8 235.1 120.8 232.9 118.9L238.1 109.9L223.3 101.3L218.1 110.3C215.4 109.3 212.6 108.6 209.8 108.1V97.6H192.7V108C189.8 108.5 187 109.2 184.4 110.2L179.2 101.2L164.4 109.8L169.6 118.8C167.4 120.7 165.4 122.7 163.5 124.9L154.5 119.7L145.9 134.5L154.9 139.7C153.9 142.4 153.2 145.2 152.7 148H142V165.1H152.4C152.9 168 153.6 170.8 154.6 173.4L145.6 178.6L154.2 193.4L163.2 188.2C165.1 190.4 167.1 192.4 169.3 194.3L164.1 203.3L178.9 211.9L184.1 202.9C186.8 203.9 189.6 204.6 192.4 205.1V215.5H209.5V205.1C212.4 204.6 215.2 203.9 217.8 202.9L223 211.9L237.8 203.3L232.6 194.3C234.8 192.4 236.8 190.4 238.7 188.2L247.7 193.4L256.3 178.6L247.3 173.4C248.3 170.7 249 167.9 249.5 165.1H260.2V165.2ZM201.1 188.6C183.5 188.6 169.2 174.3 169.2 156.7C169.2 139.1 183.5 124.8 201.1 124.8C218.7 124.8 233 139.1 233 156.7C233 174.3 218.7 188.6 201.1 188.6Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M182.2 322.7V305.6H171.8C171.3 302.7 170.6 299.9 169.6 297.3L178.6 292.1L170 277.3L161 282.5C159.1 280.3 157.1 278.3 154.9 276.4L160.1 267.4L145.3 258.8L140.1 267.8C137.4 266.8 134.6 266.1 131.8 265.6V255H114.7V265.4C111.8 265.9 109 266.6 106.4 267.6L101.2 258.6L86.4 267.2L91.6 276.2C89.4 278.1 87.4 280.1 85.5 282.3L76.5 277.1L67.7 292L76.7 297.2C75.7 299.9 75 302.7 74.5 305.5H64V322.6H74.4C74.9 325.5 75.6 328.3 76.6 330.9L67.6 336.1L76.2 350.9L85.2 345.7C87.1 347.9 89.1 349.9 91.3 351.8L86.1 360.8L100.9 369.4L106.1 360.4C108.8 361.4 111.6 362.1 114.4 362.6V373H131.5V362.6C134.4 362.1 137.2 361.4 139.8 360.4L145 369.4L159.8 360.8L154.6 351.8C156.8 349.9 158.8 347.9 160.7 345.7L169.7 350.9L178.3 336.1L169.3 330.9C170.3 328.2 171 325.4 171.5 322.6H182.2V322.7ZM123.1 346.1C105.5 346.1 91.2 331.8 91.2 314.2C91.2 296.6 105.5 282.3 123.1 282.3C140.7 282.3 155 296.6 155 314.2C155.1 331.8 140.8 346.1 123.1 346.1Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M617.3 320.2V308.6H610.3C610 306.7 609.5 304.8 608.8 303L614.9 299.5L609.1 289.5L603 293C601.7 291.5 600.4 290.1 598.9 288.9L602.4 282.8L592.4 277L588.9 283.1C587.1 282.4 585.2 281.9 583.3 281.6V274.6H571.7V281.6C569.8 281.9 567.9 282.4 566.1 283.1L562.6 277L552.6 282.8L556.1 288.9C554.6 290.2 553.2 291.5 552 293L545.9 289.5L540.1 299.5L546.2 303C545.5 304.8 545 306.7 544.7 308.6H537.7V320.2H544.7C545 322.1 545.5 324 546.2 325.8L540.1 329.3L545.9 339.3L552 335.8C553.3 337.3 554.6 338.7 556.1 339.9L552.6 346L562.6 351.8L566.1 345.7C567.9 346.4 569.8 346.9 571.7 347.2V354.2H583.3V347.2C585.2 346.9 587.1 346.4 588.9 345.7L592.4 351.8L602.4 346L598.9 339.9C600.4 338.6 601.8 337.3 603 335.8L609.1 339.3L614.9 329.3L608.8 325.8C609.5 324 610 322.1 610.3 320.2H617.3ZM577.4 336C565.5 336 555.8 326.3 555.8 314.4C555.8 302.5 565.5 292.8 577.4 292.8C589.3 292.8 599 302.5 599 314.4C599 326.4 589.4 336 577.4 336Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M560.8 156.3V144.7H553.8C553.5 142.8 553 140.9 552.3 139.1L558.4 135.6L552.6 125.6L546.5 129.1C545.2 127.6 543.9 126.2 542.4 125L545.9 118.9L535.9 113.1L532.4 119.2C530.6 118.5 528.7 118 526.8 117.7V110.7H515.2V117.7C513.3 118 511.4 118.5 509.6 119.2L506.1 113.1L496.1 118.9L499.6 125C498.1 126.3 496.7 127.6 495.5 129.1L489.4 125.6L483.6 135.6L489.7 139.1C489 140.9 488.5 142.8 488.2 144.7H481.2V156.3H488.2C488.5 158.2 489 160.1 489.7 161.9L483.6 165.4L489.4 175.4L495.5 171.9C496.8 173.4 498.1 174.8 499.6 176L496.1 182.1L506.1 187.9L509.6 181.8C511.4 182.5 513.3 183 515.2 183.3V190.3H526.8V183.3C528.7 183 530.6 182.5 532.4 181.8L535.9 187.9L545.9 182.1L542.4 176C543.9 174.7 545.3 173.4 546.5 171.9L552.6 175.4L558.4 165.4L552.3 161.9C553 160.1 553.5 158.2 553.8 156.3H560.8ZM520.9 172.1C509 172.1 499.3 162.4 499.3 150.5C499.3 138.6 509 128.9 520.9 128.9C532.8 128.9 542.5 138.6 542.5 150.5C542.4 162.4 532.8 172.1 520.9 172.1Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M141.6 383.2V303H37.2998V251.7L126.8 39.6H203.2V253H236.3V303H203.2V383.2H141.6ZM88.9998 252.9H141.6V107L88.9998 252.9Z'
@@ -269,102 +269,102 @@ export const Icon404 = () => {
 					d='M267.299 211.5L270.999 265L247.799 254.2L241.899 277.7C241.899 277.7 291.699 305.5 296.599 304.6C301.499 303.7 289.199 195.4 289.199 195.4L267.299 211.5Z'
 					fill='#92E3A9'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M300.7 340.6C300.7 340.6 327.4 331.4 337.8 322.7C348.2 313.9 293.6 207.9 293.6 207.9C293.6 207.9 294.4 305.2 300.7 340.6Z'
 					fill='#92E3A9'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M412.5 306.4L409.4 306.9C409.4 307.1 409.4 307.2 409.4 307.4C409.2 311.4 387.7 321.9 372.5 327.7C369.2 330.3 364.8 331.6 359.2 331.6C359.1 331.6 359.1 331.6 359.1 331.6C347.4 332.7 324.9 327.6 319.8 324.1L314.3 380.1C315.2 380.5 316.1 380.9 317 381.4C328.9 386.7 342.9 389.3 359.2 389.3C378 389.3 393.9 385.6 407 378.2C407.1 378.1 407.2 378.1 407.3 378C408.1 377.5 408.9 377 409.7 376.5C410.7 375.9 411.6 375.3 412.5 374.6C412.8 374.4 413.1 374.2 413.3 374C414 373.5 414.6 373.1 415.2 372.6C415.5 372.4 415.8 372.1 416.1 371.9C416.7 371.4 417.4 370.9 418 370.4C418.3 370.2 418.5 370 418.8 369.8C419.6 369.1 420.5 368.4 421.3 367.6C417.9 342.8 412.5 306.4 412.5 306.4Z'
 					fill='#737373'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M292.7 241.3C292.7 241.3 317.4 301.8 317.8 303.9C318.1 306 315.4 319.8 319.3 323.5C323.3 327.2 349.9 333.3 361.2 331.1C372.5 329 409.2 312.5 409.5 307.3C409.8 302.1 373.1 200.7 368.6 188.4C364 176.2 345.4 171.9 332.9 173.1C320.4 174.3 290.1 182.3 284.6 189.9C279 197.6 292.7 241.3 292.7 241.3Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M294.899 185.1C294.899 185.1 291.799 212.9 293.699 218.7C295.499 224.5 303.899 240.5 303.899 240.5C303.899 240.5 317.899 223 320.599 221.2C323.299 219.4 348.699 235.6 348.699 235.6C348.699 235.6 349.599 218.2 345.999 203.8C342.299 189.4 335.899 173.9 333.799 171.1C331.699 168.4 331.699 178.4 323.699 185.2C315.699 191.8 294.899 185.1 294.899 185.1Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M292.6 189.9C292.6 189.9 296.2 199.1 304.1 210.3C312 221.5 322.9 229.8 322.9 229.8C322.9 229.8 331.5 207.7 333.8 194.5C336.1 181.3 332.2 168.1 332.2 168.1C332.2 168.1 330.6 187.9 323.6 191.8C316.7 195.9 292.6 189.9 292.6 189.9Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M310.7 193C302 192.2 292.6 189.9 292.6 189.9C292.6 189.9 296.2 199.1 304.1 210.3C304.9 211.4 305.7 212.4 306.5 213.4L320.1 197.6L310.7 193Z'
 					fill='#263238'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M332.2 168.2C332.2 168.2 342.2 208.3 345.9 238.6C349.6 268.8 358.4 358.4 358.4 358.4C358.4 358.4 385.9 350.5 400.3 340.1C414.7 329.7 419.2 322.7 419.2 322.7C419.2 322.7 395.7 219.7 395.7 218.2C395.7 216.7 398.1 201.4 398.1 201.4C398.1 201.4 439.7 181.8 455.5 169.9C471.4 158 467.4 151.6 459.8 148.5C452.2 145.4 428.3 148.8 415.2 152.5C402.1 156.2 395.3 158.6 395.3 158.6C395.3 158.6 380.6 157.4 367.2 160.4C353.8 163.4 332.2 168.2 332.2 168.2Z'
 					fill='#92E3A9'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path d='M353.3 270.9C352.8 272.4 352.3 274.1 351.7 275.8L353.3 270.9Z' fill='white' />
 				<path
 					d='M353.3 270.9C352.8 272.4 352.3 274.1 351.7 275.8'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M358 202.9L362.7 205.9C362.7 205.9 361.2 230.2 359 245.6C357.7 254.9 356.6 259.9 354.5 266.8'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M349.7 173.9C352.8 179.6 357.2 187.9 357.2 189.1C357.2 190.9 352.6 199.5 352.6 199.5L355.5 201.3'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path d='M346.8 168.6C346.8 168.6 347.3 169.5 348 170.9L346.8 168.6Z' fill='white' />
 				<path
 					d='M346.8 168.6C346.8 168.6 347.3 169.5 348 170.9'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M403.1 303.2C399.7 305.6 394.6 308.6 387.5 311.3C373.1 316.8 370.7 317.7 370.7 317.7L372.8 325C372.8 325 397.9 320.4 409.5 307.3'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M408.201 299.1C408.201 299.1 407.501 299.8 406.101 300.9L408.201 299.1Z'
@@ -373,31 +373,31 @@ export const Icon404 = () => {
 				<path
 					d='M408.201 299.1C408.201 299.1 407.501 299.8 406.101 300.9'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M403.601 185.1L398.101 201.3L411.001 182'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M406.1 177.8L404.8 181.5'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M294.9 185.1C294.9 185.1 298 240.7 301.3 267.9C304.7 295.1 310.2 362.3 310.2 362.3C310.2 362.3 299.5 361.4 292.5 352.8C285.5 344.2 282.1 337.8 282.1 337.8C282.1 337.8 282.1 279.7 282.1 277.3C282.1 274.9 277.2 247.1 272.6 233.3C268 219.6 261.3 203.7 265.3 196.9C269.3 190.2 281.8 180.1 286.4 178.9C290.9 177.8 294.6 179 294.9 185.1Z'
 					fill='#92E3A9'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M293.199 254.9C294.899 260.3 296.599 265.1 297.999 268.2L293.199 254.9Z'
@@ -406,16 +406,16 @@ export const Icon404 = () => {
 				<path
 					d='M293.199 254.9C294.899 260.3 296.599 265.1 297.999 268.2'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M282.7 195.7C282.2 199.7 281.9 202.7 282.3 203.1C283.5 204.3 288.4 208.6 288.4 208.6C288.4 208.6 282.3 216.2 283.2 220.2C283.8 222.8 287.8 238 291.9 251.1'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M285.999 175.3C285.999 175.3 284.399 184.1 283.199 191.7L285.999 175.3Z'
@@ -424,47 +424,47 @@ export const Icon404 = () => {
 				<path
 					d='M285.999 175.3C285.999 175.3 284.399 184.1 283.199 191.7'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M289.599 316.6L284.199 314'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M284.199 305.8L299.199 311.9V321L292.299 317.8'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M272.1 148.3L277.3 161.1C277.3 161.1 270.5 154 268.9 160.3C267.3 166.6 272 173.9 275.2 173.9C278.3 173.9 282 174.2 282 174.2C282 174.2 293 193.5 299.8 197.2C306.6 200.9 315.7 204 321.5 200.9C327.2 197.8 330.4 189.1 332.2 182.6C334 176.1 332.7 156.5 332.7 156.5L323.3 117.9C323.3 117.9 329.8 115.6 329.8 111.1C329.8 106.7 314.7 105.4 314.7 105.4C314.7 105.4 320.7 98.4 313.1 97.3C305.5 96.3 281 110.9 280.2 111.4C279.4 111.9 284.4 102.3 278.1 105.7C271.8 109.1 264.5 125.8 265.3 129.7C266 133.4 272.1 148.3 272.1 148.3Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M314.6 105.2C314.6 105.2 320.6 98.1 313 97.1C305.4 96.1 280.9 110.7 280.1 111.2C279.3 111.7 284.3 102.1 278 105.5C271.7 108.9 264.4 125.6 265.2 129.5C266 133.4 272 148.3 272 148.3L277.2 161.1C277.2 161.1 283.2 166.6 281.1 162.4C279 158.2 274.8 148.8 275.9 147.5C276.9 146.2 282.2 144.1 282.4 141.2C282.7 138.3 277.4 130 279 127.9C280.6 125.8 302.8 129.7 306.7 127.4C310.6 125.1 305.7 119.3 305.7 119.3L323.2 117.7C323.2 117.7 329.7 115.4 329.7 110.9C329.8 106.5 314.6 105.2 314.6 105.2Z'
 					fill='#737373'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path d='M318 169.7C318 169.7 315.6 174.1 312 174.4L318 169.7Z' fill='white' />
 				<path
 					d='M318 169.7C318 169.7 315.6 174.1 312 174.4'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M301.8 157.7C302.5 159.3 302.2 161 301.1 161.5C300 162 298.5 161.2 297.8 159.6C297.1 158 297.4 156.3 298.5 155.8C299.6 155.3 301.1 156.2 301.8 157.7Z'
@@ -478,41 +478,41 @@ export const Icon404 = () => {
 				<path
 					d='M312 184.4C312 184.4 316.4 184.4 319.6 182'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M288.8 154.3C288.8 154.3 292.5 149.1 302.4 152.2'
 					stroke='#263238'
-					stroke-width='2'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeWidth='2'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M315.1 149.4C315.1 149.4 316.9 143.4 324 142.9'
 					stroke='#263238'
-					stroke-width='2'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeWidth='2'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M329.8 144.2C329.8 144.2 331.6 140 333.7 142.6C335.8 145.2 336.6 150.4 335.3 153.8C334 157.2 333.2 160.1 333.2 160.1L332.7 156.4L329.8 144.2Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M377.799 123.8C377.799 123.8 349.099 118.6 347.199 118.6C345.399 118.6 323.999 122.5 320.799 123.8C317.699 125.1 293.899 131.9 294.399 133.5C294.899 135.1 297.799 135.6 297.799 135.6C297.799 135.6 298.299 138 306.699 139C315.099 140 334.599 137.4 334.899 139.3C335.199 141.1 333.599 142.7 333.599 142.7L335.899 146.9C335.899 146.9 344.499 145.6 347.399 143.5C350.299 141.4 358.399 134.9 358.399 134.9L375.899 136.2L377.799 123.8Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M314.099 127.4C314.099 127.4 302.299 132.4 300.499 133.4C298.699 134.4 303.899 136.5 306.999 136C310.099 135.5 322.099 130.8 323.999 130.3C325.799 129.8 334.199 131.9 340.199 132.7C346.199 133.5 350.399 131.7 351.399 131.1'
@@ -521,9 +521,9 @@ export const Icon404 = () => {
 				<path
 					d='M314.099 127.4C314.099 127.4 302.299 132.4 300.499 133.4C298.699 134.4 303.899 136.5 306.999 136C310.099 135.5 322.099 130.8 323.999 130.3C325.799 129.8 334.199 131.9 340.199 132.7C346.199 133.5 350.399 131.7 351.399 131.1'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M448.6 165.5C448.6 165.5 439.4 167.9 428.4 165.5C417.4 163.1 388.4 148.7 388.4 148.7L368.5 142.9L373.1 119.7C373.1 119.7 423.2 125.8 437.3 131C451.4 136.2 471.8 148.1 471.2 152.4C470.6 156.7 459.3 165.8 459.3 165.8'
@@ -532,143 +532,143 @@ export const Icon404 = () => {
 				<path
 					d='M448.6 165.5C448.6 165.5 439.4 167.9 428.4 165.5C417.4 163.1 388.4 148.7 388.4 148.7L368.5 142.9L373.1 119.7C373.1 119.7 423.2 125.8 437.3 131C451.4 136.2 471.8 148.1 471.2 152.4C470.6 156.7 459.3 165.8 459.3 165.8'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M276.5 265.4C276.5 265.4 294.9 286.5 310.4 279.4C325.9 272.3 333.6 226.9 333.6 226.9'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M252.3 249.5C252.3 249.5 266.9 267.7 286.2 266C305.5 264.3 312.1 241.9 311.9 230.8'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M260.738 238.129L254.577 236.058L244.895 264.875L251.056 266.945L260.738 238.129Z'
 					fill='#7D7D7D'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M263.518 235.53L253.944 232.313L252.511 236.578L262.085 239.795L263.518 235.53Z'
 					fill='#263238'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M274.258 242.615L268.097 240.545L258.414 269.361L264.576 271.431L274.258 242.615Z'
 					fill='#7D7D7D'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M277.131 240.049L267.558 236.832L266.124 241.097L275.698 244.314L277.131 240.049Z'
 					fill='#263238'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M272.021 249.458L252.115 242.77L244.726 264.761L264.632 271.449L272.021 249.458Z'
 					fill='#263238'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M246.4 279.5L227.8 273.2L237.7 257L248.4 260.6L246.4 279.5Z'
 					fill='#7D7D7D'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M246.383 279.453L227.804 273.21L221.179 292.927L239.758 299.169L246.383 279.453Z'
 					fill='#636363'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M257.568 241.927L241.644 236.576L235.019 256.293L250.943 261.644L257.568 241.927Z'
 					fill='#636363'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M273.499 288.6L254.899 282.3L264.799 266.1L275.499 269.7L273.499 288.6Z'
 					fill='#7D7D7D'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M273.485 288.552L254.906 282.31L248.281 302.026L266.86 308.269L273.485 288.552Z'
 					fill='#636363'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M284.668 251.028L268.743 245.677L262.118 265.393L278.043 270.744L284.668 251.028Z'
 					fill='#636363'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M235.3 235.3C235.3 235.3 233.1 238.9 233.8 239.9C234.4 240.9 240.7 244.4 241.6 244.6C242.5 244.9 244.9 243.6 244.8 241.9C244.7 240.2 239.8 236.7 238.3 235.8C236.7 234.9 235.9 234.8 235.3 235.3Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M231.9 242.3C231.9 242.3 230.9 246.3 231.8 247.1C232.7 247.9 239.7 249.4 240.6 249.4C241.5 249.4 243.5 247.5 242.9 245.9C242.3 244.4 236.6 242.3 234.9 241.9C233.1 241.6 232.3 241.7 231.9 242.3Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M230 249.3C230 249.3 229 253.3 229.9 254.1C230.8 254.9 237.8 256.4 238.7 256.4C239.6 256.4 241.6 254.5 241 252.9C240.4 251.4 234.7 249.3 233 248.9C231.2 248.6 230.4 248.7 230 249.3Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 				<path
 					d='M230.9 256.1C230.9 256.1 229.9 260.1 230.8 260.9C231.7 261.7 238.7 263.2 239.6 263.2C240.5 263.2 242.5 261.3 241.9 259.7C241.3 258.2 235.6 256.1 233.9 255.7C232.1 255.3 231.3 255.4 230.9 256.1Z'
 					fill='white'
 					stroke='#263238'
-					stroke-miterlimit='10'
-					stroke-linecap='round'
-					stroke-linejoin='round'
+					strokeMiterlimit='10'
+					strokeLinecap='round'
+					strokeLinejoin='round'
 				/>
 			</g>
 			<defs>
