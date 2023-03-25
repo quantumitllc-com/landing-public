@@ -49,7 +49,7 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				}
 			`}</style>
 			<NextNProgress
-				color='red'
+				color={theme.palette.colors.GREEN}
 				options={{
 					showSpinner: false,
 				}}

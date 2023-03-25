@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { ReactNode } from 'react'
 import { Main, Container } from './style'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 interface IProps {
 	title?: string
@@ -16,9 +18,9 @@ export const Layout = ({ children, title }: IProps) => {
 				<title>{newTitle}</title>
 			</Head>
 			<Container>
-				<div>Header</div>
+				<Header />
 				<Main>{children}</Main>
-				<div>Footer</div>
+				<Footer />
 			</Container>
 		</>
 	)
