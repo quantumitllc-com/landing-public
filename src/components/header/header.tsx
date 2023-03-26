@@ -14,7 +14,7 @@ export const Header = () => {
 					<Navbar variant='header' />
 					<Box gap='14px' display='flex'>
 						<LanguageSelect />
-						<ContactUs />
+						<ContactUs variant='contact' />
 					</Box>
 				</Wrap>
 			</Wrapper>

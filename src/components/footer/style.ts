@@ -16,7 +16,14 @@ export const Wrapper = styled('div')`
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
 `
 
-export const Up = styled('div')``
+export const Up = styled('div')`
+	display: flex;
+	justify-content: space-between;
+	& > .wrap-up {
+		width: 100%;
+		max-width: 450px;
+	}
+`
 
 export const Down = styled('div')`
 	display: flex;
@@ -29,4 +36,20 @@ export const Down = styled('div')`
 		line-height: 16px;
 		color: ${({ theme }) => theme.palette.colors.GRAY30};
 	}
+`
+
+export const WrapSocial = styled('div')`
+	gap: 15px;
+	display: grid;
+	margin-top: 32px;
+	justify-content: end;
+	grid-template-columns: repeat(4, min-content);
+`
+
+export const WrapContact = styled('div')`
+	gap: 55px;
+	display: flex;
+	margin-top: 50px;
+	width: fit-content;
+	white-space: nowrap;
 `

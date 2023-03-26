@@ -1,10 +1,20 @@
 export const VARIABLES_CSS = {
 	COLORS: {
+		WHITE: '#FFFFFF',
 		GREEN: '#1AD980',
 		GRAY: '#EFF0F7',
 		GRAY10: '#3a4c56',
 		GRAY20: '#8d9193',
 		GRAY30: '#a5a5a5',
+		GRAY40: '#ffffff80',
+		GRAY50: '#8C8C8C',
+		GRAY60: '#ffffff1a',
+		GRAY70: '#1c1f25f2',
+		GRAY80: '#1c1f25b3',
+		GRAY90: '#737882',
+		GRAY100: '#1c1f2580',
 		BLUE: '#091F2C',
+		BLUE10: '#172C38',
+		BLUE20: '#1C1F25',
 	},
 }

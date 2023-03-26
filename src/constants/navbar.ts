@@ -5,22 +5,22 @@ export const NAVBAR = [
 	},
 	{
 		title: 'Projects',
-		href: '/projects',
+		href: '/#projects',
 	},
 	{
 		title: 'Services',
-		href: '/services',
+		href: '/#services',
 	},
 	{
 		title: 'About Us',
-		href: '/about-us',
+		href: '/#about-us',
 	},
 	{
 		title: 'Tools',
-		href: '/tools',
+		href: '/#tools',
 	},
 	{
 		title: 'Testimonials',
-		href: '/testimonials',
+		href: '/#testimonials',
 	},
 ]

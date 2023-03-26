@@ -2,14 +2,11 @@ import { styled } from '@mui/material/styles'
 
 export const Container = styled('div')`
 	display: flex;
-	min-height: 100vh;
+	padding: 136px 0 0;
 	align-items: center;
 	flex-direction: column;
 `
 
-export const Main = styled('main')`
-	width: 100%;
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
+export const WrapText = styled('div')`
+	padding: 20px 0 27px;
 `
