@@ -75,7 +75,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint1_radial_18_196'
@@ -86,7 +86,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint2_radial_18_196'
@@ -97,7 +97,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint3_radial_18_196'
@@ -108,7 +108,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint4_radial_18_196'
@@ -119,7 +119,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint5_radial_18_196'
@@ -130,7 +130,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint6_radial_18_196'
@@ -141,7 +141,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint7_radial_18_196'
@@ -152,7 +152,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint8_radial_18_196'
@@ -163,7 +163,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint9_radial_18_196'
@@ -174,7 +174,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint10_radial_18_196'
@@ -185,7 +185,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint11_radial_18_196'
@@ -196,7 +196,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint12_radial_18_196'
@@ -207,7 +207,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 				<radialGradient
 					id='paint13_radial_18_196'
@@ -218,7 +218,7 @@ export const IconBgTouch = () => {
 					gradientTransform='translate(192.208 181) rotate(-3.75037) scale(208.29 195.226)'
 				>
 					<stop />
-					<stop offset='1' stop-opacity='0' />
+					<stop offset='1' stopOpacity='0' />
 				</radialGradient>
 			</defs>
 		</svg>
