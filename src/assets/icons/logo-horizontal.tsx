@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const IconLogoHorizontal = () => (
-	<Link href=''>
+	<Link href='' style={{ display: 'flex', alignItems: 'center' }}>
 		<svg
 			width='275'
 			height='47'

@@ -5,6 +5,13 @@ export const Container = styled('div')`
 	height: 117px;
 	min-height: 117px;
 	max-height: 117px;
+	${({ theme }) => ({
+		[theme.breakpoints.down('md')]: {
+			height: '55px',
+			minHeight: '55px',
+			maxHeight: '55px',
+		},
+	})}
 `
 
 export const Wrapper = styled('div')`
@@ -30,4 +37,61 @@ export const Wrap = styled('div')`
 	align-items: center;
 	justify-content: space-between;
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
+	${({ theme }) => ({
+		[theme.breakpoints.down('lg')]: {
+			padding: '0 20px',
+		},
+		[theme.breakpoints.down('md')]: {
+			height: '55px',
+			minHeight: '55px',
+			maxHeight: '55px',
+		},
+	})}
+`
+
+export const WrapLogo = styled('div')`
+	display: flex;
+	align-items: center;
+	${({ theme }) => ({
+		[theme.breakpoints.down('md')]: {
+			'.logo': {
+				display: 'none',
+			},
+			'.logo-mobile': {
+				display: 'flex',
+			},
+		},
+		[theme.breakpoints.up('md')]: {
+			'.logo': {
+				display: 'flex',
+			},
+			'.logo-mobile': {
+				display: 'none',
+			},
+		},
+	})}
+`
+
+export const WrapDesktop = styled('div')`
+	gap: 55px;
+	flex-grow: 1;
+	display: none;
+	align-items: center;
+	justify-content: flex-end;
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			display: 'flex',
+		},
+	})}
+`
+
+export const WrapMobile = styled('div')`
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+	${({ theme }) => ({
+		[theme.breakpoints.down('md')]: {
+			display: 'flex',
+		},
+	})}
 `

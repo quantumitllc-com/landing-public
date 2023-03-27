@@ -1,21 +1,35 @@
 import { Box } from '@mui/material'
+import { Menu } from '@/components/menu'
 import { Navbar } from '@/components/navbar'
-import { Wrap, Wrapper, Container } from './style'
 import { ContactUs } from '@/components/contact-us'
+import { Wrap, Wrapper, WrapLogo, Container, WrapMobile, WrapDesktop } from './style'
 import { LanguageSelect } from '@/components/language-select'
 import { IconLogoVertical } from '@/assets/icons/logo-vertical'
+import { IconLogoVerticalMobile } from '@/assets/icons/logo-vertical-mobile'
 
 export const Header = () => {
 	return (
 		<Container>
 			<Wrapper>
 				<Wrap>
-					<IconLogoVertical />
-					<Navbar variant='header' />
-					<Box gap='14px' display='flex'>
-						<LanguageSelect />
-						<ContactUs variant='contact' />
-					</Box>
+					<WrapLogo>
+						<Box display='flex' alignItems='center' className='logo'>
+							<IconLogoVertical />
+						</Box>
+						<Box display='flex' alignItems='center' className='logo-mobile'>
+							<IconLogoVerticalMobile />
+						</Box>
+					</WrapLogo>
+					<WrapDesktop>
+						<Navbar variant='header' />
+						<Box gap='14px' display='flex' alignItems='center'>
+							<LanguageSelect />
+							<ContactUs variant='contact' />
+						</Box>
+					</WrapDesktop>
+					<WrapMobile>
+						<Menu />
+					</WrapMobile>
 				</Wrap>
 			</Wrapper>
 		</Container>

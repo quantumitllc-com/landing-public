@@ -38,14 +38,6 @@ export const Down = styled('div')`
 	}
 `
 
-export const WrapSocial = styled('div')`
-	gap: 15px;
-	display: grid;
-	margin-top: 32px;
-	justify-content: end;
-	grid-template-columns: repeat(4, min-content);
-`
-
 export const WrapContact = styled('div')`
 	gap: 55px;
 	display: flex;

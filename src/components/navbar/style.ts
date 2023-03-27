@@ -1,15 +1,19 @@
 import { styled } from '@mui/material/styles'
 
 export interface INavbar {
-	variant: 'footer' | 'header'
+	variant: 'footer' | 'header' | 'drawer-mobile'
+	onClick?: () => void
 }
 
 export const Nav = styled('nav')<INavbar>`
 	ul {
-		gap: 32px;
 		display: flex;
 		white-space: nowrap;
-		align-items: center;
+		width: ${({ variant }) => variant === 'drawer-mobile' && '100%'};
+		padding-top: ${({ variant }) => variant === 'drawer-mobile' && '12px'};
+		gap: ${({ variant }) => (variant === 'drawer-mobile' ? '10px' : '32px')};
+		align-items: ${({ variant }) => variant !== 'drawer-mobile' && 'center'};
+		flex-direction: ${({ variant }) => variant === 'drawer-mobile' && 'column'};
 	}
 	li {
 		a {
@@ -23,6 +27,9 @@ export const Nav = styled('nav')<INavbar>`
 				}
 				return theme.palette.colors.GRAY10
 			}};
+			display: ${({ variant }) => variant === 'drawer-mobile' && 'flex'};
+			padding: ${({ variant }) => variant === 'drawer-mobile' && '8px 0'};
+			justify-content: ${({ variant }) => variant === 'drawer-mobile' && 'space-between'};
 		}
 	}
 `

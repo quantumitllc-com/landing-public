@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { SOCIAL } from '@/constants/social'
 import { Navbar } from '@/components/navbar'
 import { CONTACT } from '@/constants/contact'
+import { Socials } from '@/components/socials'
 import { Box, Typography } from '@mui/material'
 import { Subscription } from '@/components/subscription'
 import { IconLogoHorizontal } from '@/assets/icons/logo-horizontal'
-import { Up, Down, Wrapper, Container, WrapSocial, WrapContact } from './style'
+import { Up, Down, Wrapper, Container, WrapContact } from './style'
 
 export const Footer = () => {
 	return (
@@ -49,13 +49,9 @@ export const Footer = () => {
 							dolor laoreet mollis convallis nunc lacinia. Faucibus.
 						</Typography>
 						<Subscription />
-						<WrapSocial>
-							{SOCIAL.map(({ Icon, href }, i) => (
-								<Link href={href} key={i}>
-									<Icon />
-								</Link>
-							))}
-						</WrapSocial>
+						<Box display='flex' justifyContent='flex-end'>
+							<Socials variant='footer' />
+						</Box>
 					</Box>
 				</Up>
 				<Down>
