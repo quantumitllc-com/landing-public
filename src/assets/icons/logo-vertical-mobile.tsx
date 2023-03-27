@@ -10,7 +10,7 @@ export const IconLogoVerticalMobile = () => {
 				fill='none'
 				xmlns='http://www.w3.org/2000/svg'
 			>
-				<circle cx='15.3577' cy='15.3594' r='9.6761' stroke='#091F2C' stroke-width='2.15024' />
+				<circle cx='15.3577' cy='15.3594' r='9.6761' stroke='#091F2C' strokeWidth='2.15024' />
 				<path
 					d='M28.7295 22.9167C27.4152 25.2419 25.5173 27.1841 23.223 28.5517L22.0698 26.6171C24.0277 25.4501 25.6473 23.7926 26.7689 21.8084L28.7295 22.9167Z'
 					fill='#091F2C'
