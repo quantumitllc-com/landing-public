@@ -21,7 +21,7 @@ export const AboutUs = () => {
 				</WrapTexts>
 			</Wrapper>
 			<WrapImage>
-				<Image fill alt='about-us' src={ImageAboutUs} placeholder='blur' />
+				<Image fill priority alt='about-us' src={ImageAboutUs} placeholder='blur' />
 			</WrapImage>
 		</Container>
 	)

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { Layout } from '@/layout'
 import type { NextPage } from 'next'
-import localFont from 'next/font/local'
+import { gilroy } from '@/utility/fonts'
 import type { AppProps } from 'next/app'
 import { theme } from '@/config/material'
 import NextNProgress from 'nextjs-progressbar'
@@ -16,26 +16,6 @@ interface NewAppProps extends AppProps {
 	emotionCache?: EmotionCache
 }
 
-const gilroy = localFont({
-	src: [
-		{
-			path: '../../public/fonts/GILROY-MEDIUM.ttf',
-			weight: '400',
-			style: 'normal',
-		},
-		{
-			path: '../../public/fonts/GILROY-LIGHT.ttf',
-			weight: '600',
-			style: 'normal',
-		},
-		{
-			path: '../../public/fonts/GILROY-BOLD.ttf',
-			weight: '700',
-			style: 'normal',
-		},
-	],
-})
-
 const clientSideEmotionCache = createEmotionCache()
 
 const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: NewAppProps) => {
@@ -48,17 +28,17 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				<link rel='icon' type='image/svg+xml' href='/icon.svg' />
 				<link rel='icon' type='image/png' href='/icon.png' />
 			</Head>
-			<style jsx global>{`
-				:root {
-					--gilroy-font: ${gilroy.style.fontFamily};
-				}
-			`}</style>
 			<NextNProgress
 				color={theme.palette.colors.GREEN}
 				options={{
 					showSpinner: false,
 				}}
 			/>
+			<style jsx global>{`
+				:root {
+					--font-gilroy: ${gilroy.style.fontFamily};
+				}
+			`}</style>
 			<CacheProvider value={emotionCache}>
 				<ThemeProvider theme={theme}>
 					<Layout {...pageProps}>
