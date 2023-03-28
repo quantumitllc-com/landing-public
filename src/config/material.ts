@@ -24,6 +24,7 @@ declare module '@mui/material/styles' {
 		title30: React.CSSProperties
 		title40: React.CSSProperties
 		title50: React.CSSProperties
+		title60: React.CSSProperties
 	}
 
 	interface TypographyVariantsOptions {
@@ -39,6 +40,7 @@ declare module '@mui/material/styles' {
 		title30: React.CSSProperties
 		title40: React.CSSProperties
 		title50: React.CSSProperties
+		title60: React.CSSProperties
 	}
 }
 
@@ -56,19 +58,11 @@ declare module '@mui/material/Typography' {
 		title30: true
 		title40: true
 		title50: true
+		title60: true
 	}
 }
 
 const defaultCreateTheme = {
-	palette: {
-		primary: {
-			main: VARIABLES_CSS.COLORS.GREEN,
-		},
-		colors: VARIABLES_CSS.COLORS,
-	},
-}
-
-export const theme = createTheme({
 	palette: {
 		primary: {
 			main: VARIABLES_CSS.COLORS.GREEN,
@@ -84,6 +78,11 @@ export const theme = createTheme({
 			xl: 1536,
 		},
 	},
+}
+
+export const theme = createTheme({
+	palette: defaultCreateTheme.palette,
+	breakpoints: defaultCreateTheme.breakpoints,
 	typography: {
 		text: {
 			fontWeight: 400,
@@ -159,6 +158,12 @@ export const theme = createTheme({
 			fontWeight: 600,
 			fontSize: '36px',
 			lineHeight: '116.7%',
+			color: defaultCreateTheme.palette.colors.BLUE20,
+		},
+		title60: {
+			fontWeight: 600,
+			fontSize: '58px',
+			lineHeight: '67.69px',
 			color: defaultCreateTheme.palette.colors.BLUE20,
 		},
 	},

@@ -10,6 +10,7 @@ export const Container = styled('div')`
 
 export const WrapIcon = styled('div')`
 	top: 180px;
+	left: 0;
 	position: absolute;
 	svg {
 		width: 80%;
