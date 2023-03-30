@@ -30,7 +30,6 @@ const Home = () => {
 			<Box id='testimonials'>
 				<Testimonials />
 			</Box>
-			<ContactUs variant='touch' />
 		</>
 	)
 }

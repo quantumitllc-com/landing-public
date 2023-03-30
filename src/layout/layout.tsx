@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 import { Main, Container } from './style'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { ContactUs } from '@/components/contact-us'
 
 interface IProps {
 	title?: string
@@ -20,6 +21,7 @@ export const Layout = ({ children, title }: IProps) => {
 			<Container>
 				<Header />
 				<Main>{children}</Main>
+				<ContactUs variant='touch' />
 				<Footer />
 			</Container>
 		</>

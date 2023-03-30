@@ -9,6 +9,7 @@ import { appWithTranslation } from 'next-i18next'
 import { ThemeProvider, CssBaseline } from '@mui/material'
 import { CacheProvider, EmotionCache } from '@emotion/react'
 import { createEmotionCache } from '@/utility/createEmotionCache'
+import 'react-multi-carousel/lib/styles.css'
 import '@/styles/globals.css'
 
 interface NewAppProps extends AppProps {

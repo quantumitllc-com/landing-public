@@ -18,6 +18,10 @@ export const WrapImage = styled('div')`
 	width: 100%;
 	height: 656px;
 	position: relative;
+
+	@media (min-height: 900px) {
+		height: 756px;
+	}
 `
 
 export const WrapTexts = styled('div')`

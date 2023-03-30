@@ -1,10 +1,44 @@
+import { useRef, LegacyRef } from 'react'
+import { IconButton, Typography } from '@mui/material'
+import Carousel from 'react-multi-carousel'
+import { IconArrowCircle } from '@/assets/icons/arrow-circle'
 import { IconTestimonials } from '@/assets/icons/testimonials'
-import { Typography } from '@mui/material'
-import { WrapIcon, WrapText, Container } from './style'
+import { Slider, WrapIcon, WrapText, Container, WrapButtons } from './style'
+import { CardTestimonial } from '@/components/card-testimonial/card'
+
+const responsive = {
+	desktop: {
+		breakpoint: {
+			max: 3000,
+			min: 1024,
+		},
+		items: 2,
+	},
+	mobile: {
+		breakpoint: {
+			max: 600,
+			min: 0,
+		},
+		items: 1,
+	},
+}
 
 export const Testimonials = () => {
+	const ref: LegacyRef<Carousel> | undefined = useRef(null)
+	const handleNextSlide = () => {
+		if (ref.current && ref.current.state.totalItems - 1 !== ref.current.state.currentSlide)
+			ref.current?.goToSlide(ref.current.state.currentSlide + 1)
+	}
+	const handlePrevSlide = () => {
+		if (ref.current && ref.current.state.currentSlide !== 0)
+			ref.current?.goToSlide(ref.current.state.currentSlide - 1)
+	}
+
 	return (
 		<Container>
+			<WrapIcon>
+				<IconTestimonials />
+			</WrapIcon>
 			<Typography variant='title30' component='h3' align='center'>
 				OUR client testimonials
 			</Typography>
@@ -31,9 +65,35 @@ export const Testimonials = () => {
 				We always try make the experience with us always the best. Therefore we are very concerned
 				about our performance. These are the stories some clients who have worked with us
 			</Typography>
-			<WrapIcon>
-				<IconTestimonials />
-			</WrapIcon>
+			<Slider>
+				<Carousel
+					ssr
+					ref={ref}
+					draggable
+					swipeable
+					arrows={false}
+					keyBoardControl
+					renderDotsOutside
+					deviceType='desktop'
+					responsive={responsive}
+					containerClass='carousel-container'
+					dotListClass='custom-dot-list-style'
+					itemClass='carousel-item-padding-40-px'
+				>
+					<CardTestimonial />
+					<CardTestimonial />
+					<CardTestimonial />
+					<CardTestimonial />
+				</Carousel>
+				<WrapButtons>
+					<IconButton onClick={handlePrevSlide}>
+						<IconArrowCircle />
+					</IconButton>
+					<IconButton onClick={handleNextSlide}>
+						<IconArrowCircle />
+					</IconButton>
+				</WrapButtons>
+			</Slider>
 		</Container>
 	)
 }

@@ -1,10 +1,14 @@
-import { WrapText, WrapIcon, Container } from './style'
 import { Typography } from '@mui/material'
 import { IconServices } from '@/assets/icons/services'
+import { WrapText, WrapIcon, Container, WrapCards, Wrapper } from './style'
+import { CardService } from '@/components/card-service'
 
 export const Services = () => {
 	return (
 		<Container>
+			<WrapIcon>
+				<IconServices />
+			</WrapIcon>
 			<Typography variant='title30' component='h3' align='center'>
 				OUR SERVICE FOR YOU
 			</Typography>
@@ -31,9 +35,16 @@ export const Services = () => {
 				User experience is very important, therefore we are trying more so that users get the best
 				and enjoyable experience
 			</Typography>
-			<WrapIcon>
-				<IconServices />
-			</WrapIcon>
+			<Wrapper>
+				<WrapCards>
+					<CardService />
+					<CardService />
+					<CardService />
+					<CardService />
+					<CardService />
+					<CardService />
+				</WrapCards>
+			</Wrapper>
 		</Container>
 	)
 }

@@ -1,5 +1,7 @@
-import { Typography } from '@mui/material'
+import Link from 'next/link'
 import { WrapText, Container } from './style'
+import { IconArrow } from '@/assets/icons/arrow'
+import { Button, Typography } from '@mui/material'
 
 export const Projects = () => {
 	return (
@@ -30,6 +32,16 @@ export const Projects = () => {
 				Projects that are carried out professionally, with collaboration between divisions, produce
 				projects that are ready to use, with great designs and details
 			</Typography>
+			<Button
+				href='projects'
+				size='medium'
+				component={Link}
+				variant='contained'
+				endIcon={<IconArrow />}
+				style={{ minWidth: '128px' }}
+			>
+				See All
+			</Button>
 		</Container>
 	)
 }

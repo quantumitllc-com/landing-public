@@ -18,6 +18,7 @@ declare module '@mui/material/styles' {
 		text30: React.CSSProperties
 		text40: React.CSSProperties
 		text50: React.CSSProperties
+		text60: React.CSSProperties
 		title: React.CSSProperties
 		title10: React.CSSProperties
 		title20: React.CSSProperties
@@ -25,6 +26,7 @@ declare module '@mui/material/styles' {
 		title40: React.CSSProperties
 		title50: React.CSSProperties
 		title60: React.CSSProperties
+		title70: React.CSSProperties
 	}
 
 	interface TypographyVariantsOptions {
@@ -34,6 +36,7 @@ declare module '@mui/material/styles' {
 		text30: React.CSSProperties
 		text40: React.CSSProperties
 		text50: React.CSSProperties
+		text60: React.CSSProperties
 		title: React.CSSProperties
 		title10: React.CSSProperties
 		title20: React.CSSProperties
@@ -41,6 +44,7 @@ declare module '@mui/material/styles' {
 		title40: React.CSSProperties
 		title50: React.CSSProperties
 		title60: React.CSSProperties
+		title70: React.CSSProperties
 	}
 }
 
@@ -52,6 +56,7 @@ declare module '@mui/material/Typography' {
 		text30: true
 		text40: true
 		text50: true
+		text60: true
 		title: true
 		title10: true
 		title20: true
@@ -59,6 +64,7 @@ declare module '@mui/material/Typography' {
 		title40: true
 		title50: true
 		title60: true
+		title70: true
 	}
 }
 
@@ -122,6 +128,12 @@ export const theme = createTheme({
 			letterSpacing: '0.0035em',
 			color: defaultCreateTheme.palette.colors.GRAY90,
 		},
+		text60: {
+			fontWeight: 400,
+			fontSize: '15px',
+			lineHeight: '154.7%',
+			color: defaultCreateTheme.palette.colors.GRAY90,
+		},
 		title: {
 			fontWeight: 600,
 			fontSize: '18px',
@@ -166,6 +178,12 @@ export const theme = createTheme({
 			lineHeight: '67.69px',
 			color: defaultCreateTheme.palette.colors.BLUE20,
 		},
+		title70: {
+			fontWeight: 600,
+			fontSize: '20px',
+			lineHeight: '116.7%',
+			color: defaultCreateTheme.palette.colors.BLUE20,
+		},
 	},
 	components: {
 		MuiButton: {
@@ -183,7 +201,7 @@ export const theme = createTheme({
 			},
 			variants: [
 				{
-					props: { variant: 'contained', size: 'large' },
+					props: { variant: 'contained' },
 					style: {
 						height: 55,
 						fontWeight: 600,
