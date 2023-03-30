@@ -45,9 +45,9 @@ export const IconLaptop = () => {
 					width='1369.87'
 					height='295.566'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feColorMatrix
 						in='SourceAlpha'
 						type='matrix'
@@ -76,9 +76,9 @@ export const IconLaptop = () => {
 					y2='779.753'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='#BBBECD' />
-					<stop offset='0.27' stop-color='#D2D4DE' />
-					<stop offset='1' stop-color='white' />
+					<stop stopColor='#BBBECD' />
+					<stop offset='0.27' stopColor='#D2D4DE' />
+					<stop offset='1' stopColor='white' />
 				</linearGradient>
 				<linearGradient
 					id='paint1_linear_152_607'
@@ -88,9 +88,9 @@ export const IconLaptop = () => {
 					y2='779.231'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='#C5DAE6' />
-					<stop offset='0.27' stop-color='#D9E2F2' />
-					<stop offset='1' stop-color='white' />
+					<stop stopColor='#C5DAE6' />
+					<stop offset='0.27' stopColor='#D9E2F2' />
+					<stop offset='1' stopColor='white' />
 				</linearGradient>
 			</defs>
 		</svg>

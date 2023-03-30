@@ -599,9 +599,9 @@ export const IconBackground = () => {
 					width='723.012'
 					height='564.98'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='3.0545' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -612,9 +612,9 @@ export const IconBackground = () => {
 					width='753.557'
 					height='595.525'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='10.6908' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -625,9 +625,9 @@ export const IconBackground = () => {
 					width='814.662'
 					height='658.954'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='25.9633' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -638,9 +638,9 @@ export const IconBackground = () => {
 					width='936.827'
 					height='778.795'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='56.5083' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -651,9 +651,9 @@ export const IconBackground = () => {
 					width='995.175'
 					height='948.684'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='99.2713' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -664,9 +664,9 @@ export const IconBackground = () => {
 					width='597.274'
 					height='696.853'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='3.0545' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -677,9 +677,9 @@ export const IconBackground = () => {
 					width='627.819'
 					height='727.398'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='10.6908' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -690,9 +690,9 @@ export const IconBackground = () => {
 					width='690.718'
 					height='788.849'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='25.9633' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -703,9 +703,9 @@ export const IconBackground = () => {
 					width='811.089'
 					height='910.668'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='56.5083' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -716,9 +716,9 @@ export const IconBackground = () => {
 					width='957.593'
 					height='987.014'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='99.2713' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -729,9 +729,9 @@ export const IconBackground = () => {
 					width='673.609'
 					height='305.322'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='2.13896' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -742,9 +742,9 @@ export const IconBackground = () => {
 					width='694.998'
 					height='326.712'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='7.48635' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -755,9 +755,9 @@ export const IconBackground = () => {
 					width='740.627'
 					height='369.549'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='18.1811' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -768,9 +768,9 @@ export const IconBackground = () => {
 					width='823.336'
 					height='455.049'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='39.5707' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -781,9 +781,9 @@ export const IconBackground = () => {
 					width='942.948'
 					height='529.841'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='69.5161' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -794,9 +794,9 @@ export const IconBackground = () => {
 					width='825.467'
 					height='247.172'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='2.13896' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -807,9 +807,9 @@ export const IconBackground = () => {
 					width='846.857'
 					height='268.562'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='7.48635' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -820,9 +820,9 @@ export const IconBackground = () => {
 					width='890.191'
 					height='312.25'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='18.1811' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -833,9 +833,9 @@ export const IconBackground = () => {
 					width='975.194'
 					height='396.899'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='39.5707' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -846,9 +846,9 @@ export const IconBackground = () => {
 					width='986.883'
 					height='512.708'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='69.5161' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -859,9 +859,9 @@ export const IconBackground = () => {
 					width='748'
 					height='630.609'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='3.53844' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -872,9 +872,9 @@ export const IconBackground = () => {
 					width='783.384'
 					height='665.994'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='12.3845' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -885,9 +885,9 @@ export const IconBackground = () => {
 					width='854.467'
 					height='738.787'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='30.0767' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -898,9 +898,9 @@ export const IconBackground = () => {
 					width='995.69'
 					height='878.3'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='65.4612' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -911,9 +911,9 @@ export const IconBackground = () => {
 					width='1089.45'
 					height='1054.79'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='114.999' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -924,9 +924,9 @@ export const IconBackground = () => {
 					width='379.725'
 					height='481.718'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='3.53844' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -937,9 +937,9 @@ export const IconBackground = () => {
 					width='415.11'
 					height='517.102'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='12.3845' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -950,9 +950,9 @@ export const IconBackground = () => {
 					width='487.399'
 					height='587.894'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='30.0767' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -963,9 +963,9 @@ export const IconBackground = () => {
 					width='627.416'
 					height='729.409'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='65.4612' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -976,9 +976,9 @@ export const IconBackground = () => {
 					width='823.91'
 					height='853.924'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='114.999' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -989,9 +989,9 @@ export const IconBackground = () => {
 					width='490.795'
 					height='496.683'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='3.53844' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -1002,9 +1002,9 @@ export const IconBackground = () => {
 					width='526.179'
 					height='532.068'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='12.3845' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -1015,9 +1015,9 @@ export const IconBackground = () => {
 					width='597.762'
 					height='603.566'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='30.0767' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -1028,9 +1028,9 @@ export const IconBackground = () => {
 					width='738.486'
 					height='744.374'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='65.4612' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -1041,9 +1041,9 @@ export const IconBackground = () => {
 					width='892.461'
 					height='894.205'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='114.999' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -1054,9 +1054,9 @@ export const IconBackground = () => {
 					width='343.228'
 					height='275.346'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='3.53844' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -1067,9 +1067,9 @@ export const IconBackground = () => {
 					width='378.613'
 					height='310.73'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='12.3845' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -1080,9 +1080,9 @@ export const IconBackground = () => {
 					width='449.422'
 					height='382.535'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='30.0767' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -1093,9 +1093,9 @@ export const IconBackground = () => {
 					width='590.919'
 					height='523.036'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='65.4612' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -1106,9 +1106,9 @@ export const IconBackground = () => {
 					width='738.246'
 					height='718.255'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
 					<feGaussianBlur stdDeviation='114.999' result='effect1_foregroundBlur_18_199' />
 				</filter>
@@ -1120,8 +1120,8 @@ export const IconBackground = () => {
 					y2='64.5066'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='white' />
-					<stop offset='1' stop-color='white' stop-opacity='0' />
+					<stop stopColor='white' />
+					<stop offset='1' stopColor='white' stopOpacity='0' />
 				</linearGradient>
 				<linearGradient
 					id='paint1_linear_18_199'
@@ -1131,8 +1131,8 @@ export const IconBackground = () => {
 					y2='164.688'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='white' />
-					<stop offset='1' stop-color='white' stop-opacity='0' />
+					<stop stopColor='white' />
+					<stop offset='1' stopColor='white' stopOpacity='0' />
 				</linearGradient>
 				<linearGradient
 					id='paint2_linear_18_199'
@@ -1142,8 +1142,8 @@ export const IconBackground = () => {
 					y2='909.113'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='white' />
-					<stop offset='1' stop-color='white' stop-opacity='0' />
+					<stop stopColor='white' />
+					<stop offset='1' stopColor='white' stopOpacity='0' />
 				</linearGradient>
 				<linearGradient
 					id='paint3_linear_18_199'
@@ -1153,8 +1153,8 @@ export const IconBackground = () => {
 					y2='5.38646e-06'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='white' />
-					<stop offset='1' stop-color='white' stop-opacity='0' />
+					<stop stopColor='white' />
+					<stop offset='1' stopColor='white' stopOpacity='0' />
 				</linearGradient>
 				<linearGradient
 					id='paint4_linear_18_199'
@@ -1164,8 +1164,8 @@ export const IconBackground = () => {
 					y2='261.658'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='white' />
-					<stop offset='1' stop-color='white' stop-opacity='0' />
+					<stop stopColor='white' />
+					<stop offset='1' stopColor='white' stopOpacity='0' />
 				</linearGradient>
 				<linearGradient
 					id='paint5_linear_18_199'
@@ -1175,8 +1175,8 @@ export const IconBackground = () => {
 					y2='1132.16'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='white' />
-					<stop offset='1' stop-color='white' stop-opacity='0' />
+					<stop stopColor='white' />
+					<stop offset='1' stopColor='white' stopOpacity='0' />
 				</linearGradient>
 				<linearGradient
 					id='paint6_linear_18_199'
@@ -1186,8 +1186,8 @@ export const IconBackground = () => {
 					y2='1684.32'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='white' />
-					<stop offset='1' stop-color='white' stop-opacity='0' />
+					<stop stopColor='white' />
+					<stop offset='1' stopColor='white' stopOpacity='0' />
 				</linearGradient>
 				<linearGradient
 					id='paint7_linear_18_199'
@@ -1197,8 +1197,8 @@ export const IconBackground = () => {
 					y2='1403.17'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='white' />
-					<stop offset='1' stop-color='white' stop-opacity='0' />
+					<stop stopColor='white' />
+					<stop offset='1' stopColor='white' stopOpacity='0' />
 				</linearGradient>
 			</defs>
 		</svg>
