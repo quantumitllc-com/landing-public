@@ -5,6 +5,14 @@ const nextConfig = {
 	i18n,
 	swcMinify: true,
 	reactStrictMode: true,
+	image: {
+		formats: ['image/webp'],
+		protocol: 'http',
+		hostname: 'zmlsoft.com',
+		port: '',
+		pathname: '/media/**',
+		domains: ['zmlsoft.com'],
+	},
 }
 
 module.exports = nextConfig

@@ -1,9 +1,14 @@
 import Link from 'next/link'
+import { getProjects } from '@/pages/api'
 import { WrapText, Container } from './style'
+import { useQuery } from '@tanstack/react-query'
 import { IconArrow } from '@/assets/icons/arrow'
 import { Button, Typography } from '@mui/material'
+import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 
 export const Projects = () => {
+	// const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.PROJECTS], queryFn: getProjects })
+
 	return (
 		<Container>
 			<Typography variant='title30' component='h3' align='center'>

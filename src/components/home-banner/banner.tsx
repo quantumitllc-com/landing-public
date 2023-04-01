@@ -1,10 +1,15 @@
-import { Box, Button, Typography } from '@mui/material'
+import { getIntro } from '@/pages/api'
+import { useQuery } from '@tanstack/react-query'
 import { IconSpread } from '@/assets/icons/spread'
 import { IconLaptop } from '@/assets/icons/laptop'
+import { Box, Button, Typography } from '@mui/material'
 import { IconBackground } from '@/assets/icons/background'
+import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { WrapText, Container, WrapButton, WrapLaptop, WrapBackground } from './style'
 
 export const HomeBanner = () => {
+	// const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.INTRO], queryFn: getIntro })
+
 	return (
 		<Container>
 			<Typography align='center' variant='title30' component='h3'>
