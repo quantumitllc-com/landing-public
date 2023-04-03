@@ -5,7 +5,6 @@ import Image from 'next/image'
 
 export const Companies = () => {
 	// const { data = [] } = useQuery({ queryKey: [REACT_QUERY_KEYS.COMPANIES], queryFn: getCompanies })
-	// console.log(data)
 	return (
 		<div>
 			{/* {data.map((company: any) => (

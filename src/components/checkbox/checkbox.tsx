@@ -1,7 +1,7 @@
 import { Label } from './style'
+import { useState } from 'react'
 import { type Control, Controller } from 'react-hook-form'
 import { type CheckboxProps, Checkbox as MuiCheckbox } from '@mui/material'
-import { useState } from 'react'
 
 type ICheckbox = CheckboxProps & {
 	label?: string

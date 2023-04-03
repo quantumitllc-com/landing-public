@@ -12,7 +12,6 @@ import { IconPlay } from '@/assets/icons/play'
 export const HomeBanner = () => {
 	// const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.INTRO], queryFn: getIntro })
 	const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.VIDEO], queryFn: getVideo })
-	console.log(data)
 
 	return (
 		<Container>

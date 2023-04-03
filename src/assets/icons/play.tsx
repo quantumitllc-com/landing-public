@@ -11,8 +11,8 @@ export const IconPlay = () => {
 				<path
 					d='M144.857 200.193C175.66 200.193 200.631 175.223 200.631 144.419C200.631 113.616 175.66 88.6455 144.857 88.6455C114.054 88.6455 89.0833 113.616 89.0833 144.419C89.0833 175.223 114.054 200.193 144.857 200.193Z'
 					fill='#1AD980'
-					fill-opacity='0.7'
-					shape-rendering='crispEdges'
+					fillOpacity='0.7'
+					shapeRendering='crispEdges'
 				/>
 			</g>
 			<path

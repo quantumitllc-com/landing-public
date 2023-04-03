@@ -13,7 +13,7 @@ export const defaultValues = {
 	last_name: '',
 	email: '',
 	phone_number: '',
-	service: '',
+	service: false,
 }
 
 export const schema: ObjectSchema<FormTypes> = object().shape({
