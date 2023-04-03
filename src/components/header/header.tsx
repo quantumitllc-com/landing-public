@@ -3,7 +3,7 @@ import { Menu } from '@/components/menu'
 import { Navbar } from '@/components/navbar'
 import { ContactUs } from '@/components/contact-us'
 import { Wrap, Wrapper, WrapLogo, Container, WrapMobile, WrapDesktop } from './style'
-import { LanguageSelect } from '@/components/language-select'
+import { SelectLanguage } from '@/components/select-language'
 import { IconLogoVertical } from '@/assets/icons/logo-vertical'
 import { IconLogoVerticalMobile } from '@/assets/icons/logo-vertical-mobile'
 
@@ -23,7 +23,7 @@ export const Header = () => {
 					<WrapDesktop>
 						<Navbar variant='header' />
 						<Box gap='14px' display='flex' alignItems='center'>
-							<LanguageSelect />
+							<SelectLanguage />
 							<ContactUs variant='contact' />
 						</Box>
 					</WrapDesktop>

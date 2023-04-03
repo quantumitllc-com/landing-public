@@ -1,4 +1,6 @@
 import { createTheme } from '@mui/material/styles'
+import { IconChecked } from '@/assets/icons/checked'
+import { IconUnchecked } from '@/assets/icons/unchecked'
 import { VARIABLES_CSS } from '@/constants/variables-css'
 
 declare module '@mui/material/styles/createPalette' {
@@ -19,6 +21,7 @@ declare module '@mui/material/styles' {
 		text40: React.CSSProperties
 		text50: React.CSSProperties
 		text60: React.CSSProperties
+		text70: React.CSSProperties
 		title: React.CSSProperties
 		title10: React.CSSProperties
 		title20: React.CSSProperties
@@ -27,6 +30,7 @@ declare module '@mui/material/styles' {
 		title50: React.CSSProperties
 		title60: React.CSSProperties
 		title70: React.CSSProperties
+		title80: React.CSSProperties
 	}
 
 	interface TypographyVariantsOptions {
@@ -37,6 +41,7 @@ declare module '@mui/material/styles' {
 		text40: React.CSSProperties
 		text50: React.CSSProperties
 		text60: React.CSSProperties
+		text70: React.CSSProperties
 		title: React.CSSProperties
 		title10: React.CSSProperties
 		title20: React.CSSProperties
@@ -45,6 +50,7 @@ declare module '@mui/material/styles' {
 		title50: React.CSSProperties
 		title60: React.CSSProperties
 		title70: React.CSSProperties
+		title80: React.CSSProperties
 	}
 }
 
@@ -57,6 +63,7 @@ declare module '@mui/material/Typography' {
 		text40: true
 		text50: true
 		text60: true
+		text70: true
 		title: true
 		title10: true
 		title20: true
@@ -65,36 +72,33 @@ declare module '@mui/material/Typography' {
 		title50: true
 		title60: true
 		title70: true
+		title80: true
 	}
 }
 
-const defaultCreateTheme = {
+const defaultCreateTheme = createTheme({
 	palette: {
 		primary: {
 			main: VARIABLES_CSS.COLORS.GREEN,
 		},
 		colors: VARIABLES_CSS.COLORS,
 	},
-	breakpoints: {
-		values: {
-			xs: 0,
-			sm: 600,
-			md: 1100,
-			lg: 1200,
-			xl: 1536,
-		},
-	},
-}
+	breakpoints: VARIABLES_CSS.BREAKPOINTS,
+})
 
 export const theme = createTheme({
 	palette: defaultCreateTheme.palette,
-	breakpoints: defaultCreateTheme.breakpoints,
+	breakpoints: VARIABLES_CSS.BREAKPOINTS,
 	typography: {
 		text: {
 			fontWeight: 400,
 			fontSize: '14px',
 			lineHeight: '24px',
 			color: defaultCreateTheme.palette.colors.GRAY40,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '11px',
+				lineHeight: '15px',
+			},
 		},
 		text10: {
 			fontWeight: 400,
@@ -113,6 +117,9 @@ export const theme = createTheme({
 			fontSize: '16px',
 			lineHeight: '151.5%',
 			color: defaultCreateTheme.palette.colors.GRAY80,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '14px',
+			},
 		},
 		text40: {
 			fontWeight: 500,
@@ -120,6 +127,10 @@ export const theme = createTheme({
 			lineHeight: '157.7%',
 			letterSpacing: '0.0035em',
 			color: defaultCreateTheme.palette.colors.GRAY90,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '13px',
+				fontWeight: 400,
+			},
 		},
 		text50: {
 			fontWeight: 500,
@@ -127,18 +138,40 @@ export const theme = createTheme({
 			lineHeight: '157.7%',
 			letterSpacing: '0.0035em',
 			color: defaultCreateTheme.palette.colors.GRAY90,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '13px',
+				fontWeight: 400,
+			},
 		},
 		text60: {
 			fontWeight: 400,
 			fontSize: '15px',
 			lineHeight: '154.7%',
 			color: defaultCreateTheme.palette.colors.GRAY90,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '12px',
+				fontWeight: 400,
+			},
+		},
+		text70: {
+			fontWeight: 500,
+			fontSize: '18px',
+			lineHeight: '20px',
+			color: defaultCreateTheme.palette.colors.BLUE30,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '14px',
+				fontWeight: 400,
+			},
 		},
 		title: {
 			fontWeight: 600,
 			fontSize: '18px',
 			lineHeight: '21px',
 			color: defaultCreateTheme.palette.colors.WHITE,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				lineHeight: '16px',
+				fontSize: '13.3523px',
+			},
 		},
 		title10: {
 			fontWeight: 600,
@@ -146,12 +179,20 @@ export const theme = createTheme({
 			textAlign: 'center',
 			lineHeight: '116.7%',
 			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '28px',
+				lineHeight: '106.7%',
+			},
 		},
 		title20: {
 			fontWeight: 600,
 			fontSize: '42px',
 			lineHeight: '50px',
 			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '24px',
+				lineHeight: '31px',
+			},
 		},
 		title30: {
 			fontWeight: 600,
@@ -159,30 +200,57 @@ export const theme = createTheme({
 			lineHeight: '116.7%',
 			textTransform: 'uppercase',
 			color: defaultCreateTheme.palette.colors.GREEN,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '12px',
+			},
 		},
 		title40: {
 			fontWeight: 600,
 			fontSize: '42px',
 			lineHeight: '117.7%',
 			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '28px',
+				lineHeight: '106.7%',
+			},
 		},
 		title50: {
 			fontWeight: 600,
 			fontSize: '36px',
 			lineHeight: '116.7%',
 			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '28px',
+				lineHeight: '106.7%',
+			},
 		},
 		title60: {
 			fontWeight: 600,
 			fontSize: '58px',
 			lineHeight: '67.69px',
 			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '28px',
+				lineHeight: '98.7%',
+			},
 		},
 		title70: {
 			fontWeight: 600,
 			fontSize: '20px',
 			lineHeight: '116.7%',
 			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '16px',
+			},
+		},
+		title80: {
+			fontWeight: 600,
+			fontSize: '16px',
+			lineHeight: '151.5%',
+			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontWeight: 500,
+			},
 		},
 	},
 	components: {
@@ -238,6 +306,12 @@ export const theme = createTheme({
 				},
 			],
 		},
+		MuiCheckbox: {
+			defaultProps: {
+				icon: <IconUnchecked />,
+				checkedIcon: <IconChecked />,
+			},
+		},
 		MuiDialog: {
 			defaultProps: {
 				PaperProps: {
@@ -255,11 +329,34 @@ export const theme = createTheme({
 				},
 			},
 		},
+		MuiOutlinedInput: {
+			styleOverrides: {
+				root: {
+					borderRadius: '8px',
+					'& fieldset': {
+						borderWidth: '1px',
+						borderColor: defaultCreateTheme.palette.colors.GRAY120,
+					},
+				},
+			},
+		},
 		MuiInputBase: {
 			styleOverrides: {
 				input: {
 					paddingTop: '12.5px !important',
 					paddingBottom: '12.5px !important',
+				},
+			},
+		},
+		MuiInputLabel: {
+			styleOverrides: {
+				root: {
+					top: '-4px',
+				},
+				shrink: {
+					top: '0',
+					fontWeight: 400,
+					color: `${defaultCreateTheme.palette.colors.BLUE20} !important`,
 				},
 			},
 		},

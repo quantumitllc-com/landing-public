@@ -1,15 +1,26 @@
-import { useBoolean } from '@/hooks/useBoolean'
+import { useContact } from './useContact'
+import { Input } from '@/components/input'
+import { Checkbox } from '@/components/checkbox'
+import { IconSpread } from '@/assets/icons/spread'
 import { IconRemove } from '@/assets/icons/remove'
 import { IconBgTouch } from '@/assets/icons/bg-touch'
-import { Form, Header, Container, WrapInputs, WrapContent } from './style'
-import { Box, Button, Dialog, IconButton, TextField, Typography } from '@mui/material'
+import { Box, Button, Dialog, IconButton, Typography } from '@mui/material'
+import {
+	Form,
+	Header,
+	Container,
+	WrapInputs,
+	WrapContent,
+	WrapperChecks,
+	WrapButtonRequest,
+} from './style'
 
 interface IContact {
-	variant: 'contact' | 'touch'
+	variant: 'contact' | 'touch' | 'request'
 }
 
 export const ContactUs = ({ variant }: IContact) => {
-	const { value, setTrue, setFalse } = useBoolean()
+	const { form, value, setTrue, setFalse, onSubmit } = useContact()
 
 	return (
 		<>
@@ -17,6 +28,21 @@ export const ContactUs = ({ variant }: IContact) => {
 				<Button size='large' variant='contained' onClick={setTrue}>
 					Contact Us
 				</Button>
+			) : variant === 'request' ? (
+				<WrapButtonRequest>
+					<Box display='flex' alignItems='center' className='icon-spread' justifyContent='center'>
+						<IconSpread />
+					</Box>
+					<Button
+						onClick={setTrue}
+						variant='contained'
+						style={{
+							textTransform: 'unset',
+						}}
+					>
+						Request a quote
+					</Button>
+				</WrapButtonRequest>
 			) : (
 				<Container>
 					<IconBgTouch />
@@ -30,13 +56,13 @@ export const ContactUs = ({ variant }: IContact) => {
 					</WrapContent>
 				</Container>
 			)}
-			<Dialog open={value} onClose={setFalse}>
+			<Dialog open={value} onClose={setFalse} maxWidth='md'>
 				<Header>
 					<IconButton onClick={setFalse}>
 						<IconRemove />
 					</IconButton>
 				</Header>
-				<Form>
+				<Form onSubmit={form.handleSubmit(onSubmit)}>
 					<Typography variant='title20' component='h1'>
 						Get in touch
 					</Typography>
@@ -44,13 +70,51 @@ export const ContactUs = ({ variant }: IContact) => {
 						Fill up the form and our Team will get back to you within 24 hours.
 					</Typography>
 					<WrapInputs>
-						<TextField label='First name' placeholder='Enter last name' />
-						<TextField label='Last name' placeholder='Enter last name' />
-						<TextField label='Your email' placeholder='Enter your email' />
-						<TextField type='email' label='Phone number' placeholder='Enter phone number' />
+						<Input
+							fullWidth
+							id='first_name'
+							name='first_name'
+							label='First name'
+							control={form.control}
+							placeholder='Enter first name'
+						/>
+						<Input
+							fullWidth
+							id='last_name'
+							name='last_name'
+							label='Last name'
+							control={form.control}
+							placeholder='Enter last name'
+						/>
+						<Input
+							fullWidth
+							id='email'
+							name='email'
+							type='email'
+							label='Your email'
+							control={form.control}
+							placeholder='Enter your email'
+						/>
+						<Input
+							fullWidth
+							id='phone_number'
+							name='phone_number'
+							label='Phone number'
+							control={form.control}
+							placeholder='Enter phone number'
+						/>
 					</WrapInputs>
+					<Typography variant='title80' component='h3'>
+						What kind of service do you need?
+					</Typography>
+					<WrapperChecks>
+						<Checkbox name='service' label='Web design' control={form.control} />
+						<Checkbox name='service' label='Mobile application' control={form.control} />
+						<Checkbox name='service' label='Web development' control={form.control} />
+						<Checkbox name='service' label='Other' control={form.control} />
+					</WrapperChecks>
 					<Box display='flex' alignItems='center' justifyContent='flex-end'>
-						<Button variant='contained' style={{ borderRadius: 8 }}>
+						<Button type='submit' variant='contained' style={{ borderRadius: 8 }}>
 							Submit order
 						</Button>
 					</Box>

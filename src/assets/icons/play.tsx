@@ -7,7 +7,7 @@ export const IconPlay = () => {
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 		>
-			<g filter='url(#filter0_bd_18_288)'>
+			<g filter='url(#filter0_bd_18_288_play)'>
 				<path
 					d='M144.857 200.193C175.66 200.193 200.631 175.223 200.631 144.419C200.631 113.616 175.66 88.6455 144.857 88.6455C114.054 88.6455 89.0833 113.616 89.0833 144.419C89.0833 175.223 114.054 200.193 144.857 200.193Z'
 					fill='#1AD980'
@@ -39,7 +39,7 @@ export const IconPlay = () => {
 			/>
 			<defs>
 				<filter
-					id='filter0_bd_18_288'
+					id='filter0_bd_18_288_play'
 					x='41.5709'
 					y='66.7167'
 					width='206.573'

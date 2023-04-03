@@ -13,8 +13,20 @@ export const VARIABLES_CSS = {
 		GRAY80: '#1c1f25b3',
 		GRAY90: '#737882',
 		GRAY100: '#1c1f2580',
+		GRAY110: '#8e8f92',
+		GRAY120: '#1c1f251f',
 		BLUE: '#091F2C',
 		BLUE10: '#172C38',
 		BLUE20: '#1C1F25',
+		BLUE30: '#170F49',
+	},
+	BREAKPOINTS: {
+		values: {
+			xs: 0,
+			sm: 600,
+			md: 1100,
+			lg: 1200,
+			xl: 1536,
+		},
 	},
 }

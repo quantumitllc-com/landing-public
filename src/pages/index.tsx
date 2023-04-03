@@ -42,14 +42,14 @@ export default Home
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
 	const queryClient = new QueryClient()
-	// await Promise.allSettled([
-	// 	queryClient.prefetchQuery([REACT_QUERY_KEYS.SERVICES], getServices),
-	// 	queryClient.prefetchQuery([REACT_QUERY_KEYS.ABOUT], getAbout),
-	// 	queryClient.prefetchQuery([REACT_QUERY_KEYS.COMPANIES], getCompanies),
-	// 	queryClient.prefetchQuery([REACT_QUERY_KEYS.INTRO], getIntro),
-	// 	queryClient.prefetchQuery([REACT_QUERY_KEYS.PROJECTS], getProjects),
-	// 	queryClient.prefetchQuery([REACT_QUERY_KEYS.VIDEO], getVideo),
-	// ])
+	await Promise.allSettled([
+		queryClient.prefetchQuery([REACT_QUERY_KEYS.SERVICES], getServices),
+		queryClient.prefetchQuery([REACT_QUERY_KEYS.ABOUT], getAbout),
+		queryClient.prefetchQuery([REACT_QUERY_KEYS.COMPANIES], getCompanies),
+		queryClient.prefetchQuery([REACT_QUERY_KEYS.INTRO], getIntro),
+		queryClient.prefetchQuery([REACT_QUERY_KEYS.PROJECTS], getProjects),
+		queryClient.prefetchQuery([REACT_QUERY_KEYS.VIDEO], getVideo),
+	])
 
 	return {
 		props: {

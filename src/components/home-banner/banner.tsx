@@ -1,14 +1,18 @@
-import { getIntro } from '@/pages/api'
+import { getIntro, getVideo } from '@/pages/api'
+import { Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
-import { IconSpread } from '@/assets/icons/spread'
 import { IconLaptop } from '@/assets/icons/laptop'
-import { Box, Button, Typography } from '@mui/material'
+import { ContactUs } from '@/components/contact-us'
 import { IconBackground } from '@/assets/icons/background'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { WrapText, Container, WrapButton, WrapLaptop, WrapBackground } from './style'
+import { WrapText, Container, WrapLaptop, WrapBackground } from './style'
+import { IconScreen } from '@/assets/icons/screen'
+import { IconPlay } from '@/assets/icons/play'
 
 export const HomeBanner = () => {
 	// const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.INTRO], queryFn: getIntro })
+	const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.VIDEO], queryFn: getVideo })
+	console.log(data)
 
 	return (
 		<Container>
@@ -37,21 +41,21 @@ export const HomeBanner = () => {
 				We are a creative agency that focuses on quality and user experience, Together with us make
 				all your dream projects come true
 			</Typography>
-			<WrapButton>
-				<Box display='flex' alignItems='center' className='icon-spread' justifyContent='center'>
-					<IconSpread />
-				</Box>
-				<Button
-					variant='contained'
-					style={{
-						textTransform: 'unset',
-					}}
-				>
-					Request a quote
-				</Button>
-			</WrapButton>
+			<ContactUs variant='request' />
 			<WrapLaptop>
 				<IconLaptop />
+				<div className='screen'>
+					<div className='video_play'>
+						<video>
+							<source src={data.video_url} />
+						</video>
+						<div className='play'>
+							<IconPlay />
+						</div>
+					</div>
+
+					<IconScreen />
+				</div>
 			</WrapLaptop>
 			<WrapBackground>
 				<IconBackground />

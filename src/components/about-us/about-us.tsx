@@ -7,8 +7,8 @@ import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { Wrapper, WrapTexts, WrapImage, Container, HighLight } from './style'
 
 export const AboutUs = () => {
-	// const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.ABOUT], queryFn: getAbout })
-	// console.log(data)
+	const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.ABOUT], queryFn: getAbout })
+	console.log(data)
 	return (
 		<Container>
 			<Wrapper>

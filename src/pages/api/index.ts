@@ -29,3 +29,8 @@ export const getProjects = async () => {
 	const { data } = await request('projects/')
 	return data
 }
+
+export const postContact = async <T>(data: T) => {
+	const res = await request.post('contact/', data)
+	return res
+}

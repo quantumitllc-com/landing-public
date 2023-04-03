@@ -8,16 +8,6 @@ export const Container = styled('div')`
 	flex-direction: column;
 `
 
-export const WrapButton = styled('div')`
-	margin-top: 55px;
-	position: relative;
-	.icon-spread {
-		top: -20px;
-		right: 100%;
-		position: absolute;
-	}
-`
-
 export const WrapText = styled('div')`
 	padding: 20px 0 36px;
 `
@@ -25,12 +15,46 @@ export const WrapText = styled('div')`
 export const WrapLaptop = styled('div')`
 	width: 100%;
 	display: flex;
+	position: relative;
 	align-items: center;
 	justify-content: center;
 	svg {
-		width: 95%;
-		height: 95%;
+		width: 100%;
+		height: 100%;
 		max-width: ${({ theme }) => theme.breakpoints.values.md}px;
+		.video {
+			fill: transparent;
+		}
+	}
+	.screen {
+		top: 2.85%;
+		position: absolute;
+		.video_play {
+			top: 15%;
+			width: 53%;
+			height: 51%;
+			left: 23.5%;
+			display: flex;
+			position: absolute;
+			align-items: center;
+			justify-content: center;
+			video {
+				width: 100%;
+				height: 100%;
+			}
+			.play {
+				z-index: 4;
+				top: center;
+				cursor: pointer;
+				position: absolute;
+			}
+		}
+		& > svg {
+			width: 100%;
+			path {
+				fill: transparent;
+			}
+		}
 	}
 `
 
