@@ -33,4 +33,9 @@ export const WrapCards = styled('div')`
 	display: grid;
 	gap: 25px 20px;
 	grid-template-columns: repeat(3, 1fr);
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			gridTemplateColumns: '1fr',
+		},
+	})}
 `

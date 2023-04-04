@@ -6,10 +6,33 @@ export const Container = styled('div')`
 	position: relative;
 	align-items: center;
 	flex-direction: column;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '30px 0 40px',
+		},
+	})}
 `
 
 export const WrapText = styled('div')`
+	max-width: 575px;
 	padding: 20px 0 36px;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '8px 0 15px',
+		},
+	})};
+`
+
+export const WrapText10 = styled('div')`
+	display: flex;
+	max-width: 680px;
+	align-items: center;
+	justify-content: center;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '0 24px',
+		},
+	})}
 `
 
 export const WrapLaptop = styled('div')`
@@ -45,8 +68,21 @@ export const WrapLaptop = styled('div')`
 			.play {
 				z-index: 4;
 				top: center;
-				cursor: pointer;
 				position: absolute;
+				svg {
+					max-width: 200px;
+					max-height: 200px;
+					${({ theme }) => ({
+						[theme.breakpoints.down('sm')]: {
+							maxWidth: '100px',
+							maxHeight: '100px',
+						},
+						[theme.breakpoints.between('sm', 'md')]: {
+							maxWidth: '140px',
+							maxHeight: '140px',
+						},
+					})}
+				}
 			}
 		}
 		& > svg {
@@ -62,9 +98,17 @@ export const WrapBackground = styled('div')`
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 1400px;
 	z-index: -1;
+	height: 1450px;
 	position: absolute;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			height: '800px',
+		},
+		[theme.breakpoints.between('sm', 'md')]: {
+			height: '1400px',
+		},
+	})}
 	svg {
 		width: 100%;
 		height: 100%;

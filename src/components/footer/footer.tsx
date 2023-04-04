@@ -5,7 +5,15 @@ import { Socials } from '@/components/socials'
 import { Box, Typography } from '@mui/material'
 import { Subscription } from '@/components/subscription'
 import { IconLogoHorizontal } from '@/assets/icons/logo-horizontal'
-import { Up, Down, Wrapper, Container, WrapContact } from './style'
+import {
+	Up,
+	Down,
+	Wrapper,
+	Container,
+	WrapContact,
+	WrapMobileSocial,
+	WrapDesktopSocial,
+} from './style'
 
 export const Footer = () => {
 	return (
@@ -49,14 +57,17 @@ export const Footer = () => {
 							dolor laoreet mollis convallis nunc lacinia. Faucibus.
 						</Typography>
 						<Subscription />
-						<Box display='flex' justifyContent='flex-end'>
+						<WrapDesktopSocial>
 							<Socials variant='footer' />
-						</Box>
+						</WrapDesktopSocial>
 					</Box>
 				</Up>
 				<Down>
 					<Navbar variant='footer' />
 					<span>© 2022-2023, All Rights Reserved</span>
+					<WrapMobileSocial>
+						<Socials variant='footer' />
+					</WrapMobileSocial>
 				</Down>
 			</Wrapper>
 		</Container>

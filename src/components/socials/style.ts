@@ -7,7 +7,6 @@ export interface ISocial {
 export const Container = styled('div')<ISocial>`
 	gap: 15px;
 	display: grid;
-	margin-top: 32px;
 	width: fit-content;
 	white-space: nowrap;
 	grid-template-columns: repeat(4, min-content);
@@ -19,5 +18,9 @@ export const Container = styled('div')<ISocial>`
 		}
 		width: ${({ variant }) => variant === 'drawer-mobile' && '37px'};
 		height: ${({ variant }) => variant === 'drawer-mobile' && '37px'};
+	}
+	a {
+		display: flex;
+		align-items: center;
 	}
 `

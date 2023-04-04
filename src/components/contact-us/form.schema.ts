@@ -1,11 +1,11 @@
-import { object, string, type ObjectSchema } from 'yup'
+import { boolean, object, string, type ObjectSchema } from 'yup'
 
 export type FormTypes = {
 	first_name: string
 	last_name: string
 	email: string
 	phone_number: string
-	service: string
+	service: boolean
 }
 
 export const defaultValues = {
@@ -21,5 +21,5 @@ export const schema: ObjectSchema<FormTypes> = object().shape({
 	first_name: string().nullable().required(),
 	last_name: string().nullable().required(),
 	phone_number: string().nullable().required(),
-	service: string().nullable().required(),
+	service: boolean().nullable().required(),
 })

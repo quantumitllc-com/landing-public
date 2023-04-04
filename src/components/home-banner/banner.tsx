@@ -1,17 +1,19 @@
-import { getIntro, getVideo } from '@/pages/api'
-import { Typography } from '@mui/material'
+import { IconPlay } from '@/assets/icons/play'
+import { useBoolean } from '@/hooks/useBoolean'
 import { useQuery } from '@tanstack/react-query'
+import { getIntro, getVideo } from '@/pages/api'
 import { IconLaptop } from '@/assets/icons/laptop'
+import { IconScreen } from '@/assets/icons/screen'
 import { ContactUs } from '@/components/contact-us'
 import { IconBackground } from '@/assets/icons/background'
+import { Dialog, IconButton, Typography } from '@mui/material'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { WrapText, Container, WrapLaptop, WrapBackground } from './style'
-import { IconScreen } from '@/assets/icons/screen'
-import { IconPlay } from '@/assets/icons/play'
+import { WrapText, WrapText10, Container, WrapLaptop, WrapBackground } from './style'
 
 export const HomeBanner = () => {
-	// const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.INTRO], queryFn: getIntro })
+	const { value, setTrue, setFalse } = useBoolean()
 	const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.VIDEO], queryFn: getVideo })
+	const { data: dataIntro } = useQuery({ queryKey: [REACT_QUERY_KEYS.INTRO], queryFn: getIntro })
 
 	return (
 		<Container>
@@ -19,40 +21,32 @@ export const HomeBanner = () => {
 				THE BEST CREATIVE AGENCY
 			</Typography>
 			<WrapText>
-				<Typography
-					component='h1'
-					align='center'
-					variant='title60'
-					sx={{
-						maxWidth: '575px',
-					}}
-				>
-					We are the solution for your project
+				<Typography component='h1' align='center' variant='title60'>
+					{dataIntro?.title}
 				</Typography>
 			</WrapText>
-			<Typography
-				align='center'
-				variant='text40'
-				sx={{
-					maxWidth: '680px',
-				}}
-			>
-				We are a creative agency that focuses on quality and user experience, Together with us make
-				all your dream projects come true
-			</Typography>
+			<WrapText10>
+				<Typography align='center' variant='text40'>
+					{dataIntro?.subtitle}
+				</Typography>
+			</WrapText10>
 			<ContactUs variant='request' />
 			<WrapLaptop>
 				<IconLaptop />
 				<div className='screen'>
 					<div className='video_play'>
 						<video>
-							<source src={data.video_url} />
+							<source src={data?.video_url} />
 						</video>
-						<div className='play'>
+						<IconButton onClick={setTrue} className='play'>
 							<IconPlay />
-						</div>
+						</IconButton>
+						<Dialog open={value} onClose={setFalse} maxWidth='lg'>
+							<video controls>
+								<source src={data?.video_url} />
+							</video>
+						</Dialog>
 					</div>
-
 					<IconScreen />
 				</div>
 			</WrapLaptop>

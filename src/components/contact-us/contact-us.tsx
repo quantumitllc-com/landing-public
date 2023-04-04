@@ -20,7 +20,7 @@ interface IContact {
 }
 
 export const ContactUs = ({ variant }: IContact) => {
-	const { form, value, setTrue, setFalse, onSubmit } = useContact()
+	const { form, value, setTrue, setFalse, onSubmit, isLoading } = useContact()
 
 	return (
 		<>
@@ -114,7 +114,12 @@ export const ContactUs = ({ variant }: IContact) => {
 						<Checkbox name='service' label='Other' control={form.control} />
 					</WrapperChecks>
 					<Box display='flex' alignItems='center' justifyContent='flex-end'>
-						<Button type='submit' variant='contained' style={{ borderRadius: 8 }}>
+						<Button
+							type='submit'
+							variant='contained'
+							disabled={isLoading}
+							style={{ borderRadius: 8 }}
+						>
 							Submit order
 						</Button>
 					</Box>

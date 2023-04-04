@@ -7,6 +7,11 @@ export const Container = styled('div')`
 	align-items: center;
 	padding: 80px 0 50px;
 	flex-direction: column;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '25px 0',
+		},
+	})}
 `
 
 export const WrapContent = styled('div')`
@@ -18,6 +23,13 @@ export const WrapContent = styled('div')`
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			top: 0,
+			gap: '15px',
+			padding: '0 38px',
+		},
+	})}
 `
 
 export const Header = styled('div')`
@@ -47,7 +59,20 @@ export const WrapButtonRequest = styled('div')`
 		top: -20px;
 		right: 100%;
 		position: absolute;
+		svg {
+			${({ theme }) => ({
+				[theme.breakpoints.down('sm')]: {
+					width: '28px',
+					height: '28px',
+				},
+			})};
+		}
 	}
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			marginTop: '30px',
+		},
+	})};
 `
 
 export const WrapperChecks = styled('div')`

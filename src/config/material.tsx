@@ -290,6 +290,10 @@ export const theme = createTheme({
 						borderRadius: '33px',
 						letterSpacing: '0.0035em',
 						color: defaultCreateTheme.palette.colors.BLUE20,
+						[defaultCreateTheme.breakpoints.down('sm')]: {
+							height: '42px',
+							fontSize: '14px',
+						},
 					},
 				},
 				{

@@ -5,8 +5,12 @@ export const getVideo = async () => {
 	return data
 }
 
-export const getIntro = async () => {
-	const { data } = await request('intro/')
+export const getIntro = async (locale = 'en') => {
+	const { data } = await request('intro/', {
+		headers: {
+			'Accept-Language': locale,
+		},
+	})
 	return data
 }
 

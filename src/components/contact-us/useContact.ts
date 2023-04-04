@@ -18,5 +18,5 @@ export const useContact = () => {
 
 	const onSubmit = (data: FormTypes) => mutate(data)
 
-	return { form, value, setTrue, setFalse, onSubmit }
+	return { form, value, setTrue, setFalse, onSubmit, isLoading }
 }

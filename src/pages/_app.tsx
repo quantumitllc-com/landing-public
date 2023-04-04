@@ -46,20 +46,20 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 					--font-gilroy: ${gilroy.style.fontFamily};
 				}
 			`}</style>
-			<ErrorBoundary>
+			<ThemeProvider theme={theme}>
+				{/* <ErrorBoundary> */}
 				<QueryClientProvider client={queryClient}>
 					<Hydrate state={pageProps.dehydratedState}>
 						<CacheProvider value={emotionCache}>
-							<ThemeProvider theme={theme}>
-								<Layout {...pageProps}>
-									<CssBaseline />
-									<Component {...pageProps} />
-								</Layout>
-							</ThemeProvider>
+							<Layout {...pageProps}>
+								<CssBaseline />
+								<Component {...pageProps} />
+							</Layout>
 						</CacheProvider>
 					</Hydrate>
 				</QueryClientProvider>
-			</ErrorBoundary>
+				{/* </ErrorBoundary> */}
+			</ThemeProvider>
 		</>
 	)
 }

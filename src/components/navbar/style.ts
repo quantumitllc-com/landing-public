@@ -32,4 +32,9 @@ export const Nav = styled('nav')<INavbar>`
 			justify-content: ${({ variant }) => variant === 'drawer-mobile' && 'space-between'};
 		}
 	}
+	${({ theme, variant }) => ({
+		[theme.breakpoints.down('sm')]: {
+			display: variant === 'footer' ? 'none' : 'flex',
+		},
+	})}
 `
