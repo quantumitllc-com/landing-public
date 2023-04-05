@@ -2,10 +2,15 @@ import { styled } from '@mui/material/styles'
 
 export const Container = styled('div')`
 	display: flex;
-	padding: 230px 0 0;
+	padding-top: 230px;
 	position: relative;
 	align-items: center;
 	flex-direction: column;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			paddingTop: '60px',
+		},
+	})}
 `
 
 export const WrapIcon = styled('div')`
@@ -19,10 +24,20 @@ export const WrapIcon = styled('div')`
 		width: 80%;
 		height: 100%;
 	}
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			top: '40px',
+		},
+	})}
 `
 
 export const WrapText = styled('div')`
 	padding: 20px 0 27px;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '8px 18px 17px',
+		},
+	})}
 `
 
 export const Slider = styled('div')`
@@ -53,4 +68,9 @@ export const WrapButtons = styled('div')`
 	.MuiTouchRipple-root .MuiTouchRipple-child {
 		border-radius: 50%;
 	}
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			display: 'none',
+		},
+	})}
 `

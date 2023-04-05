@@ -7,8 +7,8 @@ import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { WrapText, WrapIcon, Container, WrapCards, Wrapper } from './style'
 
 export const Services = () => {
-	// const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.SERVICES], queryFn: getServices })
-	// console.log(data)
+	const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.SERVICES], queryFn: getServices })
+	console.log(data)
 	return (
 		<Container>
 			<WrapIcon>
@@ -35,6 +35,7 @@ export const Services = () => {
 				variant='text50'
 				sx={{
 					maxWidth: '700px',
+					padding: '0 18px',
 				}}
 			>
 				User experience is very important, therefore we are trying more so that users get the best
@@ -42,12 +43,9 @@ export const Services = () => {
 			</Typography>
 			<Wrapper>
 				<WrapCards>
-					<CardService />
-					<CardService />
-					<CardService />
-					<CardService />
-					<CardService />
-					<CardService />
+					{data.map((v: any, i: number) => (
+						<CardService key={i} {...v} />
+					))}
 				</WrapCards>
 			</Wrapper>
 		</Container>

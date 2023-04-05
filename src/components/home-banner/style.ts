@@ -18,7 +18,7 @@ export const WrapText = styled('div')`
 	padding: 20px 0 36px;
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
-			padding: '8px 0 15px',
+			padding: '8px 18px 15px',
 		},
 	})};
 `

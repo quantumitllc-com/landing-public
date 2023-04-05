@@ -12,3 +12,11 @@ export const Container = styled('div')`
 export const WrapText = styled('div')`
 	padding: 32px 0 11px;
 `
+
+export const WrapImage = styled('div')`
+	max-width: 18px;
+	max-height: 18px;
+	img {
+		position: static !important;
+	}
+`

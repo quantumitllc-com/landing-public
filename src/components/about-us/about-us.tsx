@@ -4,7 +4,7 @@ import { Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import ImageAboutUs from '@/assets/images/about-us.webp'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { Wrapper, WrapTexts, WrapImage, Container, HighLight } from './style'
+import { Wrapper, WrapTexts, WrapImage, Container } from './style'
 
 export const AboutUs = () => {
 	const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.ABOUT], queryFn: getAbout })
@@ -16,7 +16,7 @@ export const AboutUs = () => {
 				</Typography>
 				<WrapTexts>
 					<Typography variant='title40' component='h2'>
-						We build bridges between <HighLight>companies and customers</HighLight>
+						We build bridges between companies and customers
 					</Typography>
 					<Typography variant='text40' component='h4'>
 						To build software that gives customer-facing teams at small and medium sized businesses

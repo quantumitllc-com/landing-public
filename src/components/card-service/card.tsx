@@ -1,17 +1,26 @@
+import Image from 'next/image'
 import { Typography } from '@mui/material'
-import { WrapText, Container } from './style'
+import { WrapText, WrapImage, Container } from './style'
 
-export const CardService = () => {
+interface IService {
+	image: string
+	text: string
+	title: string
+}
+
+export const CardService = ({ text, image, title }: IService) => {
 	return (
 		<Container>
+			<WrapImage>
+				<Image src={image} alt={title} fill />
+			</WrapImage>
 			<WrapText>
 				<Typography variant='title70' component='h2'>
-					Web Development
+					{title}
 				</Typography>
 			</WrapText>
 			<Typography variant='text60' component='h3'>
-				Lorem ipsum dolor sit amet consectetur. Adipiscing nisl egestas cras donec risus. Dictum
-				scelerisque nunc vitae risus massa neque morbi hac. Aliquam augue sed ac habitant proin.
+				{text}
 			</Typography>
 		</Container>
 	)

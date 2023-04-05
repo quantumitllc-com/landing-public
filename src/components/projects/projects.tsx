@@ -32,6 +32,7 @@ export const Projects = () => {
 				variant='text50'
 				sx={{
 					maxWidth: '750px',
+					padding: '0 18px',
 				}}
 			>
 				Projects that are carried out professionally, with collaboration between divisions, produce

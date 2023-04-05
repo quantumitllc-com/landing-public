@@ -18,9 +18,20 @@ export const Container = styled('div')<ISocial>`
 		}
 		width: ${({ variant }) => variant === 'drawer-mobile' && '37px'};
 		height: ${({ variant }) => variant === 'drawer-mobile' && '37px'};
+		${({ theme, variant }) => ({
+			[theme.breakpoints.down('sm')]: {
+				width: variant === 'footer' && '29px',
+				height: variant === 'footer' && '29px',
+			},
+		})}
 	}
 	a {
 		display: flex;
 		align-items: center;
 	}
+	${({ theme, variant }) => ({
+		[theme.breakpoints.down('sm')]: {
+			gap: variant === 'footer' && '11px',
+		},
+	})}
 `
