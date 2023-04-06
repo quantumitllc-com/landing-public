@@ -14,9 +14,46 @@ export const WrapText = styled('div')`
 `
 
 export const WrapImage = styled('div')`
-	max-width: 18px;
-	max-height: 18px;
+	max-width: 28px;
+	max-height: 28px;
 	img {
 		position: static !important;
+	}
+`
+
+export const WrapCircle = styled('div')`
+	width: 92px;
+	height: 92px;
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	border: 0.773108px solid rgba(9, 31, 44, 0.1);
+`
+
+export const Circle = styled('div')`
+	width: 67px;
+	height: 67px;
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	position: relative;
+	justify-content: center;
+	border: 0.565213px solid rgba(9, 31, 44, 0.1);
+	::after {
+		top: 0;
+		left: 0;
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-width: 1px;
+		position: absolute;
+		border-radius: 50%;
+		border-style: solid;
+		transform: rotate(-45deg);
+		border-bottom-color: transparent;
+		border-top-color: ${({ theme }) => theme.palette.colors.GREEN};
+		border-left-color: ${({ theme }) => theme.palette.colors.GREEN};
+		border-right-color: ${({ theme }) => theme.palette.colors.GREEN};
 	}
 `

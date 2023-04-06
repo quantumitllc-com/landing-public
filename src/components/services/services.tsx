@@ -8,7 +8,7 @@ import { WrapText, WrapIcon, Container, WrapCards, Wrapper } from './style'
 
 export const Services = () => {
 	const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.SERVICES], queryFn: getServices })
-	console.log(data)
+
 	return (
 		<Container>
 			<WrapIcon>

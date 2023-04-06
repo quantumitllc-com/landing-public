@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Typography } from '@mui/material'
-import { WrapText, WrapImage, Container } from './style'
+import { Circle, WrapText, WrapImage, Container, WrapCircle } from './style'
 
 interface IService {
 	image: string
@@ -11,9 +11,13 @@ interface IService {
 export const CardService = ({ text, image, title }: IService) => {
 	return (
 		<Container>
-			<WrapImage>
-				<Image src={image} alt={title} fill />
-			</WrapImage>
+			<WrapCircle>
+				<Circle>
+					<WrapImage>
+						<Image src={image} alt={title} fill />
+					</WrapImage>
+				</Circle>
+			</WrapCircle>
 			<WrapText>
 				<Typography variant='title70' component='h2'>
 					{title}

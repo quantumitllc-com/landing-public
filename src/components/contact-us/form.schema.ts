@@ -1,11 +1,11 @@
-import { boolean, object, string, type ObjectSchema } from 'yup'
+import { array, number, object, string, type ObjectSchema } from 'yup'
 
 export type FormTypes = {
 	first_name: string
 	last_name: string
 	email: string
 	phone_number: string
-	service: boolean
+	service: number[]
 }
 
 export const defaultValues = {
@@ -13,7 +13,7 @@ export const defaultValues = {
 	last_name: '',
 	email: '',
 	phone_number: '',
-	service: false,
+	service: [],
 }
 
 export const schema: ObjectSchema<FormTypes> = object().shape({
@@ -21,5 +21,5 @@ export const schema: ObjectSchema<FormTypes> = object().shape({
 	first_name: string().nullable().required(),
 	last_name: string().nullable().required(),
 	phone_number: string().nullable().required(),
-	service: boolean().nullable().required(),
+	service: array().of(number().required()).required(),
 })
