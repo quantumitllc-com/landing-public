@@ -1,9 +1,9 @@
 import Link from 'next/link'
+import { Follow } from '@/components/follow'
 import { Navbar } from '@/components/navbar'
 import { CONTACT } from '@/constants/contact'
 import { Socials } from '@/components/socials'
 import { Box, Typography } from '@mui/material'
-import { Subscription } from '@/components/subscription'
 import { IconLogoHorizontal } from '@/assets/icons/logo-horizontal'
 import {
 	Up,
@@ -56,7 +56,7 @@ export const Footer = () => {
 							Lorem ipsum dolor sit amet consectetur. Nec aliquam neque at vitae. Congue interdum
 							dolor laoreet mollis convallis nunc lacinia. Faucibus.
 						</Typography>
-						<Subscription />
+						<Follow />
 						<WrapDesktopSocial>
 							<Socials variant='footer' />
 						</WrapDesktopSocial>

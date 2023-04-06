@@ -1,5 +1,6 @@
 import { getServices } from '@/pages/api'
 import { Typography } from '@mui/material'
+import { IService } from '@/types/serivce'
 import { useQuery } from '@tanstack/react-query'
 import { IconServices } from '@/assets/icons/services'
 import { CardService } from '@/components/card-service'
@@ -43,8 +44,8 @@ export const Services = () => {
 			</Typography>
 			<Wrapper>
 				<WrapCards>
-					{data.map((v: any, i: number) => (
-						<CardService key={i} {...v} />
+					{data.map((v: IService) => (
+						<CardService key={v.id} {...v} />
 					))}
 				</WrapCards>
 			</Wrapper>

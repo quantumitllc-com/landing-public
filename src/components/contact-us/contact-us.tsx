@@ -108,8 +108,8 @@ export const ContactUs = ({ variant }: IContact) => {
 						What kind of service do you need?
 					</Typography>
 					<WrapperChecks>
-						{dataService.map(({ title }: IService, i: number) => (
-							<Checkbox key={i} name={`service_${++i}`} label={title} control={form.control} />
+						{dataService.map(({ title, id }: IService) => (
+							<Checkbox key={id} name={`service_${id}`} label={title} control={form.control} />
 						))}
 					</WrapperChecks>
 					<Box display='flex' alignItems='center' justifyContent='flex-end'>

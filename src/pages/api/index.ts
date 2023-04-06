@@ -38,3 +38,8 @@ export const postContact = async <T>(data: T) => {
 	const res = await request.post('contact/', data)
 	return res
 }
+
+export const postFollow = async <T>(data: T) => {
+	const res = await request.post('email/', data)
+	return res
+}
