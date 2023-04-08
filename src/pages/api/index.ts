@@ -51,6 +51,15 @@ export const getProjects = async (locale = 'en') => {
 	return data
 }
 
+export const getProject = async (id: string, locale = 'en') => {
+	const { data } = await request(`project/${id}`, {
+		headers: {
+			'Accept-Language': locale,
+		},
+	})
+	return data
+}
+
 export const getTechnologies = async (locale = 'en') => {
 	const { data } = await request('technologies/', {
 		headers: {

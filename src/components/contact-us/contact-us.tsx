@@ -47,7 +47,7 @@ export const ContactUs = ({ variant }: IContact) => {
 				<Container>
 					<IconBgTouch />
 					<WrapContent>
-						<Typography sx={{ maxWidth: '450px' }} variant='title10' component='h2'>
+						<Typography align='center' sx={{ maxWidth: '450px' }} variant='title10' component='h2'>
 							Let’s work together on a project with us
 						</Typography>
 						<Button size='medium' variant='contained' onClick={setTrue}>

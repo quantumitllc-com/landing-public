@@ -95,9 +95,6 @@ export const WrapImage = styled('div')`
 	width: 28px;
 	height: 28px;
 
-	img {
-		position: static !important;
-	}
 	&.dark_image {
 		display: flex;
 	}

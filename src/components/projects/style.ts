@@ -17,7 +17,6 @@ export const WrapImage = styled('div')`
 	display: flex;
 	padding-bottom: 20px;
 	img {
-		position: static !important;
 		object-fit: contain !important;
 	}
 `
