@@ -21,6 +21,7 @@ export const VARIABLES_CSS = {
 		BLUE10: '#172C38',
 		BLUE20: '#1C1F25',
 		BLUE30: '#170F49',
+		BLUE40: '#091f2ce6',
 	},
 	BREAKPOINTS: {
 		values: {

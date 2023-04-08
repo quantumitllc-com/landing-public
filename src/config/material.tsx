@@ -22,6 +22,7 @@ declare module '@mui/material/styles' {
 		text50: React.CSSProperties
 		text60: React.CSSProperties
 		text70: React.CSSProperties
+		text80: React.CSSProperties
 		title: React.CSSProperties
 		title10: React.CSSProperties
 		title20: React.CSSProperties
@@ -31,6 +32,7 @@ declare module '@mui/material/styles' {
 		title60: React.CSSProperties
 		title70: React.CSSProperties
 		title80: React.CSSProperties
+		title90: React.CSSProperties
 	}
 
 	interface TypographyVariantsOptions {
@@ -42,6 +44,7 @@ declare module '@mui/material/styles' {
 		text50: React.CSSProperties
 		text60: React.CSSProperties
 		text70: React.CSSProperties
+		text80: React.CSSProperties
 		title: React.CSSProperties
 		title10: React.CSSProperties
 		title20: React.CSSProperties
@@ -51,6 +54,7 @@ declare module '@mui/material/styles' {
 		title60: React.CSSProperties
 		title70: React.CSSProperties
 		title80: React.CSSProperties
+		title90: React.CSSProperties
 	}
 }
 
@@ -64,6 +68,7 @@ declare module '@mui/material/Typography' {
 		text50: true
 		text60: true
 		text70: true
+		text80: true
 		title: true
 		title10: true
 		title20: true
@@ -73,6 +78,7 @@ declare module '@mui/material/Typography' {
 		title60: true
 		title70: true
 		title80: true
+		title90: true
 	}
 }
 
@@ -163,6 +169,16 @@ export const theme = createTheme({
 				fontWeight: 400,
 			},
 		},
+		text80: {
+			fontWeight: 400,
+			fontSize: '18px',
+			lineHeight: '154.7%',
+			color: defaultCreateTheme.palette.colors.GRAY90,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '12px',
+				lineHeight: ' 148.7%',
+			},
+		},
 		title: {
 			fontWeight: 600,
 			fontSize: '18px',
@@ -250,6 +266,15 @@ export const theme = createTheme({
 			color: defaultCreateTheme.palette.colors.BLUE20,
 			[defaultCreateTheme.breakpoints.down('sm')]: {
 				fontWeight: 500,
+			},
+		},
+		title90: {
+			fontWeight: 600,
+			fontSize: '26px',
+			lineHeight: '116.7%',
+			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '16px',
 			},
 		},
 	},
