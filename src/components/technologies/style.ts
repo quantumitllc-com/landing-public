@@ -87,28 +87,171 @@ export const Wrap = styled('div')`
 	}
 `
 
-export const WrapTabPanel = styled('div')`
-	width: 100%;
-	display: flex;
-	padding: 60px 0 20px;
-	justify-content: center;
-	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			padding: '20px 0 10px',
-		},
-	})}
-`
-
 export const WrapTabPanelTexts = styled('div')`
 	gap: 15px;
+	z-index: 11;
 	display: flex;
-	padding: 0 18px;
 	max-width: 620px;
+	position: absolute;
 	align-items: center;
+	padding: 60px 18px 0;
 	flex-direction: column;
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			gap: '7px',
 		},
 	})}
+`
+
+export const WrapTabPanel = styled('div')`
+	width: 100%;
+	display: flex;
+	overflow: hidden;
+	min-height: 745px;
+	position: relative;
+	justify-content: center;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '20px 0 10px',
+		},
+	})}
+	.wrap-circle-1 {
+		z-index: 10;
+	}
+	.wrap-circle-2 {
+		z-index: 9;
+	}
+	.wrap-circle-3 {
+		z-index: 8;
+	}
+	.wrap-circle-4 {
+		z-index: 7;
+	}
+`
+
+export const WrapCircle = styled('div')`
+	height: 100%;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	.circle {
+		display: flex;
+		border-radius: 50%;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+	}
+	.icon {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		position: absolute;
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.content {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		position: absolute;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		animation: spin 4s linear infinite;
+		-moz-animation: spin 4s linear infinite;
+		-webkit-animation: spin 4s linear infinite;
+		:hover {
+			animation-play-state: paused;
+		}
+
+		@-moz-keyframes spin {
+			100% {
+				-moz-transform: rotate(360deg);
+			}
+		}
+
+		@-webkit-keyframes spin {
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+	}
+`
+
+export const Circle1 = styled('div')`
+	width: 345px;
+	height: 345px;
+	.technologies {
+		width: calc(100% - 30px);
+		height: calc(100% - 30px);
+	}
+	.content {
+		animation-delay: 0;
+	}
+`
+
+export const Circle2 = styled('div')`
+	width: 645px;
+	height: 645px;
+	.technologies {
+		width: calc(100% - 120px);
+		height: calc(100% - 120px);
+	}
+	.content {
+		animation-delay: 500ms;
+	}
+`
+
+export const Circle3 = styled('div')`
+	width: 890px;
+	height: 890px;
+	.technologies {
+		width: calc(100% - 180px);
+		height: calc(100% - 180px);
+	}
+	.content {
+		animation-delay: 1000ms;
+	}
+`
+
+export const Circle4 = styled('div')`
+	width: 1185px;
+	height: 1185px;
+	.technologies {
+		width: calc(100% - 270px);
+		height: calc(100% - 270px);
+	}
+	.content {
+		animation-delay: 1500ms;
+	}
+`
+
+export const WrapTechnologies = styled('div')`
+	display: grid;
+	border-radius: 50%;
+	grid-template-rows: 1fr;
+	justify-content: space-between;
+	grid-template-columns: auto auto;
+`
+
+export const Technology = styled('div')`
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	box-shadow: 0px 25px 55px rgba(0, 0, 0, 0.1);
 `

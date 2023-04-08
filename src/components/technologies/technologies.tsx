@@ -3,9 +3,23 @@ import { getTechnologies } from '@/pages/api'
 import { Tab, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import { SyntheticEvent, useState } from 'react'
+import { IconEllipse } from '@/assets/icons/ellipse'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { Wrap, WrapText, Container, WrapTabPanel, WrapTabPanelTexts } from './style'
+import {
+	Wrap,
+	Circle1,
+	Circle2,
+	Circle3,
+	Circle4,
+	WrapText,
+	Container,
+	Technology,
+	WrapCircle,
+	WrapTabPanel,
+	WrapTechnologies,
+	WrapTabPanelTexts,
+} from './style'
 
 export const Technologies = () => {
 	const { locale } = useRouter()
@@ -19,6 +33,7 @@ export const Technologies = () => {
 	const handleChange = (_: SyntheticEvent, newValue: string) => {
 		setValue(newValue)
 	}
+	console.log(data)
 
 	return (
 		<Container>
@@ -52,6 +67,62 @@ export const Technologies = () => {
 				{data.map((technology: any) => (
 					<TabPanel key={technology?.id} value={String(technology?.id)}>
 						<WrapTabPanel>
+							<WrapCircle className='wrap-circle-1'>
+								<Circle1 className='circle'>
+									<div className='icon'>
+										<IconEllipse />
+									</div>
+									<div className='content'>
+										<WrapTechnologies className='technologies'>
+											<Technology />
+											<Technology />
+											<Technology />
+										</WrapTechnologies>
+									</div>
+								</Circle1>
+							</WrapCircle>
+							<WrapCircle className='wrap-circle-2'>
+								<Circle2 className='circle'>
+									<div className='icon'>
+										<IconEllipse />
+									</div>
+									<div className='content'>
+										<WrapTechnologies className='technologies'>
+											<Technology />
+											<Technology />
+											<Technology />
+										</WrapTechnologies>
+									</div>
+								</Circle2>
+							</WrapCircle>
+							<WrapCircle className='wrap-circle-3'>
+								<Circle3 className='circle'>
+									<div className='icon'>
+										<IconEllipse />
+									</div>
+									<div className='content'>
+										<WrapTechnologies className='technologies'>
+											<Technology />
+											<Technology />
+											<Technology />
+										</WrapTechnologies>
+									</div>
+								</Circle3>
+							</WrapCircle>
+							<WrapCircle className='wrap-circle-4'>
+								<Circle4 className='circle'>
+									<div className='icon'>
+										<IconEllipse />
+									</div>
+									<div className='content'>
+										<WrapTechnologies className='technologies'>
+											<Technology />
+											<Technology />
+											<Technology />
+										</WrapTechnologies>
+									</div>
+								</Circle4>
+							</WrapCircle>
 							<WrapTabPanelTexts>
 								<Typography align='center' variant='title90' component='h4'>
 									{technology?.name}
