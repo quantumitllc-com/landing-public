@@ -5,4 +5,7 @@ export const REACT_QUERY_KEYS = {
 	VIDEO: 'get-video',
 	PROJECTS: 'get-projects-list',
 	SERVICES: 'get-services-list',
+	TECHNOLOGIES: 'get-technologies-list',
+	TESTIMONIALS: 'get-testimonials-list',
+	CONTACTINFORMATION: 'get-contact-information',
 }

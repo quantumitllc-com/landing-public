@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { getProjects } from '@/pages/api'
 import { WrapText, Container } from './style'
 import { useQuery } from '@tanstack/react-query'
@@ -7,7 +8,11 @@ import { Button, Typography } from '@mui/material'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 
 export const Projects = () => {
-	// const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.PROJECTS], queryFn: getProjects })
+	const { locale } = useRouter()
+	const { data } = useQuery({
+		queryKey: [REACT_QUERY_KEYS.PROJECTS, locale],
+		queryFn: () => getProjects(locale),
+	})
 
 	return (
 		<Container>

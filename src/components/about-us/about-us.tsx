@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { getAbout } from '@/pages/api'
+import { useRouter } from 'next/router'
 import { Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import ImageAboutUs from '@/assets/images/about-us.webp'
@@ -7,7 +8,12 @@ import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { Wrapper, WrapTexts, WrapImage, Container } from './style'
 
 export const AboutUs = () => {
-	const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.ABOUT], queryFn: getAbout })
+	const { locale } = useRouter()
+	const { data } = useQuery({
+		queryKey: [REACT_QUERY_KEYS.ABOUT, locale],
+		queryFn: () => getAbout(locale),
+	})
+
 	return (
 		<Container>
 			<Wrapper>

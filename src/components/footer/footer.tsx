@@ -1,9 +1,13 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Follow } from '@/components/follow'
 import { Navbar } from '@/components/navbar'
 import { CONTACT } from '@/constants/contact'
 import { Socials } from '@/components/socials'
 import { Box, Typography } from '@mui/material'
+import { useQuery } from '@tanstack/react-query'
+import { getContactInformation } from '@/pages/api'
+import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { IconLogoHorizontal } from '@/assets/icons/logo-horizontal'
 import {
 	Up,
@@ -16,6 +20,12 @@ import {
 } from './style'
 
 export const Footer = () => {
+	const { locale } = useRouter()
+	const { data = [] } = useQuery({
+		queryKey: [REACT_QUERY_KEYS.CONTACTINFORMATION, locale],
+		queryFn: () => getContactInformation(locale),
+	})
+
 	return (
 		<Container>
 			<Wrapper>

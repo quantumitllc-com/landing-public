@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { IconPlay } from '@/assets/icons/play'
 import { useBoolean } from '@/hooks/useBoolean'
 import { useQuery } from '@tanstack/react-query'
@@ -11,9 +12,13 @@ import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { WrapText, WrapText10, Container, WrapLaptop, WrapBackground } from './style'
 
 export const HomeBanner = () => {
+	const { locale } = useRouter()
 	const { value, setTrue, setFalse } = useBoolean()
 	const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.VIDEO], queryFn: getVideo })
-	const { data: dataIntro } = useQuery({ queryKey: [REACT_QUERY_KEYS.INTRO], queryFn: getIntro })
+	const { data: dataIntro } = useQuery({
+		queryKey: [REACT_QUERY_KEYS.INTRO, locale],
+		queryFn: () => getIntro(locale),
+	})
 
 	return (
 		<Container>

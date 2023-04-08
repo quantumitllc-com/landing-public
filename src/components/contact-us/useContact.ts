@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import { useBoolean } from '@/hooks/useBoolean'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -8,11 +9,11 @@ import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { schema, defaultValues, type FormTypes } from './form.schema'
 
 export const useContact = () => {
+	const { locale } = useRouter()
 	const { value, setTrue, setFalse } = useBoolean()
-
-	const { data: dataService } = useQuery({
-		queryKey: [REACT_QUERY_KEYS.SERVICES],
-		queryFn: getServices,
+	const { data: dataService = [] } = useQuery({
+		queryKey: [REACT_QUERY_KEYS.SERVICES, locale],
+		queryFn: () => getServices(locale),
 	})
 
 	const form = useForm<FormTypes>({

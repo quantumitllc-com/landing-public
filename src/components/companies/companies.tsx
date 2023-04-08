@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { getCompanies } from '@/pages/api'
 import Carousel from 'react-multi-carousel'
 import { Wrapper, Container } from './style'
@@ -35,9 +36,10 @@ interface ICompany {
 }
 
 export const Companies = () => {
+	const { locale } = useRouter()
 	const { data = [] } = useQuery({
-		queryKey: [REACT_QUERY_KEYS.COMPANIES],
-		queryFn: getCompanies,
+		queryKey: [REACT_QUERY_KEYS.COMPANIES, locale],
+		queryFn: () => getCompanies(locale),
 	})
 
 	return (

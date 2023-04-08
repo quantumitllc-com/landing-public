@@ -6,9 +6,14 @@ import { IconServices } from '@/assets/icons/services'
 import { CardService } from '@/components/card-service'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { WrapText, WrapIcon, Container, WrapCards, Wrapper } from './style'
+import { useRouter } from 'next/router'
 
 export const Services = () => {
-	const { data } = useQuery({ queryKey: [REACT_QUERY_KEYS.SERVICES], queryFn: getServices })
+	const { locale } = useRouter()
+	const { data = [] } = useQuery({
+		queryKey: [REACT_QUERY_KEYS.SERVICES, locale],
+		queryFn: () => getServices(locale),
+	})
 
 	return (
 		<Container>
