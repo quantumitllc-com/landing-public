@@ -12,7 +12,7 @@ export const IconEllipse = () => {
 				cy='172'
 				r='171.5'
 				stroke='url(#paint0_linear_33_576)'
-				stroke-dasharray='2.56 2.56'
+				strokeDasharray='2.56 2.56'
 			/>
 			<defs>
 				<linearGradient
@@ -23,9 +23,9 @@ export const IconEllipse = () => {
 					y2='344'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='#BDC3D7' stop-opacity='0' />
-					<stop offset='0.721875' stop-color='#BDC3D7' />
-					<stop offset='1' stop-color='#BDC3D7' />
+					<stop stopColor='#BDC3D7' stopOpacity='0' />
+					<stop offset='0.721875' stopColor='#BDC3D7' />
+					<stop offset='1' stopColor='#BDC3D7' />
 				</linearGradient>
 			</defs>
 		</svg>

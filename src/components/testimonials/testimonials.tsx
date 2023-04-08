@@ -1,10 +1,15 @@
+import { useRouter } from 'next/router'
 import { useRef, LegacyRef } from 'react'
-import { IconButton, Typography } from '@mui/material'
 import Carousel from 'react-multi-carousel'
+import { getTestimonials } from '@/pages/api'
+import { useQuery } from '@tanstack/react-query'
+import type { ITestimonial } from '@/types/respones'
+import { IconButton, Typography } from '@mui/material'
 import { IconArrowCircle } from '@/assets/icons/arrow-circle'
 import { IconTestimonials } from '@/assets/icons/testimonials'
-import { Slider, WrapIcon, WrapText, Container, WrapButtons } from './style'
+import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { CardTestimonial } from '@/components/card-testimonial/card'
+import { Slider, WrapIcon, WrapText, Container, WrapButtons } from './style'
 
 const responsive = {
 	desktop: {
@@ -24,6 +29,12 @@ const responsive = {
 }
 
 export const Testimonials = () => {
+	const { locale } = useRouter()
+	const { data = [] } = useQuery<ITestimonial[]>({
+		queryKey: [REACT_QUERY_KEYS.TESTIMONIALS, locale],
+		queryFn: () => getTestimonials(locale),
+	})
+
 	const ref: LegacyRef<Carousel> | undefined = useRef(null)
 	const handleNextSlide = () => {
 		if (ref.current && ref.current.state.totalItems - 1 !== ref.current.state.currentSlide)

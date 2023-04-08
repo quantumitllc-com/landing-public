@@ -117,15 +117,59 @@ export const WrapTabPanel = styled('div')`
 	})}
 	.wrap-circle-1 {
 		z-index: 10;
+		.circle {
+			width: 345px;
+			height: 345px;
+			.technologies {
+				width: calc(100% - 30px);
+				height: calc(100% - 30px);
+			}
+			.content {
+				animation-delay: 0;
+			}
+		}
 	}
 	.wrap-circle-2 {
 		z-index: 9;
+		.circle {
+			width: 645px;
+			height: 645px;
+			.technologies {
+				width: calc(100% - 120px);
+				height: calc(100% - 120px);
+			}
+			.content {
+				animation-delay: 1.5s;
+			}
+		}
 	}
 	.wrap-circle-3 {
 		z-index: 8;
+		.circle {
+			width: 890px;
+			height: 890px;
+			.technologies {
+				width: calc(100% - 180px);
+				height: calc(100% - 180px);
+			}
+			.content {
+				animation-delay: 0.15s;
+			}
+		}
 	}
 	.wrap-circle-4 {
 		z-index: 7;
+		.circle {
+			width: 1185px;
+			height: 1185px;
+			.technologies {
+				width: calc(100% - 270px);
+				height: calc(100% - 270px);
+			}
+			.content {
+				animation-delay: 2.25s;
+			}
+		}
 	}
 `
 
@@ -164,9 +208,9 @@ export const WrapCircle = styled('div')`
 		border-radius: 50%;
 		align-items: center;
 		justify-content: center;
-		animation: spin 4s linear infinite;
-		-moz-animation: spin 4s linear infinite;
-		-webkit-animation: spin 4s linear infinite;
+		animation: spin 15s linear infinite;
+		-moz-animation: spin 15s linear infinite;
+		-webkit-animation: spin 15s linear infinite;
 		:hover {
 			animation-play-state: paused;
 		}
@@ -189,54 +233,6 @@ export const WrapCircle = styled('div')`
 				transform: rotate(360deg);
 			}
 		}
-	}
-`
-
-export const Circle1 = styled('div')`
-	width: 345px;
-	height: 345px;
-	.technologies {
-		width: calc(100% - 30px);
-		height: calc(100% - 30px);
-	}
-	.content {
-		animation-delay: 0;
-	}
-`
-
-export const Circle2 = styled('div')`
-	width: 645px;
-	height: 645px;
-	.technologies {
-		width: calc(100% - 120px);
-		height: calc(100% - 120px);
-	}
-	.content {
-		animation-delay: 500ms;
-	}
-`
-
-export const Circle3 = styled('div')`
-	width: 890px;
-	height: 890px;
-	.technologies {
-		width: calc(100% - 180px);
-		height: calc(100% - 180px);
-	}
-	.content {
-		animation-delay: 1000ms;
-	}
-`
-
-export const Circle4 = styled('div')`
-	width: 1185px;
-	height: 1185px;
-	.technologies {
-		width: calc(100% - 270px);
-		height: calc(100% - 270px);
-	}
-	.content {
-		animation-delay: 1500ms;
 	}
 `
 

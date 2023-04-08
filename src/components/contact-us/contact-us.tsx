@@ -1,6 +1,5 @@
 import { useContact } from './useContact'
 import { Input } from '@/components/input'
-import { IService } from '@/types/serivce'
 import { Checkbox } from '@/components/checkbox'
 import { IconSpread } from '@/assets/icons/spread'
 import { IconRemove } from '@/assets/icons/remove'
@@ -22,6 +21,7 @@ interface IContact {
 
 export const ContactUs = ({ variant }: IContact) => {
 	const { form, value, setTrue, setFalse, onSubmit, isLoading, dataService } = useContact()
+
 	return (
 		<>
 			{variant === 'contact' ? (
@@ -108,7 +108,7 @@ export const ContactUs = ({ variant }: IContact) => {
 						What kind of service do you need?
 					</Typography>
 					<WrapperChecks>
-						{dataService.map(({ title, id }: IService) => (
+						{dataService.map(({ id, title }) => (
 							<Checkbox key={id} name={`service_${id}`} label={title} control={form.control} />
 						))}
 					</WrapperChecks>

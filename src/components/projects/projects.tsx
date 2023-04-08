@@ -1,15 +1,18 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { getProjects } from '@/pages/api'
-import { WrapText, Container } from './style'
 import { useQuery } from '@tanstack/react-query'
 import { IconArrow } from '@/assets/icons/arrow'
+import type { IProject } from '@/types/respones'
 import { Button, Typography } from '@mui/material'
+import { IconChevron } from '@/assets/icons/chevron'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
+import { Wrapper, WrapText, WrapImage, Container, WrapCardTexts, WrapIconChevron } from './style'
 
 export const Projects = () => {
 	const { locale } = useRouter()
-	const { data } = useQuery({
+	const { data = [] } = useQuery<IProject[]>({
 		queryKey: [REACT_QUERY_KEYS.PROJECTS, locale],
 		queryFn: () => getProjects(locale),
 	})
@@ -43,6 +46,32 @@ export const Projects = () => {
 				Projects that are carried out professionally, with collaboration between divisions, produce
 				projects that are ready to use, with great designs and details
 			</Typography>
+			<Wrapper>
+				{data.map(project => (
+					<div key={project.id}>
+						<WrapCardTexts>
+							<Typography align='center' variant='title100' component='h3'>
+								{project.title}
+							</Typography>
+							<Button
+								size='small'
+								component={Link}
+								href={`projects/${project.id}`}
+								endIcon={
+									<WrapIconChevron>
+										<IconChevron />
+									</WrapIconChevron>
+								}
+							>
+								Learn More
+							</Button>
+						</WrapCardTexts>
+						<WrapImage>
+							<Image fill src={project.image} alt={project.title} />
+						</WrapImage>
+					</div>
+				))}
+			</Wrapper>
 			<Button
 				href='projects'
 				size='medium'

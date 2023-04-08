@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import { useBoolean } from '@/hooks/useBoolean'
+import type { IService } from '@/types/respones'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { getServices, postContact } from '@/pages/api'
 import { notifySuccess } from '@/components/notification'
@@ -11,7 +12,7 @@ import { schema, defaultValues, type FormTypes } from './form.schema'
 export const useContact = () => {
 	const { locale } = useRouter()
 	const { value, setTrue, setFalse } = useBoolean()
-	const { data: dataService = [] } = useQuery({
+	const { data: dataService = [] } = useQuery<IService[]>({
 		queryKey: [REACT_QUERY_KEYS.SERVICES, locale],
 		queryFn: () => getServices(locale),
 	})

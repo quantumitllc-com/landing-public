@@ -3,15 +3,12 @@ import { getTechnologies } from '@/pages/api'
 import { Tab, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import { SyntheticEvent, useState } from 'react'
+import type { ITechnology } from '@/types/respones'
 import { IconEllipse } from '@/assets/icons/ellipse'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import {
 	Wrap,
-	Circle1,
-	Circle2,
-	Circle3,
-	Circle4,
 	WrapText,
 	Container,
 	Technology,
@@ -23,7 +20,7 @@ import {
 
 export const Technologies = () => {
 	const { locale } = useRouter()
-	const { data = [] } = useQuery({
+	const { data = [] } = useQuery<ITechnology[]>({
 		queryKey: [REACT_QUERY_KEYS.TECHNOLOGIES, locale],
 		queryFn: () => getTechnologies(locale),
 	})
@@ -33,7 +30,6 @@ export const Technologies = () => {
 	const handleChange = (_: SyntheticEvent, newValue: string) => {
 		setValue(newValue)
 	}
-	console.log(data)
 
 	return (
 		<Container>
@@ -59,16 +55,16 @@ export const Technologies = () => {
 						aria-label='TECHNOLOGIES'
 						TabIndicatorProps={{ sx: { display: 'none' } }}
 					>
-						{data.map((technology: any) => (
-							<Tab key={technology?.id} label={technology?.name} value={String(technology?.id)} />
+						{data.map(technology => (
+							<Tab key={technology.id} label={technology.name} value={String(technology.id)} />
 						))}
 					</TabList>
 				</Wrap>
-				{data.map((technology: any) => (
-					<TabPanel key={technology?.id} value={String(technology?.id)}>
+				{data.map((technology: ITechnology) => (
+					<TabPanel key={technology.id} value={String(technology.id)}>
 						<WrapTabPanel>
 							<WrapCircle className='wrap-circle-1'>
-								<Circle1 className='circle'>
+								<div className='circle'>
 									<div className='icon'>
 										<IconEllipse />
 									</div>
@@ -79,10 +75,10 @@ export const Technologies = () => {
 											<Technology />
 										</WrapTechnologies>
 									</div>
-								</Circle1>
+								</div>
 							</WrapCircle>
 							<WrapCircle className='wrap-circle-2'>
-								<Circle2 className='circle'>
+								<div className='circle'>
 									<div className='icon'>
 										<IconEllipse />
 									</div>
@@ -93,10 +89,10 @@ export const Technologies = () => {
 											<Technology />
 										</WrapTechnologies>
 									</div>
-								</Circle2>
+								</div>
 							</WrapCircle>
 							<WrapCircle className='wrap-circle-3'>
-								<Circle3 className='circle'>
+								<div className='circle'>
 									<div className='icon'>
 										<IconEllipse />
 									</div>
@@ -107,10 +103,10 @@ export const Technologies = () => {
 											<Technology />
 										</WrapTechnologies>
 									</div>
-								</Circle3>
+								</div>
 							</WrapCircle>
 							<WrapCircle className='wrap-circle-4'>
-								<Circle4 className='circle'>
+								<div className='circle'>
 									<div className='icon'>
 										<IconEllipse />
 									</div>
@@ -121,14 +117,14 @@ export const Technologies = () => {
 											<Technology />
 										</WrapTechnologies>
 									</div>
-								</Circle4>
+								</div>
 							</WrapCircle>
 							<WrapTabPanelTexts>
 								<Typography align='center' variant='title90' component='h4'>
-									{technology?.name}
+									{technology.name}
 								</Typography>
 								<Typography align='center' variant='text80' component='h5'>
-									{technology?.text}
+									{technology.text}
 								</Typography>
 							</WrapTabPanelTexts>
 						</WrapTabPanel>

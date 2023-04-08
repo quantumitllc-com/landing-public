@@ -33,6 +33,7 @@ declare module '@mui/material/styles' {
 		title70: React.CSSProperties
 		title80: React.CSSProperties
 		title90: React.CSSProperties
+		title100: React.CSSProperties
 	}
 
 	interface TypographyVariantsOptions {
@@ -55,6 +56,7 @@ declare module '@mui/material/styles' {
 		title70: React.CSSProperties
 		title80: React.CSSProperties
 		title90: React.CSSProperties
+		title100: React.CSSProperties
 	}
 }
 
@@ -79,6 +81,7 @@ declare module '@mui/material/Typography' {
 		title70: true
 		title80: true
 		title90: true
+		title100: true
 	}
 }
 
@@ -275,6 +278,15 @@ export const theme = createTheme({
 			color: defaultCreateTheme.palette.colors.BLUE20,
 			[defaultCreateTheme.breakpoints.down('sm')]: {
 				fontSize: '16px',
+			},
+		},
+		title100: {
+			fontWeight: 600,
+			fontSize: '24px',
+			lineHeight: '116.7%',
+			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '14px',
 			},
 		},
 	},

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Typography } from '@mui/material'
-import { IService } from '@/types/serivce'
+import { IService } from '@/types/respones'
 import { Circle, Wrapper, WrapText, WrapImage, Container, WrapCircle } from './style'
 
 export const CardService = ({ text, title, dark_image, light_image }: IService) => {

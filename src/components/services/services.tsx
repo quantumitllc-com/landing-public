@@ -1,6 +1,6 @@
 import { getServices } from '@/pages/api'
 import { Typography } from '@mui/material'
-import { IService } from '@/types/serivce'
+import type { IService } from '@/types/respones'
 import { useQuery } from '@tanstack/react-query'
 import { IconServices } from '@/assets/icons/services'
 import { CardService } from '@/components/card-service'
@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 
 export const Services = () => {
 	const { locale } = useRouter()
-	const { data = [] } = useQuery({
+	const { data = [] } = useQuery<IService[]>({
 		queryKey: [REACT_QUERY_KEYS.SERVICES, locale],
 		queryFn: () => getServices(locale),
 	})
@@ -49,7 +49,7 @@ export const Services = () => {
 			</Typography>
 			<Wrapper>
 				<WrapCards>
-					{data.map((v: IService) => (
+					{data.map(v => (
 						<CardService key={v.id} {...v} />
 					))}
 				</WrapCards>

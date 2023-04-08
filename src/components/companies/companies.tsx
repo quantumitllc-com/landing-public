@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { getCompanies } from '@/pages/api'
 import Carousel from 'react-multi-carousel'
 import { Wrapper, Container } from './style'
+import type { ICompany } from '@/types/respones'
 import { useQuery } from '@tanstack/react-query'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 
@@ -30,14 +31,9 @@ const responsive = {
 	},
 }
 
-interface ICompany {
-	id: number
-	image: string
-}
-
 export const Companies = () => {
 	const { locale } = useRouter()
-	const { data = [] } = useQuery({
+	const { data = [] } = useQuery<ICompany[]>({
 		queryKey: [REACT_QUERY_KEYS.COMPANIES, locale],
 		queryFn: () => getCompanies(locale),
 	})
@@ -61,7 +57,7 @@ export const Companies = () => {
 					transitionDuration={1000}
 					customTransition='all 5s linear'
 				>
-					{data.map((company: ICompany) => (
+					{data.map(company => (
 						<Image
 							fill
 							key={company.image}

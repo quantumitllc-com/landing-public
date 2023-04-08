@@ -2,11 +2,13 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Follow } from '@/components/follow'
 import { Navbar } from '@/components/navbar'
-import { CONTACT } from '@/constants/contact'
 import { Socials } from '@/components/socials'
 import { Box, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
+import { IconEmail } from '@/assets/icons/email'
+import { IconPhone } from '@/assets/icons/phone'
 import { getContactInformation } from '@/pages/api'
+import type { IContactInformation } from '@/types/respones'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { IconLogoHorizontal } from '@/assets/icons/logo-horizontal'
 import {
@@ -21,7 +23,7 @@ import {
 
 export const Footer = () => {
 	const { locale } = useRouter()
-	const { data = [] } = useQuery({
+	const { data = { email: '', phone_number: '' } } = useQuery<IContactInformation>({
 		queryKey: [REACT_QUERY_KEYS.CONTACTINFORMATION, locale],
 		queryFn: () => getContactInformation(locale),
 	})
@@ -39,23 +41,36 @@ export const Footer = () => {
 							software and branding.
 						</Typography>
 						<WrapContact>
-							{CONTACT.map(({ Icon, title, value, type }, i) => (
-								<Link key={i} href={`${type}: ${value}`}>
-									<Box gap='12px' display='flex' alignItems='center'>
-										<Box display='flex' alignItems='center' justifyContent='center'>
-											<Icon />
-										</Box>
-										<Box>
-											<Typography variant='text10' component='h4'>
-												{title}
-											</Typography>
-											<Typography variant='text20' component='h5'>
-												{value}
-											</Typography>
-										</Box>
+							<Link href={`tel: ${data.phone_number}`}>
+								<Box gap='12px' display='flex' alignItems='center'>
+									<Box display='flex' alignItems='center' justifyContent='center'>
+										<IconPhone />
 									</Box>
-								</Link>
-							))}
+									<Box>
+										<Typography variant='text10' component='h4'>
+											Have a question?
+										</Typography>
+										<Typography variant='text20' component='h5'>
+											{data.phone_number}
+										</Typography>
+									</Box>
+								</Box>
+							</Link>
+							<Link href={`mailto: ${data.email}`}>
+								<Box gap='12px' display='flex' alignItems='center'>
+									<Box display='flex' alignItems='center' justifyContent='center'>
+										<IconEmail />
+									</Box>
+									<Box>
+										<Typography variant='text10' component='h4'>
+											Contact us at
+										</Typography>
+										<Typography variant='text20' component='h5'>
+											{data.email}
+										</Typography>
+									</Box>
+								</Box>
+							</Link>
 						</WrapContact>
 					</Box>
 					<Box className='wrap-up'>
