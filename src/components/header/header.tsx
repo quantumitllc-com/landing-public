@@ -2,10 +2,10 @@ import { Box } from '@mui/material'
 import { Menu } from '@/components/menu'
 import { Navbar } from '@/components/navbar'
 import { ContactUs } from '@/components/contact-us'
-import { Wrap, Wrapper, WrapLogo, Container, WrapMobile, WrapDesktop } from './style'
 import { SelectLanguage } from '@/components/select-language'
 import { IconLogoVertical } from '@/assets/icons/logo-vertical'
 import { IconLogoVerticalMobile } from '@/assets/icons/logo-vertical-mobile'
+import { Wrap, Wrapper, WrapLogo, Container, WrapMobile, WrapDesktop } from './style'
 
 export const Header = () => {
 	return (

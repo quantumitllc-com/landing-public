@@ -1,26 +1,26 @@
 export const NAVBAR = [
 	{
-		title: 'Home',
+		title: 'home',
 		href: '/',
 	},
 	{
-		title: 'Projects',
+		title: 'projects',
 		href: '/#projects',
 	},
 	{
-		title: 'Services',
+		title: 'services',
 		href: '/#services',
 	},
 	{
-		title: 'About Us',
+		title: 'about_us',
 		href: '/#about-us',
 	},
 	{
-		title: 'Tools',
+		title: 'tools',
 		href: '/#tools',
 	},
 	{
-		title: 'Testimonials',
+		title: 'testimonials',
 		href: '/#testimonials',
 	},
 ]

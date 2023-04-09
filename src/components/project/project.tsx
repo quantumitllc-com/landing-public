@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { getProject } from '@/pages/api'
+import { useTranslation } from 'next-i18next'
 import { useQuery } from '@tanstack/react-query'
 import type { IProject } from '@/types/respones'
 import { IconChevron } from '@/assets/icons/chevron'
@@ -27,6 +28,7 @@ const baseURL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL
 export const Project = () => {
 	const { locale, query } = useRouter()
 	const id = query?.projectId as string
+	const { t } = useTranslation('common')
 	const { data } = useQuery<IProject>({
 		queryKey: [REACT_QUERY_KEYS.PROJECT, locale, id],
 		queryFn: () => getProject(id, locale),
@@ -35,12 +37,12 @@ export const Project = () => {
 	const breadcrumbs = [
 		<Link key='1' href='/'>
 			<Typography variant='title130' color='colors.GRAY210'>
-				Home
+				{t('home')}
 			</Typography>
 		</Link>,
 		<Link key='2' href='/projects'>
 			<Typography variant='title130' color='colors.GRAY210'>
-				Projects
+				{t('projects')}
 			</Typography>
 		</Link>,
 		<Typography key='3' variant='title130'>
@@ -72,7 +74,7 @@ export const Project = () => {
 					<Right>
 						<WrapTitle>
 							<Typography variant='title110' component='h3'>
-								Project Details
+								{t('project_details')}
 							</Typography>
 						</WrapTitle>
 						<Typography variant='text90' component='p'>
@@ -82,7 +84,7 @@ export const Project = () => {
 							{data?.client?.name && (
 								<Box gap='10px' display='flex' alignItems='center'>
 									<Typography variant='text120' component='h5'>
-										Client
+										{t('client')}
 									</Typography>
 									<Box display='flex' flexGrow={1} alignItems='center' justifyContent='flex-end'>
 										<Typography variant='text130' component='h6'>
@@ -94,7 +96,7 @@ export const Project = () => {
 							{data?.date && (
 								<Box gap='10px' display='flex' alignItems='center'>
 									<Typography variant='text120' component='h5'>
-										Date
+										{t('date')}
 									</Typography>
 									<Box display='flex' flexGrow={1} alignItems='center' justifyContent='flex-end'>
 										<Typography variant='text130' component='h6'>
@@ -106,7 +108,7 @@ export const Project = () => {
 							{data?.location && (
 								<Box gap='10px' display='flex' alignItems='center'>
 									<Typography variant='text120' component='h5'>
-										Location
+										{t('location')}
 									</Typography>
 									<Box display='flex' flexGrow={1} alignItems='center' justifyContent='flex-end'>
 										<Typography variant='text130' component='h6'>
@@ -118,7 +120,7 @@ export const Project = () => {
 							{data?.service?.title && (
 								<Box gap='10px' display='flex' alignItems='center'>
 									<Typography variant='text120' component='h5'>
-										Category
+										{t('category')}
 									</Typography>
 									<Box display='flex' flexGrow={1} alignItems='center' justifyContent='flex-end'>
 										<Typography variant='text130' component='h6'>
@@ -139,7 +141,7 @@ export const Project = () => {
 					</Typography>
 				</Body>
 				<Typography variant='title120' component='h3'>
-					Used languages
+					{t('used_languages')}
 				</Typography>
 				<Languages>
 					<div className='language'>

@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import { useTranslation } from 'next-i18next'
 import { IconPlay } from '@/assets/icons/play'
 import { useBoolean } from '@/hooks/useBoolean'
 import { useQuery } from '@tanstack/react-query'
@@ -14,6 +15,7 @@ import { WrapText, WrapText10, Container, WrapLaptop, WrapBackground } from './s
 
 export const HomeBanner = () => {
 	const { locale } = useRouter()
+	const { t } = useTranslation('common')
 	const { value, setTrue, setFalse } = useBoolean()
 	const { data: dataVideo = { video_url: '' } } = useQuery<IVideo>({
 		queryKey: [REACT_QUERY_KEYS.VIDEO],
@@ -27,7 +29,7 @@ export const HomeBanner = () => {
 	return (
 		<Container>
 			<Typography align='center' variant='title30' component='h3'>
-				THE BEST CREATIVE AGENCY
+				{t('the_best_creative_agency')}
 			</Typography>
 			<WrapText>
 				<Typography component='h1' align='center' variant='title60'>

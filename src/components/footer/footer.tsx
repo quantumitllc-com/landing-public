@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Follow } from '@/components/follow'
 import { Navbar } from '@/components/navbar'
+import { useTranslation } from 'next-i18next'
 import { Socials } from '@/components/socials'
 import { Box, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
@@ -23,6 +24,7 @@ import {
 
 export const Footer = () => {
 	const { locale } = useRouter()
+	const { t } = useTranslation('common')
 	const { data = { email: '', phone_number: '' } } = useQuery<IContactInformation>({
 		queryKey: [REACT_QUERY_KEYS.CONTACTINFORMATION, locale],
 		queryFn: () => getContactInformation(locale),
@@ -37,8 +39,9 @@ export const Footer = () => {
 							<IconLogoHorizontal />
 						</Box>
 						<Typography variant='text' component='h3'>
-							Creative-powered to fuel your growth goals. We build world-class digital products,
-							software and branding.
+							{t(
+								'creative_powered_to_fuel_your_growth_goals_we_build_world_class_digital_products_software_and_branding',
+							)}
 						</Typography>
 						<WrapContact>
 							<Link href={`tel: ${data.phone_number}`}>
@@ -48,7 +51,7 @@ export const Footer = () => {
 									</Box>
 									<Box>
 										<Typography variant='text10' component='h4'>
-											Have a question?
+											{t('have_a_question')}
 										</Typography>
 										<Typography variant='text20' component='h5'>
 											{data.phone_number}
@@ -63,7 +66,7 @@ export const Footer = () => {
 									</Box>
 									<Box>
 										<Typography variant='text10' component='h4'>
-											Contact us at
+											{t('contact_us_at')}
 										</Typography>
 										<Typography variant='text20' component='h5'>
 											{data.email}
@@ -75,7 +78,7 @@ export const Footer = () => {
 					</Box>
 					<Box className='wrap-up'>
 						<Typography variant='title' component='h2'>
-							Submit An Application
+							{t('submit_an_application')}
 						</Typography>
 						<Typography m='12px 0 24px' variant='text' component='h3'>
 							Lorem ipsum dolor sit amet consectetur. Nec aliquam neque at vitae. Congue interdum
@@ -89,7 +92,7 @@ export const Footer = () => {
 				</Up>
 				<Down>
 					<Navbar variant='footer' />
-					<span>© 2022-2023, All Rights Reserved</span>
+					<span>© 2022-2023, {t('all_rights_reserved')}</span>
 					<WrapMobileSocial>
 						<Socials variant='footer' />
 					</WrapMobileSocial>

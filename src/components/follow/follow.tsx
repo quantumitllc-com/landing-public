@@ -1,10 +1,12 @@
 import { TextField } from './style'
 import { useFollow } from './useFollow'
 import { Controller } from 'react-hook-form'
+import { useTranslation } from 'next-i18next'
 import { IconMessage } from '@/assets/icons/message'
 import { Button, InputAdornment } from '@mui/material'
 
 export const Follow = () => {
+	const { t } = useTranslation('common')
 	const { form, onSubmit, isLoading } = useFollow()
 
 	return (
@@ -19,7 +21,7 @@ export const Follow = () => {
 							fullWidth
 							type='email'
 							error={!!errors.email}
-							placeholder='Enter your email'
+							placeholder={t('enter_your_email') as string}
 							helperText={errors.email ? (errors.email?.message as string) : ''}
 							InputProps={{
 								startAdornment: (
@@ -36,7 +38,7 @@ export const Follow = () => {
 											disabled={isLoading}
 											sx={{ minWidth: 94 }}
 										>
-											Submit
+											{t('submit')}
 										</Button>
 									</InputAdornment>
 								),

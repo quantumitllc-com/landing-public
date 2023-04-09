@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import { getTechnologies } from '@/pages/api'
+import { useTranslation } from 'next-i18next'
 import { Tab, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import { SyntheticEvent, useState } from 'react'
@@ -20,6 +21,7 @@ import {
 
 export const Technologies = () => {
 	const { locale } = useRouter()
+	const { t } = useTranslation('common')
 	const { data = [] } = useQuery<ITechnology[]>({
 		queryKey: [REACT_QUERY_KEYS.TECHNOLOGIES, locale],
 		queryFn: () => getTechnologies(locale),
@@ -34,7 +36,7 @@ export const Technologies = () => {
 	return (
 		<Container>
 			<Typography variant='title30' component='h3' align='center'>
-				tools we use
+				{t('tools_we_use')}
 			</Typography>
 			<WrapText>
 				<Typography
@@ -45,7 +47,7 @@ export const Technologies = () => {
 						maxWidth: '640px',
 					}}
 				>
-					Let your projects take advantage of the latest technologies
+					{t('let_your_projects_take_advantage_of_the_latest_technologies')}
 				</Typography>
 			</WrapText>
 			<TabContext value={value}>

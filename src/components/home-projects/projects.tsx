@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { getProjects } from '@/pages/api'
+import { useTranslation } from 'next-i18next'
 import { useQuery } from '@tanstack/react-query'
 import { IconArrow } from '@/assets/icons/arrow'
 import type { IProject } from '@/types/respones'
@@ -12,6 +13,7 @@ import { Wrapper, WrapText, WrapImage, Container, WrapCardTexts, WrapIconChevron
 
 export const HomeProjects = () => {
 	const { locale } = useRouter()
+	const { t } = useTranslation('common')
 	const { data = [] } = useQuery<IProject[]>({
 		queryKey: [REACT_QUERY_KEYS.PROJECTS, locale],
 		queryFn: () => getProjects(locale),
@@ -20,7 +22,7 @@ export const HomeProjects = () => {
 	return (
 		<Container>
 			<Typography variant='title30' component='h3' align='center'>
-				OUR LATEST PROJECT
+				{t('our_latest_project')}
 			</Typography>
 			<WrapText>
 				<Typography
@@ -31,7 +33,7 @@ export const HomeProjects = () => {
 						maxWidth: '640px',
 					}}
 				>
-					Our latest project is the result of the hard work of designers
+					{t('our_latest_project_is_the_result_of_the_hard_work_of_designers')}
 				</Typography>
 			</WrapText>
 			<Typography
@@ -43,8 +45,7 @@ export const HomeProjects = () => {
 					padding: '0 18px',
 				}}
 			>
-				Projects that are carried out professionally, with collaboration between divisions, produce
-				projects that are ready to use, with great designs and details
+				{t('projects_that_are_ready_to_use_with_great_designs_and_details')}
 			</Typography>
 			<Wrapper>
 				{data.map(project => (
@@ -63,7 +64,7 @@ export const HomeProjects = () => {
 									</WrapIconChevron>
 								}
 							>
-								Learn More
+								{t('learn_more')}
 							</Button>
 						</WrapCardTexts>
 						<WrapImage>
@@ -80,7 +81,7 @@ export const HomeProjects = () => {
 				endIcon={<IconArrow />}
 				style={{ minWidth: '128px' }}
 			>
-				See All
+				{t('see_all')}
 			</Button>
 		</Container>
 	)

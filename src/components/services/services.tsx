@@ -1,15 +1,17 @@
+import { useRouter } from 'next/router'
 import { getServices } from '@/pages/api'
 import { Typography } from '@mui/material'
+import { useTranslation } from 'next-i18next'
 import type { IService } from '@/types/respones'
 import { useQuery } from '@tanstack/react-query'
 import { IconServices } from '@/assets/icons/services'
 import { CardService } from '@/components/card-service'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { WrapText, WrapIcon, Container, WrapCards, Wrapper } from './style'
-import { useRouter } from 'next/router'
 
 export const Services = () => {
 	const { locale } = useRouter()
+	const { t } = useTranslation('common')
 	const { data = [] } = useQuery<IService[]>({
 		queryKey: [REACT_QUERY_KEYS.SERVICES, locale],
 		queryFn: () => getServices(locale),
@@ -21,7 +23,7 @@ export const Services = () => {
 				<IconServices />
 			</WrapIcon>
 			<Typography variant='title30' component='h3' align='center'>
-				OUR SERVICE FOR YOU
+				{t('our_service_for_you')}
 			</Typography>
 			<WrapText>
 				<Typography
@@ -32,7 +34,7 @@ export const Services = () => {
 						maxWidth: '640px',
 					}}
 				>
-					We try our best to provide a pleasant user experience
+					{t('we_try_your_best_to_provide_a_pleasant_user_experience')}
 				</Typography>
 			</WrapText>
 			<Typography
@@ -44,8 +46,7 @@ export const Services = () => {
 					padding: '0 18px',
 				}}
 			>
-				User experience is very important, therefore we are trying more so that users get the best
-				and enjoyable experience
+				{t('user_experience_is_very_important_and_enjoyable_experience')}
 			</Typography>
 			<Wrapper>
 				<WrapCards>

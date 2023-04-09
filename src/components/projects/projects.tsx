@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { getProjects } from '@/pages/api'
 import { IProject } from '@/types/respones'
+import { useTranslation } from 'next-i18next'
 import { useQuery } from '@tanstack/react-query'
 import { IconChevron } from '@/assets/icons/chevron'
 import { Breadcrumbs, Typography } from '@mui/material'
@@ -10,6 +11,7 @@ import { Wrapper, Container, WrapBreadcrumb, WrapIconChevron } from './style'
 
 export const Projects = () => {
 	const { locale } = useRouter()
+	const { t } = useTranslation('common')
 	const { data = [] } = useQuery<IProject[]>({
 		queryKey: [REACT_QUERY_KEYS.PROJECTS, locale],
 		queryFn: () => getProjects(locale),
@@ -18,11 +20,11 @@ export const Projects = () => {
 	const breadcrumbs = [
 		<Link key='1' href='/'>
 			<Typography variant='title130' color='colors.GRAY210'>
-				Home
+				{t('home')}
 			</Typography>
 		</Link>,
 		<Typography key='2' variant='title130'>
-			Projects
+			{t('projects')}
 		</Typography>,
 	]
 

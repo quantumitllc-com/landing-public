@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import { useRef, LegacyRef } from 'react'
 import Carousel from 'react-multi-carousel'
 import { getTestimonials } from '@/pages/api'
+import { useTranslation } from 'next-i18next'
 import { useQuery } from '@tanstack/react-query'
 import type { ITestimonial } from '@/types/respones'
 import { IconButton, Typography } from '@mui/material'
@@ -30,6 +31,7 @@ const responsive = {
 
 export const Testimonials = () => {
 	const { locale } = useRouter()
+	const { t } = useTranslation('common')
 	const { data = [] } = useQuery<ITestimonial[]>({
 		queryKey: [REACT_QUERY_KEYS.TESTIMONIALS, locale],
 		queryFn: () => getTestimonials(locale),
@@ -51,7 +53,7 @@ export const Testimonials = () => {
 				<IconTestimonials />
 			</WrapIcon>
 			<Typography variant='title30' component='h3' align='center'>
-				OUR client testimonials
+				{t('our_client_testimonials')}
 			</Typography>
 			<WrapText>
 				<Typography
@@ -62,7 +64,7 @@ export const Testimonials = () => {
 						maxWidth: '640px',
 					}}
 				>
-					Our clients want to share their experiences with you
+					{t('our_clients_want_to_share_their_experiences_with_you')}
 				</Typography>
 			</WrapText>
 			<Typography
@@ -74,8 +76,7 @@ export const Testimonials = () => {
 					padding: '0 18px',
 				}}
 			>
-				We always try make the experience with us always the best. Therefore we are very concerned
-				about our performance. These are the stories some clients who have worked with us
+				{t('we_always_try_make_the_experience_with_us_always_the_best')}
 			</Typography>
 			<Slider>
 				<Carousel

@@ -1,5 +1,6 @@
 import { useContact } from './useContact'
 import { Input } from '@/components/input'
+import { useTranslation } from 'next-i18next'
 import { Checkbox } from '@/components/checkbox'
 import { IconSpread } from '@/assets/icons/spread'
 import { IconRemove } from '@/assets/icons/remove'
@@ -20,13 +21,14 @@ interface IContact {
 }
 
 export const ContactUs = ({ variant }: IContact) => {
+	const { t } = useTranslation('common')
 	const { form, value, setTrue, setFalse, onSubmit, isLoading, dataService } = useContact()
 
 	return (
 		<>
 			{variant === 'contact' ? (
 				<Button size='large' variant='contained' onClick={setTrue}>
-					Contact Us
+					{t('contact_us')}
 				</Button>
 			) : variant === 'request' ? (
 				<WrapButtonRequest>
@@ -40,7 +42,7 @@ export const ContactUs = ({ variant }: IContact) => {
 							textTransform: 'unset',
 						}}
 					>
-						Request a quote
+						{t('request_a_quote')}
 					</Button>
 				</WrapButtonRequest>
 			) : (
@@ -48,10 +50,10 @@ export const ContactUs = ({ variant }: IContact) => {
 					<IconBgTouch />
 					<WrapContent>
 						<Typography align='center' sx={{ maxWidth: '450px' }} variant='title10' component='h2'>
-							Let’s work together on a project with us
+							{t('let_work_together_on_a_project_with_us')}
 						</Typography>
 						<Button size='medium' variant='contained' onClick={setTrue}>
-							Get in touch
+							{t('get_in_touch')}
 						</Button>
 					</WrapContent>
 				</Container>
@@ -64,48 +66,48 @@ export const ContactUs = ({ variant }: IContact) => {
 				</Header>
 				<Form onSubmit={form.handleSubmit(onSubmit)}>
 					<Typography variant='title20' component='h1'>
-						Get in touch
+						{t('get_in_touch')}
 					</Typography>
 					<Typography variant='text30' component='h2'>
-						Fill up the form and our Team will get back to you within 24 hours.
+						{t('fill_up_the_form_and_our_team_will_get_back_to_you_within_24_hours')}
 					</Typography>
 					<WrapInputs>
 						<Input
 							fullWidth
 							id='first_name'
 							name='first_name'
-							label='First name'
 							control={form.control}
-							placeholder='Enter first name'
+							label={t('first_name')}
+							placeholder={t('enter_first_name') as string}
 						/>
 						<Input
 							fullWidth
 							id='last_name'
 							name='last_name'
-							label='Last name'
+							label={t('last_name')}
 							control={form.control}
-							placeholder='Enter last name'
+							placeholder={t('enter_last_name') as string}
 						/>
 						<Input
 							fullWidth
 							id='email'
 							name='email'
 							type='email'
-							label='Your email'
 							control={form.control}
-							placeholder='Enter your email'
+							label={t('your_email')}
+							placeholder={t('enter_your_email') as string}
 						/>
 						<Input
 							fullWidth
 							id='phone_number'
 							name='phone_number'
-							label='Phone number'
 							control={form.control}
-							placeholder='Enter phone number'
+							label={t('phone_number')}
+							placeholder={t('enter_phone_number') as string}
 						/>
 					</WrapInputs>
 					<Typography variant='title80' component='h3'>
-						What kind of service do you need?
+						{t('what_kind_of_service_do_you_need')}
 					</Typography>
 					<WrapperChecks>
 						{dataService.map(({ id, title }) => (
@@ -119,7 +121,7 @@ export const ContactUs = ({ variant }: IContact) => {
 							disabled={isLoading}
 							style={{ borderRadius: 8 }}
 						>
-							Submit order
+							{t('submit_order')}
 						</Button>
 					</Box>
 				</Form>
