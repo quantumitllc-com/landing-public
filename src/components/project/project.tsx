@@ -1,9 +1,11 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { getProject } from '@/pages/api'
-import { Box, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import type { IProject } from '@/types/respones'
+import { IconChevron } from '@/assets/icons/chevron'
+import { Box, Breadcrumbs, Typography } from '@mui/material'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import {
 	Left,
@@ -16,6 +18,8 @@ import {
 	Container,
 	Languages,
 	WrapImages,
+	WrapBreadcrumb,
+	WrapIconChevron,
 } from './style'
 
 const baseURL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL
@@ -28,9 +32,37 @@ export const Project = () => {
 		queryFn: () => getProject(id, locale),
 	})
 
+	const breadcrumbs = [
+		<Link key='1' href='/'>
+			<Typography variant='title130' color='colors.GRAY210'>
+				Home
+			</Typography>
+		</Link>,
+		<Link key='2' href='/projects'>
+			<Typography variant='title130' color='colors.GRAY210'>
+				Projects
+			</Typography>
+		</Link>,
+		<Typography key='3' variant='title130'>
+			{data?.title}
+		</Typography>,
+	]
+
 	return (
 		<Container>
 			<Wrapper>
+				<WrapBreadcrumb>
+					<Breadcrumbs
+						aria-label='breadcrumb'
+						separator={
+							<WrapIconChevron>
+								<IconChevron />
+							</WrapIconChevron>
+						}
+					>
+						{breadcrumbs}
+					</Breadcrumbs>
+				</WrapBreadcrumb>
 				<Header>
 					<Left>
 						<WrapImage>

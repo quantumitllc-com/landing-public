@@ -23,6 +23,7 @@ export const VARIABLES_CSS = {
 		GRAY180: '#ffffffb3',
 		GRAY190: '#1c1f250d',
 		GRAY200: '#ffffffd9',
+		GRAY210: '#172c3880',
 		BLUE: '#091F2C',
 		BLUE10: '#172C38',
 		BLUE20: '#1C1F25',

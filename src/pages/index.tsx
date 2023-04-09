@@ -1,12 +1,12 @@
 import { Box } from '@mui/material'
 import type { GetServerSideProps } from 'next'
 import { AboutUs } from '@/components/about-us'
-import { Projects } from '@/components/projects'
 import { Services } from '@/components/services'
 import { Companies } from '@/components/companies'
 import { HomeBanner } from '@/components/home-banner'
 import { Testimonials } from '@/components/testimonials'
 import { Technologies } from '@/components/technologies'
+import { HomeProjects } from '@/components/home-projects'
 import { QuantumBanner } from '@/components/quantum-banner'
 import { dehydrate, QueryClient } from '@tanstack/react-query'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
@@ -33,7 +33,7 @@ const Home = () => {
 				<Services />
 			</Box>
 			<Box id='projects'>
-				<Projects />
+				<HomeProjects />
 			</Box>
 			<Box id='about-us'>
 				<AboutUs />

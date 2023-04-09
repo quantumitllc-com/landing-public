@@ -118,3 +118,16 @@ export const WrapImages = styled('div')`
 		}
 	}
 `
+
+export const WrapIconChevron = styled('span')`
+	transform: rotate(-90deg);
+	svg {
+		path {
+			stroke: ${({ theme }) => theme.palette.colors.GRAY210};
+		}
+	}
+`
+
+export const WrapBreadcrumb = styled('div')`
+	margin: 25px 0;
+`
