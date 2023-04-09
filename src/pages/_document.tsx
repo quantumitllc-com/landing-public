@@ -1,4 +1,6 @@
 import { Children } from 'react'
+import type { ILocales } from '@/types/locales'
+import { HTML_LOCALES } from '@/constants/languages'
 import nextI18nextConfig from '../../next-i18next.config'
 import createEmotionServer from '@emotion/server/create-instance'
 import { createEmotionCache } from '@/utility/createEmotionCache'
@@ -6,7 +8,10 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
 	render() {
-		const currentLocale = this.props.__NEXT_DATA__.locale ?? nextI18nextConfig.i18n.defaultLocale
+		const currentLocale =
+			HTML_LOCALES[this.props.__NEXT_DATA__.locale as ILocales] ??
+			HTML_LOCALES[nextI18nextConfig.i18n.defaultLocale as ILocales]
+
 		return (
 			<Html lang={currentLocale}>
 				<Head />

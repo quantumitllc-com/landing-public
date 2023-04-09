@@ -54,7 +54,7 @@ export const Left = styled('div')`
 export const Right = styled('div')`
 	width: 100%;
 	height: fit-content;
-	padding: 20px 25px 80px;
+	padding: 20px 25px 24px;
 	background-color: ${({ theme }) => theme.palette.colors.BLUE};
 `
 

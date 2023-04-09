@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const accessToken = 'd6f1c8ab8e77556b43d068e844fe2c9b6bf08cc9'
+const accessToken = process.env.NEXT_PUBLIC_ACCESS_TOKEN
 
-const baseURL = 'https://zmlsoft.com/api'
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 
 const request = axios.create({
 	baseURL,

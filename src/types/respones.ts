@@ -34,6 +34,10 @@ export interface IVideo {
 }
 
 export interface IProject {
+	client: {
+		id: number
+		name: string
+	}
 	date: string
 	id: number
 	image: string
@@ -41,7 +45,13 @@ export interface IProject {
 	languages: ILanguage[]
 	location: string
 	project_images: {}[]
-	service: number
+	service: {
+		dark_image: string
+		id: 1
+		light_image: string
+		text: string
+		title: string
+	}
 	subtitle: string
 	text: string
 	title: string

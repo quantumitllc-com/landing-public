@@ -1,12 +1,13 @@
+import { getMonth } from '@/utility/getMonth'
 import { request } from '@/utility/interceptors'
 
 export const getVideo = async () => {
-	const { data } = await request('video/')
+	const { data } = await request('api/video/')
 	return data
 }
 
 export const getIntro = async (locale = 'en') => {
-	const { data } = await request('intro/', {
+	const { data } = await request('api/intro/', {
 		headers: {
 			'Accept-Language': locale,
 		},
@@ -15,7 +16,7 @@ export const getIntro = async (locale = 'en') => {
 }
 
 export const getCompanies = async (locale = 'en') => {
-	const { data } = await request('companies/', {
+	const { data } = await request('api/companies/', {
 		headers: {
 			'Accept-Language': locale,
 		},
@@ -25,7 +26,7 @@ export const getCompanies = async (locale = 'en') => {
 }
 
 export const getServices = async (locale = 'en') => {
-	const { data } = await request('services/', {
+	const { data } = await request('api/services/', {
 		headers: {
 			'Accept-Language': locale,
 		},
@@ -34,7 +35,7 @@ export const getServices = async (locale = 'en') => {
 }
 
 export const getAbout = async (locale = 'en') => {
-	const { data } = await request('about/', {
+	const { data } = await request('api/about/', {
 		headers: {
 			'Accept-Language': locale,
 		},
@@ -43,7 +44,7 @@ export const getAbout = async (locale = 'en') => {
 }
 
 export const getProjects = async (locale = 'en') => {
-	const { data } = await request('projects/', {
+	const { data } = await request('api/projects/', {
 		headers: {
 			'Accept-Language': locale,
 		},
@@ -52,16 +53,19 @@ export const getProjects = async (locale = 'en') => {
 }
 
 export const getProject = async (id: string, locale = 'en') => {
-	const { data } = await request(`project/${id}`, {
+	const { data } = await request(`api/project/${id}`, {
 		headers: {
 			'Accept-Language': locale,
 		},
 	})
-	return data
+	const d = new Date(data?.date as string)
+	const date = `${getMonth(d.getMonth(), locale)} ${d.getDate()},${d.getFullYear()}`
+
+	return { ...data, date }
 }
 
 export const getTechnologies = async (locale = 'en') => {
-	const { data } = await request('technologies/', {
+	const { data } = await request('api/technologies/', {
 		headers: {
 			'Accept-Language': locale,
 		},
@@ -70,7 +74,7 @@ export const getTechnologies = async (locale = 'en') => {
 }
 
 export const getTestimonials = async (locale = 'en') => {
-	const { data } = await request('testimonials/', {
+	const { data } = await request('api/testimonials/', {
 		headers: {
 			'Accept-Language': locale,
 		},
@@ -79,7 +83,7 @@ export const getTestimonials = async (locale = 'en') => {
 }
 
 export const getContactInformation = async (locale = 'en') => {
-	const { data } = await request('contactinformation/', {
+	const { data } = await request('api/contactinformation/', {
 		headers: {
 			'Accept-Language': locale,
 		},
@@ -88,11 +92,11 @@ export const getContactInformation = async (locale = 'en') => {
 }
 
 export const postContact = async <T>(data: T) => {
-	const res = await request.post('contact/', data)
+	const res = await request.post('api/contact/', data)
 	return res
 }
 
 export const postFollow = async <T>(data: T) => {
-	const res = await request.post('email/', data)
+	const res = await request.post('api/email/', data)
 	return res
 }

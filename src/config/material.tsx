@@ -26,6 +26,8 @@ declare module '@mui/material/styles' {
 		text90: React.CSSProperties
 		text100: React.CSSProperties
 		text110: React.CSSProperties
+		text120: React.CSSProperties
+		text130: React.CSSProperties
 		title: React.CSSProperties
 		title10: React.CSSProperties
 		title20: React.CSSProperties
@@ -54,6 +56,8 @@ declare module '@mui/material/styles' {
 		text90: React.CSSProperties
 		text100: React.CSSProperties
 		text110: React.CSSProperties
+		text120: React.CSSProperties
+		text130: React.CSSProperties
 		title: React.CSSProperties
 		title10: React.CSSProperties
 		title20: React.CSSProperties
@@ -84,6 +88,8 @@ declare module '@mui/material/Typography' {
 		text90: true
 		text100: true
 		text110: true
+		text120: true
+		text130: true
 		title: true
 		title10: true
 		title20: true
@@ -227,6 +233,20 @@ export const theme = createTheme({
 				fontSize: '12px',
 				lineHeight: '14px',
 			},
+		},
+		text120: {
+			fontWeight: 400,
+			fontSize: '14px',
+			lineHeight: '152.7%',
+			letterSpacing: '0.0035em',
+			color: defaultCreateTheme.palette.colors.GRAY200,
+		},
+		text130: {
+			fontWeight: 500,
+			fontSize: '14px',
+			lineHeight: '152.7%',
+			letterSpacing: '0.0035em',
+			color: defaultCreateTheme.palette.colors.WHITE,
 		},
 		title: {
 			fontWeight: 600,

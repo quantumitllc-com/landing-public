@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const IconLogoVerticalMobile = () => {
 	return (
-		<Link href='' style={{ display: 'flex', alignItems: 'center' }}>
+		<Link href='/' style={{ display: 'flex', alignItems: 'center' }}>
 			<svg
 				width='176'
 				height='31'

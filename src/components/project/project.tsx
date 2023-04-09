@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { getProject } from '@/pages/api'
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import type { IProject } from '@/types/respones'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
@@ -18,21 +18,23 @@ import {
 	WrapImages,
 } from './style'
 
+const baseURL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL
+
 export const Project = () => {
 	const { locale, query } = useRouter()
 	const id = query?.projectId as string
-	const { data = { text: '', image: '', title: '', location: '', date: '' } } = useQuery<IProject>({
+	const { data } = useQuery<IProject>({
 		queryKey: [REACT_QUERY_KEYS.PROJECT, locale, id],
 		queryFn: () => getProject(id, locale),
 	})
-	console.log(data)
+
 	return (
 		<Container>
 			<Wrapper>
 				<Header>
 					<Left>
 						<WrapImage>
-							<Image fill src={`http://zmlsoft.com${data.image}`} alt={data.title} />
+							<Image fill alt={data?.title as string} src={`${baseURL}${data?.image as string}`} />
 						</WrapImage>
 					</Left>
 					<Right>
@@ -42,18 +44,66 @@ export const Project = () => {
 							</Typography>
 						</WrapTitle>
 						<Typography variant='text90' component='p'>
-							Lorem ipsum dolor sit amet consectetur. Amet euismod quam fringilla leo eget duis id
-							odio. Posuere pulvinar dis diam mauris consequat senectus diam enim. Libero risus
-							condimentum.
+							{data?.subtitle}
 						</Typography>
+						<Box mt='20px' gap='14px' display='flex' flexDirection='column'>
+							{data?.client?.name && (
+								<Box gap='10px' display='flex' alignItems='center'>
+									<Typography variant='text120' component='h5'>
+										Client
+									</Typography>
+									<Box display='flex' flexGrow={1} alignItems='center' justifyContent='flex-end'>
+										<Typography variant='text130' component='h6'>
+											{data?.client?.name}
+										</Typography>
+									</Box>
+								</Box>
+							)}
+							{data?.date && (
+								<Box gap='10px' display='flex' alignItems='center'>
+									<Typography variant='text120' component='h5'>
+										Date
+									</Typography>
+									<Box display='flex' flexGrow={1} alignItems='center' justifyContent='flex-end'>
+										<Typography variant='text130' component='h6'>
+											{data?.date}
+										</Typography>
+									</Box>
+								</Box>
+							)}
+							{data?.location && (
+								<Box gap='10px' display='flex' alignItems='center'>
+									<Typography variant='text120' component='h5'>
+										Location
+									</Typography>
+									<Box display='flex' flexGrow={1} alignItems='center' justifyContent='flex-end'>
+										<Typography variant='text130' component='h6'>
+											{data?.location}
+										</Typography>
+									</Box>
+								</Box>
+							)}
+							{data?.service?.title && (
+								<Box gap='10px' display='flex' alignItems='center'>
+									<Typography variant='text120' component='h5'>
+										Category
+									</Typography>
+									<Box display='flex' flexGrow={1} alignItems='center' justifyContent='flex-end'>
+										<Typography variant='text130' component='h6'>
+											{data?.service.title}
+										</Typography>
+									</Box>
+								</Box>
+							)}
+						</Box>
 					</Right>
 				</Header>
 				<Body>
 					<Typography variant='title10' component='h2'>
-						{data.title}
+						{data?.title}
 					</Typography>
 					<Typography variant='text100' component='p'>
-						{data.text}
+						{data?.text}
 					</Typography>
 				</Body>
 				<Typography variant='title120' component='h3'>
@@ -68,13 +118,13 @@ export const Project = () => {
 				</Languages>
 				<WrapImages>
 					<div>
-						<Image fill src={`http://zmlsoft.com${data.image}`} alt={data.title} />
+						<Image fill alt={data?.title as string} src={`${baseURL}${data?.image as string}`} />
 					</div>
 					<div>
-						<Image fill src={`http://zmlsoft.com${data.image}`} alt={data.title} />
+						<Image fill alt={data?.title as string} src={`${baseURL}${data?.image as string}`} />
 					</div>
 					<div>
-						<Image fill src={`http://zmlsoft.com${data.image}`} alt={data.title} />
+						<Image fill alt={data?.title as string} src={`${baseURL}${data?.image as string}`} />
 					</div>
 				</WrapImages>
 			</Wrapper>
