@@ -31,6 +31,7 @@ export const VARIABLES_CSS = {
 		BLUE20: '#1C1F25',
 		BLUE30: '#170F49',
 		BLUE40: '#091f2ce6',
+		PURPLE: '#857FFF',
 	},
 	SHADOWS: {
 		SHADOW: '0px 0px 100px #0f364e1a',

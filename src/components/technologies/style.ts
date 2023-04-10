@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles'
+import pointer from '@/assets/images/pointer.png'
 
 export const Container = styled('div')`
 	display: flex;
@@ -13,6 +14,7 @@ export const Container = styled('div')`
 	.MuiTabPanel-root {
 		width: 100%;
 		padding: 0 0 !important;
+		cursor: url(${pointer.src}) 4 5, pointer;
 		background: linear-gradient(180deg, #fafafa 0%, #f4f4ff 100%);
 	}
 `

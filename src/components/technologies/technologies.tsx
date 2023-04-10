@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { getTechnologies } from '@/pages/api'
 import { useTranslation } from 'next-i18next'
+import { styled } from '@mui/material/styles'
 import { Tab, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import { SyntheticEvent, useState } from 'react'
@@ -8,6 +9,7 @@ import type { ITechnology } from '@/types/respones'
 import { IconEllipse } from '@/assets/icons/ellipse'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
+import MuiTooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip'
 import {
 	Wrap,
 	WrapText,
@@ -18,6 +20,19 @@ import {
 	WrapTechnologies,
 	WrapTabPanelTexts,
 } from './style'
+
+const Tooltip = styled(({ className, ...props }: TooltipProps) => (
+	<MuiTooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+	[`& .${tooltipClasses.tooltip}`]: {
+		fontSize: '18px',
+		fontWeight: 600,
+		padding: '11px 20px',
+		borderRadius: '10px',
+		color: theme.palette.colors.WHITE,
+		backgroundColor: theme.palette.colors.PURPLE,
+	},
+}))
 
 export const Technologies = () => {
 	const { locale } = useRouter()
@@ -74,7 +89,9 @@ export const Technologies = () => {
 										<WrapTechnologies className='technologies'>
 											<Technology />
 											<Technology />
-											<Technology />
+											<Tooltip title='Next' disableFocusListener>
+												<Technology />
+											</Tooltip>
 										</WrapTechnologies>
 									</div>
 								</div>

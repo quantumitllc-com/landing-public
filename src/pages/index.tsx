@@ -41,9 +41,7 @@ const Home = () => {
 			<Box id='tools'>
 				<Technologies />
 			</Box>
-			<Box id='testimonials'>
-				<Testimonials />
-			</Box>
+			<Box id='testimonials'>{/* <Testimonials /> */}</Box>
 		</>
 	)
 }
