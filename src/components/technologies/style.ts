@@ -136,10 +136,10 @@ export const WrapTabPanel = styled('div')`
 				[theme.breakpoints.down('sm')]: {
 					width: '173px',
 					height: '173px',
-				},
-				'.technologies': {
-					width: 'calc(100% - 15px)',
-					height: 'calc(100% - 15px)',
+					'.technologies': {
+						width: 'calc(100% - 15px)',
+						height: 'calc(100% - 15px)',
+					},
 				},
 			})}
 		}
@@ -160,10 +160,10 @@ export const WrapTabPanel = styled('div')`
 				[theme.breakpoints.down('sm')]: {
 					width: '323.2px',
 					height: '323.2px',
-				},
-				'.technologies': {
-					width: 'calc(100% - 55px)',
-					height: 'calc(100% - 55px)',
+					'.technologies': {
+						width: 'calc(100% - 55px)',
+						height: 'calc(100% - 55px)',
+					},
 				},
 			})}
 		}
@@ -184,10 +184,10 @@ export const WrapTabPanel = styled('div')`
 				[theme.breakpoints.down('sm')]: {
 					width: '449.26px',
 					height: '449.26px',
-				},
-				'.technologies': {
-					width: 'calc(100% - 95px)',
-					height: 'calc(100% - 95px)',
+					'.technologies': {
+						width: 'calc(100% - 95px)',
+						height: 'calc(100% - 95px)',
+					},
 				},
 			})}
 		}
@@ -208,10 +208,10 @@ export const WrapTabPanel = styled('div')`
 				[theme.breakpoints.down('sm')]: {
 					width: '598px',
 					height: '598px',
-				},
-				'.technologies': {
-					width: 'calc(100% - 135px)',
-					height: 'calc(100% - 135px)',
+					'.technologies': {
+						width: 'calc(100% - 135px)',
+						height: 'calc(100% - 135px)',
+					},
 				},
 			})}
 		}
