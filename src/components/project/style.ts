@@ -33,12 +33,15 @@ export const Header = styled('div')`
 				left: '-90vw',
 				width: '100vw',
 			},
+			[theme.breakpoints.down('sm')]: {
+				display: 'none',
+			},
 		})}
 	}
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			gridTemplateColumns: '1fr',
-			padding: '20px 18px 15px',
+			padding: '20px 0 15px',
 		},
 	})}
 `
