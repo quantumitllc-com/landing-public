@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles'
-import { TextField as MuiTextField } from '@mui/material'
+import { Button, TextField as MuiTextField } from '@mui/material'
 
 export const TextField = styled(MuiTextField)`
 	.MuiInputBase-root {
@@ -39,4 +39,41 @@ export const TextField = styled(MuiTextField)`
 		box-shadow: 0 0 0 30px ${({ theme }) => theme.palette.colors.GRAY140} inset !important;
 		background-color: ${({ theme }) => theme.palette.colors.GRAY140} !important;
 	}
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			input: {
+				paddingTop: '6px !important',
+				paddingBottom: '6px !important',
+			},
+			'.MuiOutlinedInput-root': {
+				borderRadius: '22.2538px',
+			},
+			'.MuiInputBase-root': {
+				padding: '0 4.5px 0 18px',
+			},
+			svg: {
+				width: '12px',
+				height: '12px',
+			},
+			'input::placeholder': {
+				fontWeight: 400,
+				lineHeight: '10px',
+				fontSize: '8.90153px',
+			},
+		},
+	})}
+`
+
+export const ButtonSubmit = styled(Button)`
+	min-width: 94px;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			height: '26px',
+			minWidth: '70px',
+			fontWeight: 600,
+			lineHeight: '11px',
+			fontSize: '8.90153px',
+			borderRadius: '22.2538px',
+		},
+	})}
 `

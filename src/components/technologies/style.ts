@@ -12,7 +12,7 @@ export const Container = styled('div')`
 	})}
 	.MuiTabPanel-root {
 		width: 100%;
-		padding: 0 18px !important;
+		padding: 0 0 !important;
 		background: linear-gradient(180deg, #fafafa 0%, #f4f4ff 100%);
 	}
 `
@@ -99,6 +99,7 @@ export const WrapTabPanelTexts = styled('div')`
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			gap: '7px',
+			padding: '0 18px 0',
 		},
 	})}
 `
@@ -106,13 +107,16 @@ export const WrapTabPanelTexts = styled('div')`
 export const WrapTabPanel = styled('div')`
 	width: 100%;
 	display: flex;
+	margin: 0 auto;
 	overflow: hidden;
 	min-height: 745px;
 	position: relative;
 	justify-content: center;
+
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			padding: '20px 0 10px',
+			minHeight: '376px',
 		},
 	})}
 	.wrap-circle-1 {
@@ -120,6 +124,7 @@ export const WrapTabPanel = styled('div')`
 		.circle {
 			width: 345px;
 			height: 345px;
+
 			.technologies {
 				width: calc(100% - 30px);
 				height: calc(100% - 30px);
@@ -127,6 +132,16 @@ export const WrapTabPanel = styled('div')`
 			.content {
 				animation-delay: 0;
 			}
+			${({ theme }) => ({
+				[theme.breakpoints.down('sm')]: {
+					width: '173px',
+					height: '173px',
+				},
+				'.technologies': {
+					width: 'calc(100% - 15px)',
+					height: 'calc(100% - 15px)',
+				},
+			})}
 		}
 	}
 	.wrap-circle-2 {
@@ -141,6 +156,16 @@ export const WrapTabPanel = styled('div')`
 			.content {
 				animation-delay: 1.5s;
 			}
+			${({ theme }) => ({
+				[theme.breakpoints.down('sm')]: {
+					width: '323.2px',
+					height: '323.2px',
+				},
+				'.technologies': {
+					width: 'calc(100% - 55px)',
+					height: 'calc(100% - 55px)',
+				},
+			})}
 		}
 	}
 	.wrap-circle-3 {
@@ -155,6 +180,16 @@ export const WrapTabPanel = styled('div')`
 			.content {
 				animation-delay: 0.15s;
 			}
+			${({ theme }) => ({
+				[theme.breakpoints.down('sm')]: {
+					width: '449.26px',
+					height: '449.26px',
+				},
+				'.technologies': {
+					width: 'calc(100% - 95px)',
+					height: 'calc(100% - 95px)',
+				},
+			})}
 		}
 	}
 	.wrap-circle-4 {
@@ -169,6 +204,16 @@ export const WrapTabPanel = styled('div')`
 			.content {
 				animation-delay: 2.25s;
 			}
+			${({ theme }) => ({
+				[theme.breakpoints.down('sm')]: {
+					width: '598px',
+					height: '598px',
+				},
+				'.technologies': {
+					width: 'calc(100% - 135px)',
+					height: 'calc(100% - 135px)',
+				},
+			})}
 		}
 	}
 `
@@ -250,4 +295,10 @@ export const Technology = styled('div')`
 	border-radius: 50%;
 	background-color: #ffffff;
 	box-shadow: 0px 25px 55px rgba(0, 0, 0, 0.1);
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			width: '40px',
+			height: '40px',
+		},
+	})}
 `

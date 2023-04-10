@@ -44,7 +44,11 @@ export interface IProject {
 	in_home_page: boolean
 	languages: ILanguage[]
 	location: string
-	project_images: {}[]
+	project_images: {
+		id: number
+		image: string
+		project: number
+	}[]
 	service: {
 		dark_image: string
 		id: 1

@@ -35,6 +35,12 @@ export const Header = styled('div')`
 			},
 		})}
 	}
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			gridTemplateColumns: '1fr',
+			padding: '20px 18px 15px',
+		},
+	})}
 `
 
 export const WrapImage = styled('div')`
@@ -44,6 +50,11 @@ export const WrapImage = styled('div')`
 	img {
 		object-fit: contain !important;
 	}
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			width: '100%',
+		},
+	})}
 `
 
 export const Left = styled('div')`
@@ -51,25 +62,17 @@ export const Left = styled('div')`
 	background-color: ${({ theme }) => theme.palette.colors.GRAY160};
 `
 
-export const Right = styled('div')`
-	width: 100%;
-	height: fit-content;
-	padding: 20px 25px 24px;
-	background-color: ${({ theme }) => theme.palette.colors.BLUE};
-`
-
-export const WrapTitle = styled('div')`
-	width: fit-content;
-	margin-bottom: 12px;
-	padding-bottom: 18px;
-	border-bottom: 3px solid ${({ theme }) => theme.palette.colors.GREEN};
-`
-
 export const Body = styled('div')`
 	gap: 20px;
 	display: flex;
 	padding: 40px 0 35px;
 	flex-direction: column;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			gap: '12px',
+			padding: '18px 18px 24px',
+		},
+	})}
 `
 
 export const Languages = styled('div')`
@@ -89,6 +92,24 @@ export const Languages = styled('div')`
 		justify-content: center;
 		background-color: ${({ theme }) => theme.palette.colors.GRAY190};
 	}
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			margin: '10px 0 40px',
+			'.language': {
+				height: '26px',
+				minHeight: '26px',
+				maxHeight: '26px',
+			},
+		},
+	})}
+`
+
+export const WrapLanguage = styled('div')`
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '0 18px',
+		},
+	})}
 `
 
 export const WrapImages = styled('div')`
@@ -96,7 +117,6 @@ export const WrapImages = styled('div')`
 	display: grid;
 	grid-template-columns: 0.6fr 0.4fr;
 	& > div:nth-of-type(3n + 3) {
-		grid-column: 1 / 3;
 		background-color: ${({ theme }) => theme.palette.colors.GRAY160};
 	}
 	& > div:nth-of-type(3n - 1) {
@@ -117,6 +137,20 @@ export const WrapImages = styled('div')`
 			object-fit: contain !important;
 		}
 	}
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			gap: '12px',
+			gridTemplateColumns: '1fr',
+			'& > div': {
+				height: '290px',
+			},
+		},
+		[theme.breakpoints.up('sm')]: {
+			'& > div:nth-of-type(3n + 3)': {
+				gridColumn: '1 / 3',
+			},
+		},
+	})}
 `
 
 export const WrapIconChevron = styled('span')`
@@ -129,5 +163,30 @@ export const WrapIconChevron = styled('span')`
 `
 
 export const WrapBreadcrumb = styled('div')`
-	margin: 25px 0;
+	padding: 25px 0;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '12px 18px 15px',
+		},
+	})}
+`
+
+export const WrapMobileProjectDetail = styled('div')`
+	display: none;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			display: 'flex',
+			padding: '0 18px',
+			marginTop: '20px',
+		},
+	})}
+`
+
+export const WrapDesktopProjectDetail = styled('div')`
+	display: flex;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			display: 'none',
+		},
+	})}
 `

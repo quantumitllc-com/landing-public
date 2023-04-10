@@ -4,11 +4,17 @@ import { IconMenu } from '@/assets/icons/menu'
 import { useBoolean } from '@/hooks/useBoolean'
 import { IconClear } from '@/assets/icons/clear'
 import { Wrapper, Header, Container } from './style'
-import { IconButton, SwipeableDrawer } from '@mui/material'
 import { SelectLanguage } from '@/components/select-language'
+import { useTheme, IconButton, SwipeableDrawer, useMediaQuery } from '@mui/material'
 
 export const Menu = () => {
+	const theme = useTheme()
 	const { value, setTrue, setFalse } = useBoolean()
+	const matches = useMediaQuery(theme.breakpoints.up('sm'))
+
+	if (matches) {
+		return null
+	}
 
 	return (
 		<>

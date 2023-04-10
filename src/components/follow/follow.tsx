@@ -1,9 +1,9 @@
-import { TextField } from './style'
 import { useFollow } from './useFollow'
 import { Controller } from 'react-hook-form'
 import { useTranslation } from 'next-i18next'
+import { InputAdornment } from '@mui/material'
+import { TextField, ButtonSubmit } from './style'
 import { IconMessage } from '@/assets/icons/message'
-import { Button, InputAdornment } from '@mui/material'
 
 export const Follow = () => {
 	const { t } = useTranslation('common')
@@ -31,15 +31,14 @@ export const Follow = () => {
 								),
 								endAdornment: (
 									<InputAdornment position='end'>
-										<Button
+										<ButtonSubmit
 											size='small'
 											type='submit'
 											variant='contained'
 											disabled={isLoading}
-											sx={{ minWidth: 94 }}
 										>
 											{t('submit')}
-										</Button>
+										</ButtonSubmit>
 									</InputAdornment>
 								),
 							}}

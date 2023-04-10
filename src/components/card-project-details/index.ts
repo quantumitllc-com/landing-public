@@ -1,0 +1,1 @@
+export { CardProjectDetails } from './card'
