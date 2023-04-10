@@ -1,6 +1,8 @@
 {
 	"russian": "Russian",
 	"english": "English",
+    "ru":"Ru",
+    "eng":"Eng",
     "home": "Home",
     "projects":"Projects",
     "services":"Services",

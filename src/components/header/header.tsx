@@ -23,7 +23,7 @@ export const Header = () => {
 					<WrapDesktop>
 						<Navbar variant='header' />
 						<Box gap='14px' display='flex' alignItems='center'>
-							<SelectLanguage />
+							<SelectLanguage variant='header' />
 							<ContactUs variant='contact' />
 						</Box>
 					</WrapDesktop>

@@ -5,6 +5,7 @@ import { useBoolean } from '@/hooks/useBoolean'
 import { IconClear } from '@/assets/icons/clear'
 import { Wrapper, Header, Container } from './style'
 import { IconButton, SwipeableDrawer } from '@mui/material'
+import { SelectLanguage } from '@/components/select-language'
 
 export const Menu = () => {
 	const { value, setTrue, setFalse } = useBoolean()
@@ -31,7 +32,7 @@ export const Menu = () => {
 						`}</style>
 					)}
 					<Header>
-						<div>LanguageSelect</div>
+						<SelectLanguage variant='drawer-mobile' />
 						<IconButton onClick={setFalse}>
 							<IconClear />
 						</IconButton>
