@@ -1,72 +1,56 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { useTheme } from '@mui/material'
 import { getCompanies } from '@/pages/api'
-import Carousel from 'react-multi-carousel'
+import { ICompany } from '@/types/respones'
 import { Wrapper, Container } from './style'
-import type { ICompany } from '@/types/respones'
 import { useQuery } from '@tanstack/react-query'
+import { useKeenSlider } from 'keen-slider/react'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 
-const responsive = {
-	desktop: {
-		breakpoint: {
-			max: 3000,
-			min: 1024,
-		},
-		items: 5,
-	},
-	mobile: {
-		breakpoint: {
-			max: 600,
-			min: 0,
-		},
-		items: 3,
-	},
-	tablet: {
-		breakpoint: {
-			max: 1024,
-			min: 464,
-		},
-		items: 2,
-	},
-}
+const animation = { duration: 10000, easing: (t: number) => t }
 
 export const Companies = () => {
+	const theme = useTheme()
 	const { locale } = useRouter()
 	const { data = [] } = useQuery<ICompany[]>({
 		queryKey: [REACT_QUERY_KEYS.COMPANIES, locale],
 		queryFn: () => getCompanies(locale),
 	})
 
+	const [sliderRef] = useKeenSlider<HTMLDivElement>({
+		loop: true,
+		drag: false,
+		mode: 'free',
+		renderMode: 'performance',
+		slides: {
+			perView: 5,
+			spacing: 80,
+		},
+		breakpoints: {
+			[`(max-width: ${theme.breakpoints.values.sm}px)`]: {
+				slides: { perView: 3.2, spacing: 17 },
+			},
+		},
+		created(s) {
+			s.moveToIdx(5, true, animation)
+		},
+		updated(s) {
+			s.moveToIdx(s.track.details.abs + 5, true, animation)
+		},
+		animationEnded(s) {
+			s.moveToIdx(s.track.details.abs + 5, true, animation)
+		},
+	})
+
 	return (
 		<Container>
-			<Wrapper>
-				<Carousel
-					ssr
-					infinite
-					autoPlay
-					draggable
-					swipeable
-					pauseOnHover
-					arrows={false}
-					autoPlaySpeed={1}
-					slidesToSlide={1}
-					minimumTouchDrag={80}
-					additionalTransfrom={0}
-					responsive={responsive}
-					transitionDuration={1000}
-					customTransition='all 5s linear'
-				>
-					{data.map(company => (
-						<Image
-							fill
-							key={company.image}
-							src={company.image}
-							alt={`company-${company.id}`}
-							style={{ cursor: 'pointer' }}
-						/>
-					))}
-				</Carousel>
+			<Wrapper ref={sliderRef} className='keen-slider'>
+				{data.map(company => (
+					<div key={company.id} className='keen-slider__slide'>
+						<Image fill key={company.image} src={company.image} alt={`company-${company.id}`} />
+					</div>
+				))}
 			</Wrapper>
 		</Container>
 	)

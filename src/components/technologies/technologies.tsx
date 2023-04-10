@@ -31,6 +31,11 @@ const Tooltip = styled(({ className, ...props }: TooltipProps) => (
 		borderRadius: '10px',
 		color: theme.palette.colors.WHITE,
 		backgroundColor: theme.palette.colors.PURPLE,
+		[theme.breakpoints.down('sm')]: {
+			padding: '7px 13px',
+			fontSize: '11.1969px',
+			borderRadius: '6.22047px',
+		},
 	},
 }))
 

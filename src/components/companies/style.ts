@@ -3,14 +3,16 @@ import { styled } from '@mui/material/styles'
 export const Container = styled('div')`
 	width: 100%;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 `
 
 export const Wrapper = styled('div')`
 	width: 100%;
-	margin: 0 auto;
 	padding-bottom: 120px;
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
-	.react-multi-carousel-item {
+	.keen-slider__slide {
+		cursor: pointer;
 		max-width: 180px;
 		min-width: 180px;
 		min-height: 100px;
