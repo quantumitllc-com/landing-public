@@ -25,8 +25,6 @@ import {
 	WrapDesktopProjectDetail,
 } from './style'
 
-const baseURL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL
-
 export const Project = () => {
 	const { locale, query } = useRouter()
 	const id = query?.projectId as string
@@ -70,7 +68,7 @@ export const Project = () => {
 				<Header>
 					<Left>
 						<WrapImage>
-							<Image fill alt={data?.title as string} src={`${baseURL}${data?.image as string}`} />
+							<Image fill alt={data?.title as string} src={data?.image as string} />
 						</WrapImage>
 					</Left>
 					<WrapDesktopProjectDetail>
@@ -108,11 +106,7 @@ export const Project = () => {
 				<WrapImages>
 					{data?.project_images.map(project_image => (
 						<div key={project_image.id}>
-							<Image
-								fill
-								alt={String(project_image.id)}
-								src={`${baseURL}${project_image.image as string}`}
-							/>
+							<Image fill alt={String(project_image.id)} src={project_image.image as string} />
 						</div>
 					))}
 				</WrapImages>
