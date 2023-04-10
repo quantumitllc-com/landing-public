@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import { useContact } from './useContact'
 import { Input } from '@/components/input'
 import { useTranslation } from 'next-i18next'
@@ -5,7 +6,17 @@ import { Checkbox } from '@/components/checkbox'
 import { IconSpread } from '@/assets/icons/spread'
 import { IconRemove } from '@/assets/icons/remove'
 import { IconBgTouch } from '@/assets/icons/bg-touch'
-import { Box, Button, Dialog, IconButton, Typography } from '@mui/material'
+import { TransitionProps } from '@mui/material/transitions'
+import {
+	Box,
+	Button,
+	Dialog,
+	useTheme,
+	IconButton,
+	Typography,
+	useMediaQuery,
+	Slide,
+} from '@mui/material'
 import {
 	Form,
 	Header,
@@ -16,12 +27,23 @@ import {
 	WrapButtonRequest,
 } from './style'
 
+const Transition = forwardRef(function Transition(
+	props: TransitionProps & {
+		children: React.ReactElement<any, any>
+	},
+	ref: React.Ref<unknown>,
+) {
+	return <Slide direction='up' ref={ref} {...props} />
+})
+
 interface IContact {
 	variant: 'contact' | 'touch' | 'request'
 }
 
 export const ContactUs = ({ variant }: IContact) => {
+	const theme = useTheme()
 	const { t } = useTranslation('common')
+	const fullScreen = useMediaQuery(theme.breakpoints.down('sm'))
 	const { form, value, setTrue, setFalse, onSubmit, isLoading, dataService } = useContact()
 
 	return (
@@ -58,7 +80,26 @@ export const ContactUs = ({ variant }: IContact) => {
 					</WrapContent>
 				</Container>
 			)}
-			<Dialog open={value} onClose={setFalse} maxWidth='md'>
+			<Dialog
+				open={value}
+				maxWidth='md'
+				onClose={setFalse}
+				fullScreen={fullScreen}
+				TransitionComponent={Transition}
+				PaperProps={{
+					style: {
+						borderRadius: fullScreen ? 0 : '24px',
+					},
+				}}
+			>
+				{value && (
+					<style jsx global>{`
+						html,
+						body {
+							overflow: hidden;
+						}
+					`}</style>
+				)}
 				<Header>
 					<IconButton onClick={setFalse}>
 						<IconRemove />

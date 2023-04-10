@@ -1,14 +1,28 @@
 import { styled } from '@mui/material/styles'
 
+interface IWrapper {
+	length: number
+}
+
 export const Container = styled('div')`
 	display: flex;
-	padding: 124px 0 0;
+	padding-top: 124px;
 	align-items: center;
 	flex-direction: column;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			paddingTop: '90px',
+		},
+	})}
 `
 
 export const WrapText = styled('div')`
 	padding: 20px 0 27px;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '8px 18px 18px',
+		},
+	})}
 `
 
 export const WrapImage = styled('div')`
@@ -20,10 +34,6 @@ export const WrapImage = styled('div')`
 		object-fit: contain !important;
 	}
 `
-
-interface IWrapper {
-	length: number
-}
 
 export const Wrapper = styled('div')<IWrapper>`
 	gap: 14px;
@@ -72,9 +82,19 @@ export const Wrapper = styled('div')<IWrapper>`
 			},
 		},
 		[theme.breakpoints.down('sm')]: {
+			gap: '12px',
 			padding: '30px 18px 24px',
-			'& > div': {
+			gridTemplateColumns: '1fr',
+			'& > div, & > div:nth-of-type(6)': {
 				height: '270px',
+			},
+			'& > div:first-of-type, & > div:nth-of-type(4)': {
+				height: '270px',
+				gridColumn: '1 / 3',
+			},
+			'& > div:nth-of-type(2)': {
+				gridRow: '2 / 3',
+				gridColumn: '1 / 3',
 			},
 		},
 	})}

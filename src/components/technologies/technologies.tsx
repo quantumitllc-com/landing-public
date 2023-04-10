@@ -82,78 +82,127 @@ export const Technologies = () => {
 						))}
 					</TabList>
 				</Wrap>
-				{data.map((technology: ITechnology) => (
-					<TabPanel key={technology.id} value={String(technology.id)}>
-						<WrapTabPanel>
-							<WrapCircle className='wrap-circle-1'>
-								<div className='circle'>
-									<div className='icon'>
-										<IconEllipse />
+				{data.map((technology: ITechnology) => {
+					const third = technology.languages.length <= 3
+					const fourth = technology.languages.length > 12
+					const fifth = technology.languages.length > 15
+
+					return (
+						<TabPanel key={technology.id} value={String(technology.id)}>
+							<WrapTabPanel>
+								<WrapCircle className='wrap-circle-1'>
+									<div className='circle'>
+										<div className='icon'>
+											<IconEllipse />
+										</div>
+										<div className='content'>
+											<WrapTechnologies className='technologies'>
+												{technology.languages.splice(0, fifth ? 4 : 3).map(language => (
+													<Tooltip key={language.id} title='Next' disableFocusListener>
+														<Technology />
+													</Tooltip>
+												))}
+											</WrapTechnologies>
+										</div>
 									</div>
-									<div className='content'>
-										<WrapTechnologies className='technologies'>
-											<Technology />
-											<Technology />
-											<Tooltip title='Next' disableFocusListener>
-												<Technology />
-											</Tooltip>
-										</WrapTechnologies>
+								</WrapCircle>
+								<WrapCircle className='wrap-circle-2'>
+									<div className='circle'>
+										<div className='icon'>
+											<IconEllipse />
+										</div>
+										{!third && (
+											<div className='content'>
+												<WrapTechnologies className='technologies'>
+													{technology.languages
+														.splice(
+															fifth ? 4 : 3,
+															fifth
+																? 8
+																: fourth
+																? 7
+																: technology.languages.length < 6
+																? technology.languages.length
+																: 6,
+														)
+														.map(language => (
+															<Tooltip key={language.id} title='Next' disableFocusListener>
+																<Technology />
+															</Tooltip>
+														))}
+												</WrapTechnologies>
+											</div>
+										)}
 									</div>
-								</div>
-							</WrapCircle>
-							<WrapCircle className='wrap-circle-2'>
-								<div className='circle'>
-									<div className='icon'>
-										<IconEllipse />
+								</WrapCircle>
+								<WrapCircle className='wrap-circle-3'>
+									<div className='circle'>
+										<div className='icon'>
+											<IconEllipse />
+										</div>
+										{!third && (
+											<div className='content'>
+												<WrapTechnologies className='technologies'>
+													{technology.languages
+														.splice(
+															fifth ? 9 : 6,
+															fifth
+																? 13
+																: fourth
+																? 10
+																: technology.languages.length < 9
+																? technology.languages.length
+																: 9,
+														)
+														.map(language => (
+															<Tooltip key={language.id} title='Next' disableFocusListener>
+																<Technology />
+															</Tooltip>
+														))}
+												</WrapTechnologies>
+											</div>
+										)}
 									</div>
-									<div className='content'>
-										<WrapTechnologies className='technologies'>
-											<Technology />
-											<Technology />
-											<Technology />
-										</WrapTechnologies>
+								</WrapCircle>
+								<WrapCircle className='wrap-circle-4'>
+									<div className='circle'>
+										<div className='icon'>
+											<IconEllipse />
+										</div>
+										{!third && (
+											<div className='content'>
+												{technology.languages
+													.splice(
+														fifth ? 14 : 9,
+														fifth
+															? 18
+															: fourth
+															? 13
+															: technology.languages.length < 12
+															? technology.languages.length
+															: 12,
+													)
+													.map(language => (
+														<Tooltip key={language.id} title='Next' disableFocusListener>
+															<Technology />
+														</Tooltip>
+													))}
+											</div>
+										)}
 									</div>
-								</div>
-							</WrapCircle>
-							<WrapCircle className='wrap-circle-3'>
-								<div className='circle'>
-									<div className='icon'>
-										<IconEllipse />
-									</div>
-									<div className='content'>
-										<WrapTechnologies className='technologies'>
-											<Technology />
-											<Technology />
-											<Technology />
-										</WrapTechnologies>
-									</div>
-								</div>
-							</WrapCircle>
-							<WrapCircle className='wrap-circle-4'>
-								<div className='circle'>
-									<div className='icon'>
-										<IconEllipse />
-									</div>
-									<div className='content'>
-										<WrapTechnologies className='technologies'>
-											<Technology />
-											<Technology />
-											<Technology />
-										</WrapTechnologies>
-									</div>
-								</div>
-							</WrapCircle>
-							<WrapTabPanelTexts>
-								<Typography align='center' variant='title90' component='h4'>
-									{technology.name}
-								</Typography>
-								<Typography align='center' variant='text80' component='h5'>
-									{technology.text}
-								</Typography>
-							</WrapTabPanelTexts>
-						</WrapTabPanel>
-					</TabPanel>
-				))}
+								</WrapCircle>
+								<WrapTabPanelTexts>
+									<Typography align='center' variant='title90' component='h4'>
+										{technology.name}
+									</Typography>
+									<Typography align='center' variant='text80' component='h5'>
+										{technology.text}
+									</Typography>
+								</WrapTabPanelTexts>
+							</WrapTabPanel>
+						</TabPanel>
+					)
+				})}
 			</TabContext>
 		</Container>
 	)

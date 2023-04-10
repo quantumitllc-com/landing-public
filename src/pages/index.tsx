@@ -38,9 +38,7 @@ const Home = () => {
 			<Box id='about-us'>
 				<AboutUs />
 			</Box>
-			<Box id='tools'>
-				<Technologies />
-			</Box>
+			<Box id='tools'>{/* <Technologies /> */}</Box>
 			<Box id='testimonials'>{/* <Testimonials /> */}</Box>
 		</>
 	)

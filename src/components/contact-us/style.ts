@@ -37,11 +37,23 @@ export const Header = styled('div')`
 	align-items: center;
 	padding: 16px 16px 0;
 	justify-content: flex-end;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '10px 10px 18px 0',
+		},
+	})}
 `
 
 export const Form = styled('form')`
-	display: fl;
+	display: flex;
+	flex-direction: column;
 	padding: 10px 75px 50px 60px;
+
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			padding: '10px 18px 10px',
+		},
+	})}
 `
 
 export const WrapInputs = styled('div')`
@@ -50,6 +62,13 @@ export const WrapInputs = styled('div')`
 	display: grid;
 	padding: 40px 0 20px;
 	grid-template-columns: 1fr 1fr;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			gap: '16px',
+			padding: '30px 0 36px',
+			gridTemplateColumns: '1fr',
+		},
+	})}
 `
 
 export const WrapButtonRequest = styled('div')`
