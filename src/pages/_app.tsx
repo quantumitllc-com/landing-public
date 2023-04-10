@@ -15,7 +15,6 @@ import { CacheProvider, EmotionCache } from '@emotion/react'
 import { createEmotionCache } from '@/utility/createEmotionCache'
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import 'react-toastify/dist/ReactToastify.css'
-import 'react-multi-carousel/lib/styles.css'
 import 'keen-slider/keen-slider.min.css'
 import '@/styles/globals.css'
 
