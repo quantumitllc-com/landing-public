@@ -21,40 +21,63 @@ export const WrapImage = styled('div')`
 	}
 `
 
-export const Wrapper = styled('div')`
+interface IWrapper {
+	length: number
+}
+
+export const Wrapper = styled('div')<IWrapper>`
 	gap: 14px;
 	width: 100%;
 	display: grid;
 	padding: 42px 0;
-	grid-template-columns: 1fr 1fr;
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
+
 	& > div {
 		width: 100%;
 		height: 400px;
 		display: flex;
 		overflow: hidden;
 		flex-direction: column;
-	}
-	& > div:nth-of-type(2) {
-		grid-column: 2 / 3;
-		grid-row: 2 / 3;
-	}
-	& > div:nth-of-type(3) {
-		grid-column: 1 / 2;
-		grid-row: 2 / 3;
-	}
-	& > div:nth-of-type(odd) {
 		background-color: ${({ theme }) => theme.palette.colors.GRAY160};
 	}
-	& > div:nth-of-type(even) {
-		background-color: ${({ theme }) => theme.palette.colors.GRAY170};
-	}
-	& > div:first-of-type,
-	& > div:last-of-type {
-		height: 550px;
-		height: 550px;
-		grid-column: 1 / 3;
-	}
+
+	${({ theme, length }) => ({
+		gridTemplateColumns: length === 1 ? '1fr' : '1fr 1fr',
+		'& > div:first-of-type': {
+			height: length !== 2 && length !== 1 && '550px',
+			gridColumn: length !== 2 && length !== 1 && '1 / 3',
+		},
+		'& > div:nth-of-type(2)': {
+			gridRow: length !== 2 && length !== 1 && '2 / 3',
+			gridColumn: length !== 2 && length !== 1 && '2 / 3',
+			backgroundColor: length === 1 ? theme.palette.colors.GRAY160 : theme.palette.colors.GRAY170,
+			h3: {
+				color: theme.palette.colors.WHITE,
+			},
+		},
+		'& > div:nth-of-type(4)': {
+			height: length === 4 && '550px',
+			gridColumn: length === 4 && '1 / 3',
+			backgroundColor: theme.palette.colors.GRAY170,
+			h3: {
+				color: theme.palette.colors.WHITE,
+			},
+		},
+		'& > div:nth-of-type(6)': {
+			height: '550px',
+			gridColumn: '1 / 3',
+			backgroundColor: theme.palette.colors.GRAY170,
+			h3: {
+				color: theme.palette.colors.WHITE,
+			},
+		},
+		[theme.breakpoints.down('sm')]: {
+			padding: '30px 18px 24px',
+			'& > div': {
+				height: '270px',
+			},
+		},
+	})}
 `
 
 export const WrapIconChevron = styled('span')`

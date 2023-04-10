@@ -47,31 +47,34 @@ export const HomeProjects = () => {
 			>
 				{t('projects_that_are_ready_to_use_with_great_designs_and_details')}
 			</Typography>
-			<Wrapper>
-				{data.map(project => (
-					<div key={project.id}>
-						<WrapCardTexts>
-							<Typography align='center' variant='title100' component='h3'>
-								{project.title}
-							</Typography>
-							<Button
-								size='small'
-								component={Link}
-								href={`projects/${project.id}`}
-								endIcon={
-									<WrapIconChevron>
-										<IconChevron />
-									</WrapIconChevron>
-								}
-							>
-								{t('learn_more')}
-							</Button>
-						</WrapCardTexts>
-						<WrapImage>
-							<Image fill src={project.image} alt={project.title} />
-						</WrapImage>
-					</div>
-				))}
+			<Wrapper length={data.filter(project => project.in_home_page).length}>
+				{data
+					.filter(project => project.in_home_page)
+					.splice(0, 6)
+					.map(project => (
+						<div key={project.id}>
+							<WrapCardTexts>
+								<Typography align='center' variant='title100' component='h3'>
+									{project.title}
+								</Typography>
+								<Button
+									size='small'
+									component={Link}
+									href={`projects/${project.id}`}
+									endIcon={
+										<WrapIconChevron>
+											<IconChevron />
+										</WrapIconChevron>
+									}
+								>
+									{t('learn_more')}
+								</Button>
+							</WrapCardTexts>
+							<WrapImage>
+								<Image fill src={project.image} alt={project.title} />
+							</WrapImage>
+						</div>
+					))}
 			</Wrapper>
 			<Button
 				href='projects'
