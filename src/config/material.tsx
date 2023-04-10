@@ -6,9 +6,11 @@ import { VARIABLES_CSS } from '@/constants/variables-css'
 declare module '@mui/material/styles/createPalette' {
 	interface Palette {
 		colors: typeof VARIABLES_CSS.COLORS
+		shadows: typeof VARIABLES_CSS.SHADOWS
 	}
 	interface PaletteOptions {
 		colors: typeof VARIABLES_CSS.COLORS
+		shadows: typeof VARIABLES_CSS.SHADOWS
 	}
 }
 
@@ -28,6 +30,7 @@ declare module '@mui/material/styles' {
 		text110: React.CSSProperties
 		text120: React.CSSProperties
 		text130: React.CSSProperties
+		text140: React.CSSProperties
 		title: React.CSSProperties
 		title10: React.CSSProperties
 		title20: React.CSSProperties
@@ -43,6 +46,7 @@ declare module '@mui/material/styles' {
 		title120: React.CSSProperties
 		title130: React.CSSProperties
 		title140: React.CSSProperties
+		title150: React.CSSProperties
 	}
 
 	interface TypographyVariantsOptions {
@@ -60,6 +64,7 @@ declare module '@mui/material/styles' {
 		text110: React.CSSProperties
 		text120: React.CSSProperties
 		text130: React.CSSProperties
+		text140: React.CSSProperties
 		title: React.CSSProperties
 		title10: React.CSSProperties
 		title20: React.CSSProperties
@@ -75,6 +80,7 @@ declare module '@mui/material/styles' {
 		title120: React.CSSProperties
 		title130: React.CSSProperties
 		title140: React.CSSProperties
+		title150: React.CSSProperties
 	}
 }
 
@@ -94,6 +100,7 @@ declare module '@mui/material/Typography' {
 		text110: true
 		text120: true
 		text130: true
+		text140: true
 		title: true
 		title10: true
 		title20: true
@@ -109,6 +116,7 @@ declare module '@mui/material/Typography' {
 		title120: true
 		title130: true
 		title140: true
+		title150: true
 	}
 }
 
@@ -118,6 +126,7 @@ const defaultCreateTheme = createTheme({
 			main: VARIABLES_CSS.COLORS.GREEN,
 		},
 		colors: VARIABLES_CSS.COLORS,
+		shadows: VARIABLES_CSS.SHADOWS,
 	},
 	breakpoints: VARIABLES_CSS.BREAKPOINTS,
 })
@@ -253,6 +262,16 @@ export const theme = createTheme({
 			lineHeight: '152.7%',
 			letterSpacing: '0.0035em',
 			color: defaultCreateTheme.palette.colors.WHITE,
+		},
+		text140: {
+			fontWeight: 500,
+			fontSize: '18px',
+			lineHeight: '154.7%',
+			color: defaultCreateTheme.palette.colors.BLUE40,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '13px',
+				lineHeight: '142.7%',
+			},
 		},
 		title: {
 			fontWeight: 600,
@@ -393,6 +412,15 @@ export const theme = createTheme({
 			color: defaultCreateTheme.palette.colors.BLUE20,
 			[defaultCreateTheme.breakpoints.down('sm')]: {
 				fontSize: '18px',
+			},
+		},
+		title150: {
+			fontWeight: 600,
+			fontSize: '18px',
+			lineHeight: '116.7%',
+			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '13px',
 			},
 		},
 	},

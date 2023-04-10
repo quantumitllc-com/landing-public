@@ -24,11 +24,16 @@ export const VARIABLES_CSS = {
 		GRAY190: '#1c1f250d',
 		GRAY200: '#ffffffd9',
 		GRAY210: '#172c3880',
+		GRAY220: '#091f2c66',
+		GRAY230: '#00000012',
 		BLUE: '#091F2C',
 		BLUE10: '#172C38',
 		BLUE20: '#1C1F25',
 		BLUE30: '#170F49',
 		BLUE40: '#091f2ce6',
+	},
+	SHADOWS: {
+		SHADOW: '0px 0px 100px #0f364e1a',
 	},
 	BREAKPOINTS: {
 		values: {

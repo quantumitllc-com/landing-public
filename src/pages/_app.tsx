@@ -7,7 +7,6 @@ import type { AppProps } from 'next/app'
 import { theme } from '@/config/material'
 import NextNProgress from 'nextjs-progressbar'
 import { ToastContainer } from 'react-toastify'
-import { AnimatePresence } from 'framer-motion'
 import { appWithTranslation } from 'next-i18next'
 import { queryClientConfig } from '@/utility/react-query'
 import { ThemeProvider, CssBaseline } from '@mui/material'
@@ -17,6 +16,7 @@ import { createEmotionCache } from '@/utility/createEmotionCache'
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import 'react-toastify/dist/ReactToastify.css'
 import 'react-multi-carousel/lib/styles.css'
+import 'keen-slider/keen-slider.min.css'
 import '@/styles/globals.css'
 
 interface NewAppProps extends AppProps {
@@ -49,23 +49,21 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 					--font-gilroy: ${gilroy.style.fontFamily};
 				}
 			`}</style>
-			<AnimatePresence mode='wait' initial={false}>
-				<ThemeProvider theme={theme}>
-					{/* <ErrorBoundary> */}
-					<QueryClientProvider client={queryClient}>
-						<Hydrate state={pageProps.dehydratedState}>
-							<CacheProvider value={emotionCache}>
-								<Layout {...pageProps}>
-									<CssBaseline />
-									<ToastContainer />
-									<Component {...pageProps} />
-								</Layout>
-							</CacheProvider>
-						</Hydrate>
-					</QueryClientProvider>
-					{/* </ErrorBoundary> */}
-				</ThemeProvider>
-			</AnimatePresence>
+			<ThemeProvider theme={theme}>
+				{/* <ErrorBoundary> */}
+				<QueryClientProvider client={queryClient}>
+					<Hydrate state={pageProps.dehydratedState}>
+						<CacheProvider value={emotionCache}>
+							<Layout {...pageProps}>
+								<CssBaseline />
+								<ToastContainer />
+								<Component {...pageProps} />
+							</Layout>
+						</CacheProvider>
+					</Hydrate>
+				</QueryClientProvider>
+				{/* </ErrorBoundary> */}
+			</ThemeProvider>
 		</>
 	)
 }

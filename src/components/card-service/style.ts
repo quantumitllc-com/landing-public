@@ -18,7 +18,7 @@ export const Container = styled('div')`
 		border-radius: 12px;
 		transition: 0.3s ease-in-out;
 		background-color: transparent;
-		box-shadow: 0px 0px 100px rgba(15, 54, 78, 0.1);
+		box-shadow: ${({ theme }) => theme.palette.shadows.SHADOW};
 	}
 `
 
@@ -29,8 +29,8 @@ export const Wrapper = styled('div')`
 	background: #ffffff;
 	border-radius: 12px;
 	transition: all 0.3s ease;
-	border: 1px solid rgba(0, 0, 0, 0.07);
-	box-shadow: 0px 0px 100px rgba(15, 54, 78, 0.1);
+	box-shadow: ${({ theme }) => theme.palette.shadows.SHADOW};
+	border: 1px solid ${({ theme }) => theme.palette.colors.GRAY230};
 	h2,
 	h3 {
 		transition: color 0.5s;

@@ -1,21 +1,35 @@
-import { Container } from './style'
-import { Avatar, Box, Typography } from '@mui/material'
+import { ITestimonial } from '@/types/respones'
+import { Box, Typography } from '@mui/material'
+import { IconQuotes } from '@/assets/icons/quotes'
 import { stringAvatar } from '@/utility/stringAvatar'
+import { Avatar, WrapText, Container } from './style'
 
-export const CardTestimonial = () => {
+interface ICardTestimonial extends ITestimonial {
+	className?: string
+}
+
+export const CardTestimonial = ({ className, ...testimonial }: ICardTestimonial) => {
 	return (
-		<Container>
+		<Container className={className}>
 			<Box gap='13px' display='flex' alignItems='center'>
-				<Avatar {...stringAvatar('Kent Dodds')} sx={{ width: 56, height: 56 }} />
+				<Avatar
+					src={testimonial.image}
+					{...stringAvatar(`${testimonial.first_name} ${testimonial.last_name}`)}
+				/>
 				<Box display='flex' justifyContent='center' flexDirection='column'>
-					<Typography>Annette Black</Typography>
-					<Typography>Fayzee Studio</Typography>
+					<Typography variant='title150' component='h6'>
+						{testimonial.first_name} {testimonial.last_name}
+					</Typography>
 				</Box>
 			</Box>
-			<Typography>
-				“Quantum is the right choice for you. The performance of this team is very fast and
-				satisfying. They are really professional”
-			</Typography>
+			<WrapText>
+				<Box className='icon'>
+					<IconQuotes />
+				</Box>
+				<Typography variant='text140' component='p'>
+					“{testimonial.text}”
+				</Typography>
+			</WrapText>
 		</Container>
 	)
 }

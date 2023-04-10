@@ -1,52 +1,46 @@
+import { useState } from 'react'
 import { useRouter } from 'next/router'
-import { useRef, LegacyRef } from 'react'
-import Carousel from 'react-multi-carousel'
 import { getTestimonials } from '@/pages/api'
 import { useTranslation } from 'next-i18next'
+import { ITestimonial } from '@/types/respones'
 import { useQuery } from '@tanstack/react-query'
-import type { ITestimonial } from '@/types/respones'
-import { IconButton, Typography } from '@mui/material'
+import { useKeenSlider } from 'keen-slider/react'
+import { Typography, useTheme } from '@mui/material'
 import { IconArrowCircle } from '@/assets/icons/arrow-circle'
 import { IconTestimonials } from '@/assets/icons/testimonials'
+import { CardTestimonial } from '@/components/card-testimonial'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { CardTestimonial } from '@/components/card-testimonial/card'
-import { Slider, WrapIcon, WrapText, Container, WrapButtons } from './style'
-
-const responsive = {
-	desktop: {
-		breakpoint: {
-			max: 3000,
-			min: 1024,
-		},
-		items: 2,
-	},
-	mobile: {
-		breakpoint: {
-			max: 600,
-			min: 0,
-		},
-		items: 1,
-	},
-}
+import { Slider, WrapText, WrapIcon, Container, WrapButtons, ArrowButton } from './style'
 
 export const Testimonials = () => {
+	const theme = useTheme()
 	const { locale } = useRouter()
 	const { t } = useTranslation('common')
 	const { data = [] } = useQuery<ITestimonial[]>({
 		queryKey: [REACT_QUERY_KEYS.TESTIMONIALS, locale],
 		queryFn: () => getTestimonials(locale),
 	})
-
-	const ref: LegacyRef<Carousel> | undefined = useRef(null)
-	const handleNextSlide = () => {
-		if (ref.current && ref.current.state.totalItems - 1 !== ref.current.state.currentSlide)
-			ref.current?.goToSlide(ref.current.state.currentSlide + 1)
-	}
-	const handlePrevSlide = () => {
-		if (ref.current && ref.current.state.currentSlide !== 0)
-			ref.current?.goToSlide(ref.current.state.currentSlide - 1)
-	}
-
+	const [loaded, setLoaded] = useState(false)
+	const [currentSlide, setCurrentSlide] = useState(0)
+	const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+		mode: 'free',
+		slides: {
+			perView: data.length === 1 ? 1 : 2,
+			spacing: 20,
+		},
+		created() {
+			setLoaded(true)
+		},
+		slideChanged(s) {
+			setCurrentSlide(s.track.details.rel)
+		},
+		breakpoints: {
+			[`(max-width: ${theme.breakpoints.values.sm}px)`]: {
+				slides: { perView: 1.2, spacing: 12 },
+			},
+		},
+	})
+	console.log(data)
 	return (
 		<Container>
 			<WrapIcon>
@@ -79,33 +73,28 @@ export const Testimonials = () => {
 				{t('we_always_try_make_the_experience_with_us_always_the_best')}
 			</Typography>
 			<Slider>
-				<Carousel
-					ssr
-					ref={ref}
-					draggable
-					swipeable
-					arrows={false}
-					keyBoardControl
-					renderDotsOutside
-					deviceType='desktop'
-					responsive={responsive}
-					containerClass='carousel-container'
-					dotListClass='custom-dot-list-style'
-					itemClass='carousel-item-padding-40-px'
-				>
-					<CardTestimonial />
-					<CardTestimonial />
-					<CardTestimonial />
-					<CardTestimonial />
-				</Carousel>
-				<WrapButtons>
-					<IconButton onClick={handlePrevSlide}>
-						<IconArrowCircle />
-					</IconButton>
-					<IconButton onClick={handleNextSlide}>
-						<IconArrowCircle />
-					</IconButton>
-				</WrapButtons>
+				<div ref={sliderRef} className='keen-slider'>
+					{data.map(testimonial => (
+						<CardTestimonial key={testimonial.id} className='keen-slider__slide' {...testimonial} />
+					))}
+				</div>
+				{loaded && instanceRef.current && (
+					<WrapButtons>
+						<ArrowButton
+							disabled={currentSlide === 0}
+							onClick={(e: any) => e.stopPropagation() || instanceRef.current?.prev()}
+						>
+							<IconArrowCircle />
+						</ArrowButton>
+						<ArrowButton
+							isright='true'
+							onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()}
+							disabled={currentSlide === instanceRef.current.track.details.slides.length - 2}
+						>
+							<IconArrowCircle />
+						</ArrowButton>
+					</WrapButtons>
+				)}
 			</Slider>
 		</Container>
 	)
