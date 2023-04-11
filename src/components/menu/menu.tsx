@@ -10,7 +10,7 @@ import { useTheme, IconButton, SwipeableDrawer, useMediaQuery } from '@mui/mater
 export const Menu = () => {
 	const theme = useTheme()
 	const { value, setTrue, setFalse } = useBoolean()
-	const matches = useMediaQuery(theme.breakpoints.up('sm'))
+	const matches = useMediaQuery(theme.breakpoints.up('lg'))
 
 	if (matches) {
 		return null

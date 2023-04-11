@@ -66,6 +66,10 @@ export interface ITechnology {
 	name: string
 	text: string
 	languages: ILanguage[]
+	listLanguages1: ILanguage[]
+	listLanguages2: ILanguage[]
+	listLanguages3: ILanguage[]
+	listLanguages4: ILanguage[]
 }
 
 export interface ITestimonial {

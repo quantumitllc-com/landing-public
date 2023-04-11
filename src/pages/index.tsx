@@ -18,8 +18,8 @@ import {
 	getProjects,
 	getServices,
 	getCompanies,
-	getTestimonials,
 	getTechnologies,
+	getTestimonials,
 	getContactInformation,
 } from '@/pages/api'
 
@@ -38,8 +38,12 @@ const Home = () => {
 			<Box id='about-us'>
 				<AboutUs />
 			</Box>
-			<Box id='tools'>{/* <Technologies /> */}</Box>
-			<Box id='testimonials'>{/* <Testimonials /> */}</Box>
+			<Box id='tools'>
+				<Technologies />
+			</Box>
+			<Box id='testimonials'>
+				<Testimonials />
+			</Box>
 		</>
 	)
 }

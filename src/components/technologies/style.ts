@@ -294,13 +294,30 @@ export const WrapTechnologies = styled('div')`
 export const Technology = styled('div')`
 	width: 80px;
 	height: 80px;
+	display: flex;
 	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
 	background-color: #ffffff;
 	box-shadow: 0px 25px 55px rgba(0, 0, 0, 0.1);
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			width: '40px',
 			height: '40px',
+		},
+	})}
+`
+
+export const WrapImage = styled('div')`
+	width: 49px;
+	height: 49px;
+	img {
+		object-fit: cover;
+	}
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			width: '24px',
+			height: '24px',
 		},
 	})}
 `

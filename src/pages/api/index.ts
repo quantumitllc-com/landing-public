@@ -1,3 +1,4 @@
+import { ITechnology } from '@/types/respones'
 import { getMonth } from '@/utility/getMonth'
 import { request } from '@/utility/interceptors'
 
@@ -70,7 +71,41 @@ export const getTechnologies = async (locale = 'en') => {
 			'Accept-Language': locale,
 		},
 	})
-	return data
+
+	const newData = data.map((technology: ITechnology) => {
+		const fourth = technology.languages.length > 12
+		const fifth = technology.languages.length > 15
+
+		return {
+			...technology,
+			listLanguages1: technology.languages.slice(0, fifth ? 4 : 3),
+			listLanguages2: technology.languages.splice(
+				fifth ? 4 : 3,
+				fifth ? 8 : fourth ? 7 : technology.languages.length < 6 ? technology.languages.length : 6,
+			),
+			listLanguages3: technology.languages.splice(
+				fifth ? 9 : 6,
+				fifth
+					? 13
+					: fourth
+					? 10
+					: technology.languages.length < 9
+					? technology.languages.length
+					: 9,
+			),
+			listLanguages4: technology.languages.splice(
+				fifth ? 14 : 9,
+				fifth
+					? 18
+					: fourth
+					? 13
+					: technology.languages.length < 12
+					? technology.languages.length
+					: 12,
+			),
+		}
+	})
+	return newData
 }
 
 export const getTestimonials = async (locale = 'en') => {
@@ -89,11 +124,6 @@ export const getContactInformation = async (locale = 'en') => {
 		},
 	})
 	return data
-}
-
-export const postContact = async <T>(data: T) => {
-	const res = await request.post('api/contact/', data)
-	return res
 }
 
 export const postFollow = async <T>(data: T) => {
