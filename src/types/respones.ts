@@ -51,7 +51,7 @@ export interface IProject {
 	}[]
 	service: {
 		dark_image: string
-		id: 1
+		id: number
 		light_image: string
 		text: string
 		title: string
@@ -74,10 +74,11 @@ export interface ITechnology {
 
 export interface ITestimonial {
 	first_name: string
-	id: 1
+	id: number
 	image: string
 	last_name: string
 	text: string
+	company_name: string
 }
 
 export interface IContactInformation {

@@ -20,12 +20,16 @@ export const CardTestimonial = ({ className, ...testimonial }: ICardTestimonial)
 					<Typography variant='title150' component='h6'>
 						{testimonial.first_name} {testimonial.last_name}
 					</Typography>
+					<Typography variant='title160' component='h6'>
+						{testimonial.company_name}
+					</Typography>
 				</Box>
 			</Box>
 			<WrapText>
 				<Box className='icon'>
 					<IconQuotes />
 				</Box>
+
 				<Typography variant='text140' component='p'>
 					“{testimonial.text}”
 				</Typography>
