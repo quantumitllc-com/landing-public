@@ -49,19 +49,19 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				}
 			`}</style>
 			<ThemeProvider theme={theme}>
-				{/* <ErrorBoundary> */}
-				<QueryClientProvider client={queryClient}>
-					<Hydrate state={pageProps.dehydratedState}>
-						<CacheProvider value={emotionCache}>
-							<Layout {...pageProps}>
-								<CssBaseline />
-								<ToastContainer />
-								<Component {...pageProps} />
-							</Layout>
-						</CacheProvider>
-					</Hydrate>
-				</QueryClientProvider>
-				{/* </ErrorBoundary> */}
+				<ErrorBoundary>
+					<QueryClientProvider client={queryClient}>
+						<Hydrate state={pageProps.dehydratedState}>
+							<CacheProvider value={emotionCache}>
+								<Layout {...pageProps}>
+									<CssBaseline />
+									<ToastContainer />
+									<Component {...pageProps} />
+								</Layout>
+							</CacheProvider>
+						</Hydrate>
+					</QueryClientProvider>
+				</ErrorBoundary>
 			</ThemeProvider>
 		</>
 	)

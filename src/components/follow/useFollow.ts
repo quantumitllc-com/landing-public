@@ -2,8 +2,8 @@ import { postFollow } from '@/pages/api'
 import { useForm } from 'react-hook-form'
 import { useMutation } from '@tanstack/react-query'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { notifySuccess } from '@/components/notification'
 import { schema, defaultValues, type FormTypes } from './form.schema'
+import { notifyError, notifySuccess } from '@/components/notification'
 
 export const useFollow = () => {
 	const form = useForm<FormTypes>({
@@ -16,6 +16,9 @@ export const useFollow = () => {
 		onSuccess: () => {
 			form.reset(defaultValues)
 			notifySuccess('Thanks')
+		},
+		onError(error: any) {
+			notifyError(error.response.data.email[0])
 		},
 	})
 

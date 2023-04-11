@@ -1,14 +1,15 @@
+import { notifyError } from '@/components/notification'
 import { QueryCache, MutationCache, type QueryClientConfig } from '@tanstack/react-query'
 
 const mutationCache = new MutationCache({
 	onError(error: any) {
-		console.log(error)
+		notifyError(`${error.response.status} ${error.response.statusText}`)
 	},
 })
 
 const queryCache = new QueryCache({
 	onError: (error: any) => {
-		console.log(error)
+		notifyError(`${error.response.status} ${error.response.statusText}`)
 	},
 })
 
