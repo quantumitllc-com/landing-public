@@ -118,7 +118,11 @@ export const Technologies = () => {
 										<WrapTechnologies className='technologies'>
 											{technology.listLanguages2.map(language => (
 												<Tooltip key={language.id} title={language.name} disableFocusListener>
-													<Technology />
+													<Technology>
+														<WrapImage>
+															<Image fill src={language.image} alt={language.name} />
+														</WrapImage>
+													</Technology>
 												</Tooltip>
 											))}
 										</WrapTechnologies>
@@ -134,7 +138,11 @@ export const Technologies = () => {
 										<WrapTechnologies className='technologies'>
 											{technology.listLanguages3.map(language => (
 												<Tooltip key={language.id} title={language.name} disableFocusListener>
-													<Technology />
+													<Technology>
+														<WrapImage>
+															<Image fill src={language.image} alt={language.name} />
+														</WrapImage>
+													</Technology>
 												</Tooltip>
 											))}
 										</WrapTechnologies>
@@ -149,7 +157,11 @@ export const Technologies = () => {
 									<div className='content'>
 										{technology.listLanguages4.map(language => (
 											<Tooltip key={language.id} title={language.name} disableFocusListener>
-												<Technology />
+												<Technology>
+													<WrapImage>
+														<Image fill src={language.image} alt={language.name} />
+													</WrapImage>
+												</Technology>
 											</Tooltip>
 										))}
 									</div>

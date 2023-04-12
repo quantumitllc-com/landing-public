@@ -40,7 +40,7 @@ export const Testimonials = () => {
 			},
 		},
 	})
-	console.log(data)
+
 	return (
 		<Container>
 			<WrapIcon>

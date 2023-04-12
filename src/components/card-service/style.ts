@@ -1,7 +1,9 @@
 import { styled } from '@mui/material/styles'
 
 export const Container = styled('div')`
+	width: 100%;
 	position: relative;
+
 	:hover::after {
 		right: -8px;
 		bottom: -8px;
@@ -23,6 +25,8 @@ export const Container = styled('div')`
 `
 
 export const Wrapper = styled('div')`
+	width: 100%;
+	height: 100%;
 	padding: 25px;
 	overflow: hidden;
 	position: relative;

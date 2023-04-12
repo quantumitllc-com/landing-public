@@ -37,7 +37,6 @@ export const Projects = () => {
 		</Typography>,
 	]
 
-	console.log(data)
 	return (
 		<Container>
 			<Wrapper>
