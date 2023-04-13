@@ -3,15 +3,13 @@ import { useState } from 'react'
 import { Layout } from '@/layout'
 import type { NextPage } from 'next'
 import { DefaultSeo } from 'next-seo'
-import { useRouter } from 'next/router'
 import { gilroy } from '@/utility/fonts'
 import type { AppProps } from 'next/app'
 import { theme } from '@/config/material'
-import { ILocales } from '@/types/locales'
 import NextNProgress from 'nextjs-progressbar'
+import DEFAULT_SEO from '../../next-seo.config'
 import { ToastContainer } from 'react-toastify'
 import { appWithTranslation } from 'next-i18next'
-import { HTML_LOCALES } from '@/constants/languages'
 import { queryClientConfig } from '@/utility/react-query'
 import { ThemeProvider, CssBaseline } from '@mui/material'
 import { ErrorBoundary } from '@/components/error-boundary'
@@ -30,7 +28,6 @@ interface NewAppProps extends AppProps {
 const clientSideEmotionCache = createEmotionCache()
 
 const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: NewAppProps) => {
-	const router = useRouter()
 	const [queryClient] = useState(() => new QueryClient(queryClientConfig))
 
 	return (
@@ -42,51 +39,7 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				}}
 			/>
 			<Head>
-				{/* <DefaultSeo
-					canonical='https://quantumitllc.com'
-					openGraph={{
-						locale: HTML_LOCALES[router.locale as ILocales] ?? HTML_LOCALES.en,
-						type: 'website',
-						url: 'https://quantumitllc.com',
-						title: 'Enterprise Software Development Company | Quantum IT Solutions',
-						description:
-							'Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.',
-						site_name: 'Quantumitllc.com',
-						images: [
-							{
-								url: '/icon.png',
-								alt: 'Quantum IT Solutions',
-							},
-						],
-					}}
-					twitter={{
-						handle: '@handle',
-						site: '@site',
-						cardType: 'summary_large_image',
-					}}
-				/> */}
-				<DefaultSeo
-					openGraph={{
-						title: 'TSS',
-						type: 'website',
-						locale: 'en_IE',
-						url: 'http://zmltss.com/',
-						site_name: 'TSS',
-						description: 'Trailer security system is a solution',
-						images: [
-							{
-								url: '/images/trucks.png',
-								type: 'png',
-								alt: 'Trucks',
-							},
-						],
-					}}
-					twitter={{
-						handle: '@handle',
-						site: '@site',
-						cardType: 'summary_large_image',
-					}}
-				/>
+				<DefaultSeo {...DEFAULT_SEO} />
 				<title>Enterprise Software Development Company | Quantum IT Solutions</title>
 				<meta
 					name='description'
