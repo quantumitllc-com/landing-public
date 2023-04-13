@@ -35,66 +35,66 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 
 	return (
 		<>
-			<DefaultSeo
-				canonical={`https://quantumitllc.com/${router.locale}`}
-				title='Enterprise Software Development Company | Quantum IT Solutions'
-				description='Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.'
-				openGraph={{
-					locale: HTML_LOCALES[router.locale as ILocales] ?? HTML_LOCALES.en,
-					type: 'website',
-					url: `https://quantumitllc.com/${router.locale}`,
-					title: 'Enterprise Software Development Company | Quantum IT Solutions',
-					description:
-						'Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.',
-					site_name: 'Quantumitllc.com',
-					images: [
-						{
-							url: '/icon.png',
-							width: 800,
-							height: 420,
-							alt: 'Quantum IT Solutions',
-						},
-					],
-				}}
-				robotsProps={{
-					nosnippet: true,
-					notranslate: true,
-					noimageindex: true,
-					noarchive: true,
-					maxSnippet: -1,
-					maxImagePreview: 'large',
-					maxVideoPreview: -1,
-				}}
-				languageAlternates={[
-					{
-						hrefLang: HTML_LOCALES.en,
-						href: `https://quantumitllc.com`,
-					},
-					{
-						hrefLang: HTML_LOCALES.ru,
-						href: `https://quantumitllc.com/ru`,
-					},
-				]}
-				mobileAlternate={{
-					media: 'only screen and (max-width: 600px)',
-					href: `https://quantumitllc.com/${router.locale}`,
-				}}
-				additionalMetaTags={[
-					{
-						property: 'dc:creator',
-						content: 'Quantum IT Solutions',
-					},
-					{
-						name: 'application-name',
-						content: 'Quantumitllc.com',
-					},
-					{
-						httpEquiv: 'x-ua-compatible',
-						content: 'IE=edge; chrome=1',
-					},
-				]}
-			/>
 			<Head>
+				<DefaultSeo
+					canonical={`https://quantumitllc.com/${router.locale}`}
+					title='Enterprise Software Development Company | Quantum IT Solutions'
+					description='Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.'
+					openGraph={{
+						locale: HTML_LOCALES[router.locale as ILocales] ?? HTML_LOCALES.en,
+						type: 'website',
+						url: `https://quantumitllc.com/${router.locale}`,
+						title: 'Enterprise Software Development Company | Quantum IT Solutions',
+						description:
+							'Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.',
+						site_name: 'Quantumitllc.com',
+						images: [
+							{
+								url: '/icon.png',
+								width: 800,
+								height: 420,
+								alt: 'Quantum IT Solutions',
+							},
+						],
+					}}
+					robotsProps={{
+						nosnippet: true,
+						notranslate: true,
+						noimageindex: true,
+						noarchive: true,
+						maxSnippet: -1,
+						maxImagePreview: 'large',
+						maxVideoPreview: -1,
+					}}
+					languageAlternates={[
+						{
+							hrefLang: HTML_LOCALES.en,
+							href: `https://quantumitllc.com`,
+						},
+						{
+							hrefLang: HTML_LOCALES.ru,
+							href: `https://quantumitllc.com/ru`,
+						},
+					]}
+					mobileAlternate={{
+						media: 'only screen and (max-width: 600px)',
+						href: `https://quantumitllc.com/${router.locale}`,
+					}}
+					additionalMetaTags={[
+						{
+							property: 'dc:creator',
+							content: 'Quantum IT Solutions',
+						},
+						{
+							name: 'application-name',
+							content: 'Quantumitllc.com',
+						},
+						{
+							httpEquiv: 'x-ua-compatible',
+							content: 'IE=edge; chrome=1',
+						},
+					]}
+				/>
 				<title>Quantum IT Solutions</title>
 				<meta name='description' content='Quantum IT Solutions' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
