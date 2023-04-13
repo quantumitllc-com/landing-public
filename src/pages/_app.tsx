@@ -37,13 +37,13 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 		<>
 			<Head>
 				<DefaultSeo
-					canonical={`https://quantumitllc.com/${router.locale}`}
+					canonical='https://quantumitllc.com'
 					title='Enterprise Software Development Company | Quantum IT Solutions'
 					description='Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.'
 					openGraph={{
 						locale: HTML_LOCALES[router.locale as ILocales] ?? HTML_LOCALES.en,
 						type: 'website',
-						url: `https://quantumitllc.com/${router.locale}`,
+						url: 'https://quantumitllc.com',
 						title: 'Enterprise Software Development Company | Quantum IT Solutions',
 						description:
 							'Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.',
@@ -78,7 +78,7 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 					]}
 					mobileAlternate={{
 						media: 'only screen and (max-width: 600px)',
-						href: `https://quantumitllc.com/${router.locale}`,
+						href: 'https://quantumitllc.com',
 					}}
 					additionalMetaTags={[
 						{
@@ -97,6 +97,7 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				/>
 				<title>Quantum IT Solutions</title>
 				<meta name='description' content='Quantum IT Solutions' />
+				<meta content='IE=edge' httpEquiv='X-UA-Compatible' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' type='image/svg+xml' href='/icon.svg' />
 				<link rel='icon' type='image/png' href='/icon.png' />
