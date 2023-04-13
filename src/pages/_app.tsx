@@ -35,6 +35,12 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 
 	return (
 		<>
+			<NextNProgress
+				color={theme.palette.colors.GREEN}
+				options={{
+					showSpinner: false,
+				}}
+			/>
 			<Head>
 				<DefaultSeo
 					canonical='https://quantumitllc.com'
@@ -51,63 +57,26 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 						images: [
 							{
 								url: '/icon.png',
-								width: 800,
-								height: 420,
 								alt: 'Quantum IT Solutions',
 							},
 						],
 					}}
-					robotsProps={{
-						nosnippet: true,
-						notranslate: true,
-						noimageindex: true,
-						noarchive: true,
-						maxSnippet: -1,
-						maxImagePreview: 'large',
-						maxVideoPreview: -1,
+					twitter={{
+						handle: '@handle',
+						site: '@site',
+						cardType: 'summary_large_image',
 					}}
-					languageAlternates={[
-						{
-							hrefLang: HTML_LOCALES.en,
-							href: `https://quantumitllc.com`,
-						},
-						{
-							hrefLang: HTML_LOCALES.ru,
-							href: `https://quantumitllc.com/ru`,
-						},
-					]}
-					mobileAlternate={{
-						media: 'only screen and (max-width: 600px)',
-						href: 'https://quantumitllc.com',
-					}}
-					additionalMetaTags={[
-						{
-							property: 'dc:creator',
-							content: 'Quantum IT Solutions',
-						},
-						{
-							name: 'application-name',
-							content: 'Quantumitllc.com',
-						},
-						{
-							httpEquiv: 'x-ua-compatible',
-							content: 'IE=edge; chrome=1',
-						},
-					]}
 				/>
-				<title>Quantum IT Solutions</title>
-				<meta name='description' content='Quantum IT Solutions' />
+				<title>Enterprise Software Development Company | Quantum IT Solutions</title>
+				<meta
+					name='description'
+					content='Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.'
+				/>
 				<meta content='IE=edge' httpEquiv='X-UA-Compatible' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' type='image/svg+xml' href='/icon.svg' />
 				<link rel='icon' type='image/png' href='/icon.png' />
 			</Head>
-			<NextNProgress
-				color={theme.palette.colors.GREEN}
-				options={{
-					showSpinner: false,
-				}}
-			/>
 			<style jsx global>{`
 				:root {
 					--font-gilroy: ${gilroy.style.fontFamily};
