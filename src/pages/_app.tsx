@@ -44,8 +44,6 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 			<Head>
 				<DefaultSeo
 					canonical='https://quantumitllc.com'
-					title='Enterprise Software Development Company | Quantum IT Solutions'
-					description='Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.'
 					openGraph={{
 						locale: HTML_LOCALES[router.locale as ILocales] ?? HTML_LOCALES.en,
 						type: 'website',
@@ -73,6 +71,8 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 					content='Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.'
 				/>
 				<meta content='IE=edge' httpEquiv='X-UA-Compatible' />
+				<meta name='hostname' content='quantumitllc.com' />
+				<link rel='canonical' href='https://quantumitllc.com' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' type='image/svg+xml' href='/icon.svg' />
 				<link rel='icon' type='image/png' href='/icon.png' />

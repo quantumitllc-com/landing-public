@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { ReactNode } from 'react'
 import { Main, Container } from './style'
 import { Header } from '@/components/header'
@@ -15,9 +14,6 @@ export const Layout = ({ children, title }: IProps) => {
 
 	return (
 		<>
-			<Head>
-				<title>{newTitle}</title>
-			</Head>
 			<Container>
 				<Header />
 				<Main>{children}</Main>
