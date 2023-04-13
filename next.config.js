@@ -10,7 +10,7 @@ const nextConfig = {
 		remotePatterns: [
 			{
 				protocol: 'http',
-				hostname: 'zmlsoft.com',
+				hostname: 'quantumitllc.com',
 				port: '',
 				pathname: '/media/**',
 			},
