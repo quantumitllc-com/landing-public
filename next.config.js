@@ -9,7 +9,7 @@ const nextConfig = {
 		formats: ['image/webp'],
 		remotePatterns: [
 			{
-				protocol: 'https',
+				protocol: 'http',
 				hostname: 'quantumitllc.com',
 				port: '',
 				pathname: '/media/**',
