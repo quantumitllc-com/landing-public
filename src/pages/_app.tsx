@@ -42,7 +42,7 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				}}
 			/>
 			<Head>
-				<DefaultSeo
+				{/* <DefaultSeo
 					canonical='https://quantumitllc.com'
 					openGraph={{
 						locale: HTML_LOCALES[router.locale as ILocales] ?? HTML_LOCALES.en,
@@ -56,6 +56,28 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 							{
 								url: '/icon.png',
 								alt: 'Quantum IT Solutions',
+							},
+						],
+					}}
+					twitter={{
+						handle: '@handle',
+						site: '@site',
+						cardType: 'summary_large_image',
+					}}
+				/> */}
+				<DefaultSeo
+					openGraph={{
+						title: 'TSS',
+						type: 'website',
+						locale: 'en_IE',
+						url: 'http://zmltss.com/',
+						site_name: 'TSS',
+						description: 'Trailer security system is a solution',
+						images: [
+							{
+								url: '/images/trucks.png',
+								type: 'png',
+								alt: 'Trucks',
 							},
 						],
 					}}
