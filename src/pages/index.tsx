@@ -72,7 +72,6 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
 
 	return {
 		props: {
-			title: 'Home',
 			dehydratedState: dehydrate(queryClient),
 			...(await serverSideTranslations(locale as string, ['common'])),
 		},
