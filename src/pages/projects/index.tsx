@@ -1,4 +1,3 @@
-import { NextSeo } from 'next-seo'
 import { getProjects } from '@/pages/api'
 import type { GetServerSideProps } from 'next'
 import { Projects } from '@/components/projects'
@@ -6,14 +5,7 @@ import { QueryClient, dehydrate } from '@tanstack/react-query'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-const ProjectsPage = () => {
-	return (
-		<>
-			<NextSeo title='Projects' />
-			<Projects />
-		</>
-	)
-}
+const ProjectsPage = () => <Projects />
 
 export default ProjectsPage
 

@@ -6,7 +6,7 @@ const siteName = 'Quantum IT Solutions'
 const title = 'Enterprise Software Development Company'
 const description =
 	'Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.'
-const image = '/icon.png'
+const image = '/icon.svg'
 const keywords = ['']
 
 const seoConfig: DefaultSeoProps = {

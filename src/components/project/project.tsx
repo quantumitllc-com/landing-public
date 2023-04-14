@@ -53,7 +53,15 @@ export const Project = () => {
 
 	return (
 		<>
-			<NextSeo title={data?.title} description={data?.text} />
+			<NextSeo
+				title={data?.title}
+				description={data?.text}
+				openGraph={{
+					title: data?.title,
+					description: data?.text,
+					images: [{ url: data?.image as string, alt: data?.title }],
+				}}
+			/>
 			<Container>
 				<Wrapper>
 					<WrapBreadcrumb>

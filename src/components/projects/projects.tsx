@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import { getProjects } from '@/pages/api'
 import { IProject } from '@/types/respones'
@@ -38,47 +39,55 @@ export const Projects = () => {
 	]
 
 	return (
-		<Container>
-			<Wrapper>
-				<WrapBreadcrumb>
-					<Breadcrumbs
-						aria-label='breadcrumb'
-						separator={
-							<WrapIconChevron>
-								<IconChevron />
-							</WrapIconChevron>
-						}
-					>
-						{breadcrumbs}
-					</Breadcrumbs>
-				</WrapBreadcrumb>
-				<WrapCards>
-					{data.map(project => (
-						<div key={project.id}>
-							<WrapCardTexts>
-								<Typography align='center' variant='title100' component='h3'>
-									{project.title}
-								</Typography>
-								<Button
-									size='small'
-									component={Link}
-									href={`projects/${project.id}`}
-									endIcon={
-										<WrapIconChevron>
-											<IconChevron />
-										</WrapIconChevron>
-									}
-								>
-									{t('learn_more')}
-								</Button>
-							</WrapCardTexts>
-							<WrapImage>
-								<Image fill src={project.image} alt={project.title} />
-							</WrapImage>
-						</div>
-					))}
-				</WrapCards>
-			</Wrapper>
-		</Container>
+		<>
+			<NextSeo
+				title='Projects'
+				openGraph={{
+					title: 'Projects',
+				}}
+			/>
+			<Container>
+				<Wrapper>
+					<WrapBreadcrumb>
+						<Breadcrumbs
+							aria-label='breadcrumb'
+							separator={
+								<WrapIconChevron>
+									<IconChevron />
+								</WrapIconChevron>
+							}
+						>
+							{breadcrumbs}
+						</Breadcrumbs>
+					</WrapBreadcrumb>
+					<WrapCards>
+						{data.map(project => (
+							<div key={project.id}>
+								<WrapCardTexts>
+									<Typography align='center' variant='title100' component='h3'>
+										{project.title}
+									</Typography>
+									<Button
+										size='small'
+										component={Link}
+										href={`projects/${project.id}`}
+										endIcon={
+											<WrapIconChevron>
+												<IconChevron />
+											</WrapIconChevron>
+										}
+									>
+										{t('learn_more')}
+									</Button>
+								</WrapCardTexts>
+								<WrapImage>
+									<Image fill src={project.image} alt={project.title} />
+								</WrapImage>
+							</div>
+						))}
+					</WrapCards>
+				</Wrapper>
+			</Container>
+		</>
 	)
 }
