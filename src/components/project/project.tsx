@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import { getProject } from '@/pages/api'
 import { useTranslation } from 'next-i18next'
@@ -51,27 +52,68 @@ export const Project = () => {
 	]
 
 	return (
-		<Container>
-			<Wrapper>
-				<WrapBreadcrumb>
-					<Breadcrumbs
-						aria-label='breadcrumb'
-						separator={
-							<WrapIconChevron>
-								<IconChevron />
-							</WrapIconChevron>
-						}
-					>
-						{breadcrumbs}
-					</Breadcrumbs>
-				</WrapBreadcrumb>
-				<Header>
-					<Left>
-						<WrapImage>
-							<Image fill alt={data?.title as string} src={data?.image as string} />
-						</WrapImage>
-					</Left>
-					<WrapDesktopProjectDetail>
+		<>
+			<NextSeo title={data?.title} description={data?.text} />
+			<Container>
+				<Wrapper>
+					<WrapBreadcrumb>
+						<Breadcrumbs
+							aria-label='breadcrumb'
+							separator={
+								<WrapIconChevron>
+									<IconChevron />
+								</WrapIconChevron>
+							}
+						>
+							{breadcrumbs}
+						</Breadcrumbs>
+					</WrapBreadcrumb>
+					<Header>
+						<Left>
+							<WrapImage>
+								<Image fill alt={data?.title as string} src={data?.image as string} />
+							</WrapImage>
+						</Left>
+						<WrapDesktopProjectDetail>
+							<CardProjectDetails
+								date={data?.date}
+								subtitle={data?.subtitle}
+								location={data?.location}
+								clientName={data?.client?.name}
+								serviceTitle={data?.service?.title}
+							/>
+						</WrapDesktopProjectDetail>
+					</Header>
+					<Body>
+						<Typography variant='title140' component='h2'>
+							{data?.title}
+						</Typography>
+						<Typography variant='text100' component='p'>
+							{data?.text}
+						</Typography>
+					</Body>
+					<WrapLanguage>
+						<Typography variant='title120' component='h3'>
+							{t('used_languages')}
+						</Typography>
+						<Languages>
+							{data?.languages.map(language => (
+								<div key={language.id} className='language'>
+									<Typography variant='text110' component='span'>
+										{language.name}
+									</Typography>
+								</div>
+							))}
+						</Languages>
+					</WrapLanguage>
+					<WrapImages>
+						{data?.project_images.map(project_image => (
+							<div key={project_image.id}>
+								<Image fill alt={String(project_image.id)} src={project_image.image as string} />
+							</div>
+						))}
+					</WrapImages>
+					<WrapMobileProjectDetail>
 						<CardProjectDetails
 							date={data?.date}
 							subtitle={data?.subtitle}
@@ -79,47 +121,9 @@ export const Project = () => {
 							clientName={data?.client?.name}
 							serviceTitle={data?.service?.title}
 						/>
-					</WrapDesktopProjectDetail>
-				</Header>
-				<Body>
-					<Typography variant='title140' component='h2'>
-						{data?.title}
-					</Typography>
-					<Typography variant='text100' component='p'>
-						{data?.text}
-					</Typography>
-				</Body>
-				<WrapLanguage>
-					<Typography variant='title120' component='h3'>
-						{t('used_languages')}
-					</Typography>
-					<Languages>
-						{data?.languages.map(language => (
-							<div key={language.id} className='language'>
-								<Typography variant='text110' component='span'>
-									{language.name}
-								</Typography>
-							</div>
-						))}
-					</Languages>
-				</WrapLanguage>
-				<WrapImages>
-					{data?.project_images.map(project_image => (
-						<div key={project_image.id}>
-							<Image fill alt={String(project_image.id)} src={project_image.image as string} />
-						</div>
-					))}
-				</WrapImages>
-				<WrapMobileProjectDetail>
-					<CardProjectDetails
-						date={data?.date}
-						subtitle={data?.subtitle}
-						location={data?.location}
-						clientName={data?.client?.name}
-						serviceTitle={data?.service?.title}
-					/>
-				</WrapMobileProjectDetail>
-			</Wrapper>
-		</Container>
+					</WrapMobileProjectDetail>
+				</Wrapper>
+			</Container>
+		</>
 	)
 }

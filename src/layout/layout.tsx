@@ -5,13 +5,10 @@ import { Footer } from '@/components/footer'
 import { ContactUs } from '@/components/contact-us'
 
 interface IProps {
-	title?: string
 	children: ReactNode
 }
 
-export const Layout = ({ children, title }: IProps) => {
-	const newTitle = title === undefined ? 'Quantum IT Solutions' : `${title} | Quantum IT Solutions`
-
+export const Layout = ({ children }: IProps) => {
 	return (
 		<>
 			<Container>

@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo'
 import { getProjects } from '@/pages/api'
 import type { GetServerSideProps } from 'next'
 import { Projects } from '@/components/projects'
@@ -6,7 +7,12 @@ import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const ProjectsPage = () => {
-	return <Projects />
+	return (
+		<>
+			<NextSeo title='Projects' />
+			<Projects />
+		</>
+	)
 }
 
 export default ProjectsPage
@@ -17,7 +23,6 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
 
 	return {
 		props: {
-			title: 'Projects',
 			dehydratedState: dehydrate(queryClient),
 			...(await serverSideTranslations(locale as string, ['common'])),
 		},

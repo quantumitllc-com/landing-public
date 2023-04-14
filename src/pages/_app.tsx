@@ -39,15 +39,6 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				}}
 			/>
 			<Head>
-				<DefaultSeo {...DEFAULT_SEO} />
-				<title>Enterprise Software Development Company | Quantum IT Solutions</title>
-				<meta
-					name='description'
-					content='Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.'
-				/>
-				<meta content='IE=edge' httpEquiv='X-UA-Compatible' />
-				<meta name='hostname' content='quantumitllc.com' />
-				<link rel='canonical' href='https://quantumitllc.com' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' type='image/svg+xml' href='/icon.svg' />
 				<link rel='icon' type='image/png' href='/icon.png' />
@@ -57,6 +48,7 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 					--font-gilroy: ${gilroy.style.fontFamily};
 				}
 			`}</style>
+			<DefaultSeo {...DEFAULT_SEO} />
 			<ThemeProvider theme={theme}>
 				<ErrorBoundary>
 					<QueryClientProvider client={queryClient}>
