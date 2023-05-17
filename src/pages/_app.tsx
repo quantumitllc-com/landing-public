@@ -2,23 +2,25 @@ import Head from 'next/head'
 import { useState } from 'react'
 import { Layout } from '@/layout'
 import type { NextPage } from 'next'
-import { DefaultSeo } from 'next-seo'
 import { gilroy } from '@/utility/fonts'
 import type { AppProps } from 'next/app'
 import { theme } from '@/config/material'
 import NextNProgress from 'nextjs-progressbar'
-import DEFAULT_SEO from '../../next-seo.config'
 import { ToastContainer } from 'react-toastify'
 import { appWithTranslation } from 'next-i18next'
 import { queryClientConfig } from '@/utility/react-query'
 import { ThemeProvider, CssBaseline } from '@mui/material'
 import { ErrorBoundary } from '@/components/error-boundary'
+import { DefaultSeo, type DefaultSeoProps } from 'next-seo'
 import { CacheProvider, EmotionCache } from '@emotion/react'
 import { createEmotionCache } from '@/utility/createEmotionCache'
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import 'react-toastify/dist/ReactToastify.css'
 import 'keen-slider/keen-slider.min.css'
 import '@/styles/globals.css'
+import { useRouter } from 'next/router'
+import { HTML_LOCALES } from '@/constants/languages'
+import { ILocales } from '@/types/locales'
 
 interface NewAppProps extends AppProps {
 	Component: NextPage
@@ -27,8 +29,58 @@ interface NewAppProps extends AppProps {
 
 const clientSideEmotionCache = createEmotionCache()
 
+const url = process.env.NEXT_PUBLIC_BASE_URL as string
+const siteName = 'Quantum IT Solutions'
+const title = 'Enterprise Software Development Company'
+const description =
+	'Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.'
+const image = '/favicon.ico'
+const keywords = ['']
+
 const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: NewAppProps) => {
+	const { locale } = useRouter()
 	const [queryClient] = useState(() => new QueryClient(queryClientConfig))
+
+	const DEFAULT_SEO: DefaultSeoProps = {
+		title,
+		description,
+		canonical: url,
+		titleTemplate: `%s |  ${siteName}`,
+		openGraph: {
+			url,
+			title,
+			siteName,
+			description,
+			type: 'website',
+			locale: HTML_LOCALES[locale as ILocales],
+			images: [{ url: image, alt: siteName }],
+		},
+		twitter: {
+			handle: '@handle',
+			site: '@site',
+			cardType: 'summary_large_image',
+		},
+		additionalMetaTags: [{ name: 'keywords', content: keywords.join(',') }],
+		robotsProps: {
+			nosnippet: true,
+			notranslate: true,
+			noimageindex: true,
+			noarchive: true,
+			maxSnippet: -1,
+			maxImagePreview: 'none',
+			maxVideoPreview: -1,
+		},
+		languageAlternates: [
+			{
+				hrefLang: HTML_LOCALES.en,
+				href: url,
+			},
+			{
+				hrefLang: HTML_LOCALES.ru,
+				href: `${url}/ru`,
+			},
+		],
+	}
 
 	return (
 		<>
