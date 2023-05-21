@@ -46,7 +46,7 @@ jobs:
           
     - name: Configuration Git
       run: git config --global user.email "zeromax.adm@gmail.com" && git config --global user.name "zeromaxinc"
-
+ 
     - name: Notification Slack
       uses: rtCamp/action-slack-notify@v2
       env:
