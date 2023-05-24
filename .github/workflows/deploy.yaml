@@ -29,18 +29,18 @@ jobs:
 
 
     
-    - name: Log in to Server and Restarting Kubernetes
-      uses: appleboy/ssh-action@master
-      with:
-        host: 146.190.116.39
-        username: root
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
-          cd /root/quantumitllc
-          ls
-          kubectl delete -f quantum.yaml
-          kubectl apply -f quantum.yaml
+    # - name: Log in to Server and Restarting Kubernetes
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: 146.190.116.39
+    #     username: root
+    #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+    #     port: 22
+    #     script: |
+    #       cd /root/quantumitllc
+    #       ls
+    #       kubectl delete -f quantum.yaml
+    #       kubectl apply -f quantum.yaml
 
     
           

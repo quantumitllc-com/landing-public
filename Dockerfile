@@ -1,15 +1,13 @@
-FROM node
-
-COPY package.json package.json  
-
-
-RUN mkdir /app
-
-COPY . /app
+FROM node:latest
 
 WORKDIR /app
 
+COPY package.json yarn.lock /app/
 
-RUN npm install
+RUN yarn install
 
-CMD npm run dev
+COPY . /app
+
+RUN yarn build
+
+CMD ["yarn", "start"]
