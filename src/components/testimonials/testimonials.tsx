@@ -72,7 +72,7 @@ export const Testimonials = () => {
 			>
 				{t('we_always_try_make_the_experience_with_us_always_the_best')}
 			</Typography>
-			<Slider>
+			{/* <Slider>
 				<div ref={sliderRef} className='keen-slider'>
 					{data.map(testimonial => (
 						<CardTestimonial key={testimonial.id} className='keen-slider__slide' {...testimonial} />
@@ -89,13 +89,12 @@ export const Testimonials = () => {
 						<ArrowButton
 							isright='true'
 							onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()}
-							disabled={currentSlide === instanceRef.current.track.details.slides.length - 2}
-						>
+							disabled={currentSlide === instanceRef.current.track.details?.slides.length - 2}>
 							<IconArrowCircle />
 						</ArrowButton>
 					</WrapButtons>
 				)}
-			</Slider>
+			</Slider> */}
 		</Container>
 	)
 }
