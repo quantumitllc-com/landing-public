@@ -6,6 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
+		"deploy": "next build && npx pm2 startOrRestart ecosystem.config.js",
 		"lint": "eslint --fix . --ext .ts,.tsx",
 		"prepare": "husky install"
 	},
@@ -28,6 +29,7 @@
 		"next-i18next": "^13.1.5",
 		"next-seo": "^6.0.0",
 		"nextjs-progressbar": "^0.0.16",
+		"pm2": "^5.3.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-error-boundary": "^4.0.3",
