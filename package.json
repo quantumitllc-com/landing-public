@@ -6,7 +6,6 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"deploy": "next build && npx pm2 startOrRestart ecosystem.config.js",
 		"lint": "eslint --fix . --ext .ts,.tsx",
 		"prepare": "husky install"
 	},
