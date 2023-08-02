@@ -2,9 +2,6 @@ name: Deployment workflow
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
 
 jobs:
   deployment:
@@ -32,15 +29,15 @@ jobs:
     - name: Log in to Server and Restarting Kubernetes
       uses: appleboy/ssh-action@master
       with:
-        host: 209.38.208.65
+        host: 161.35.235.214
         username: root
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          cd /root/Projects/Quantum/frontend
+          cd /root/Projects/quantumitllc/frontend
           ls
-          kubectl delete -f quantum.yaml
-          kubectl apply -f quantum.yaml
+          kubectl delete -f quantumitllc.yaml
+          kubectl apply -f quantumitllc.yaml
 
     
           
