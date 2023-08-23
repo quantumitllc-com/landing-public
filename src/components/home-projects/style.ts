@@ -16,15 +16,6 @@ export const Container = styled('div')`
 	})}
 `
 
-export const WrapText = styled('div')`
-	padding: 20px 0 27px;
-	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			padding: '8px 18px 18px',
-		},
-	})}
-`
-
 export const WrapImage = styled('div')`
 	height: 0;
 	flex-grow: 1;

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { Logo } from '@/components/logo'
 import { Follow } from '@/components/follow'
 import { Navbar } from '@/components/navbar'
 import { useTranslation } from 'next-i18next'
@@ -11,7 +12,6 @@ import { IconPhone } from '@/assets/icons/phone'
 import { getContactInformation } from '@/pages/api'
 import type { IContactInformation } from '@/types/respones'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { IconLogoHorizontal } from '@/assets/icons/logo-horizontal'
 import {
 	Up,
 	Down,
@@ -36,7 +36,7 @@ export const Footer = () => {
 				<Up>
 					<Box className='wrap-up'>
 						<Box mb='12px' display='flex' alignItems='center'>
-							<IconLogoHorizontal />
+							<Logo variant='footer' />
 						</Box>
 						<Typography variant='text' component='h3'>
 							{t(

@@ -1,6 +1,7 @@
-export const VARIABLES_CSS = {
+export const CSS = {
 	COLORS: {
 		WHITE: '#FFFFFF',
+		WHITE10: '#FFFFFFBF',
 		GREEN: '#1AD980',
 		GRAY: '#EFF0F7',
 		GRAY10: '#3a4c56',
@@ -44,5 +45,30 @@ export const VARIABLES_CSS = {
 			lg: 1200,
 			xl: 1536,
 		},
+	},
+	BORDERRADIUSES: {
+		33: '33px',
+		'50%': '50%',
+	},
+	FONNTSIZES: {
+		15: '15px',
+		16: '16px',
+		18: '18px',
+		48: '48px',
+	},
+	FONTWEIGHTS: {
+		400: 400,
+		500: 500,
+		600: 600,
+		800: 800,
+	},
+	LINEHEIGHTS: {
+		'114.5%': '114.5%;',
+		'116.7%': '116.7%;',
+		'155.7%': '155.7%;',
+	},
+	LETTERSPACES: {
+		0.056: '0.056px',
+		0.052: '0.052px',
 	},
 }

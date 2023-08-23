@@ -3,13 +3,16 @@ import { styled } from '@mui/material/styles'
 export const Container = styled('div')`
 	width: 100%;
 	display: flex;
+	margin-top: 60px;
 	align-items: center;
 	justify-content: center;
+	img {
+		position: static !important;
+	}
 `
 
 export const Wrapper = styled('div')`
 	width: 100%;
-	padding-bottom: 120px;
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
 	.keen-slider__slide {
 		cursor: pointer;

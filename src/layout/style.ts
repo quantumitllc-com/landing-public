@@ -5,6 +5,7 @@ export const Container = styled('div')`
 	min-height: 100vh;
 	align-items: center;
 	flex-direction: column;
+	background-color: ${({ theme }) => theme.palette.colors.WHITE};
 `
 
 export const Main = styled('main')`

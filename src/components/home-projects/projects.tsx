@@ -9,7 +9,7 @@ import type { IProject } from '@/types/respones'
 import { Button, Typography } from '@mui/material'
 import { IconChevron } from '@/assets/icons/chevron'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { Wrapper, WrapText, WrapImage, Container, WrapCardTexts, WrapIconChevron } from './style'
+import { Wrapper, WrapImage, Container, WrapCardTexts, WrapIconChevron } from './style'
 
 export const HomeProjects = () => {
 	const { locale } = useRouter()
@@ -21,21 +21,9 @@ export const HomeProjects = () => {
 
 	return (
 		<Container>
-			<Typography variant='title30' component='h3' align='center'>
+			<Typography component='h4' align='center' variant='title50' textTransform='capitalize'>
 				{t('our_latest_project')}
 			</Typography>
-			<WrapText>
-				<Typography
-					component='h4'
-					align='center'
-					variant='title50'
-					sx={{
-						maxWidth: '640px',
-					}}
-				>
-					{t('our_latest_project_is_the_result_of_the_hard_work_of_designers')}
-				</Typography>
-			</WrapText>
 			<Typography
 				component='p'
 				align='center'
@@ -76,16 +64,6 @@ export const HomeProjects = () => {
 						</div>
 					))}
 			</Wrapper>
-			<Button
-				href='projects'
-				size='medium'
-				component={Link}
-				variant='contained'
-				endIcon={<IconArrow />}
-				style={{ minWidth: '128px' }}
-			>
-				{t('see_all')}
-			</Button>
 		</Container>
 	)
 }

@@ -2,10 +2,11 @@ import { styled } from '@mui/material/styles'
 
 export const Container = styled('div')`
 	display: flex;
-	padding-top: 210px;
+	margin-top: 120px;
 	position: relative;
 	align-items: center;
 	flex-direction: column;
+
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			paddingTop: '60px',
@@ -15,7 +16,7 @@ export const Container = styled('div')`
 export const Wrapper = styled('div')`
 	width: 100%;
 	display: flex;
-	padding-top: 120px;
+	margin-top: 44px;
 	flex-direction: column;
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
 	${({ theme }) => ({
@@ -27,7 +28,7 @@ export const Wrapper = styled('div')`
 
 export const WrapIcon = styled('div')`
 	left: 0;
-	top: 180px;
+	bottom: calc(100% - 102px);
 	position: absolute;
 	svg {
 		width: 80%;
@@ -36,15 +37,6 @@ export const WrapIcon = styled('div')`
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			top: '30px',
-		},
-	})}
-`
-
-export const WrapText = styled('div')`
-	padding: 20px 18px 27px;
-	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			padding: '8px 18px 18px',
 		},
 	})}
 `

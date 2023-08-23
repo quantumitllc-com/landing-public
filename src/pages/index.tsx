@@ -1,13 +1,11 @@
-import { Box } from '@mui/material'
+import Box from '@mui/material/Box'
+import { Main } from '@/components/main'
 import type { GetServerSideProps } from 'next'
-import { AboutUs } from '@/components/about-us'
 import { Services } from '@/components/services'
 import { Companies } from '@/components/companies'
-import { HomeBanner } from '@/components/home-banner'
 import { Testimonials } from '@/components/testimonials'
 import { Technologies } from '@/components/technologies'
 import { HomeProjects } from '@/components/home-projects'
-import { QuantumBanner } from '@/components/quantum-banner'
 import { dehydrate, QueryClient } from '@tanstack/react-query'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -26,17 +24,13 @@ import {
 const Home = () => {
 	return (
 		<>
-			<HomeBanner />
+			<Main />
 			<Companies />
-			<QuantumBanner />
 			<Box id='services'>
 				<Services />
 			</Box>
 			<Box id='projects'>
 				<HomeProjects />
-			</Box>
-			<Box id='about-us'>
-				<AboutUs />
 			</Box>
 			<Box id='tools'>
 				<Technologies />
