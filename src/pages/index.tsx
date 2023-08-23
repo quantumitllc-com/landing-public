@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box'
 import { Main } from '@/components/main'
 import type { GetServerSideProps } from 'next'
+import { AboutUs } from '@/components/about-us'
 import { Services } from '@/components/services'
 import { Companies } from '@/components/companies'
 import { Testimonials } from '@/components/testimonials'
@@ -28,6 +29,9 @@ const Home = () => {
 			<Companies />
 			<Box id='services'>
 				<Services />
+			</Box>
+			<Box id='about-us'>
+				<AboutUs />
 			</Box>
 			<Box id='projects'>
 				<HomeProjects />

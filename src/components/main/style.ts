@@ -11,14 +11,14 @@ export const Container = styled('main')`
 export const Wrap = styled('div')`
 	width: 100%;
 	height: 100%;
-	max-width: 1200px;
 	position: relative;
+	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
 `
 
 export const WrapVideo = styled('div')`
 	left: 80px;
-	position: absolute;
 	bottom: 90px;
+	position: absolute;
 `
 
 export const WrapRobot = styled('div')`

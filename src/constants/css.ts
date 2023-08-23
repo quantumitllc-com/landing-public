@@ -47,6 +47,8 @@ export const CSS = {
 		},
 	},
 	BORDERRADIUSES: {
+		0: 0,
+		16: '16px',
 		33: '33px',
 		'50%': '50%',
 	},
