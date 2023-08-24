@@ -35,15 +35,6 @@ export const getServices = async (locale = 'en') => {
 	return data
 }
 
-export const getAbout = async (locale = 'en') => {
-	const { data } = await request('api/about/', {
-		headers: {
-			'Accept-Language': locale,
-		},
-	})
-	return data
-}
-
 export const getProjects = async (locale = 'en') => {
 	const { data } = await request('api/projects/', {
 		headers: {
@@ -134,4 +125,13 @@ export const postFollow = async <T>(data: T) => {
 export const postContact = async <T>(data: T) => {
 	const res = await request.post('api/contact/', data)
 	return res
+}
+
+export const getAchievements = async (locale = 'en') => {
+	const { data } = await request('api/achievements/', {
+		headers: {
+			'Accept-Language': locale,
+		},
+	})
+	return data
 }

@@ -13,13 +13,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import {
 	getVideo,
 	getIntro,
-	getAbout,
 	getProjects,
 	getServices,
 	getCompanies,
 	getTechnologies,
 	getTestimonials,
 	getContactInformation,
+	getAchievements,
 } from '@/pages/api'
 
 const Home = () => {
@@ -53,7 +53,9 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
 	await Promise.allSettled([
 		queryClient.prefetchQuery([REACT_QUERY_KEYS.VIDEO], getVideo),
 		queryClient.prefetchQuery([REACT_QUERY_KEYS.SERVICES, locale], () => getServices(locale)),
-		queryClient.prefetchQuery([REACT_QUERY_KEYS.ABOUT, locale], () => getAbout(locale)),
+		queryClient.prefetchQuery([REACT_QUERY_KEYS.ACHIEVEMENTS, locale], () =>
+			getAchievements(locale),
+		),
 		queryClient.prefetchQuery([REACT_QUERY_KEYS.COMPANIES, locale], () => getCompanies(locale)),
 		queryClient.prefetchQuery([REACT_QUERY_KEYS.INTRO, locale], () => getIntro(locale)),
 		queryClient.prefetchQuery([REACT_QUERY_KEYS.PROJECTS, locale], () => getProjects(locale)),

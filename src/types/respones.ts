@@ -12,11 +12,6 @@ export interface IService {
 	title: string
 }
 
-export interface IAbout {
-	text: string
-	title: string
-}
-
 export interface ICompany {
 	id: number
 	image: string
@@ -89,4 +84,11 @@ export interface IContactInformation {
 	instagram: string | null
 	linkedin: string | null
 	telegram: string | null
+}
+
+export interface IAchievements {
+	id: number
+	icon: string
+	number: string
+	name: string
 }
