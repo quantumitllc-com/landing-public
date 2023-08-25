@@ -15,6 +15,10 @@ export const ButtonPlay = styled(Button)`
 			width: '190px',
 			height: '190px',
 		},
+		[theme.breakpoints.between('sm', 'md')]: {
+			width: '130px',
+			height: '130px',
+		},
 	})}
 `
 
@@ -63,6 +67,10 @@ export const WrapPlay = styled('div')`
 			[theme.breakpoints.up('md')]: {
 				width: '55px',
 				height: '55px',
+			},
+			[theme.breakpoints.between('sm', 'md')]: {
+				width: '45px',
+				height: '45px',
 			},
 		})}
 	}

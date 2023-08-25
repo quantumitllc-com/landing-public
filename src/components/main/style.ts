@@ -39,6 +39,9 @@ export const WrapMobileVideo = styled('div')`
 		[theme.breakpoints.up('md')]: {
 			display: 'none',
 		},
+		[theme.breakpoints.between('sm', 'md')]: {
+			bottom: '200px',
+		},
 	})}
 `
 
@@ -56,6 +59,12 @@ export const WrapRobot = styled('div')`
 			right: '-55px',
 			maxWidth: '900px',
 			maxHeight: '900px',
+		},
+		[theme.breakpoints.between('sm', 'md')]: {
+			left: 'unset',
+			right: '18px',
+			maxWidth: '400px',
+			maxHeight: '450px',
 		},
 	})}
 `

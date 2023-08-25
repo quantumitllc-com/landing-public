@@ -11,6 +11,9 @@ export const Container = styled('div')`
 		[theme.breakpoints.up('md')]: {
 			marginTop: '120px',
 		},
+		[theme.breakpoints.between('sm', 'md')]: {
+			marginTop: '70px',
+		},
 	})}
 `
 export const Wrapper = styled('div')`
@@ -20,8 +23,8 @@ export const Wrapper = styled('div')`
 	flex-direction: column;
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			padding: '30px 18px 0',
+		[theme.breakpoints.down('md')]: {
+			padding: '0 18px 0',
 		},
 	})}
 `
@@ -49,6 +52,11 @@ export const WrapCards = styled('div')`
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			gridTemplateColumns: '1fr',
+		},
+	})}
+	${({ theme }) => ({
+		[theme.breakpoints.between('sm', 'md')]: {
+			gridTemplateColumns: '1fr 1fr',
 		},
 	})}
 `

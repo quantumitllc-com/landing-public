@@ -282,6 +282,9 @@ export const theme = createTheme({
 				textAlign: 'center',
 				fontSize: defaultCreateTheme.palette.fontsizes[13],
 			},
+			[defaultCreateTheme.breakpoints.between('sm', 'md')]: {
+				fontSize: defaultCreateTheme.palette.fontsizes[16],
+			},
 		},
 		text160: {
 			color: defaultCreateTheme.palette.colors.GRAY180,
@@ -460,6 +463,9 @@ export const theme = createTheme({
 			[defaultCreateTheme.breakpoints.down('sm')]: {
 				textAlign: 'center',
 				fontSize: defaultCreateTheme.palette.fontsizes[26],
+			},
+			[defaultCreateTheme.breakpoints.between('sm', 'md')]: {
+				fontSize: defaultCreateTheme.palette.fontsizes[33],
 			},
 		},
 		title180: {

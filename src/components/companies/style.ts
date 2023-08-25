@@ -32,8 +32,15 @@ export const Wrapper = styled('div')`
 				minWidth: '90px',
 				minHeight: '50px',
 			},
+			[theme.breakpoints.between('sm', 'md')]: {
+				maxWidth: '135px',
+				maxHeight: '75px',
+				minWidth: '135px',
+				minHeight: '75px',
+			},
 		})}
 	}
+
 	${({ theme }) => ({
 		[theme.breakpoints.up('md')]: {
 			paddingBottom: '40px',
