@@ -31,8 +31,8 @@ export const WrapVideo = styled('div')`
 `
 
 export const WrapMobileVideo = styled('div')`
-	top: 55px;
 	left: 18px;
+	bottom: 230px;
 	display: flex;
 	position: absolute;
 	${({ theme }) => ({
@@ -43,13 +43,13 @@ export const WrapMobileVideo = styled('div')`
 `
 
 export const WrapRobot = styled('div')`
-	left: 18px;
+	right: 18px;
 	bottom: 0;
 	width: 100%;
 	height: 100%;
+	max-width: 380px;
 	max-height: 370px;
 	position: absolute;
-
 	${({ theme }) => ({
 		[theme.breakpoints.up('md')]: {
 			left: 'unset',
@@ -67,11 +67,13 @@ export const WrapContent = styled('div')`
 	display: flex;
 	max-width: 590px;
 	margin-top: -90px;
+	padding: 0 18px;
 	flex-direction: column;
 	justify-content: center;
 	${({ theme }) => ({
 		[theme.breakpoints.up('md')]: {
 			gap: '16px',
+			padding: '0 18px',
 		},
 	})}
 `
@@ -81,7 +83,7 @@ export const WrapButton = styled('div')`
 	margin-top: 13px;
 	justify-content: center;
 	${({ theme }) => ({
-		[theme.breakpoints.up('md')]: {
+		[theme.breakpoints.up('sm')]: {
 			marginTop: '17px',
 			justifyContent: 'flex-start',
 		},

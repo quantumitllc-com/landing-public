@@ -2,14 +2,14 @@ import { styled } from '@mui/material/styles'
 
 export const Container = styled('div')`
 	display: flex;
-	margin-top: 120px;
+	margin-top: 20px;
 	position: relative;
 	align-items: center;
 	flex-direction: column;
 
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			paddingTop: '60px',
+		[theme.breakpoints.up('md')]: {
+			marginTop: '120px',
 		},
 	})}
 `

@@ -3,12 +3,17 @@ import { styled } from '@mui/material/styles'
 export const Container = styled('div')`
 	width: 100%;
 	display: flex;
-	margin-top: 60px;
+	margin-top: 10px;
 	align-items: center;
 	justify-content: center;
 	img {
 		position: static !important;
 	}
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			marginTop: '60px',
+		},
+	})}
 `
 
 export const Wrapper = styled('div')`
@@ -30,7 +35,7 @@ export const Wrapper = styled('div')`
 		})}
 	}
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.up('md')]: {
 			paddingBottom: '40px',
 		},
 	})}

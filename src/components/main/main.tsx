@@ -27,7 +27,7 @@ export const Main = () => {
 	const theme = useTheme()
 	const { locale } = useRouter()
 	const { t } = useTranslation('common')
-	const matches = useMediaQuery(theme.breakpoints.up('sm'))
+	const matches = useMediaQuery(theme.breakpoints.up('md'))
 	const { data: dataIntro = { title: '', subtitle: '' } } = useQuery<IIntro>({
 		queryKey: [REACT_QUERY_KEYS.INTRO, locale],
 		queryFn: () => getIntro(locale),
@@ -53,10 +53,10 @@ export const Main = () => {
 						<Video />
 					</WrapVideo>
 				</WrapContent>
+				<WrapMobileVideo>
+					<Video />
+				</WrapMobileVideo>
 				<WrapRobot>
-					<WrapMobileVideo>
-						<Video />
-					</WrapMobileVideo>
 					<Image priority fill src={ImageRobot} alt='robot' />
 				</WrapRobot>
 			</Wrap>

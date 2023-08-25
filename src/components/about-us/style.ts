@@ -4,8 +4,15 @@ export const Container = styled('div')`
 	width: 100%;
 	display: flex;
 	align-items: center;
+	margin: 180px 0 110px;
 	flex-direction: column;
 	justify-content: center;
+
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			margin: '65px 0 38px',
+		},
+	})}
 `
 
 export const Wrapper = styled('div')`

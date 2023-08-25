@@ -7,7 +7,6 @@ export const Container = styled('div')`
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	margin-top: 300px;
 `
 
 export const WrapImage = styled('div')`
