@@ -85,10 +85,3 @@ export interface IContactInformation {
 	linkedin: string | null
 	telegram: string | null
 }
-
-export interface IAchievements {
-	id: number
-	icon: string
-	number: string
-	name: string
-}

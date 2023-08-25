@@ -22,7 +22,34 @@ export const Wrapper = styled('div')`
 	z-index: 1;
 	width: 100%;
 	display: grid;
-	padding: 59px 0 52px;
-	grid-template-columns: repeat(4, 1fr);
+	gap: 22px 57px;
+	padding: 28px 8px;
+	grid-template-columns: repeat(2, 1fr);
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			padding: ' 59px 0 52px',
+			gridTemplateColumns: 'repeat(4, 1fr)',
+		},
+	})}
+`
+
+export const Wrap = styled('div')`
+	gap: 10px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	svg {
+		width: 28px;
+		height: 28px;
+	}
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			gap: '24px',
+			svg: {
+				width: '44px',
+				height: '44px',
+			},
+		},
+	})}
 `

@@ -3,9 +3,9 @@ import type { IVideo } from '@/types/respones'
 import { IconPlay } from '@/assets/icons/play'
 import { useBoolean } from '@/hooks/useBoolean'
 import { useQuery } from '@tanstack/react-query'
-import { ButtonPlay, WrapIconShowreels } from './style'
 import { IconShowreels } from '@/assets/icons/showreels'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
+import { WrapPlay, ButtonPlay, WrapIconShowreels } from './style'
 
 export const Video = () => {
 	const { value, setTrue, setFalse } = useBoolean()
@@ -16,7 +16,9 @@ export const Video = () => {
 
 	return (
 		<ButtonPlay>
-			<IconPlay />
+			<WrapPlay>
+				<IconPlay />
+			</WrapPlay>
 			<WrapIconShowreels>
 				<IconShowreels />
 			</WrapIconShowreels>

@@ -1,17 +1,21 @@
-'use client'
-
 import Button from '@mui/material/Button'
 import { styled } from '@mui/material/styles'
 
 export const ButtonPlay = styled(Button)`
-	width: 190px;
+	width: 104px;
 	border: none;
-	height: 190px;
+	height: 104px;
 	flex-shrink: 0;
 	cursor: pointer;
 	box-shadow: none;
 	position: relative;
 	border-radius: ${({ theme }) => theme.palette.borderradiuses['50%']};
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			width: '190px',
+			height: '190px',
+		},
+	})}
 `
 
 export const WrapIconShowreels = styled('div')`
@@ -23,6 +27,11 @@ export const WrapIconShowreels = styled('div')`
 	animation: spin 10s linear infinite;
 	-moz-animation: spin 10s linear infinite;
 	-webkit-animation: spin 10s linear infinite;
+
+	svg {
+		width: 100%;
+		height: 100%;
+	}
 
 	@-moz-keyframes spin {
 		100% {
@@ -39,5 +48,22 @@ export const WrapIconShowreels = styled('div')`
 			-webkit-transform: rotate(360deg);
 			transform: rotate(360deg);
 		}
+	}
+`
+
+export const WrapPlay = styled('div')`
+	display: flex;
+	padding-left: 8px;
+	align-items: center;
+	justify-content: center;
+	svg {
+		width: 40px;
+		height: 40px;
+		${({ theme }) => ({
+			[theme.breakpoints.up('md')]: {
+				width: '55px',
+				height: '55px',
+			},
+		})}
 	}
 `

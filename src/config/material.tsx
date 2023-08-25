@@ -41,6 +41,7 @@ interface ITypography {
 	text130: React.CSSProperties
 	text140: React.CSSProperties
 	text150: React.CSSProperties
+	text160: React.CSSProperties
 	title: React.CSSProperties
 	title10: React.CSSProperties
 	title20: React.CSSProperties
@@ -59,6 +60,7 @@ interface ITypography {
 	title150: React.CSSProperties
 	title160: React.CSSProperties
 	title170: React.CSSProperties
+	title180: React.CSSProperties
 }
 
 declare module '@mui/material/styles' {
@@ -84,6 +86,7 @@ declare module '@mui/material/Typography' {
 		text130: true
 		text140: true
 		text150: true
+		text160: true
 		title: true
 		title10: true
 		title20: true
@@ -102,6 +105,7 @@ declare module '@mui/material/Typography' {
 		title150: true
 		title160: true
 		title170: true
+		title180: true
 	}
 }
 
@@ -274,6 +278,19 @@ export const theme = createTheme({
 			fontSize: defaultCreateTheme.palette.fontsizes[18],
 			fontWeight: defaultCreateTheme.palette.fontweights[500],
 			lineHeight: defaultCreateTheme.palette.lineheights['155.7%'],
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				textAlign: 'center',
+				fontSize: defaultCreateTheme.palette.fontsizes[13],
+			},
+		},
+		text160: {
+			color: defaultCreateTheme.palette.colors.GRAY180,
+			fontSize: defaultCreateTheme.palette.fontsizes[18],
+			fontWeight: defaultCreateTheme.palette.fontweights[400],
+			lineHeight: defaultCreateTheme.palette.lineheights['154.7%'],
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: defaultCreateTheme.palette.fontsizes[13],
+			},
 		},
 		title: {
 			fontWeight: 600,
@@ -440,6 +457,19 @@ export const theme = createTheme({
 			fontSize: defaultCreateTheme.palette.fontsizes[48],
 			fontWeight: defaultCreateTheme.palette.fontweights[800],
 			lineHeight: defaultCreateTheme.palette.lineheights['116.7%'],
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				textAlign: 'center',
+				fontSize: defaultCreateTheme.palette.fontsizes[26],
+			},
+		},
+		title180: {
+			color: defaultCreateTheme.palette.colors.WHITE,
+			fontSize: defaultCreateTheme.palette.fontsizes[33],
+			fontWeight: defaultCreateTheme.palette.fontweights[800],
+			lineHeight: defaultCreateTheme.palette.lineheights['116.7%'],
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: defaultCreateTheme.palette.fontsizes[18],
+			},
 		},
 	},
 	components: {

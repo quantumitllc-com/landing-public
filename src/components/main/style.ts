@@ -6,6 +6,9 @@ export const Container = styled('main')`
 	display: flex;
 	user-select: none;
 	justify-content: center;
+	img {
+		position: absolute !important;
+	}
 `
 
 export const Wrap = styled('div')`
@@ -18,21 +21,47 @@ export const Wrap = styled('div')`
 export const WrapVideo = styled('div')`
 	left: 80px;
 	bottom: 90px;
+	display: none;
 	position: absolute;
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			display: 'flex',
+		},
+	})}
+`
+
+export const WrapMobileVideo = styled('div')`
+	top: 55px;
+	left: 18px;
+	display: flex;
+	position: absolute;
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			display: 'none',
+		},
+	})}
 `
 
 export const WrapRobot = styled('div')`
+	left: 18px;
 	bottom: 0;
 	width: 100%;
-	right: -55px;
 	height: 100%;
-	max-width: 900px;
-	max-height: 900px;
+	max-height: 370px;
 	position: absolute;
+
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			left: 'unset',
+			right: '-55px',
+			maxWidth: '900px',
+			maxHeight: '900px',
+		},
+	})}
 `
 
 export const WrapContent = styled('div')`
-	gap: 16px;
+	gap: 10px;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -40,4 +69,21 @@ export const WrapContent = styled('div')`
 	margin-top: -90px;
 	flex-direction: column;
 	justify-content: center;
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			gap: '16px',
+		},
+	})}
+`
+
+export const WrapButton = styled('div')`
+	display: flex;
+	margin-top: 13px;
+	justify-content: center;
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			marginTop: '17px',
+			justifyContent: 'flex-start',
+		},
+	})}
 `

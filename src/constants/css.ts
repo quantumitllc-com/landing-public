@@ -53,9 +53,13 @@ export const CSS = {
 		'50%': '50%',
 	},
 	FONNTSIZES: {
+		13: '13px',
 		15: '15px',
 		16: '16px',
 		18: '18px',
+		26: '26px',
+		28: '28px',
+		33: '33px',
 		48: '48px',
 	},
 	FONTWEIGHTS: {
@@ -67,6 +71,7 @@ export const CSS = {
 	LINEHEIGHTS: {
 		'114.5%': '114.5%;',
 		'116.7%': '116.7%;',
+		'154.7%': '154.7%',
 		'155.7%': '155.7%;',
 	},
 	LETTERSPACES: {
