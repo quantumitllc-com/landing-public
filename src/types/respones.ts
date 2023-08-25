@@ -75,13 +75,3 @@ export interface ITestimonial {
 	text: string
 	company_name: string
 }
-
-export interface IContactInformation {
-	id: number
-	email: string
-	phone_number: string
-	facebook: string | null
-	instagram: string | null
-	linkedin: string | null
-	telegram: string | null
-}

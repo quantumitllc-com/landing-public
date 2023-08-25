@@ -27,7 +27,7 @@ export const Nav = styled('nav')<INavbar>`
 					? theme.palette.colors.GRAY200
 					: variant === 'footer'
 					? theme.palette.colors.GRAY20
-					: theme.palette.colors.GRAY10};
+					: theme.palette.colors.GRAY200};
 			display: ${({ variant }) => variant === 'drawer-mobile' && 'flex'};
 			padding: ${({ variant }) => variant === 'drawer-mobile' && '8px 0'};
 			justify-content: ${({ variant }) => variant === 'drawer-mobile' && 'space-between'};

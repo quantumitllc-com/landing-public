@@ -26,7 +26,13 @@ export const Menu = () => {
 				anchor='right'
 				onOpen={setTrue}
 				onClose={setFalse}
-				PaperProps={{ style: { width: '100%' } }}
+				PaperProps={{
+					sx: theme => ({
+						width: '100%',
+						backdropFilter: 'blur(35px)',
+						background: theme.palette.colors.GREEN10,
+					}),
+				}}
 			>
 				<Container>
 					{value && (

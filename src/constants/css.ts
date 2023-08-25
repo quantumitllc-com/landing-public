@@ -3,6 +3,7 @@ export const CSS = {
 		WHITE: '#FFFFFF',
 		WHITE10: '#FFFFFFBF',
 		GREEN: '#1AD980',
+		GREEN10: '#091f2ccc',
 		GRAY: '#EFF0F7',
 		GRAY10: '#3a4c56',
 		GRAY20: '#8d9193',
