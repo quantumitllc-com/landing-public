@@ -6,11 +6,11 @@ import { useTranslation } from 'next-i18next'
 import type { IIntro } from '@/types/respones'
 import { useTheme } from '@mui/material/styles'
 import { useQuery } from '@tanstack/react-query'
-import { Button, Typography } from '@mui/material'
 import ImageRobot from '@/assets/images/robot.webp'
 import { IconArrowUp } from '@/assets/icons/arrow-up'
 import ImageMainBg from '@/assets/images/main-bg.webp'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import { Box, Button, Typography } from '@mui/material'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import ImageMainMobileBg from '@/assets/images/main-mobile-bg.webp'
 import {
@@ -38,12 +38,14 @@ export const Main = () => {
 			<Image priority fill src={matches ? ImageMainBg : ImageMainMobileBg} alt='main' />
 			<Wrap>
 				<WrapContent>
-					<Typography variant='title170' component='h1'>
-						{dataIntro.title}
-					</Typography>
-					<Typography variant='text150' component='span'>
-						{dataIntro.subtitle}
-					</Typography>
+					<Box data-aos='fade-down'>
+						<Typography variant='title170' component='h1'>
+							{dataIntro.title}
+						</Typography>
+						<Typography variant='text150' component='span'>
+							{dataIntro.subtitle}
+						</Typography>
+					</Box>
 					<WrapButton>
 						<Button variant='mainGreen' endIcon={<IconArrowUp />}>
 							{t('see_portfolio')}

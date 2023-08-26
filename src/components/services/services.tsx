@@ -19,7 +19,7 @@ export const Services = () => {
 
 	return (
 		<Container>
-			<WrapIcon>
+			<WrapIcon data-aos='flip-left'>
 				<IconServices />
 			</WrapIcon>
 			<Typography

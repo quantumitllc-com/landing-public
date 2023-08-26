@@ -21,7 +21,7 @@ export const AboutUs = () => {
 					</Typography>
 					<Ul>
 						{SUPPORTS.map(({ Icon, text, title }) => (
-							<Li key={title}>
+							<Li key={title} data-aos='fade-up' data-aos-anchor-placement='center-bottom'>
 								<Box display='flex'>
 									<Icon />
 								</Box>

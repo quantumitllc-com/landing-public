@@ -1,5 +1,5 @@
+import Aos from 'aos'
 import Head from 'next/head'
-import { useState } from 'react'
 import { Layout } from '@/layout'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
@@ -7,6 +7,7 @@ import { gilroy } from '@/utility/fonts'
 import type { AppProps } from 'next/app'
 import { theme } from '@/config/material'
 import { ILocales } from '@/types/locales'
+import { useEffect, useState } from 'react'
 import NextNProgress from 'nextjs-progressbar'
 import { ToastContainer } from 'react-toastify'
 import { appWithTranslation } from 'next-i18next'
@@ -22,6 +23,7 @@ import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query
 import 'react-toastify/dist/ReactToastify.css'
 import 'keen-slider/keen-slider.min.css'
 import '@/styles/globals.css'
+import 'aos/dist/aos.css'
 
 interface NewAppProps extends AppProps {
 	Component: NextPage
@@ -82,6 +84,13 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 			},
 		],
 	}
+
+	useEffect(() => {
+		Aos.init({
+			easing: 'ease-out-quad',
+			duration: 1000,
+		})
+	}, [])
 
 	return (
 		<>
