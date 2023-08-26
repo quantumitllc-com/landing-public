@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 import { getProjects } from '@/pages/api'
 import { useTranslation } from 'next-i18next'
 import { useQuery } from '@tanstack/react-query'
-import { IconArrow } from '@/assets/icons/arrow'
 import type { IProject } from '@/types/respones'
 import { Button, Typography } from '@mui/material'
 import { IconChevron } from '@/assets/icons/chevron'
@@ -19,6 +18,9 @@ export const HomeProjects = () => {
 		queryFn: () => getProjects(locale),
 	})
 
+	if (data.length === 0) {
+		return null
+	}
 	return (
 		<Container>
 			<Typography component='h4' align='center' variant='title50' textTransform='capitalize'>
@@ -35,34 +37,31 @@ export const HomeProjects = () => {
 			>
 				{t('projects_that_are_ready_to_use_with_great_designs_and_details')}
 			</Typography>
-			<Wrapper length={data.filter(project => project.in_home_page).length}>
-				{data
-					.filter(project => project.in_home_page)
-					.splice(0, 6)
-					.map(project => (
-						<div key={project.id}>
-							<WrapCardTexts>
-								<Typography align='center' variant='title100' component='h3'>
-									{project.title}
-								</Typography>
-								<Button
-									size='small'
-									component={Link}
-									href={`projects/${project.id}`}
-									endIcon={
-										<WrapIconChevron>
-											<IconChevron />
-										</WrapIconChevron>
-									}
-								>
-									{t('learn_more')}
-								</Button>
-							</WrapCardTexts>
-							<WrapImage>
-								<Image fill src={project.image} alt={project.title} />
-							</WrapImage>
-						</div>
-					))}
+			<Wrapper length={data.length}>
+				{data.map(project => (
+					<div key={project.id}>
+						<WrapCardTexts>
+							<Typography align='center' variant='title100' component='h3'>
+								{project.title}
+							</Typography>
+							<Button
+								size='small'
+								component={Link}
+								href={`projects/${project.id}`}
+								endIcon={
+									<WrapIconChevron>
+										<IconChevron />
+									</WrapIconChevron>
+								}
+							>
+								{t('learn_more')}
+							</Button>
+						</WrapCardTexts>
+						<WrapImage>
+							<Image fill src={project.main_image} alt={project.title} />
+						</WrapImage>
+					</div>
+				))}
 			</Wrapper>
 		</Container>
 	)

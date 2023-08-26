@@ -24,8 +24,8 @@ export interface IIntro {
 
 export interface IVideo {
 	id: number
-	video: string
-	video_url: string
+	file: string
+	file_url: string
 }
 
 export interface IProject {
@@ -54,6 +54,7 @@ export interface IProject {
 	subtitle: string
 	text: string
 	title: string
+	main_image: string
 }
 
 export interface ITechnology {
@@ -68,6 +69,7 @@ export interface ITechnology {
 }
 
 export interface ITestimonial {
+	country: string
 	first_name: string
 	id: number
 	image: string

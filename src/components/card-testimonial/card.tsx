@@ -1,8 +1,7 @@
 import { ITestimonial } from '@/types/respones'
 import { Box, Typography } from '@mui/material'
 import { IconQuotes } from '@/assets/icons/quotes'
-import { stringAvatar } from '@/utility/stringAvatar'
-import { Avatar, WrapText, Container } from './style'
+import { WrapText, Container } from './style'
 
 interface ICardTestimonial extends ITestimonial {
 	className?: string
@@ -11,29 +10,25 @@ interface ICardTestimonial extends ITestimonial {
 export const CardTestimonial = ({ className, ...testimonial }: ICardTestimonial) => {
 	return (
 		<Container className={className}>
-			<Box gap='13px' display='flex' alignItems='center'>
-				<Avatar
-					src={testimonial.image}
-					{...stringAvatar(`${testimonial.first_name} ${testimonial.last_name}`)}
-				/>
-				<Box display='flex' justifyContent='center' flexDirection='column'>
-					<Typography variant='title150' component='h6'>
-						{testimonial.first_name} {testimonial.last_name}
-					</Typography>
-					<Typography variant='title160' component='h6'>
-						{testimonial.company_name}
-					</Typography>
-				</Box>
-			</Box>
 			<WrapText>
 				<Box className='icon'>
 					<IconQuotes />
 				</Box>
-
 				<Typography variant='text140' component='p'>
 					“{testimonial.text}”
 				</Typography>
 			</WrapText>
+			<Box width='100%' display='flex' justifyContent='flex-end' flexDirection='column'>
+				<Typography variant='title150' component='h6' align='right'>
+					{testimonial.first_name} {testimonial.last_name}
+					<Typography ml='5px' variant='inherit' component='span' fontWeight='400'>
+						({testimonial.country})
+					</Typography>
+				</Typography>
+				<Typography variant='title160' component='h6' align='right'>
+					{testimonial.company_name}
+				</Typography>
+			</Box>
 		</Container>
 	)
 }

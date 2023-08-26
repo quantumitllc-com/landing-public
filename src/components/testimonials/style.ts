@@ -8,13 +8,13 @@ interface IArrowButton {
 
 export const Container = styled('div')`
 	display: flex;
-	padding-top: 230px;
+	margin-top: 150px;
 	position: relative;
 	align-items: center;
 	flex-direction: column;
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			paddingTop: '60px',
+		[theme.breakpoints.down('md')]: {
+			marginTop: '60px',
 		},
 	})}
 `
@@ -84,27 +84,18 @@ export const WrapButtons = styled('div')`
 
 export const WrapIcon = styled('div')`
 	right: 0;
-	top: 180px;
 	width: 100%;
 	display: flex;
-	position: absolute;
 	justify-content: flex-end;
+	bottom: calc(100% - 70px);
+	position: absolute;
 	svg {
 		width: 80%;
 		height: 100%;
 	}
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			top: '40px',
-		},
-	})}
-`
-
-export const WrapText = styled('div')`
-	padding: 20px 0 27px;
-	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			padding: '8px 18px 17px',
+		[theme.breakpoints.down('md')]: {
+			display: 'none',
 		},
 	})}
 `
