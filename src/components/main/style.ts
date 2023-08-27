@@ -4,6 +4,7 @@ export const Container = styled('main')`
 	width: 100vw;
 	height: 100vh;
 	display: flex;
+	padding: 0 18px;
 	user-select: none;
 	justify-content: center;
 	img {
@@ -84,13 +85,11 @@ export const WrapContent = styled('div')`
 	display: flex;
 	max-width: 590px;
 	margin-top: -90px;
-	padding: 0 18px;
 	flex-direction: column;
 	justify-content: center;
 	${({ theme }) => ({
 		[theme.breakpoints.up('md')]: {
 			gap: '16px',
-			padding: '0 18px',
 		},
 	})}
 `
