@@ -82,6 +82,19 @@ export const WrapContact = styled('div')`
 			whiteSpace: 'nowrap',
 		},
 	})}
+	a:hover {
+		svg {
+			path,
+			circle {
+				transition: all 0.8s ease;
+				stroke: ${({ theme }) => theme.palette.colors.GREEN};
+			}
+		}
+		h5 {
+			transition: all 0.8s ease;
+			color: ${({ theme }) => theme.palette.colors.GREEN};
+		}
+	}
 `
 
 export const WrapMobileSocial = styled('div')`

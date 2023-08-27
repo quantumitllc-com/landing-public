@@ -28,6 +28,14 @@ export const Container = styled('div')<ISocial>`
 	a {
 		display: flex;
 		align-items: center;
+		:hover {
+			svg {
+				path,
+				circle {
+					fill: ${({ theme, variant }) => variant === 'footer' && theme.palette.colors.GREEN};
+				}
+			}
+		}
 	}
 	${({ theme, variant }) => ({
 		[theme.breakpoints.down('sm')]: {

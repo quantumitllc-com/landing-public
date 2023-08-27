@@ -31,10 +31,16 @@ export const Nav = styled('nav')<INavbar>`
 			display: ${({ variant }) => variant === 'drawer-mobile' && 'flex'};
 			padding: ${({ variant }) => variant === 'drawer-mobile' && '8px 0'};
 			justify-content: ${({ variant }) => variant === 'drawer-mobile' && 'space-between'};
-			transition: color 1s ease;
 
 			:hover {
+				transition: color 0.5s ease;
 				color: ${({ theme }) => theme.palette.colors.GREEN};
+				svg {
+					path {
+						transition: color 0.5s ease;
+						stroke: ${({ theme }) => theme.palette.colors.GREEN};
+					}
+				}
 			}
 			span {
 				height: 30px;
@@ -42,12 +48,12 @@ export const Nav = styled('nav')<INavbar>`
 		}
 		a:after {
 			content: '';
-			display: block;
 			margin: auto;
 			height: 2px;
 			width: 0px;
 			background: transparent;
 			transition: width 0.5s ease, background-color 0.5s ease;
+			display: ${({ variant }) => (variant === 'drawer-mobile' ? 'none' : 'block')};
 		}
 		a:hover:after {
 			width: 100%;
