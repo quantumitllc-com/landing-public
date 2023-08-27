@@ -1,7 +1,7 @@
 export const IconAchievementDrunk = () => {
 	return (
 		<svg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'>
-			<g clip-path='url(#clip0_0_869)'>
+			<g clipPath='url(#clip0_0_869)'>
 				<path
 					d='M5.59724 42.0906H11.5885C11.6717 42.6126 12.1043 43.0208 12.6506 43.0208H26.2721C26.8204 43.0208 27.251 42.6146 27.3342 42.0906H33.3255C34.3389 42.0906 35.1594 41.2701 35.1594 40.2567H3.76535C3.76535 41.2701 4.58584 42.0906 5.59724 42.0906Z'
 					fill='#1AD980'

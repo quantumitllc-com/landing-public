@@ -1,7 +1,7 @@
 export const IconAchievementProjects = () => {
 	return (
 		<svg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'>
-			<g clip-path='url(#clip0_0_845)'>
+			<g clipPath='url(#clip0_0_845)'>
 				<path
 					d='M6.42304 28.1941C6.17396 28.691 6.27097 29.2915 6.6634 29.6843L6.97861 29.9995C7.88935 28.9203 8.95081 27.749 10.2382 26.462C10.3292 26.371 10.4228 26.327 10.5141 26.2431L8.48621 24.2148C7.30726 26.3472 6.61976 27.8041 6.42304 28.1941Z'
 					fill='#1AD980'

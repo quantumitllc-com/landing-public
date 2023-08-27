@@ -1,1 +1,0 @@
-export { CardProjectDetails } from './card'

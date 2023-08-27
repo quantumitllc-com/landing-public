@@ -10,7 +10,6 @@ import { useQuery } from '@tanstack/react-query'
 import { IconEmail } from '@/assets/icons/email'
 import { IconPhone } from '@/assets/icons/phone'
 import { getContactInformation } from '@/pages/api'
-import type { IContactInformation } from '@/types/respones'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import {
 	Up,
@@ -25,7 +24,7 @@ import {
 export const Footer = () => {
 	const { locale } = useRouter()
 	const { t } = useTranslation('common')
-	const { data = { email: '', phone_number: '' } } = useQuery<IContactInformation>({
+	const { data = { email: '', phone_number: '' } } = useQuery({
 		queryKey: [REACT_QUERY_KEYS.CONTACTINFORMATION, locale],
 		queryFn: () => getContactInformation(locale),
 	})
@@ -81,8 +80,7 @@ export const Footer = () => {
 							{t('submit_an_application')}
 						</Typography>
 						<Typography m='12px 0 24px' variant='text' component='h3'>
-							Lorem ipsum dolor sit amet consectetur. Nec aliquam neque at vitae. Congue interdum
-							dolor laoreet mollis convallis nunc lacinia. Faucibus.
+							Leave your email and we will get back to you soon.
 						</Typography>
 						<Follow />
 						<WrapDesktopSocial>

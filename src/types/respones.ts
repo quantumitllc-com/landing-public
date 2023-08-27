@@ -29,32 +29,19 @@ export interface IVideo {
 }
 
 export interface IProject {
-	client: {
-		id: number
-		name: string
-	}
-	date: string
 	id: number
-	image: string
-	in_home_page: boolean
-	languages: ILanguage[]
-	location: string
-	project_images: {
-		id: number
-		image: string
-		project: number
-	}[]
-	service: {
-		dark_image: string
-		id: number
-		light_image: string
-		text: string
-		title: string
-	}
-	subtitle: string
-	text: string
 	title: string
 	main_image: string
+	description: string
+	seo_keywords: string[]
+	languages: ILanguage[]
+	contents: {
+		content: string
+		id: number
+		image: string
+		is_right_position: boolean
+		project: number
+	}[]
 }
 
 export interface ITechnology {

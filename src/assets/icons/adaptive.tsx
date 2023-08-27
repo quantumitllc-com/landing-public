@@ -1,8 +1,8 @@
 export const IconAdaptive = () => {
 	return (
 		<svg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'>
-			<circle cx='21' cy='21' r='21' fill='#1AD980' fill-opacity='0.1' />
-			<g clip-path='url(#clip0_301_345)'>
+			<circle cx='21' cy='21' r='21' fill='#1AD980' fillOpacity='0.1' />
+			<g clipPath='url(#clip0_301_345)'>
 				<path
 					d='M15.6172 29.8463C17.2015 30.8625 19.0415 31.4258 20.9492 31.4258C22.55 31.4258 24.0779 31.0553 25.4928 30.3248L24.7935 28.971C21.8697 30.4812 18.1636 30.0598 15.6172 27.9622V22.2852H8V29.9023H15.6172V29.8463Z'
 					fill='#1AD980'

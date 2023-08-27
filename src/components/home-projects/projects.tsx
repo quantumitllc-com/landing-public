@@ -47,7 +47,7 @@ export const HomeProjects = () => {
 							<Button
 								size='small'
 								component={Link}
-								href={`projects/${project.id}`}
+								href={`/${project.id}`}
 								endIcon={
 									<WrapIconChevron>
 										<IconChevron />
