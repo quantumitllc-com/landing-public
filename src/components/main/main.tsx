@@ -42,7 +42,7 @@ export const Main = () => {
 						<Typography variant='title170' component='h1'>
 							{dataIntro.title}
 						</Typography>
-						<Typography variant='text150' component='span'>
+						<Typography variant='text150' component='h2'>
 							{dataIntro.subtitle}
 						</Typography>
 					</Box>

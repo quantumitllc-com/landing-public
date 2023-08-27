@@ -4,6 +4,7 @@ import { Logo } from '@/components/logo'
 import { Navbar } from '@/components/navbar'
 import { useScrollPosition } from '@/hooks/useScrollPosition'
 import { Wrapper, WrapLeft, WrapRight, Container, WrapDesktop, WrapMobile } from './style'
+import { SelectLanguage } from '../select-language'
 
 export const Header = () => {
 	const { pathname } = useRouter()
@@ -17,7 +18,9 @@ export const Header = () => {
 						<Logo variant='header' />
 						<Navbar variant='header' />
 					</WrapLeft>
-					<WrapRight>WrapRight</WrapRight>
+					<WrapRight>
+						<SelectLanguage variant='header' />
+					</WrapRight>
 				</Wrapper>
 			</WrapDesktop>
 			<WrapMobile>

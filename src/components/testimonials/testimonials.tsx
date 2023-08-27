@@ -35,13 +35,11 @@ export const Testimonials = () => {
 			setCurrentSlide(s.track.details.rel)
 		},
 		breakpoints: {
-			[`(max-width: ${theme.breakpoints.values.sm}px)`]: {
+			[`(max-width: ${theme.breakpoints.values.md}px)`]: {
 				slides: { perView: 1.2, spacing: 12 },
 			},
 		},
 	})
-
-	console.log(data)
 
 	if (data.length === 0) {
 		return null
@@ -49,7 +47,7 @@ export const Testimonials = () => {
 
 	return (
 		<Container>
-			<WrapIcon>
+			<WrapIcon data-aos='flip-left'>
 				<IconTestimonials />
 			</WrapIcon>
 			<Typography

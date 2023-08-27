@@ -24,7 +24,7 @@
     "enter_phone_number":"Введите номер телефона",
     "what_kind_of_service_do_you_need":"Какая услуга вам нужна?",
     "submit_order":"Подтвердить заказ",
-    "creative_powered_to_fuel_your_growth_goals_we_build_world_class_digital_products_software_and_branding": "Креативные возможности для достижения ваших целей роста. Мы создаем цифровые продукты, программное обеспечение и брендинг мирового класса.",
+    "creative_powered_to_fuel_your_growth_goals_we_build_world_class_digital_products_software_and_branding": "Творческие возможности для достижения ваших целей и роста. Мы создаем цифровые продукты, программное обеспечение и брендинг мирового уровня.",
     "have_a_question":"Есть вопрос?",
     "contact_us_at":"Свяжитесь с нами по",
     "submit_an_application":"Подавать заявление",
@@ -52,5 +52,7 @@
     "successful_projects":"Успешные проекты",
     "profits": "Увеличение прибыли",
 	"experience": "Опыт работы на рынке",
-    "coffee_drunk": "Кофе пьяный"
+    "coffee_drunk": "Кофе пьяный",
+    "leave_your_email_and_we_will_get_back_to_you_soon":"Оставьте свой адрес электронной почты, и мы скоро свяжемся с вами."
+
 }

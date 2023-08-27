@@ -44,7 +44,7 @@ export const Slider = styled('div')`
 		box-shadow: ${({ theme }) => theme.palette.shadows.SHADOW};
 	}
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			marginTop: '34px',
 			paddingLeft: '18px',
 		},

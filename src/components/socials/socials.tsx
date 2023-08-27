@@ -1,4 +1,4 @@
-import { Link } from '@mui/material'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useQuery } from '@tanstack/react-query'
 import { type ISocial, Container } from './style'

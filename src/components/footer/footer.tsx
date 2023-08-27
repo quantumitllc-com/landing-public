@@ -15,6 +15,7 @@ import {
 	Up,
 	Down,
 	Wrapper,
+	WrapLogo,
 	Container,
 	WrapContact,
 	WrapMobileSocial,
@@ -34,9 +35,9 @@ export const Footer = () => {
 			<Wrapper>
 				<Up>
 					<Box className='wrap-up'>
-						<Box mb='12px' display='flex' alignItems='center'>
+						<WrapLogo>
 							<Logo variant='footer' />
-						</Box>
+						</WrapLogo>
 						<Typography variant='text' component='h3'>
 							{t(
 								'creative_powered_to_fuel_your_growth_goals_we_build_world_class_digital_products_software_and_branding',
@@ -80,7 +81,7 @@ export const Footer = () => {
 							{t('submit_an_application')}
 						</Typography>
 						<Typography m='12px 0 24px' variant='text' component='h3'>
-							Leave your email and we will get back to you soon.
+							{t('leave_your_email_and_we_will_get_back_to_you_soon')}
 						</Typography>
 						<Follow />
 						<WrapDesktopSocial>

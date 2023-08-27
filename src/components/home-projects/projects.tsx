@@ -39,7 +39,7 @@ export const HomeProjects = () => {
 			</Typography>
 			<Wrapper length={data.length}>
 				{data.map(project => (
-					<div key={project.id}>
+					<div key={project.id} data-aos='fade-up' data-aos-anchor-placement='top-bottom'>
 						<WrapCardTexts>
 							<Typography align='center' variant='title100' component='h3'>
 								{project.title}

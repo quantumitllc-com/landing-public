@@ -64,7 +64,7 @@ export const Achievements = () => {
 	})
 
 	return (
-		<Container>
+		<Container data-aos='fade-up' data-aos-anchor-placement='top-bottom'>
 			<Wrapper>
 				{data.map(({ id, Icon, value, symbol }: IAchievement) => (
 					<Wrap key={id}>

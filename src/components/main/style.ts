@@ -9,6 +9,14 @@ export const Container = styled('main')`
 	img {
 		position: absolute !important;
 	}
+	${({ theme }) => ({
+		minHeight: '650px',
+		[theme.breakpoints.up('md')]: {
+			img: {
+				minHeight: '650px',
+			},
+		},
+	})}
 `
 
 export const Wrap = styled('div')`

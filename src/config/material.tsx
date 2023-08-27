@@ -200,12 +200,10 @@ export const theme = createTheme({
 		},
 		text70: {
 			fontWeight: 500,
-			fontSize: '18px',
+			fontSize: '16px',
 			lineHeight: '20px',
-			color: defaultCreateTheme.palette.colors.BLUE30,
 			[defaultCreateTheme.breakpoints.down('sm')]: {
 				fontSize: '14px',
-				fontWeight: 400,
 			},
 		},
 		text80: {
