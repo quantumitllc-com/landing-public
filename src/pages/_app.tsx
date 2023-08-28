@@ -105,6 +105,7 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				<link rel='icon' type='image/svg+xml' href='/icon.svg' />
 				<link rel='icon' type='image/png' href='/icon.png' />
 				<link rel='shortcut icon' href='/icon.png' />
+				<script src='//code.jivosite.com/widget/ShuWU2A1gc' async></script>
 			</Head>
 			<DefaultSeo {...DEFAULT_SEO} />
 			<ThemeProvider theme={theme}>
