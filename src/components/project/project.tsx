@@ -7,27 +7,21 @@ import { useTranslation } from 'next-i18next'
 import { useQuery } from '@tanstack/react-query'
 import type { IProject } from '@/types/respones'
 import { IconChevron } from '@/assets/icons/chevron'
-import { Breadcrumbs, Typography } from '@mui/material'
+import { Box, Breadcrumbs, Typography } from '@mui/material'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { CardProjectDetails } from '@/components/card-project-details'
 import {
-	Left,
 	Body,
-	Header,
+	Contents,
 	Wrapper,
-	WrapImage,
 	Container,
 	Languages,
-	WrapImages,
-	WrapLanguage,
+	WrapContent,
 	WrapBreadcrumb,
 	WrapIconChevron,
-	WrapMobileProjectDetail,
-	WrapDesktopProjectDetail,
 } from './style'
 
 export const Project = () => {
-	const { locale, query } = useRouter()
+	const { locale, query, ...router } = useRouter()
 	const id = query?.projectId as string
 	const { t } = useTranslation('common')
 	const { data } = useQuery<IProject>({
@@ -35,15 +29,15 @@ export const Project = () => {
 		queryFn: () => getProject(id, locale),
 	})
 
+	if (typeof data === 'undefined' && typeof window !== 'undefined') {
+		router.push('/404')
+		return null
+	}
+
 	const breadcrumbs = [
 		<Link key='1' href='/'>
 			<Typography variant='title130' color='colors.GRAY210'>
 				{t('home')}
-			</Typography>
-		</Link>,
-		<Link key='2' href='/projects'>
-			<Typography variant='title130' color='colors.GRAY210'>
-				{t('projects')}
 			</Typography>
 		</Link>,
 		<Typography key='3' variant='title130'>
@@ -55,14 +49,14 @@ export const Project = () => {
 		<>
 			<NextSeo
 				title={data?.title}
-				description={data?.text}
+				description={data?.description}
 				openGraph={{
 					title: data?.title,
-					description: data?.text,
-					images: [{ url: data?.image as string, alt: data?.title }],
+					description: data?.description,
+					images: [{ url: data?.main_image as string, alt: data?.title }],
 				}}
 			/>
-			<Container>
+			<Container data-aos='fade-up' data-aos-duration='2000'>
 				<Wrapper>
 					<WrapBreadcrumb>
 						<Breadcrumbs
@@ -76,31 +70,15 @@ export const Project = () => {
 							{breadcrumbs}
 						</Breadcrumbs>
 					</WrapBreadcrumb>
-					<Header>
-						<Left>
-							<WrapImage>
-								<Image fill alt={data?.title as string} src={data?.image as string} />
-							</WrapImage>
-						</Left>
-						<WrapDesktopProjectDetail>
-							<CardProjectDetails
-								date={data?.date}
-								subtitle={data?.subtitle}
-								location={data?.location}
-								clientName={data?.client?.name}
-								serviceTitle={data?.service?.title}
-							/>
-						</WrapDesktopProjectDetail>
-					</Header>
 					<Body>
 						<Typography variant='title140' component='h2'>
 							{data?.title}
 						</Typography>
 						<Typography variant='text100' component='p'>
-							{data?.text}
+							{data?.description}
 						</Typography>
 					</Body>
-					<WrapLanguage>
+					<Box>
 						<Typography variant='title120' component='h3'>
 							{t('used_languages')}
 						</Typography>
@@ -108,28 +86,29 @@ export const Project = () => {
 							{data?.languages.map(language => (
 								<div key={language.id} className='language'>
 									<Typography variant='text110' component='span'>
-										{language.name}
+										#{language.name}
 									</Typography>
 								</div>
 							))}
 						</Languages>
-					</WrapLanguage>
-					<WrapImages>
-						{data?.project_images.map(project_image => (
-							<div key={project_image.id}>
-								<Image fill alt={String(project_image.id)} src={project_image.image as string} />
-							</div>
+					</Box>
+					<Contents>
+						{data?.contents.map(c => (
+							<WrapContent key={c.id}>
+								{c.is_right_position ? (
+									<>
+										<div dangerouslySetInnerHTML={{ __html: c.content }} />
+										{c.image && <Image fill alt={String(c.id)} src={c.image} />}
+									</>
+								) : (
+									<>
+										{c.image && <Image fill alt={String(c.id)} src={c.image} />}
+										<div dangerouslySetInnerHTML={{ __html: c.content }} />
+									</>
+								)}
+							</WrapContent>
 						))}
-					</WrapImages>
-					<WrapMobileProjectDetail>
-						<CardProjectDetails
-							date={data?.date}
-							subtitle={data?.subtitle}
-							location={data?.location}
-							clientName={data?.client?.name}
-							serviceTitle={data?.service?.title}
-						/>
-					</WrapMobileProjectDetail>
+					</Contents>
 				</Wrapper>
 			</Container>
 		</>

@@ -2,6 +2,7 @@ import { styled } from '@mui/material/styles'
 
 export const Container = styled('div')`
 	width: 100%;
+	z-index: 10;
 	position: relative;
 
 	:hover::after {
@@ -12,7 +13,7 @@ export const Container = styled('div')`
 	::after {
 		right: 0;
 		bottom: 0;
-		z-index: -2;
+		z-index: -4;
 		content: '';
 		width: 100%;
 		height: 100%;

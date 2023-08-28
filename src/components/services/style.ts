@@ -2,32 +2,36 @@ import { styled } from '@mui/material/styles'
 
 export const Container = styled('div')`
 	display: flex;
-	padding-top: 210px;
+	margin-top: 20px;
 	position: relative;
 	align-items: center;
 	flex-direction: column;
+
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			paddingTop: '60px',
+		[theme.breakpoints.up('md')]: {
+			marginTop: '120px',
+		},
+		[theme.breakpoints.between('sm', 'md')]: {
+			marginTop: '70px',
 		},
 	})}
 `
 export const Wrapper = styled('div')`
 	width: 100%;
 	display: flex;
-	padding-top: 120px;
+	margin-top: 44px;
 	flex-direction: column;
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			padding: '30px 18px 0',
+		[theme.breakpoints.down('md')]: {
+			padding: '0 18px 0',
 		},
 	})}
 `
 
 export const WrapIcon = styled('div')`
 	left: 0;
-	top: 180px;
+	bottom: calc(100% - 102px);
 	position: absolute;
 	svg {
 		width: 80%;
@@ -40,15 +44,6 @@ export const WrapIcon = styled('div')`
 	})}
 `
 
-export const WrapText = styled('div')`
-	padding: 20px 18px 27px;
-	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			padding: '8px 18px 18px',
-		},
-	})}
-`
-
 export const WrapCards = styled('div')`
 	width: 100%;
 	display: grid;
@@ -57,6 +52,11 @@ export const WrapCards = styled('div')`
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			gridTemplateColumns: '1fr',
+		},
+	})}
+	${({ theme }) => ({
+		[theme.breakpoints.between('sm', 'md')]: {
+			gridTemplateColumns: '1fr 1fr',
 		},
 	})}
 `

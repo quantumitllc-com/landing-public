@@ -10,7 +10,7 @@ import { IconArrowCircle } from '@/assets/icons/arrow-circle'
 import { IconTestimonials } from '@/assets/icons/testimonials'
 import { CardTestimonial } from '@/components/card-testimonial'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { Slider, WrapText, WrapIcon, Container, WrapButtons, ArrowButton } from './style'
+import { Slider, WrapIcon, Container, WrapButtons, ArrowButton } from './style'
 
 export const Testimonials = () => {
 	const theme = useTheme()
@@ -35,32 +35,32 @@ export const Testimonials = () => {
 			setCurrentSlide(s.track.details.rel)
 		},
 		breakpoints: {
-			[`(max-width: ${theme.breakpoints.values.sm}px)`]: {
+			[`(max-width: ${theme.breakpoints.values.md}px)`]: {
 				slides: { perView: 1.2, spacing: 12 },
 			},
 		},
 	})
 
+	if (data.length === 0) {
+		return null
+	}
+
 	return (
 		<Container>
-			<WrapIcon>
+			<WrapIcon data-aos='flip-left'>
 				<IconTestimonials />
 			</WrapIcon>
-			<Typography variant='title30' component='h3' align='center'>
-				{t('our_client_testimonials')}
+			<Typography
+				mb='10px'
+				component='h4'
+				align='center'
+				variant='title50'
+				sx={{
+					maxWidth: '640px',
+				}}
+			>
+				Customer Reviews
 			</Typography>
-			<WrapText>
-				<Typography
-					component='h4'
-					align='center'
-					variant='title50'
-					sx={{
-						maxWidth: '640px',
-					}}
-				>
-					{t('our_clients_want_to_share_their_experiences_with_you')}
-				</Typography>
-			</WrapText>
 			<Typography
 				component='p'
 				align='center'
@@ -72,13 +72,13 @@ export const Testimonials = () => {
 			>
 				{t('we_always_try_make_the_experience_with_us_always_the_best')}
 			</Typography>
-			{/* <Slider>
+			<Slider>
 				<div ref={sliderRef} className='keen-slider'>
 					{data.map(testimonial => (
 						<CardTestimonial key={testimonial.id} className='keen-slider__slide' {...testimonial} />
 					))}
 				</div>
-				{loaded && instanceRef.current && (
+				{data.length > 2 && loaded && instanceRef.current && (
 					<WrapButtons>
 						<ArrowButton
 							disabled={currentSlide === 0}
@@ -89,12 +89,13 @@ export const Testimonials = () => {
 						<ArrowButton
 							isright='true'
 							onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()}
-							disabled={currentSlide === instanceRef.current.track.details?.slides.length - 2}>
+							disabled={currentSlide === instanceRef.current.track.details?.slides.length - 2}
+						>
 							<IconArrowCircle />
 						</ArrowButton>
 					</WrapButtons>
 				)}
-			</Slider> */}
+			</Slider>
 		</Container>
 	)
 }

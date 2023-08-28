@@ -24,15 +24,13 @@
     "enter_phone_number":"Введите номер телефона",
     "what_kind_of_service_do_you_need":"Какая услуга вам нужна?",
     "submit_order":"Подтвердить заказ",
-    "creative_powered_to_fuel_your_growth_goals_we_build_world_class_digital_products_software_and_branding": "Креативные возможности для достижения ваших целей роста. Мы создаем цифровые продукты, программное обеспечение и брендинг мирового класса.",
+    "creative_powered_to_fuel_your_growth_goals_we_build_world_class_digital_products_software_and_branding": "Творческие возможности для достижения ваших целей и роста. Мы создаем цифровые продукты, программное обеспечение и брендинг мирового уровня.",
     "have_a_question":"Есть вопрос?",
     "contact_us_at":"Свяжитесь с нами по",
     "submit_an_application":"Подавать заявление",
     "all_rights_reserved":"Все права защищены",
     "submit":"присылать",
-    "the_best_creative_agency":"ЛУЧШЕЕ КРЕАТИВНОЕ АГЕНТСТВО",
-    "our_latest_project":"НАШ ПОСЛЕДНИЙ ПРОЕКТ",
-    "our_latest_project_is_the_result_of_the_hard_work_of_designers":"Наш последний проект – результат кропотливой работы дизайнеров.",
+    "our_latest_project":"Наш последний проект",
     "projects_that_are_ready_to_use_with_great_designs_and_details":"Проекты, которые выполняются профессионально, при сотрудничестве между подразделениями, создают проекты, готовые к использованию, с отличным дизайном и деталями.",
     "learn_more":"Узнать больше",
     "see_all":"Увидеть все",
@@ -42,24 +40,20 @@
     "location":"Расположение",
     "category":"Категория",
     "used_languages":"Используемые языки",
-    "our_service_for_you":"НАШИ УСЛУГИ ДЛЯ ВАС",
-    "we_try_your_best_to_provide_a_pleasant_user_experience":"Мы стараемся сделать все возможное, чтобы обеспечить приятный пользовательский опыт",
+    "our_service_for_you":"Наши услуги для вас",
     "user_experience_is_very_important_and_enjoyable_experience":"Пользовательский опыт очень важен, поэтому мы стараемся больше, чтобы пользователи получали лучший и приятный опыт.",
     "tools_we_use":"инструменты, которые мы используем",
     "let_your_projects_take_advantage_of_the_latest_technologies":"Пусть ваши проекты используют преимущества новейших технологий",
     "our_client_testimonials":"НАШИ отзывы клиентов",
-    "our_clients_want_to_share_their_experiences_with_you":"Наши клиенты хотят поделиться с вами своим опытом",
-    "we_always_try_make_the_experience_with_us_always_the_best":"Мы всегда стараемся сделать опыт с нами всегда лучшим. Поэтому мы очень обеспокоены своим выступлением. Это истории некоторых клиентов, которые работали с нами"
-
-
-
-
-
-
-
-
-
-
-
-
+    "we_always_try_make_the_experience_with_us_always_the_best":"Мы всегда стараемся сделать опыт с нами всегда лучшим. Поэтому мы очень обеспокоены своим выступлением. Это истории некоторых клиентов, которые работали с нами",
+    "see_portfolio":"Посмотреть портфолио",
+    "What_you_get_by_contacting_us":"Что вы получаете, обратившись к нам:",
+    "years":" Годы",
+    "successful_projects":"Успешные проекты",
+    "profits": "Увеличение прибыли",
+	"experience": "Опыт работы на рынке",
+    "coffee_drunk": "Кофе пьяный",
+    "leave_your_email_and_we_will_get_back_to_you_soon":"Оставьте свой адрес электронной почты, и мы скоро свяжемся с вами.",
+    "page_not_found":"Страница не найдена",
+    "we_are_sorry_the_page_you_requested_could_not_be_found_please_go_back_to_the_homepage":"К сожалению, запрошенная вами страница не найдена, пожалуйста, вернитесь на домашнюю страницу."
 }

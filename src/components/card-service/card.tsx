@@ -5,7 +5,7 @@ import { Circle, Wrapper, WrapText, WrapImage, Container, WrapCircle } from './s
 
 export const CardService = ({ text, title, dark_image, light_image }: IService) => {
 	return (
-		<Container>
+		<Container data-aos='fade-up' data-aos-anchor-placement='top-bottom'>
 			<Wrapper>
 				<WrapCircle className='wrap-circle'>
 					<Circle className='circle'>

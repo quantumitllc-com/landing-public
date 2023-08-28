@@ -1,6 +1,6 @@
 import { Navbar } from '@/components/navbar'
-import { Socials } from '@/components/socials'
 import { IconMenu } from '@/assets/icons/menu'
+import { Socials } from '@/components/socials'
 import { useBoolean } from '@/hooks/useBoolean'
 import { IconClear } from '@/assets/icons/clear'
 import { Wrapper, Header, Container } from './style'
@@ -18,7 +18,21 @@ export const Menu = () => {
 
 	return (
 		<>
-			<IconButton onClick={setTrue}>
+			<IconButton
+				onClick={setTrue}
+				sx={theme => ({
+					':hover': {
+						svg: {
+							g: {
+								path: {
+									transition: 'fill 0.5s ease',
+									fill: theme.palette.colors.GREEN,
+								},
+							},
+						},
+					},
+				})}
+			>
 				<IconMenu />
 			</IconButton>
 			<SwipeableDrawer
@@ -26,7 +40,13 @@ export const Menu = () => {
 				anchor='right'
 				onOpen={setTrue}
 				onClose={setFalse}
-				PaperProps={{ style: { width: '100%' } }}
+				PaperProps={{
+					sx: theme => ({
+						width: '100%',
+						backdropFilter: 'blur(35px)',
+						background: theme.palette.colors.GREEN10,
+					}),
+				}}
 			>
 				<Container>
 					{value && (

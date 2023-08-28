@@ -7,7 +7,7 @@ import { useQuery } from '@tanstack/react-query'
 import { IconServices } from '@/assets/icons/services'
 import { CardService } from '@/components/card-service'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { WrapText, WrapIcon, Container, WrapCards, Wrapper } from './style'
+import { WrapIcon, Container, WrapCards, Wrapper } from './style'
 
 export const Services = () => {
 	const { locale } = useRouter()
@@ -19,24 +19,18 @@ export const Services = () => {
 
 	return (
 		<Container>
-			<WrapIcon>
+			<WrapIcon data-aos='flip-left'>
 				<IconServices />
 			</WrapIcon>
-			<Typography variant='title30' component='h3' align='center'>
+			<Typography
+				mb='10px'
+				component='h4'
+				align='center'
+				variant='title50'
+				textTransform='capitalize'
+			>
 				{t('our_service_for_you')}
 			</Typography>
-			<WrapText>
-				<Typography
-					component='h4'
-					align='center'
-					variant='title50'
-					sx={{
-						maxWidth: '640px',
-					}}
-				>
-					{t('we_try_your_best_to_provide_a_pleasant_user_experience')}
-				</Typography>
-			</WrapText>
 			<Typography
 				component='p'
 				align='center'

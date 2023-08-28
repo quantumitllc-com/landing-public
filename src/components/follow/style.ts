@@ -35,10 +35,12 @@ export const TextField = styled(MuiTextField)`
 	input:-webkit-autofill:hover,
 	input:-webkit-autofill:focus,
 	input:-webkit-autofill:active {
+		-webkit-text-fill-color: ${({ theme }) => theme.palette.colors.GRAY50} !important;
 		-webkit-box-shadow: 0 0 0 30px ${({ theme }) => theme.palette.colors.GRAY140} inset !important;
 		box-shadow: 0 0 0 30px ${({ theme }) => theme.palette.colors.GRAY140} inset !important;
 		background-color: ${({ theme }) => theme.palette.colors.GRAY140} !important;
 	}
+
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			input: {

@@ -14,7 +14,7 @@ export const Container = styled('div')<ISocial>`
 		path,
 		circle {
 			fill: ${({ theme, variant }) =>
-				variant === 'drawer-mobile' ? theme.palette.colors.BLUE10 : theme.palette.colors.WHITE};
+				variant === 'drawer-mobile' ? theme.palette.colors.GREEN : theme.palette.colors.WHITE};
 		}
 		width: ${({ variant }) => variant === 'drawer-mobile' && '37px'};
 		height: ${({ variant }) => variant === 'drawer-mobile' && '37px'};
@@ -28,6 +28,14 @@ export const Container = styled('div')<ISocial>`
 	a {
 		display: flex;
 		align-items: center;
+		:hover {
+			svg {
+				path,
+				circle {
+					fill: ${({ theme, variant }) => variant === 'footer' && theme.palette.colors.GREEN};
+				}
+			}
+		}
 	}
 	${({ theme, variant }) => ({
 		[theme.breakpoints.down('sm')]: {

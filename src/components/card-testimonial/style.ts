@@ -1,5 +1,4 @@
 import { styled } from '@mui/material/styles'
-import { Avatar as MuiAvatar } from '@mui/material'
 
 export const Container = styled('div')`
 	gap: 32px;
@@ -7,6 +6,7 @@ export const Container = styled('div')`
 	border-radius: 12px;
 	flex-direction: column;
 	padding: 20px 50px 20px 30px;
+	justify-content: space-between;
 	box-shadow: ${({ theme }) => theme.palette.shadows.SHADOW};
 	background-color: ${({ theme }) => theme.palette.colors.WHITE};
 	border: 1px solid ${({ theme }) => theme.palette.colors.GRAY230};
@@ -25,15 +25,4 @@ export const WrapText = styled('div')`
 		left: -5px;
 		position: absolute;
 	}
-`
-
-export const Avatar = styled(MuiAvatar)`
-	width: 56px;
-	height: 56px;
-	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			width: '36px',
-			height: '36px',
-		},
-	})}
 `

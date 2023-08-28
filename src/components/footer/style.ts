@@ -3,11 +3,11 @@ import { styled } from '@mui/material/styles'
 export const Container = styled('footer')`
 	width: 100%;
 	display: flex;
-	padding: 50px 0;
+	padding: 50px 18px;
 	background-color: ${({ theme }) => theme.palette.colors.BLUE};
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			padding: '30px 0 35px',
+		[theme.breakpoints.down('md')]: {
+			padding: '30px 18px 35px',
 		},
 	})}
 `
@@ -20,9 +20,8 @@ export const Wrapper = styled('div')`
 	flex-direction: column;
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			gap: '23px',
-			padding: '0 18px',
 		},
 	})}
 `
@@ -33,13 +32,13 @@ export const Up = styled('div')`
 	& > .wrap-up {
 		width: 100%;
 		${({ theme }) => ({
-			[theme.breakpoints.up('sm')]: {
+			[theme.breakpoints.up('md')]: {
 				maxWidth: '450px',
 			},
 		})}
 	}
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			flexDirection: 'column',
 		},
 	})}
@@ -56,7 +55,7 @@ export const Down = styled('div')`
 		line-height: 16px;
 		color: ${({ theme }) => theme.palette.colors.GRAY30};
 		${({ theme }) => ({
-			[theme.breakpoints.down('sm')]: {
+			[theme.breakpoints.down('md')]: {
 				fontSize: '10px',
 				lineHeight: '12px',
 			},
@@ -67,25 +66,42 @@ export const Down = styled('div')`
 export const WrapContact = styled('div')`
 	gap: 55px;
 	display: flex;
+	flex-wrap: wrap;
 	margin-top: 50px;
-	width: fit-content;
-	white-space: nowrap;
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
+			gap: '12px',
 			margin: '35px 0 38px',
 			svg: {
 				width: '36px',
 				height: '36px',
 			},
 		},
+		[theme.breakpoints.up('md')]: {
+			flexWrap: 'nowrap',
+			whiteSpace: 'nowrap',
+		},
 	})}
+	a:hover {
+		svg {
+			path,
+			circle {
+				transition: all 0.8s ease;
+				stroke: ${({ theme }) => theme.palette.colors.GREEN};
+			}
+		}
+		h5 {
+			transition: all 0.8s ease;
+			color: ${({ theme }) => theme.palette.colors.GREEN};
+		}
+	}
 `
 
 export const WrapMobileSocial = styled('div')`
 	display: flex;
 	align-items: center;
 	${({ theme }) => ({
-		[theme.breakpoints.up('sm')]: {
+		[theme.breakpoints.up('md')]: {
 			display: 'none',
 		},
 	})}
@@ -96,8 +112,22 @@ export const WrapDesktopSocial = styled('div')`
 	margin-top: 32px;
 	justify-content: flex-end;
 	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			display: 'none',
 		},
 	})}
+`
+
+export const WrapLogo = styled('div')`
+	display: flex;
+	align-items: center;
+	margin-bottom: 12px;
+	svg {
+		${({ theme }) => ({
+			[theme.breakpoints.down('md')]: {
+				width: '260px',
+				height: '45px',
+			},
+		})}
+	}
 `

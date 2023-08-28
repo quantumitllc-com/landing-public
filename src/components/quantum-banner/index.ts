@@ -1,1 +1,0 @@
-export { QuantumBanner } from './banner'

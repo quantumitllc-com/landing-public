@@ -1,37 +1,32 @@
-import { Box } from '@mui/material'
+import { useRouter } from 'next/router'
 import { Menu } from '@/components/menu'
+import { Logo } from '@/components/logo'
 import { Navbar } from '@/components/navbar'
-import { ContactUs } from '@/components/contact-us'
-import { SelectLanguage } from '@/components/select-language'
-import { IconLogoVertical } from '@/assets/icons/logo-vertical'
-import { IconLogoVerticalMobile } from '@/assets/icons/logo-vertical-mobile'
-import { Wrap, Wrapper, WrapLogo, Container, WrapMobile, WrapDesktop } from './style'
+import { useScrollPosition } from '@/hooks/useScrollPosition'
+import { Wrapper, WrapLeft, WrapRight, Container, WrapDesktop, WrapMobile } from './style'
+import { SelectLanguage } from '../select-language'
 
 export const Header = () => {
+	const { pathname } = useRouter()
+	const scrollPosition = useScrollPosition()
+
 	return (
-		<Container>
-			<Wrapper>
-				<Wrap>
-					<WrapLogo>
-						<Box display='flex' alignItems='center' className='logo'>
-							<IconLogoVertical />
-						</Box>
-						<Box display='flex' alignItems='center' className='logo-mobile'>
-							<IconLogoVerticalMobile />
-						</Box>
-					</WrapLogo>
-					<WrapDesktop>
+		<Container scrollPosition={pathname === '/' ? scrollPosition : 1}>
+			<WrapDesktop>
+				<Wrapper>
+					<WrapLeft>
+						<Logo variant='header' />
 						<Navbar variant='header' />
-						<Box gap='14px' display='flex' alignItems='center'>
-							<SelectLanguage variant='header' />
-							<ContactUs variant='contact' />
-						</Box>
-					</WrapDesktop>
-					<WrapMobile>
-						<Menu />
-					</WrapMobile>
-				</Wrap>
-			</Wrapper>
+					</WrapLeft>
+					<WrapRight>
+						<SelectLanguage variant='header' />
+					</WrapRight>
+				</Wrapper>
+			</WrapDesktop>
+			<WrapMobile>
+				<Menu />
+				<Logo variant='header' />
+			</WrapMobile>
 		</Container>
 	)
 }

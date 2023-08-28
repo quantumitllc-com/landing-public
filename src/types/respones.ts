@@ -12,11 +12,6 @@ export interface IService {
 	title: string
 }
 
-export interface IAbout {
-	text: string
-	title: string
-}
-
 export interface ICompany {
 	id: number
 	image: string
@@ -29,36 +24,24 @@ export interface IIntro {
 
 export interface IVideo {
 	id: number
-	video: string
-	video_url: string
+	file: string
+	file_url: string
 }
 
 export interface IProject {
-	client: {
-		id: number
-		name: string
-	}
-	date: string
 	id: number
-	image: string
-	in_home_page: boolean
+	title: string
+	main_image: string
+	description: string
+	seo_keywords: string[]
 	languages: ILanguage[]
-	location: string
-	project_images: {
+	contents: {
+		content: string
 		id: number
 		image: string
+		is_right_position: boolean
 		project: number
 	}[]
-	service: {
-		dark_image: string
-		id: number
-		light_image: string
-		text: string
-		title: string
-	}
-	subtitle: string
-	text: string
-	title: string
 }
 
 export interface ITechnology {
@@ -73,20 +56,11 @@ export interface ITechnology {
 }
 
 export interface ITestimonial {
+	country: string
 	first_name: string
 	id: number
 	image: string
 	last_name: string
 	text: string
 	company_name: string
-}
-
-export interface IContactInformation {
-	id: number
-	email: string
-	phone_number: string
-	facebook: string | null
-	instagram: string | null
-	linkedin: string | null
-	telegram: string | null
 }

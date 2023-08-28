@@ -4,7 +4,6 @@ import { useBoolean } from '@/hooks/useBoolean'
 import type { IService } from '@/types/respones'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { getServices, postContact } from '@/pages/api'
-import { notifySuccess } from '@/components/notification'
 import { useQuery, useMutation } from '@tanstack/react-query'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { schema, defaultValues, type FormTypes } from './form.schema'
@@ -27,7 +26,6 @@ export const useContact = () => {
 		onSuccess: () => {
 			setFalse()
 			form.reset(defaultValues)
-			notifySuccess('Thanks')
 		},
 	})
 

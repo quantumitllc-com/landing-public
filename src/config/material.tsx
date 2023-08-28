@@ -1,89 +1,72 @@
+import { CSS } from '@/constants/css'
 import { createTheme } from '@mui/material/styles'
 import { IconChecked } from '@/assets/icons/checked'
 import { IconUnchecked } from '@/assets/icons/unchecked'
-import { VARIABLES_CSS } from '@/constants/variables-css'
 
 declare module '@mui/material/styles/createPalette' {
 	interface Palette {
-		colors: typeof VARIABLES_CSS.COLORS
-		shadows: typeof VARIABLES_CSS.SHADOWS
+		colors: typeof CSS.COLORS
+		fontsizes: typeof CSS.FONNTSIZES
+		letterspaces: typeof CSS.LETTERSPACES
+		lineheights: typeof CSS.LINEHEIGHTS
+		fontweights: typeof CSS.FONTWEIGHTS
+		borderradiuses: typeof CSS.BORDERRADIUSES
+		shadows: typeof CSS.SHADOWS
 	}
 	interface PaletteOptions {
-		colors: typeof VARIABLES_CSS.COLORS
-		shadows: typeof VARIABLES_CSS.SHADOWS
+		colors: typeof CSS.COLORS
+		fontsizes: typeof CSS.FONNTSIZES
+		letterspaces: typeof CSS.LETTERSPACES
+		lineheights: typeof CSS.LINEHEIGHTS
+		fontweights: typeof CSS.FONTWEIGHTS
+		borderradiuses: typeof CSS.BORDERRADIUSES
+		shadows: typeof CSS.SHADOWS
 	}
 }
 
-declare module '@mui/material/styles' {
-	interface TypographyVariants {
-		text: React.CSSProperties
-		text10: React.CSSProperties
-		text20: React.CSSProperties
-		text30: React.CSSProperties
-		text40: React.CSSProperties
-		text50: React.CSSProperties
-		text60: React.CSSProperties
-		text70: React.CSSProperties
-		text80: React.CSSProperties
-		text90: React.CSSProperties
-		text100: React.CSSProperties
-		text110: React.CSSProperties
-		text120: React.CSSProperties
-		text130: React.CSSProperties
-		text140: React.CSSProperties
-		title: React.CSSProperties
-		title10: React.CSSProperties
-		title20: React.CSSProperties
-		title30: React.CSSProperties
-		title40: React.CSSProperties
-		title50: React.CSSProperties
-		title60: React.CSSProperties
-		title70: React.CSSProperties
-		title80: React.CSSProperties
-		title90: React.CSSProperties
-		title100: React.CSSProperties
-		title110: React.CSSProperties
-		title120: React.CSSProperties
-		title130: React.CSSProperties
-		title140: React.CSSProperties
-		title150: React.CSSProperties
-		title160: React.CSSProperties
-	}
+interface ITypography {
+	text: React.CSSProperties
+	text10: React.CSSProperties
+	text20: React.CSSProperties
+	text30: React.CSSProperties
+	text40: React.CSSProperties
+	text50: React.CSSProperties
+	text60: React.CSSProperties
+	text70: React.CSSProperties
+	text80: React.CSSProperties
+	text90: React.CSSProperties
+	text100: React.CSSProperties
+	text110: React.CSSProperties
+	text120: React.CSSProperties
+	text130: React.CSSProperties
+	text140: React.CSSProperties
+	text150: React.CSSProperties
+	text160: React.CSSProperties
+	title: React.CSSProperties
+	title10: React.CSSProperties
+	title20: React.CSSProperties
+	title30: React.CSSProperties
+	title40: React.CSSProperties
+	title50: React.CSSProperties
+	title60: React.CSSProperties
+	title70: React.CSSProperties
+	title80: React.CSSProperties
+	title90: React.CSSProperties
+	title100: React.CSSProperties
+	title110: React.CSSProperties
+	title120: React.CSSProperties
+	title130: React.CSSProperties
+	title140: React.CSSProperties
+	title150: React.CSSProperties
+	title160: React.CSSProperties
+	title170: React.CSSProperties
+	title180: React.CSSProperties
+	title190: React.CSSProperties
+}
 
-	interface TypographyVariantsOptions {
-		text: React.CSSProperties
-		text10: React.CSSProperties
-		text20: React.CSSProperties
-		text30: React.CSSProperties
-		text40: React.CSSProperties
-		text50: React.CSSProperties
-		text60: React.CSSProperties
-		text70: React.CSSProperties
-		text80: React.CSSProperties
-		text90: React.CSSProperties
-		text100: React.CSSProperties
-		text110: React.CSSProperties
-		text120: React.CSSProperties
-		text130: React.CSSProperties
-		text140: React.CSSProperties
-		title: React.CSSProperties
-		title10: React.CSSProperties
-		title20: React.CSSProperties
-		title30: React.CSSProperties
-		title40: React.CSSProperties
-		title50: React.CSSProperties
-		title60: React.CSSProperties
-		title70: React.CSSProperties
-		title80: React.CSSProperties
-		title90: React.CSSProperties
-		title100: React.CSSProperties
-		title110: React.CSSProperties
-		title120: React.CSSProperties
-		title130: React.CSSProperties
-		title140: React.CSSProperties
-		title150: React.CSSProperties
-		title160: React.CSSProperties
-	}
+declare module '@mui/material/styles' {
+	interface TypographyVariants extends ITypography {}
+	interface TypographyVariantsOptions extends ITypography {}
 }
 
 declare module '@mui/material/Typography' {
@@ -103,6 +86,8 @@ declare module '@mui/material/Typography' {
 		text120: true
 		text130: true
 		text140: true
+		text150: true
+		text160: true
 		title: true
 		title10: true
 		title20: true
@@ -120,23 +105,31 @@ declare module '@mui/material/Typography' {
 		title140: true
 		title150: true
 		title160: true
+		title170: true
+		title180: true
+		title190: true
 	}
 }
 
 const defaultCreateTheme = createTheme({
 	palette: {
 		primary: {
-			main: VARIABLES_CSS.COLORS.GREEN,
+			main: CSS.COLORS.GREEN,
 		},
-		colors: VARIABLES_CSS.COLORS,
-		shadows: VARIABLES_CSS.SHADOWS,
+		colors: CSS.COLORS,
+		fontsizes: CSS.FONNTSIZES,
+		letterspaces: CSS.LETTERSPACES,
+		lineheights: CSS.LINEHEIGHTS,
+		fontweights: CSS.FONTWEIGHTS,
+		borderradiuses: CSS.BORDERRADIUSES,
+		shadows: CSS.SHADOWS,
 	},
-	breakpoints: VARIABLES_CSS.BREAKPOINTS,
+	breakpoints: CSS.BREAKPOINTS,
 })
 
 export const theme = createTheme({
 	palette: defaultCreateTheme.palette,
-	breakpoints: VARIABLES_CSS.BREAKPOINTS,
+	breakpoints: CSS.BREAKPOINTS,
 	typography: {
 		text: {
 			fontWeight: 400,
@@ -203,12 +196,10 @@ export const theme = createTheme({
 		},
 		text70: {
 			fontWeight: 500,
-			fontSize: '18px',
+			fontSize: '16px',
 			lineHeight: '20px',
-			color: defaultCreateTheme.palette.colors.BLUE30,
 			[defaultCreateTheme.breakpoints.down('sm')]: {
 				fontSize: '14px',
-				fontWeight: 400,
 			},
 		},
 		text80: {
@@ -274,6 +265,28 @@ export const theme = createTheme({
 			[defaultCreateTheme.breakpoints.down('sm')]: {
 				fontSize: '13px',
 				lineHeight: '142.7%',
+			},
+		},
+		text150: {
+			color: defaultCreateTheme.palette.colors.WHITE10,
+			fontSize: defaultCreateTheme.palette.fontsizes[18],
+			fontWeight: defaultCreateTheme.palette.fontweights[500],
+			lineHeight: defaultCreateTheme.palette.lineheights['155.7%'],
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				textAlign: 'center',
+				fontSize: defaultCreateTheme.palette.fontsizes[13],
+			},
+			[defaultCreateTheme.breakpoints.between('sm', 'md')]: {
+				fontSize: defaultCreateTheme.palette.fontsizes[16],
+			},
+		},
+		text160: {
+			color: defaultCreateTheme.palette.colors.GRAY180,
+			fontSize: defaultCreateTheme.palette.fontsizes[18],
+			fontWeight: defaultCreateTheme.palette.fontweights[400],
+			lineHeight: defaultCreateTheme.palette.lineheights['154.7%'],
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: defaultCreateTheme.palette.fontsizes[13],
 			},
 		},
 		title: {
@@ -436,13 +449,47 @@ export const theme = createTheme({
 				fontSize: '11px',
 			},
 		},
+		title170: {
+			color: defaultCreateTheme.palette.colors.WHITE,
+			fontSize: defaultCreateTheme.palette.fontsizes[48],
+			fontWeight: defaultCreateTheme.palette.fontweights[800],
+			lineHeight: defaultCreateTheme.palette.lineheights['116.7%'],
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				textAlign: 'center',
+				fontSize: defaultCreateTheme.palette.fontsizes[26],
+			},
+			[defaultCreateTheme.breakpoints.between('sm', 'md')]: {
+				fontSize: defaultCreateTheme.palette.fontsizes[33],
+			},
+		},
+		title180: {
+			color: defaultCreateTheme.palette.colors.WHITE,
+			fontSize: defaultCreateTheme.palette.fontsizes[33],
+			fontWeight: defaultCreateTheme.palette.fontweights[800],
+			lineHeight: defaultCreateTheme.palette.lineheights['116.7%'],
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: defaultCreateTheme.palette.fontsizes[18],
+			},
+		},
+		title190: {
+			fontWeight: 600,
+			fontSize: '20px',
+			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '24px',
+			},
+		},
 	},
 	components: {
 		MuiButton: {
 			styleOverrides: {
 				root: {
+					height: 48,
 					boxShadow: 'none',
-					textTransform: 'capitalize',
+					whiteSpace: 'nowrap',
+					minWidth: 'fit-content',
+					textTransform: 'inherit',
+					borderRadius: defaultCreateTheme.palette.borderradiuses[33],
 					'&:hover': {
 						boxShadow: 'none',
 					},
@@ -524,6 +571,10 @@ export const theme = createTheme({
 					'& fieldset': {
 						borderWidth: '1px',
 						borderColor: defaultCreateTheme.palette.colors.GRAY120,
+					},
+					'&:not(.Mui-error)&:hover .MuiOutlinedInput-notchedOutline': {
+						borderWidth: '1px',
+						borderColor: defaultCreateTheme.palette.colors.GREEN,
 					},
 				},
 			},

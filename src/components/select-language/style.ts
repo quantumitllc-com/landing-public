@@ -9,8 +9,14 @@ export const Container = styled('div')<ISelect>`
 	align-items: center;
 	max-width: fit-content;
 	justify-content: center;
+
 	.MuiSelect-icon {
-		top: calc(50% - 12px) !important;
+		right: 4px !important;
+	}
+
+	.MuiSelect-iconOpen {
+		right: 4px !important;
+		top: calc(50% - 16px) !important;
 	}
 
 	.MuiInputBase-root {
@@ -18,14 +24,15 @@ export const Container = styled('div')<ISelect>`
 			border-radius: ${({ variant }) => variant === 'header' && '50px'} !important;
 			box-shadow: ${({ variant }) =>
 				variant === 'header' && '0px 5px 5px rgba(8, 15, 52, 0.04)'} !important;
-			border-color: ${({ theme, variant }) =>
-				variant === 'drawer-mobile' ? 'transparent' : theme.palette.colors.GRAY} !important;
+			border-color: transparent !important;
 		}
 	}
 
 	.MuiSelect-select {
+		background: ${({ variant }) => variant === 'header' && 'rgba(255, 255, 255, 0.24)'} !important;
+		border-radius: ${({ variant }) => variant === 'header' && '50px'} !important;
 		padding: ${({ variant }) =>
-			variant === 'drawer-mobile' ? '8px 25px 8px 9px' : '8px 36px 8px 9px'}!important;
+			variant === 'drawer-mobile' ? '8px 25px 8px 9px' : '9px 21px 9px 9px'}!important;
 	}
 	.MuiInputBase-root.Mui-focused fieldset.MuiOutlinedInput-notchedOutline {
 		border-color: ${({ theme }) => theme.palette.colors.GREEN} !important;
@@ -52,7 +59,7 @@ export const MenuItemWrap = styled('div')`
 `
 
 export const RenderIcon = styled('div')<ISelect>`
-	gap: 8px;
+	gap: 4px;
 	display: flex;
 	align-items: center;
 	justify-content: center;

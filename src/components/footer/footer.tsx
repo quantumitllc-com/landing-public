@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { Logo } from '@/components/logo'
 import { Follow } from '@/components/follow'
 import { Navbar } from '@/components/navbar'
 import { useTranslation } from 'next-i18next'
@@ -9,13 +10,12 @@ import { useQuery } from '@tanstack/react-query'
 import { IconEmail } from '@/assets/icons/email'
 import { IconPhone } from '@/assets/icons/phone'
 import { getContactInformation } from '@/pages/api'
-import type { IContactInformation } from '@/types/respones'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { IconLogoHorizontal } from '@/assets/icons/logo-horizontal'
 import {
 	Up,
 	Down,
 	Wrapper,
+	WrapLogo,
 	Container,
 	WrapContact,
 	WrapMobileSocial,
@@ -25,7 +25,7 @@ import {
 export const Footer = () => {
 	const { locale } = useRouter()
 	const { t } = useTranslation('common')
-	const { data = { email: '', phone_number: '' } } = useQuery<IContactInformation>({
+	const { data = {} } = useQuery({
 		queryKey: [REACT_QUERY_KEYS.CONTACTINFORMATION, locale],
 		queryFn: () => getContactInformation(locale),
 	})
@@ -35,9 +35,9 @@ export const Footer = () => {
 			<Wrapper>
 				<Up>
 					<Box className='wrap-up'>
-						<Box mb='12px' display='flex' alignItems='center'>
-							<IconLogoHorizontal />
-						</Box>
+						<WrapLogo>
+							<Logo variant='footer' />
+						</WrapLogo>
 						<Typography variant='text' component='h3'>
 							{t(
 								'creative_powered_to_fuel_your_growth_goals_we_build_world_class_digital_products_software_and_branding',
@@ -81,8 +81,7 @@ export const Footer = () => {
 							{t('submit_an_application')}
 						</Typography>
 						<Typography m='12px 0 24px' variant='text' component='h3'>
-							Lorem ipsum dolor sit amet consectetur. Nec aliquam neque at vitae. Congue interdum
-							dolor laoreet mollis convallis nunc lacinia. Faucibus.
+							{t('leave_your_email_and_we_will_get_back_to_you_soon')}
 						</Typography>
 						<Follow />
 						<WrapDesktopSocial>
