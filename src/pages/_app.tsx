@@ -104,6 +104,7 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' type='image/svg+xml' href='/icon.svg' />
 				<link rel='icon' type='image/png' href='/icon.png' />
+				<link rel='shortcut icon' href='/icon.png' />
 			</Head>
 			<DefaultSeo {...DEFAULT_SEO} />
 			<ThemeProvider theme={theme}>
