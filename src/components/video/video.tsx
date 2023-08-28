@@ -11,7 +11,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { IconShowreels } from '@/assets/icons/showreels'
 import { TransitionProps } from '@mui/material/transitions'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { WrapPlay, ButtonPlay, WrapIconShowreels } from './style'
+import { WrapPlay, ButtonPlay, WrapVideo, WrapIconShowreels } from './style'
 
 const Transition = forwardRef(function Transition(
 	props: TransitionProps & {
@@ -50,13 +50,21 @@ export const Video = () => {
 				TransitionComponent={Transition}
 				PaperProps={{
 					style: {
-						borderRadius: fullScreen ? 0 : '24px',
+						borderRadius: 0,
 					},
 				}}
 			>
-				<video controls>
-					<source src={dataVideo.file_url} />
-				</video>
+				<style jsx global>{`
+					html,
+					body {
+						overflow-y: hidden;
+					}
+				`}</style>
+				<WrapVideo>
+					<video controls>
+						<source src={dataVideo.file_url} />
+					</video>
+				</WrapVideo>
 			</Dialog>
 		</>
 	)
