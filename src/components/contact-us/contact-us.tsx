@@ -48,7 +48,7 @@ export const ContactUs = () => {
 			</Container>
 			<Dialog
 				open={value}
-				maxWidth='md'
+				maxWidth='sm'
 				onClose={setFalse}
 				fullScreen={fullScreen}
 				TransitionComponent={Transition}

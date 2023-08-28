@@ -7,7 +7,7 @@ export const GoUpButton = styled(Button)`
 	width: 65px;
 	bottom: 20px;
 	height: 65px;
-	z-index: 9999;
+	z-index: 99;
 	position: fixed;
 	border-radius: 50px;
 	transition: background-color 0.5s ease;
