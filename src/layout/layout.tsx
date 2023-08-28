@@ -14,7 +14,7 @@ export const Layout = ({ children }: IProps) => {
 			<Container>
 				<Header />
 				<Main>{children}</Main>
-				<ContactUs variant='touch' />
+				<ContactUs />
 				<Footer />
 			</Container>
 		</>
