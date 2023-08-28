@@ -109,12 +109,6 @@ declare module '@mui/material/Typography' {
 	}
 }
 
-declare module '@mui/material/Button' {
-	interface ButtonPropsVariantOverrides {
-		mainGreen: true
-	}
-}
-
 const defaultCreateTheme = createTheme({
 	palette: {
 		primary: {
@@ -535,17 +529,6 @@ export const theme = createTheme({
 						color: defaultCreateTheme.palette.colors.BLUE,
 					},
 				},
-				{
-					props: { variant: 'mainGreen' },
-					style: {
-						color: defaultCreateTheme.palette.colors.BLUE20,
-						fontSize: defaultCreateTheme.palette.fontsizes[15],
-						fontWeight: defaultCreateTheme.palette.fontweights[600],
-						backgroundColor: defaultCreateTheme.palette.colors.GREEN,
-						lineHeight: defaultCreateTheme.palette.lineheights['114.5%'],
-						letterSpacing: defaultCreateTheme.palette.letterspaces[0.052],
-					},
-				},
 			],
 		},
 		MuiCheckbox: {
@@ -578,6 +561,10 @@ export const theme = createTheme({
 					'& fieldset': {
 						borderWidth: '1px',
 						borderColor: defaultCreateTheme.palette.colors.GRAY120,
+					},
+					'&:not(.Mui-error)&:hover .MuiOutlinedInput-notchedOutline': {
+						borderWidth: '1px',
+						borderColor: defaultCreateTheme.palette.colors.GREEN,
 					},
 				},
 			},

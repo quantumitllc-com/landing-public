@@ -15,6 +15,7 @@ import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import ImageMainMobileBg from '@/assets/images/main-mobile-bg.webp'
 import {
 	Wrap,
+	WrapTexts,
 	WrapRobot,
 	WrapVideo,
 	Container,
@@ -38,16 +39,16 @@ export const Main = () => {
 			<Image priority fill src={matches ? ImageMainBg : ImageMainMobileBg} alt='main' />
 			<Wrap>
 				<WrapContent>
-					<Box data-aos='fade-down'>
+					<WrapTexts data-aos='fade-down'>
 						<Typography variant='title170' component='h1'>
 							{dataIntro.title}
 						</Typography>
 						<Typography variant='text150' component='h2'>
 							{dataIntro.subtitle}
 						</Typography>
-					</Box>
+					</WrapTexts>
 					<WrapButton>
-						<Button variant='mainGreen' endIcon={<IconArrowUp />}>
+						<Button variant='contained' endIcon={<IconArrowUp />}>
 							{t('see_portfolio')}
 						</Button>
 					</WrapButton>

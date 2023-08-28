@@ -25,7 +25,7 @@ import {
 export const Footer = () => {
 	const { locale } = useRouter()
 	const { t } = useTranslation('common')
-	const { data = { email: '', phone_number: '' } } = useQuery({
+	const { data = {} } = useQuery({
 		queryKey: [REACT_QUERY_KEYS.CONTACTINFORMATION, locale],
 		queryFn: () => getContactInformation(locale),
 	})

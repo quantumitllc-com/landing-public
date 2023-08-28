@@ -105,3 +105,14 @@ export const WrapButton = styled('div')`
 		},
 	})}
 `
+
+export const WrapTexts = styled('div')`
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+	${({ theme }) => ({
+		[theme.breakpoints.up('sm')]: {
+			gap: '16px',
+		},
+	})}
+`

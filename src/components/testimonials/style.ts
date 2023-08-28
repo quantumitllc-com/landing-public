@@ -90,8 +90,8 @@ export const WrapIcon = styled('div')`
 	bottom: calc(100% - 70px);
 	position: absolute;
 	svg {
-		width: 80%;
 		height: 100%;
+		max-height: 160px;
 	}
 	${({ theme }) => ({
 		[theme.breakpoints.down('md')]: {
