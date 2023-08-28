@@ -55,9 +55,9 @@ export const WrapMobileVideo = styled('div')`
 `
 
 export const WrapRobot = styled('div')`
-	right: 18px;
 	bottom: 0;
 	width: 100%;
+	right: -18px;
 	height: 100%;
 	max-width: 380px;
 	max-height: 370px;

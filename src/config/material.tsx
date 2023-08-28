@@ -61,6 +61,7 @@ interface ITypography {
 	title160: React.CSSProperties
 	title170: React.CSSProperties
 	title180: React.CSSProperties
+	title190: React.CSSProperties
 }
 
 declare module '@mui/material/styles' {
@@ -106,6 +107,7 @@ declare module '@mui/material/Typography' {
 		title160: true
 		title170: true
 		title180: true
+		title190: true
 	}
 }
 
@@ -467,6 +469,14 @@ export const theme = createTheme({
 			lineHeight: defaultCreateTheme.palette.lineheights['116.7%'],
 			[defaultCreateTheme.breakpoints.down('sm')]: {
 				fontSize: defaultCreateTheme.palette.fontsizes[18],
+			},
+		},
+		title190: {
+			fontWeight: 600,
+			fontSize: '20px',
+			color: defaultCreateTheme.palette.colors.BLUE20,
+			[defaultCreateTheme.breakpoints.down('sm')]: {
+				fontSize: '24px',
 			},
 		},
 	},

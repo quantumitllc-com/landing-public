@@ -53,5 +53,7 @@
     "profits": "Increased profits",
 	"experience": "Experience on the market",
     "coffee_drunk": "Coffee drunk",
-    "leave_your_email_and_we_will_get_back_to_you_soon":"Leave your email and we will get back to you soon."
+    "leave_your_email_and_we_will_get_back_to_you_soon":"Leave your email and we will get back to you soon.",
+    "page_not_found":"Page Not Found",
+    "we_are_sorry_the_page_you_requested_could_not_be_found_please_go_back_to_the_homepage":"We’re sorry, the page you requested could not be found please go back to the homepage"
 }

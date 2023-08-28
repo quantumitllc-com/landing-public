@@ -3,7 +3,6 @@ import { useContact } from './useContact'
 import { Input } from '@/components/input'
 import { useTranslation } from 'next-i18next'
 import { Checkbox } from '@/components/checkbox'
-import { IconSpread } from '@/assets/icons/spread'
 import { IconRemove } from '@/assets/icons/remove'
 import { IconBgTouch } from '@/assets/icons/bg-touch'
 import { TransitionProps } from '@mui/material/transitions'
@@ -17,15 +16,7 @@ import {
 	useMediaQuery,
 	Slide,
 } from '@mui/material'
-import {
-	Form,
-	Header,
-	Container,
-	WrapInputs,
-	WrapContent,
-	WrapperChecks,
-	WrapButtonRequest,
-} from './style'
+import { Form, Header, Container, WrapInputs, WrapContent, WrapperChecks } from './style'
 
 const Transition = forwardRef(function Transition(
 	props: TransitionProps & {
@@ -36,11 +27,7 @@ const Transition = forwardRef(function Transition(
 	return <Slide direction='up' ref={ref} {...props} />
 })
 
-interface IContact {
-	variant: 'contact' | 'touch' | 'request'
-}
-
-export const ContactUs = ({ variant }: IContact) => {
+export const ContactUs = () => {
 	const theme = useTheme()
 	const { t } = useTranslation('common')
 	const fullScreen = useMediaQuery(theme.breakpoints.down('sm'))
@@ -48,38 +35,17 @@ export const ContactUs = ({ variant }: IContact) => {
 
 	return (
 		<>
-			{variant === 'contact' ? (
-				<Button size='large' variant='contained' onClick={setTrue}>
-					{t('contact_us')}
-				</Button>
-			) : variant === 'request' ? (
-				<WrapButtonRequest>
-					<Box display='flex' alignItems='center' className='icon-spread' justifyContent='center'>
-						<IconSpread />
-					</Box>
-					<Button
-						onClick={setTrue}
-						variant='contained'
-						style={{
-							textTransform: 'unset',
-						}}
-					>
-						{t('request_a_quote')}
+			<Container data-aos='fade-right'>
+				<IconBgTouch />
+				<WrapContent>
+					<Typography align='center' sx={{ maxWidth: '450px' }} variant='title10' component='h2'>
+						{t('let_work_together_on_a_project_with_us')}
+					</Typography>
+					<Button size='medium' variant='contained' onClick={setTrue}>
+						{t('get_in_touch')}
 					</Button>
-				</WrapButtonRequest>
-			) : (
-				<Container>
-					<IconBgTouch />
-					<WrapContent>
-						<Typography align='center' sx={{ maxWidth: '450px' }} variant='title10' component='h2'>
-							{t('let_work_together_on_a_project_with_us')}
-						</Typography>
-						<Button size='medium' variant='contained' onClick={setTrue}>
-							{t('get_in_touch')}
-						</Button>
-					</WrapContent>
-				</Container>
-			)}
+				</WrapContent>
+			</Container>
 			<Dialog
 				open={value}
 				maxWidth='md'

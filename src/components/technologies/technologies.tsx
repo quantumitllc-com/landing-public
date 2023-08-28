@@ -67,6 +67,7 @@ export const Technologies = () => {
 					variant='title50'
 					sx={{
 						maxWidth: '640px',
+						padding: '0 18px',
 					}}
 				>
 					{t('let_your_projects_take_advantage_of_the_latest_technologies')}

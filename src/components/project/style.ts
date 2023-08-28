@@ -3,12 +3,12 @@ import { styled } from '@mui/material/styles'
 export const Container = styled('div')`
 	display: flex;
 	padding: 0 18px;
-	margin-top: 60px;
+	padding-top: 60px;
 	align-items: center;
 	flex-direction: column;
 	${({ theme }) => ({
 		[theme.breakpoints.up('md')]: {
-			marginTop: '90px',
+			paddingTop: '90px',
 		},
 	})}
 `
@@ -29,7 +29,7 @@ export const Body = styled('div')`
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			gap: '12px',
-			padding: '18px 18px 24px',
+			padding: '18px 0 24px',
 		},
 	})}
 `
@@ -63,14 +63,6 @@ export const Languages = styled('div')`
 	})}
 `
 
-export const WrapLanguage = styled('div')`
-	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			padding: '0 18px',
-		},
-	})}
-`
-
 export const WrapIconChevron = styled('span')`
 	transform: rotate(-90deg);
 	svg {
@@ -84,7 +76,7 @@ export const WrapBreadcrumb = styled('div')`
 	padding: 25px 0;
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
-			padding: '12px 18px 15px',
+			padding: '12px 0 15px',
 		},
 	})}
 `

@@ -71,31 +71,8 @@ export const WrapInputs = styled('div')`
 	})}
 `
 
-export const WrapButtonRequest = styled('div')`
-	margin-top: 55px;
-	position: relative;
-	.icon-spread {
-		top: -20px;
-		right: 100%;
-		position: absolute;
-		svg {
-			${({ theme }) => ({
-				[theme.breakpoints.down('sm')]: {
-					width: '28px',
-					height: '28px',
-				},
-			})};
-		}
-	}
-	${({ theme }) => ({
-		[theme.breakpoints.down('sm')]: {
-			marginTop: '30px',
-		},
-	})};
-`
-
 export const WrapperChecks = styled('div')`
-	display: grid;
+	display: flex;
+	flex-wrap: wrap;
 	padding: 6px 0 41px;
-	grid-template-columns: repeat(4, auto);
 `

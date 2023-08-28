@@ -1,4 +1,4 @@
-import { ITechnology } from '@/types/respones'
+import { IProject, ITechnology } from '@/types/respones'
 import { getMonth } from '@/utility/getMonth'
 import { request } from '@/utility/interceptors'
 
@@ -45,15 +45,13 @@ export const getProjects = async (locale = 'en') => {
 }
 
 export const getProject = async (id: string, locale = 'en') => {
-	const { data } = await request(`api/project/${id}`, {
+	const { data }: { data: IProject } = await request(`api/project/${id}`, {
 		headers: {
 			'Accept-Language': locale,
 		},
 	})
-	const d = new Date(data?.date as string)
-	const date = `${getMonth(d.getMonth(), locale)} ${d.getDate()},${d.getFullYear()}`
 
-	return { ...data, date }
+	return data
 }
 
 export const getTechnologies = async (locale = 'en') => {

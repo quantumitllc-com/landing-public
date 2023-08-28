@@ -39,7 +39,7 @@ export const Main = () => {
 			<Image priority fill src={matches ? ImageMainBg : ImageMainMobileBg} alt='main' />
 			<Wrap>
 				<WrapContent>
-					<WrapTexts data-aos='fade-down'>
+					<WrapTexts data-aos='fade-up'>
 						<Typography variant='title170' component='h1'>
 							{dataIntro.title}
 						</Typography>

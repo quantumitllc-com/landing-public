@@ -37,6 +37,7 @@ export const Services = () => {
 				variant='text50'
 				sx={{
 					maxWidth: '700px',
+					padding: '0 18px',
 				}}
 			>
 				{t('user_experience_is_very_important_and_enjoyable_experience')}

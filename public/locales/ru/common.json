@@ -53,6 +53,7 @@
     "profits": "Увеличение прибыли",
 	"experience": "Опыт работы на рынке",
     "coffee_drunk": "Кофе пьяный",
-    "leave_your_email_and_we_will_get_back_to_you_soon":"Оставьте свой адрес электронной почты, и мы скоро свяжемся с вами."
-
+    "leave_your_email_and_we_will_get_back_to_you_soon":"Оставьте свой адрес электронной почты, и мы скоро свяжемся с вами.",
+    "page_not_found":"Страница не найдена",
+    "we_are_sorry_the_page_you_requested_could_not_be_found_please_go_back_to_the_homepage":"К сожалению, запрошенная вами страница не найдена, пожалуйста, вернитесь на домашнюю страницу."
 }

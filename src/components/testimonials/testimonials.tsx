@@ -67,6 +67,7 @@ export const Testimonials = () => {
 				variant='text50'
 				sx={{
 					maxWidth: '750px',
+					padding: '0 18px',
 				}}
 			>
 				{t('we_always_try_make_the_experience_with_us_always_the_best')}

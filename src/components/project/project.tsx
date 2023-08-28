@@ -7,7 +7,7 @@ import { useTranslation } from 'next-i18next'
 import { useQuery } from '@tanstack/react-query'
 import type { IProject } from '@/types/respones'
 import { IconChevron } from '@/assets/icons/chevron'
-import { Breadcrumbs, Typography } from '@mui/material'
+import { Box, Breadcrumbs, Typography } from '@mui/material'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import {
 	Body,
@@ -16,19 +16,23 @@ import {
 	Container,
 	Languages,
 	WrapContent,
-	WrapLanguage,
 	WrapBreadcrumb,
 	WrapIconChevron,
 } from './style'
 
 export const Project = () => {
-	const { locale, query } = useRouter()
+	const { locale, query, ...router } = useRouter()
 	const id = query?.projectId as string
 	const { t } = useTranslation('common')
 	const { data } = useQuery<IProject>({
 		queryKey: [REACT_QUERY_KEYS.PROJECT, locale, id],
 		queryFn: () => getProject(id, locale),
 	})
+
+	if (typeof data === 'undefined' && typeof window !== 'undefined') {
+		router.push('/404')
+		return null
+	}
 
 	const breadcrumbs = [
 		<Link key='1' href='/'>
@@ -52,7 +56,7 @@ export const Project = () => {
 					images: [{ url: data?.main_image as string, alt: data?.title }],
 				}}
 			/>
-			<Container data-aos='fade-down' data-aos-duration='2000'>
+			<Container data-aos='fade-up' data-aos-duration='2000'>
 				<Wrapper>
 					<WrapBreadcrumb>
 						<Breadcrumbs
@@ -74,7 +78,7 @@ export const Project = () => {
 							{data?.description}
 						</Typography>
 					</Body>
-					<WrapLanguage>
+					<Box>
 						<Typography variant='title120' component='h3'>
 							{t('used_languages')}
 						</Typography>
@@ -87,7 +91,7 @@ export const Project = () => {
 								</div>
 							))}
 						</Languages>
-					</WrapLanguage>
+					</Box>
 					<Contents>
 						{data?.contents.map(c => (
 							<WrapContent key={c.id}>

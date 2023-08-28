@@ -28,15 +28,15 @@ export const Wrapper = styled('div')`
 		${({ theme }) => ({
 			[theme.breakpoints.down('sm')]: {
 				maxWidth: '90px',
-				maxHeight: '50px',
+				maxHeight: '60px',
 				minWidth: '90px',
-				minHeight: '50px',
+				minHeight: '60px',
 			},
 			[theme.breakpoints.between('sm', 'md')]: {
 				maxWidth: '135px',
-				maxHeight: '75px',
+				maxHeight: '80px',
 				minWidth: '135px',
-				minHeight: '75px',
+				minHeight: '80px',
 			},
 		})}
 	}
