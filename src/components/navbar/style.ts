@@ -19,7 +19,7 @@ export const Nav = styled('nav')<INavbar>`
 	li {
 		a {
 			font-size: ${({ theme }) => theme.palette.fontsizes[16]};
-			font-weight: ${({ theme }) => theme.palette.fontweights[500]};
+			font-weight: ${({ theme }) => theme.palette.fontweights[400]};
 			line-height: ${({ theme }) => theme.palette.lineheights['114.5%']};
 			letter-spacing: ${({ theme }) => theme.palette.letterspaces['0.056']};
 			color: ${({ theme, variant }) =>

@@ -270,7 +270,7 @@ export const theme = createTheme({
 		text150: {
 			color: defaultCreateTheme.palette.colors.WHITE10,
 			fontSize: defaultCreateTheme.palette.fontsizes[18],
-			fontWeight: defaultCreateTheme.palette.fontweights[500],
+			fontWeight: defaultCreateTheme.palette.fontweights[400],
 			lineHeight: defaultCreateTheme.palette.lineheights['155.7%'],
 			[defaultCreateTheme.breakpoints.down('sm')]: {
 				textAlign: 'center',
