@@ -1,4 +1,4 @@
-import { IconUnique } from '@/assets/icons/Unique'
+import { IconUnique } from '@/assets/icons/unique'
 import { IconAdaptive } from '@/assets/icons/adaptive'
 import { IconApproach } from '@/assets/icons/approach'
 import { IconDispatcher } from '@/assets/icons/dispatcher'
