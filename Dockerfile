@@ -2,7 +2,7 @@ FROM node:latest AS build
 
 WORKDIR /app
 
-COPY package.json yarn.lock /app/
+COPY package.json /app/
 
 RUN npm install
 
