@@ -14,6 +14,7 @@ import MuiTooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip'
 import {
 	Wrap,
 	WrapText,
+	WrapTexts,
 	WrapImage,
 	Container,
 	Technology,
@@ -21,6 +22,7 @@ import {
 	WrapTabPanel,
 	WrapTechnologies,
 	WrapTabPanelTexts,
+	Tr,
 } from './style'
 
 const Tooltip = styled(({ className, ...props }: TooltipProps) => (
@@ -169,12 +171,15 @@ export const Technologies = () => {
 								</div>
 							</WrapCircle>
 							<WrapTabPanelTexts>
-								<Typography align='center' variant='title90' component='h4'>
-									{technology.name}
-								</Typography>
-								<Typography align='center' variant='text80' component='h5'>
-									{technology.text}
-								</Typography>
+								<WrapTexts>
+									<Typography align='center' variant='title90' component='h4'>
+										{technology.name}
+									</Typography>
+									<Typography align='center' variant='text80' component='h5'>
+										{technology.text}
+									</Typography>
+								</WrapTexts>
+								<Tr />
 							</WrapTabPanelTexts>
 						</WrapTabPanel>
 					</TabPanel>

@@ -96,8 +96,8 @@ export const WrapTabPanelTexts = styled('div')`
 	max-width: 620px;
 	position: absolute;
 	align-items: center;
-	padding: 60px 18px 0;
 	flex-direction: column;
+
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
 			gap: '7px',
@@ -117,7 +117,6 @@ export const WrapTabPanel = styled('div')`
 
 	${({ theme }) => ({
 		[theme.breakpoints.down('sm')]: {
-			padding: '20px 0 10px',
 			minHeight: '376px',
 		},
 	})}
@@ -318,6 +317,33 @@ export const WrapImage = styled('div')`
 		[theme.breakpoints.down('sm')]: {
 			width: '24px',
 			height: '24px',
+		},
+	})}
+`
+
+export const Tr = styled('div')`
+	z-index: 99;
+	position: relative;
+	border-top: 300px solid #fafafa;
+	border-left: 590px solid transparent;
+	border-right: 590px solid transparent;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			borderTop: '150px solid #fafafa',
+			borderLeft: '200px solid transparent',
+			borderRight: '200px solid transparent',
+		},
+	})}
+`
+
+export const WrapTexts = styled('div')`
+	padding: 60px 0 0;
+	position: absolute;
+	z-index: 100;
+	${({ theme }) => ({
+		[theme.breakpoints.down('sm')]: {
+			maxWidth: '300px',
+			padding: '15px 0 0',
 		},
 	})}
 `
