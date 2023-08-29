@@ -38,7 +38,7 @@ const title = 'Enterprise Software Development Company'
 const description =
 	'Quantum IT Solutions is a global software engineering company that delivers digital transformation and builds novel IT products.'
 const image = '/favicon.ico'
-const keywords = ['']
+const keywords = ['Quantum', 'IT', 'Solutions']
 
 const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: NewAppProps) => {
 	const { locale } = useRouter()
@@ -64,6 +64,45 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 			cardType: 'summary_large_image',
 		},
 		additionalMetaTags: [{ name: 'keywords', content: keywords.join(',') }],
+		additionalLinkTags: [
+			{
+				rel: 'icon',
+				href: '/icon.svg',
+				type: 'image/svg+xml',
+			},
+			{
+				rel: 'icon',
+				href: '/icon.png',
+				type: 'image/png',
+			},
+			{
+				rel: 'shortcut icon',
+				href: '/icon.svg',
+				type: 'image/svg+xml',
+			},
+
+			{
+				rel: 'apple-touch-icon',
+				href: '/icon.svg',
+				sizes: '16x16',
+			},
+
+			{
+				rel: 'apple-touch-icon',
+				href: '/icon.svg',
+				sizes: '32x32',
+			},
+			{
+				rel: 'apple-touch-icon',
+				href: '/icon.svg',
+				sizes: '192x192',
+			},
+			{
+				rel: 'apple-touch-icon',
+				href: '/icon.svg',
+				sizes: '512x512',
+			},
+		],
 		robotsProps: {
 			nosnippet: true,
 			notranslate: true,
