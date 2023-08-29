@@ -34,6 +34,6 @@ export const SUPPORTS = [
 	{
 		Icon: IconUnique,
 		title: 'unique_design',
-		text: 'you_can_contact_us_anytime_you_like_we_are_always_happy_to_help_you',
+		text: 'with_a_focus_on_design_we_strive_to_create_visually_appealing_and_user_friendly_interfaces_that_enhance_the_overall_user_experience',
 	},
 ]
