@@ -27,10 +27,10 @@ export const AboutUs = () => {
 								</Box>
 								<WrapTexts>
 									<Typography title={title} component='h3' variant='title70'>
-										{title}
+										{t(title)}
 									</Typography>
 									<Typography variant='text60' maxWidth='450px'>
-										{text}
+										{t(text)}
 									</Typography>
 								</WrapTexts>
 							</Li>
