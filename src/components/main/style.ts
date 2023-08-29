@@ -104,6 +104,27 @@ export const WrapButton = styled('div')`
 			justifyContent: 'flex-start',
 		},
 	})}
+	a {
+		transition: all 0.2s ease-in-out;
+		border: 1px solid ${({ theme }) => theme.palette.colors.GREEN};
+	}
+	a:hover {
+		background-color: transparent;
+		color: ${({ theme }) => theme.palette.colors.GREEN};
+		transform: scale(1.02) !important;
+		svg {
+			transform: rotate(90deg);
+			transition: all 0.2s ease-in-out;
+			circle {
+				transition: all 0.2s ease-in-out;
+				fill: ${({ theme }) => theme.palette.colors.GREEN};
+			}
+			path {
+				transition: stroke 0.5s ease;
+				stroke: ${({ theme }) => theme.palette.colors.GREEN};
+			}
+		}
+	}
 `
 
 export const WrapTexts = styled('div')`

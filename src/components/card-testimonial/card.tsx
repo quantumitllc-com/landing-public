@@ -9,7 +9,7 @@ interface ICardTestimonial extends ITestimonial {
 
 export const CardTestimonial = ({ className, ...testimonial }: ICardTestimonial) => {
 	return (
-		<Container className={className} data-aos='zoom-in'>
+		<Container className={className}>
 			<WrapText>
 				<Box className='icon'>
 					<IconQuotes />

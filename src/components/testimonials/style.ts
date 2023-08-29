@@ -22,6 +22,7 @@ export const Container = styled('div')`
 export const Slider = styled('div')`
 	width: 100%;
 	display: flex;
+	margin-bottom: 50px;
 	margin-top: 64px;
 	position: relative;
 	border-radius: 12px;
@@ -71,7 +72,7 @@ export const ArrowButton = styled(IconButton)<IArrowButton>`
 export const WrapButtons = styled('div')`
 	gap: 17px;
 	right: 30px;
-	z-index: 10;
+	z-index: 10000;
 	bottom: -50px;
 	display: flex;
 	position: absolute;

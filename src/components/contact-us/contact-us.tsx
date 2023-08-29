@@ -17,6 +17,7 @@ import {
 	Slide,
 } from '@mui/material'
 import { Form, Header, Container, WrapInputs, WrapContent, WrapperChecks } from './style'
+import { useRouter } from 'next/router'
 
 const Transition = forwardRef(function Transition(
 	props: TransitionProps & {
@@ -29,10 +30,14 @@ const Transition = forwardRef(function Transition(
 
 export const ContactUs = () => {
 	const theme = useTheme()
+	const { pathname } = useRouter()
 	const { t } = useTranslation('common')
 	const fullScreen = useMediaQuery(theme.breakpoints.down('sm'))
 	const { form, value, setTrue, setFalse, onSubmit, isLoading, dataService } = useContact()
 
+	if (pathname === '/404') {
+		return null
+	}
 	return (
 		<>
 			<Container data-aos='fade-right'>

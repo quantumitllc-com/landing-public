@@ -80,11 +80,17 @@ export const Wrap = styled('div')`
 				fontSize: '13px',
 			},
 		})}
+		:hover {
+			font-weight: 600;
+			color: ${({ theme }) => theme.palette.colors.GREEN};
+			border: 1px solid ${({ theme }) => theme.palette.colors.GREEN};
+		}
 	}
 	.Mui-selected {
 		border: none;
 		font-weight: 600 !important;
 		color: ${({ theme }) => theme.palette.colors.BLUE40} !important;
+		border: 1px solid ${({ theme }) => theme.palette.colors.GREEN};
 		background-color: ${({ theme }) => theme.palette.colors.GREEN} !important;
 	}
 `

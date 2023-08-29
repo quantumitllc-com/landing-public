@@ -5,8 +5,8 @@ import { getProjects } from '@/pages/api'
 import { useTranslation } from 'next-i18next'
 import { useQuery } from '@tanstack/react-query'
 import type { IProject } from '@/types/respones'
-import { Button, Typography } from '@mui/material'
 import { IconChevron } from '@/assets/icons/chevron'
+import { Box, Button, Typography } from '@mui/material'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import { Wrapper, WrapImage, Container, WrapCardTexts, WrapIconChevron } from './style'
 
@@ -39,15 +39,20 @@ export const HomeProjects = () => {
 			</Typography>
 			<Wrapper length={data.length}>
 				{data.map(project => (
-					<div key={project.id} data-aos='fade-up' data-aos-anchor-placement='top-bottom'>
+					<Box
+						key={project.id}
+						data-aos='fade-up'
+						data-aos-anchor-placement='top-bottom'
+						component={Link}
+						href={`/${project.id}`}
+					>
 						<WrapCardTexts>
 							<Typography align='center' variant='title100' component='h3'>
 								{project.title}
 							</Typography>
 							<Button
 								size='small'
-								component={Link}
-								href={`/${project.id}`}
+								sx={{ background: 'transparent' }}
 								endIcon={
 									<WrapIconChevron>
 										<IconChevron />
@@ -60,7 +65,7 @@ export const HomeProjects = () => {
 						<WrapImage>
 							<Image fill src={project.main_image} alt={project.title} />
 						</WrapImage>
-					</div>
+					</Box>
 				))}
 			</Wrapper>
 		</Container>

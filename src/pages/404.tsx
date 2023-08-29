@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { GetStaticProps } from 'next'
 import { Icon404 } from '@/assets/icons/404'
 import { useTranslation } from 'next-i18next'
@@ -18,7 +19,7 @@ const NotFound404 = () => {
 				gap: '50px',
 				flexGrow: 1,
 				display: 'flex',
-				paddingTop: '150px',
+				padding: '150px 0',
 				alignItems: 'center',
 				flexDirection: 'column',
 				justifyContent: 'center',
@@ -59,7 +60,9 @@ const NotFound404 = () => {
 					)}
 				</Typography>
 			</Box>
-			<Button variant='contained'>Back to Home</Button>
+			<Button component={Link} href='/' variant='contained'>
+				Back to Home
+			</Button>
 		</Box>
 	)
 }

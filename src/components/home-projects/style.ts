@@ -33,22 +33,28 @@ export const Wrapper = styled('div')<IWrapper>`
 	padding: 42px 0;
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
 
-	& > div {
+	& > a {
 		width: 100%;
 		height: 400px;
 		display: flex;
 		overflow: hidden;
 		flex-direction: column;
 		background-color: ${({ theme }) => theme.palette.colors.GRAY160};
+		:hover {
+			img {
+				transition: all 0.5s ease-in-out;
+				transform: scale(1.05, 1.05) !important;
+			}
+		}
 	}
 
 	${({ theme, length }) => ({
 		gridTemplateColumns: length === 1 ? '1fr' : '1fr 1fr',
-		'& > div:first-of-type': {
+		'& > a:first-of-type': {
 			height: length !== 2 && length !== 1 && '550px',
 			gridColumn: length !== 2 && length !== 1 && '1 / 3',
 		},
-		'& > div:nth-of-type(2)': {
+		'& > a:nth-of-type(2)': {
 			gridRow: length !== 2 && length !== 1 && '2 / 3',
 			gridColumn: length !== 2 && length !== 1 && '2 / 3',
 			backgroundColor: length === 1 ? theme.palette.colors.GRAY160 : theme.palette.colors.GRAY170,
@@ -56,7 +62,7 @@ export const Wrapper = styled('div')<IWrapper>`
 				color: theme.palette.colors.WHITE,
 			},
 		},
-		'& > div:nth-of-type(4)': {
+		'& > a:nth-of-type(4)': {
 			height: length === 4 && '550px',
 			gridColumn: length === 4 && '1 / 3',
 			backgroundColor: theme.palette.colors.GRAY170,
@@ -64,7 +70,7 @@ export const Wrapper = styled('div')<IWrapper>`
 				color: theme.palette.colors.WHITE,
 			},
 		},
-		'& > div:nth-of-type(6)': {
+		'& > a:nth-of-type(6)': {
 			height: '550px',
 			gridColumn: '1 / 3',
 			backgroundColor: theme.palette.colors.GRAY170,
@@ -76,14 +82,14 @@ export const Wrapper = styled('div')<IWrapper>`
 			gap: '12px',
 			padding: '30px 18px 24px',
 			gridTemplateColumns: '1fr',
-			'& > div, & > div:nth-of-type(6)': {
+			'& > a, & > a:nth-of-type(6)': {
 				height: '270px',
 			},
-			'& > div:first-of-type, & > div:nth-of-type(4)': {
+			'& > a:first-of-type, & > a:nth-of-type(4)': {
 				height: '270px',
 				gridColumn: '1 / 3',
 			},
-			'& > div:nth-of-type(2)': {
+			'& > a:nth-of-type(2)': {
 				gridRow: '2 / 3',
 				gridColumn: '1 / 3',
 			},

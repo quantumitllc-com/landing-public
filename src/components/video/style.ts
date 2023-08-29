@@ -28,27 +28,38 @@ export const WrapIconShowreels = styled('div')`
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	animation: spin 10s linear infinite;
-	-moz-animation: spin 10s linear infinite;
-	-webkit-animation: spin 10s linear infinite;
+	animation: rotate 15s linear infinite;
+	-moz-animation: rotate 15s linear infinite;
+	-webkit-animation: rotate 15s linear infinite;
 
 	svg {
 		width: 100%;
 		height: 100%;
 	}
 
-	@-moz-keyframes spin {
-		100% {
+	@-moz-keyframes rotate {
+		from {
+			-moz-transform: rotate(-360deg);
+		}
+		to {
 			-moz-transform: rotate(360deg);
 		}
 	}
-	@-webkit-keyframes spin {
-		100% {
+	@-webkit-keyframes rotate {
+		from {
+			-webkit-transform: rotate(-360deg);
+		}
+		to {
 			-webkit-transform: rotate(360deg);
 		}
 	}
-	@keyframes spin {
-		100% {
+
+	@keyframes rotate {
+		from {
+			-webkit-transform: rotate(-360deg);
+			transform: rotate(-360deg);
+		}
+		to {
 			-webkit-transform: rotate(360deg);
 			transform: rotate(360deg);
 		}

@@ -72,7 +72,7 @@ export const Testimonials = () => {
 			>
 				{t('we_always_try_make_the_experience_with_us_always_the_best')}
 			</Typography>
-			<Slider>
+			<Slider data-aos='fade-up' data-aos-anchor-placement='top-bottom' data-aos-duration='3000'>
 				<div ref={sliderRef} className='keen-slider'>
 					{data.map(testimonial => (
 						<CardTestimonial key={testimonial.id} className='keen-slider__slide' {...testimonial} />

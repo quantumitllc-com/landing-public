@@ -5,13 +5,14 @@ import { useTranslation } from 'next-i18next'
 import { styled } from '@mui/material/styles'
 import { Tab, Typography } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
-import { SyntheticEvent, useState } from 'react'
 import type { ITechnology } from '@/types/respones'
 import { IconEllipse } from '@/assets/icons/ellipse'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
+import { useState, SyntheticEvent, useLayoutEffect } from 'react'
 import MuiTooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip'
 import {
+	Tr,
 	Wrap,
 	WrapText,
 	WrapTexts,
@@ -22,7 +23,6 @@ import {
 	WrapTabPanel,
 	WrapTechnologies,
 	WrapTabPanelTexts,
-	Tr,
 } from './style'
 
 const Tooltip = styled(({ className, ...props }: TooltipProps) => (
@@ -50,8 +50,13 @@ export const Technologies = () => {
 		queryKey: [REACT_QUERY_KEYS.TECHNOLOGIES, locale],
 		queryFn: () => getTechnologies(locale),
 	})
-
 	const [value, setValue] = useState(String(data[0]?.id))
+
+	useLayoutEffect(() => {
+		if (value === String(data[0]?.id)) {
+			setValue(String(data[0]?.id))
+		}
+	}, [data.length])
 
 	const handleChange = (_: SyntheticEvent, newValue: string) => {
 		setValue(newValue)

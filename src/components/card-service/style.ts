@@ -142,5 +142,36 @@ export const Circle = styled('div')`
 		border-top-color: ${({ theme }) => theme.palette.colors.GREEN};
 		border-left-color: ${({ theme }) => theme.palette.colors.GREEN};
 		border-right-color: ${({ theme }) => theme.palette.colors.GREEN};
+		animation: rotate 5s linear infinite;
+		-moz-animation: rotate 5s linear infinite;
+		-webkit-animation: rotate 5s linear infinite;
+
+		@-moz-keyframes rotate {
+			from {
+				-moz-transform: rotate(-360deg);
+			}
+			to {
+				-moz-transform: rotate(360deg);
+			}
+		}
+		@-webkit-keyframes rotate {
+			from {
+				-webkit-transform: rotate(-360deg);
+			}
+			to {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes rotate {
+			from {
+				transform: rotate(-360deg);
+				-webkit-transform: rotate(-360deg);
+			}
+			to {
+				transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+			}
+		}
 	}
 `
