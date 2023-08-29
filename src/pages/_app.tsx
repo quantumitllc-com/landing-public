@@ -105,6 +105,10 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				<link rel='icon' type='image/svg+xml' href='/icon.svg' />
 				<link rel='icon' type='image/png' href='/icon.png' />
 				<link rel='shortcut icon' href='/icon.png' />
+				<link rel='apple-touch-icon' sizes='16x16' href='/icon.svg' />
+				<link rel='apple-touch-icon' sizes='32x32' href='/icon.svg' />
+				<link rel='apple-touch-icon' sizes='512x512' href='/icon.svg' />
+				<link rel='apple-touch-icon' sizes='192x192' href='/icon.svg' />
 				<script src='//code.jivosite.com/widget/ShuWU2A1gc' async></script>
 			</Head>
 			<DefaultSeo {...DEFAULT_SEO} />
