@@ -5,13 +5,11 @@ import Dialog from '@mui/material/Dialog'
 import type { IVideo } from '@/types/respones'
 import { IconPlay } from '@/assets/icons/play'
 import { useBoolean } from '@/hooks/useBoolean'
-import { useTheme } from '@mui/material/styles'
 import { useQuery } from '@tanstack/react-query'
-import useMediaQuery from '@mui/material/useMediaQuery'
 import { IconShowreels } from '@/assets/icons/showreels'
 import { TransitionProps } from '@mui/material/transitions'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { WrapPlay, ButtonPlay, WrapVideo, WrapIconShowreels } from './style'
+import { WrapPlay, ButtonPlay, WrapIconShowreels } from './style'
 
 const Transition = forwardRef(function Transition(
 	props: TransitionProps & {
@@ -23,9 +21,6 @@ const Transition = forwardRef(function Transition(
 })
 
 export const Video = () => {
-	const theme = useTheme()
-	const fullScreen = useMediaQuery(theme.breakpoints.down('sm'))
-
 	const { value, setTrue, setFalse } = useBoolean()
 	const { data: dataVideo = { file_url: '' } } = useQuery<IVideo>({
 		queryKey: [REACT_QUERY_KEYS.VIDEO],
@@ -44,15 +39,27 @@ export const Video = () => {
 			</ButtonPlay>
 			<Dialog
 				open={value}
-				maxWidth='md'
 				onClose={setFalse}
-				fullScreen={fullScreen}
+				maxWidth={false}
 				TransitionComponent={Transition}
 				PaperProps={{
 					style: {
 						borderRadius: 0,
 					},
 				}}
+				sx={theme => ({
+					video: {
+						objectFit: 'fill',
+						maxWidth: '1000px',
+						maxHeight: '800px',
+						height: '60vh !important',
+						width: 'calc(70vw - 64px) !important',
+						[theme.breakpoints.down('sm')]: {
+							height: '40vh !important',
+							width: 'calc(100vw - 64px) !important',
+						},
+					},
+				})}
 			>
 				<style jsx global>{`
 					html,
@@ -60,11 +67,9 @@ export const Video = () => {
 						overflow-y: hidden;
 					}
 				`}</style>
-				<WrapVideo>
-					<video controls>
-						<source src={dataVideo.file_url} />
-					</video>
-				</WrapVideo>
+				<video preload='preload' controls autoPlay>
+					<source src={dataVideo.file_url} />
+				</video>
 			</Dialog>
 		</>
 	)

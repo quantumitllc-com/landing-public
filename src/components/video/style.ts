@@ -86,19 +86,3 @@ export const WrapPlay = styled('div')`
 		})}
 	}
 `
-
-export const WrapVideo = styled('div')`
-	video {
-		${({ theme }) => ({
-			[theme.breakpoints.up('md')]: {
-				width: '70vw',
-				height: '70vh',
-				minHeight: '400px',
-			},
-			[theme.breakpoints.between('sm', 'md')]: {
-				width: '100vw',
-				height: '100vh',
-			},
-		})}
-	}
-`

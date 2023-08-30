@@ -14,7 +14,7 @@ export const Container = styled('main')`
 `
 
 export const Button = styled(MuiButton)<ButtonProps>`
-	height: 40px !important;
+	height: 40px;
 	font-size: 13px;
 	font-weight: 600;
 	width: fit-content;
@@ -28,7 +28,7 @@ export const Button = styled(MuiButton)<ButtonProps>`
 			height: '48px',
 			fontSize: '15px',
 			letterSpacing: '0.052px',
-			padding: '7px 7px 7px 20px',
+			padding: '7px 10px 7px 20px',
 		},
 	})}
 
