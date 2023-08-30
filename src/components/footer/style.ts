@@ -13,7 +13,7 @@ export const Container = styled('footer')`
 `
 
 export const Wrapper = styled('div')`
-	gap: 65px;
+	gap: 45px;
 	width: 100%;
 	display: flex;
 	margin: 0 auto;
@@ -27,13 +27,14 @@ export const Wrapper = styled('div')`
 `
 
 export const Up = styled('div')`
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	& > .wrap-up {
 		width: 100%;
 		${({ theme }) => ({
 			[theme.breakpoints.up('md')]: {
-				maxWidth: '450px',
+				maxWidth: 'max-content',
 			},
 		})}
 	}
@@ -67,7 +68,7 @@ export const WrapContact = styled('div')`
 	gap: 55px;
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 50px;
+	margin-top: 30px;
 	${({ theme }) => ({
 		[theme.breakpoints.down('md')]: {
 			gap: '12px',
@@ -108,11 +109,8 @@ export const WrapMobileSocial = styled('div')`
 `
 
 export const WrapDesktopSocial = styled('div')`
-	flex-grow: 1;
-	height: 100%;
 	display: flex;
-	align-items: flex-end;
-	justify-content: flex-end;
+	justify-content: flex-start;
 
 	${({ theme }) => ({
 		[theme.breakpoints.down('md')]: {

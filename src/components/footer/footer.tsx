@@ -37,11 +37,16 @@ export const Footer = () => {
 						<WrapLogo>
 							<Logo variant='footer' />
 						</WrapLogo>
-						<Typography variant='text' component='h3'>
+						<Typography variant='text' component='h3' sx={{ maxWidth: '450px' }}>
 							{t(
 								'creative_powered_to_fuel_your_growth_goals_we_build_world_class_digital_products_software_and_branding',
 							)}
 						</Typography>
+					</Box>
+					<Box className='wrap-up'>
+						<WrapDesktopSocial>
+							<Socials variant='footer' />
+						</WrapDesktopSocial>
 						<WrapContact>
 							<Link href={`tel: ${data.phone_number}`}>
 								<Box gap='12px' display='flex' alignItems='center'>
@@ -74,11 +79,6 @@ export const Footer = () => {
 								</Box>
 							</Link>
 						</WrapContact>
-					</Box>
-					<Box className='wrap-up'>
-						<WrapDesktopSocial>
-							<Socials variant='footer' />
-						</WrapDesktopSocial>
 					</Box>
 				</Up>
 				<Down>
