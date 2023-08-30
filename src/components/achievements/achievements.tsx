@@ -1,58 +1,26 @@
 import Image from 'next/image'
+import { useRef } from 'react'
 import { useRouter } from 'next/router'
 import { getAchievements } from '@/pages/api'
 import { useTranslation } from 'next-i18next'
 import { useTheme } from '@mui/material/styles'
 import { Box, Typography } from '@mui/material'
+import { CountUp } from '@/components/count-up'
 import { useQuery } from '@tanstack/react-query'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import { ACHIEVEMENTS, type IAchievement } from './constants'
 import { Wrap, Wrapper, WrapImage, Container } from './style'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
 import ImageAchievementBg from '@/assets/images/achievement-bg.webp'
 import ImageAchievementMobileBg from '@/assets/images/achievement-mobile-bg.webp'
-import { IconAchievementDrunk } from '@/assets/icons/achievement-drunk'
-import { IconAchievementProfits } from '@/assets/icons/achievement-profits'
-import { IconAchievementProjects } from '@/assets/icons/achievement-projects'
-import { IconAchievementExperience } from '@/assets/icons/achievement-experience'
-
-interface IAchievement {
-	value: number
-	Icon: () => JSX.Element
-	id: string
-	symbol: string
-}
-
-const ACHIEVEMENTS: IAchievement[] = [
-	{
-		id: 'successful_projects',
-		Icon: IconAchievementProjects,
-		value: 0,
-		symbol: '+',
-	},
-	{
-		id: 'profits',
-		Icon: IconAchievementProfits,
-		value: 0,
-		symbol: '%',
-	},
-	{
-		id: 'experience',
-		Icon: IconAchievementExperience,
-		value: 0,
-		symbol: 'years',
-	},
-	{
-		id: 'coffee_drunk',
-		Icon: IconAchievementDrunk,
-		value: 0,
-		symbol: '',
-	},
-]
 
 export const Achievements = () => {
 	const theme = useTheme()
+	const date = new Date()
 	const { locale } = useRouter()
+	const currentHours = date.getHours()
 	const { t } = useTranslation('common')
+	const myElementRef = useRef<HTMLDivElement | null>(null)
 	const matches = useMediaQuery(theme.breakpoints.up('sm'))
 	const { data = [] } = useQuery({
 		queryKey: [REACT_QUERY_KEYS.ACHIEVEMENTS, locale],
@@ -64,7 +32,7 @@ export const Achievements = () => {
 	})
 
 	return (
-		<Container data-aos='fade-up' data-aos-anchor-placement='top-bottom'>
+		<Container data-aos='fade-up' data-aos-anchor-placement='top-bottom' ref={myElementRef}>
 			<Wrapper>
 				{data.map(({ id, Icon, value, symbol }: IAchievement) => (
 					<Wrap key={id}>
@@ -72,10 +40,15 @@ export const Achievements = () => {
 							<Icon />
 						</Box>
 						<Box
-							sx={{ gap: '2px', display: 'flex', alignItems: 'center', flexDirection: 'column' }}
+							sx={{
+								gap: '2px',
+								display: 'flex',
+								alignItems: 'center',
+								flexDirection: 'column',
+							}}
 						>
 							<Typography component='h4' variant='title180'>
-								{value}
+								<CountUp value={id === 'coffee_drunk' ? value + currentHours : value} />
 								{t(symbol)}
 							</Typography>
 							<Typography component='h6' variant='text160' align='center'>
