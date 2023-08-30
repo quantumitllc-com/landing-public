@@ -20,6 +20,7 @@ export interface ICompany {
 export interface IIntro {
 	subtitle: string
 	title: string
+	seo_keywords: string[]
 }
 
 export interface IVideo {

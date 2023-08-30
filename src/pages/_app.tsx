@@ -63,44 +63,43 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 			site: '@site',
 			cardType: 'summary_large_image',
 		},
-		additionalMetaTags: [{ name: 'keywords', content: keywords.join(',') }],
+		additionalMetaTags: [
+			{ name: 'keywords', content: keywords.join(',') },
+			{
+				name: 'msapplication-confi',
+				content: '/browserconfig.xml',
+			},
+			{
+				name: 'viewport',
+				content: 'width=device-width, initial-scale=1',
+			},
+		],
 		additionalLinkTags: [
 			{
-				rel: 'icon',
-				href: '/icon.svg',
-				type: 'image/svg+xml',
+				rel: 'mask-icon',
+				href: '/safari-pinned-tab.svg',
+				color: '#5bbad5',
+			},
+			{
+				rel: 'manifest',
+				href: '/site.webmanifest',
 			},
 			{
 				rel: 'icon',
-				href: '/icon.png',
 				type: 'image/png',
-			},
-			{
-				rel: 'shortcut icon',
-				href: '/icon.svg',
-				type: 'image/svg+xml',
-			},
-
-			{
-				rel: 'apple-touch-icon',
-				href: '/icon.svg',
 				sizes: '16x16',
+				href: '/favicon-16x16.png',
 			},
-
 			{
-				rel: 'apple-touch-icon',
-				href: '/icon.svg',
+				rel: 'icon',
+				type: 'image/png',
 				sizes: '32x32',
+				href: '/favicon-32x32.png',
 			},
 			{
 				rel: 'apple-touch-icon',
-				href: '/icon.svg',
-				sizes: '192x192',
-			},
-			{
-				rel: 'apple-touch-icon',
-				href: '/icon.svg',
-				sizes: '512x512',
+				sizes: '180x180',
+				href: '/apple-touch-icon.png',
 			},
 		],
 		robotsProps: {
@@ -140,14 +139,6 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				}}
 			/>
 			<Head>
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' type='image/svg+xml' href='/icon.svg' />
-				<link rel='icon' type='image/png' href='/icon.png' />
-				<link rel='shortcut icon' href='/icon.png' />
-				<link rel='apple-touch-icon' sizes='16x16' href='/icon.svg' />
-				<link rel='apple-touch-icon' sizes='32x32' href='/icon.svg' />
-				<link rel='apple-touch-icon' sizes='512x512' href='/icon.svg' />
-				<link rel='apple-touch-icon' sizes='192x192' href='/icon.svg' />
 				<script src='//code.jivosite.com/widget/ShuWU2A1gc' async></script>
 			</Head>
 			<DefaultSeo {...DEFAULT_SEO} />
