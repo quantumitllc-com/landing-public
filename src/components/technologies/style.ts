@@ -53,6 +53,7 @@ export const Wrap = styled('div')`
 	.MuiTabs-flexContainer {
 		gap: 12px 26px;
 		flex-wrap: wrap;
+		justify-content: center;
 		${({ theme }) => ({
 			[theme.breakpoints.down('sm')]: {
 				gap: '12px',

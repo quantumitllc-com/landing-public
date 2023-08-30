@@ -101,6 +101,10 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: Ne
 				sizes: '180x180',
 				href: '/apple-touch-icon.png',
 			},
+			{
+				rel: 'canonical',
+				href: url,
+			},
 		],
 		robotsProps: {
 			nosnippet: true,
