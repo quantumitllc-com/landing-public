@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles'
+import MuiButton, { ButtonProps } from '@mui/material/Button'
 
 export const Container = styled('main')`
 	width: 100vw;
@@ -6,109 +7,33 @@ export const Container = styled('main')`
 	display: flex;
 	padding: 0 18px;
 	user-select: none;
+	align-items: flex-end;
 	justify-content: center;
 	img {
 		position: absolute !important;
 	}
-	${({ theme }) => ({
-		minHeight: '650px',
-		[theme.breakpoints.up('md')]: {
-			img: {
-				minHeight: '650px',
-			},
-		},
-	})}
 `
 
-export const Wrap = styled('div')`
-	width: 100%;
-	height: 100%;
-	position: relative;
-	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
-`
-
-export const WrapVideo = styled('div')`
-	left: 80px;
-	bottom: 90px;
-	display: none;
-	position: absolute;
+export const Button = styled(MuiButton)<ButtonProps>`
+	height: 40px;
+	font-size: 13px;
+	font-weight: 600;
+	width: fit-content;
+	line-height: 114.5%;
+	letter-spacing: 0.045px;
+	padding: 3px 6px 3px 18px;
+	transition: all 0.2s ease-in-out;
+	border: 1px solid ${({ theme }) => theme.palette.colors.GREEN};
 	${({ theme }) => ({
 		[theme.breakpoints.up('md')]: {
-			display: 'flex',
+			height: '48px',
+			fontSize: '15px',
+			letterSpacing: '0.052px',
+			padding: '7px 7px 7px 20px',
 		},
 	})}
-`
 
-export const WrapMobileVideo = styled('div')`
-	left: 18px;
-	bottom: 230px;
-	display: flex;
-	position: absolute;
-	${({ theme }) => ({
-		[theme.breakpoints.up('md')]: {
-			display: 'none',
-		},
-		[theme.breakpoints.between('sm', 'md')]: {
-			bottom: '200px',
-		},
-	})}
-`
-
-export const WrapRobot = styled('div')`
-	bottom: 0;
-	width: 100%;
-	right: -18px;
-	height: 100%;
-	max-width: 380px;
-	max-height: 370px;
-	position: absolute;
-	${({ theme }) => ({
-		[theme.breakpoints.up('md')]: {
-			left: 'unset',
-			right: '-55px',
-			maxWidth: '900px',
-			maxHeight: '900px',
-		},
-		[theme.breakpoints.between('sm', 'md')]: {
-			left: 'unset',
-			right: '18px',
-			maxWidth: '400px',
-			maxHeight: '450px',
-		},
-	})}
-`
-
-export const WrapContent = styled('div')`
-	gap: 10px;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	max-width: 590px;
-	margin-top: -90px;
-	flex-direction: column;
-	justify-content: center;
-	${({ theme }) => ({
-		[theme.breakpoints.up('md')]: {
-			gap: '16px',
-		},
-	})}
-`
-
-export const WrapButton = styled('div')`
-	display: flex;
-	margin-top: 13px;
-	justify-content: center;
-	${({ theme }) => ({
-		[theme.breakpoints.up('sm')]: {
-			marginTop: '17px',
-			justifyContent: 'flex-start',
-		},
-	})}
-	a {
-		transition: all 0.2s ease-in-out;
-		border: 1px solid ${({ theme }) => theme.palette.colors.GREEN};
-	}
-	a:hover {
+	:hover {
 		background-color: transparent;
 		color: ${({ theme }) => theme.palette.colors.GREEN};
 		transform: scale(1.02) !important;
@@ -127,13 +52,104 @@ export const WrapButton = styled('div')`
 	}
 `
 
-export const WrapTexts = styled('div')`
-	gap: 10px;
-	display: flex;
-	flex-direction: column;
+export const WrapDesktop = styled('div')`
+	width: 100vw;
+	display: none;
+	flex-grow: 1;
+	justify-content: center;
+	height: calc(100vh - 90px);
 	${({ theme }) => ({
-		[theme.breakpoints.up('sm')]: {
-			gap: '16px',
+		[theme.breakpoints.up('md')]: {
+			display: 'flex',
 		},
 	})}
+`
+
+export const WrapDesktopContent = styled('div')`
+	width: 100%;
+	height: 100%;
+	position: relative;
+	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
+`
+
+export const WrapDesktopContainer = styled('div')`
+	gap: 16px;
+	height: 100%;
+	flex-grow: 1;
+	display: flex;
+	padding-bottom: 290px;
+	flex-direction: column;
+	justify-content: center;
+	max-width: ${({ theme }) => theme.breakpoints.values.sm}px;
+`
+
+export const WrapDesktopVideo = styled('div')`
+	left: 80px;
+	z-index: 99;
+	bottom: 90px;
+	display: none;
+	position: absolute;
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			display: 'flex',
+		},
+	})}
+`
+
+export const WrapDesktopRobot = styled('div')`
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	max-width: 790px;
+	max-height: 800px;
+	position: absolute;
+`
+
+export const WrapMobile = styled('div')`
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	height: calc(100vh - 60px);
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			display: 'none',
+		},
+	})}
+`
+
+export const WrapMobileContent = styled('div')`
+	gap: 23px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: relative;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
+`
+
+export const WrapMobileContainer = styled('div')`
+	height: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	max-width: ${({ theme }) => theme.breakpoints.values.sm}px;
+`
+
+export const WrapMobileRobot = styled('div')`
+	width: 100%;
+	height: 60%;
+	position: relative;
+	margin-right: -54px;
+`
+
+export const WrapMobileVideo = styled('div')`
+	top: 0;
+	left: 0;
+	z-index: 99;
+	display: flex;
+	position: absolute;
 `
