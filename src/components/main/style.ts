@@ -5,7 +5,6 @@ export const Container = styled('main')`
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	padding: 0 18px;
 	user-select: none;
 	align-items: flex-end;
 	justify-content: center;
@@ -15,13 +14,13 @@ export const Container = styled('main')`
 `
 
 export const Button = styled(MuiButton)<ButtonProps>`
-	height: 40px;
+	height: 40px !important;
 	font-size: 13px;
 	font-weight: 600;
 	width: fit-content;
 	line-height: 114.5%;
+	padding: 0 6px 0 18px;
 	letter-spacing: 0.045px;
-	padding: 3px 6px 3px 18px;
 	transition: all 0.2s ease-in-out;
 	border: 1px solid ${({ theme }) => theme.palette.colors.GREEN};
 	${({ theme }) => ({
@@ -56,6 +55,7 @@ export const WrapDesktop = styled('div')`
 	width: 100vw;
 	display: none;
 	flex-grow: 1;
+	padding: 0 18px;
 	justify-content: center;
 	height: calc(100vh - 90px);
 	${({ theme }) => ({
@@ -109,13 +109,15 @@ export const WrapDesktopRobot = styled('div')`
 export const WrapMobile = styled('div')`
 	width: 100vw;
 	display: flex;
+	position: relative;
+	padding: 60px 18px 0;
 	justify-content: center;
-	height: calc(100vh - 60px);
+	height: 100vh;
 	${({ theme }) => ({
 		[theme.breakpoints.up('md')]: {
 			display: 'none',
 		},
-	})}
+	})};
 `
 
 export const WrapMobileContent = styled('div')`
