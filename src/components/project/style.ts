@@ -85,25 +85,54 @@ export const Contents = styled('div')`
 	gap: 100px;
 	display: grid;
 	grid-template-columns: 1fr;
-`
-
-export const WrapContent = styled('div')`
-	gap: 75px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
 	${({ theme }) => ({
 		[theme.breakpoints.down('md')]: {
-			gridTemplateColumns: '1fr',
-			img: {
-				maxHeight: '255px',
-			},
+			gap: '24px',
 		},
 	})}
-	${({ theme }) => ({
-		[theme.breakpoints.between('sm', 'md')]: {
-			img: {
-				maxHeight: '350px',
+`
+
+interface WrapContentProps {
+	hasImage: boolean
+}
+
+export const WrapContent = styled('div')<WrapContentProps>`
+	& > div {
+		gap: 75px;
+		grid-template-columns: ${({ hasImage }) => (hasImage ? '1fr 1fr' : '1fr')};
+		${({ theme }) => ({
+			[theme.breakpoints.down('md')]: {
+				gap: '24px',
+				gridTemplateColumns: '1fr',
+				img: {
+					maxHeight: '255px',
+				},
 			},
+		})}
+		${({ theme }) => ({
+			[theme.breakpoints.between('sm', 'md')]: {
+				img: {
+					maxHeight: '350px',
+				},
+			},
+		})}
+	}
+`
+
+export const WrapMobileContent = styled('div')`
+	display: none;
+	${({ theme }) => ({
+		[theme.breakpoints.down('md')]: {
+			display: 'grid',
+		},
+	})}
+`
+
+export const WrapDesktopContent = styled('div')`
+	display: none;
+	${({ theme }) => ({
+		[theme.breakpoints.up('md')]: {
+			display: 'grid',
 		},
 	})}
 `

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useEffect } from 'react'
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import { getProject } from '@/pages/api'
@@ -18,6 +19,8 @@ import {
 	WrapContent,
 	WrapBreadcrumb,
 	WrapIconChevron,
+	WrapMobileContent,
+	WrapDesktopContent,
 } from './style'
 
 export const Project = () => {
@@ -29,10 +32,13 @@ export const Project = () => {
 		queryFn: () => getProject(id, locale),
 	})
 
-	if (typeof data === 'undefined' && typeof window !== 'undefined') {
-		router.push('/404')
-		return null
-	}
+	useEffect(() => {
+		if (!data?.id) {
+			if (typeof data === 'undefined' && typeof window !== 'undefined') {
+				router.push('/404')
+			}
+		}
+	}, [data?.id])
 
 	const breadcrumbs = [
 		<Link key='1' href='/'>
@@ -70,7 +76,7 @@ export const Project = () => {
 							{breadcrumbs}
 						</Breadcrumbs>
 					</WrapBreadcrumb>
-					<Body>
+					<Body data-aos='fade-up' data-aos-anchor-placement='top-bottom'>
 						<Typography variant='title140' component='h2'>
 							{data?.title}
 						</Typography>
@@ -78,7 +84,7 @@ export const Project = () => {
 							{data?.description}
 						</Typography>
 					</Body>
-					<Box>
+					<Box data-aos='fade-up' data-aos-anchor-placement='top-bottom'>
 						<Typography variant='title120' component='h3'>
 							{t('used_languages')}
 						</Typography>
@@ -92,20 +98,31 @@ export const Project = () => {
 							))}
 						</Languages>
 					</Box>
-					<Contents>
+					<Contents data-aos='fade-up' data-aos-anchor-placement='top-bottom'>
 						{data?.contents.map(c => (
-							<WrapContent key={c.id}>
-								{c.is_right_position ? (
-									<>
-										<div dangerouslySetInnerHTML={{ __html: c.content }} />
-										{c.image && <Image fill alt={String(c.id)} src={c.image} />}
-									</>
-								) : (
-									<>
-										{c.image && <Image fill alt={String(c.id)} src={c.image} />}
-										<div dangerouslySetInnerHTML={{ __html: c.content }} />
-									</>
-								)}
+							<WrapContent
+								key={c.id}
+								hasImage={Boolean(c.image)}
+								data-aos='fade-up'
+								data-aos-anchor-placement='top-bottom'
+							>
+								<WrapMobileContent>
+									<div dangerouslySetInnerHTML={{ __html: c.content }} />
+									{c.image && <Image fill alt={String(c.id)} src={c.image} />}
+								</WrapMobileContent>
+								<WrapDesktopContent>
+									{c.is_right_position ? (
+										<>
+											<div dangerouslySetInnerHTML={{ __html: c.content }} />
+											{c.image && <Image fill alt={String(c.id)} src={c.image} />}
+										</>
+									) : (
+										<>
+											{c.image && <Image fill alt={String(c.id)} src={c.image} />}
+											<div dangerouslySetInnerHTML={{ __html: c.content }} />
+										</>
+									)}
+								</WrapDesktopContent>
 							</WrapContent>
 						))}
 					</Contents>

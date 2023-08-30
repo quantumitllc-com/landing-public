@@ -8,6 +8,7 @@ import { IconLinkedin } from '@/assets/icons/linkedin'
 import { IconTelegram } from '@/assets/icons/telegram'
 import { IconInstagram } from '@/assets/icons/instagram'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
+import { Box } from '@mui/material'
 
 const SOCIALS = [
 	{
@@ -52,9 +53,9 @@ export const Socials = ({ variant }: ISocial) => {
 	return (
 		<Container variant={variant}>
 			{data.map(({ id, Icon, href }) => (
-				<Link key={id} href={href} target='_blank'>
+				<Box component={Link} key={id} href={href} target='_blank'>
 					<Icon />
-				</Link>
+				</Box>
 			))}
 		</Container>
 	)

@@ -31,15 +31,18 @@ export const Wrapper = styled('div')<IWrapper>`
 	width: 100%;
 	display: grid;
 	padding: 42px 0;
+	justify-content: space-between;
 	max-width: ${({ theme }) => theme.breakpoints.values.lg}px;
 
 	& > a {
 		width: 100%;
-		height: 400px;
 		display: flex;
 		overflow: hidden;
 		flex-direction: column;
 		background-color: ${({ theme }) => theme.palette.colors.GRAY160};
+		.wrapImage {
+			height: 300px;
+		}
 		:hover {
 			img {
 				transition: all 0.5s ease-in-out;
@@ -51,8 +54,10 @@ export const Wrapper = styled('div')<IWrapper>`
 	${({ theme, length }) => ({
 		gridTemplateColumns: length === 1 ? '1fr' : '1fr 1fr',
 		'& > a:first-of-type': {
-			height: length !== 2 && length !== 1 && '550px',
 			gridColumn: length !== 2 && length !== 1 && '1 / 3',
+			'.wrapImage': {
+				height: length !== 2 && length !== 1 && '550px',
+			},
 		},
 		'& > a:nth-of-type(2)': {
 			gridRow: length !== 2 && length !== 1 && '2 / 3',
@@ -63,7 +68,7 @@ export const Wrapper = styled('div')<IWrapper>`
 			},
 		},
 		'& > a:nth-of-type(4)': {
-			height: length === 4 && '550px',
+			height: length === 4 && '450px',
 			gridColumn: length === 4 && '1 / 3',
 			backgroundColor: theme.palette.colors.GRAY170,
 			h3: {
@@ -77,17 +82,24 @@ export const Wrapper = styled('div')<IWrapper>`
 			h3: {
 				color: theme.palette.colors.WHITE,
 			},
+			'.wrapImage': {
+				height: '450px',
+			},
 		},
 		[theme.breakpoints.down('sm')]: {
 			gap: '12px',
 			padding: '30px 18px 24px',
 			gridTemplateColumns: '1fr',
 			'& > a, & > a:nth-of-type(6)': {
-				height: '270px',
+				'.wrapImage': {
+					height: '200px',
+				},
 			},
 			'& > a:first-of-type, & > a:nth-of-type(4)': {
-				height: '270px',
 				gridColumn: '1 / 3',
+				'.wrapImage': {
+					height: '200px',
+				},
 			},
 			'& > a:nth-of-type(2)': {
 				gridRow: '2 / 3',
@@ -109,7 +121,6 @@ export const WrapIconChevron = styled('span')`
 export const WrapCardTexts = styled('div')`
 	gap: 5px;
 	display: flex;
-	height: 100px;
 	padding-top: 25px;
 	align-items: center;
 	flex-direction: column;

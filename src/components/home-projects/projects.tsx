@@ -40,11 +40,11 @@ export const HomeProjects = () => {
 			<Wrapper length={data.length}>
 				{data.map(project => (
 					<Box
+						component={Link}
 						key={project.id}
 						data-aos='fade-up'
-						data-aos-anchor-placement='top-bottom'
-						component={Link}
 						href={`/${project.id}`}
+						data-aos-anchor-placement='top-bottom'
 					>
 						<WrapCardTexts>
 							<Typography align='center' variant='title100' component='h3'>
@@ -52,7 +52,13 @@ export const HomeProjects = () => {
 							</Typography>
 							<Button
 								size='small'
-								sx={{ background: 'transparent' }}
+								sx={{
+									padding: '0',
+									height: 'fit-content',
+									':hover': {
+										background: 'transparent',
+									},
+								}}
 								endIcon={
 									<WrapIconChevron>
 										<IconChevron />
@@ -62,7 +68,7 @@ export const HomeProjects = () => {
 								{t('learn_more')}
 							</Button>
 						</WrapCardTexts>
-						<WrapImage>
+						<WrapImage className='wrapImage'>
 							<Image fill src={project.main_image} alt={project.title} />
 						</WrapImage>
 					</Box>

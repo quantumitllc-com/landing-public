@@ -28,7 +28,7 @@ export const Container = styled('div')<ISocial>`
 	a {
 		display: flex;
 		align-items: center;
-		:hover {
+		&:hover {
 			svg {
 				path,
 				circle {
