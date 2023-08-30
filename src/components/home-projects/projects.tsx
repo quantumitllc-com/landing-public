@@ -24,7 +24,7 @@ export const HomeProjects = () => {
 	return (
 		<Container>
 			<Typography component='h4' align='center' variant='title50' textTransform='capitalize'>
-				{t('our_latest_project')}
+				{t('our_latest_projects')}
 			</Typography>
 			<Typography
 				component='p'
