@@ -115,11 +115,6 @@ export const getContactInformation = async (locale = 'en') => {
 	return data
 }
 
-export const postFollow = async <T>(data: T) => {
-	const res = await request.post('api/email/', data)
-	return res
-}
-
 export const postContact = async <T>(data: T) => {
 	const res = await request.post('api/contact/', data)
 	return res

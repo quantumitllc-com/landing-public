@@ -108,9 +108,12 @@ export const WrapMobileSocial = styled('div')`
 `
 
 export const WrapDesktopSocial = styled('div')`
+	flex-grow: 1;
+	height: 100%;
 	display: flex;
-	margin-top: 32px;
+	align-items: flex-end;
 	justify-content: flex-end;
+
 	${({ theme }) => ({
 		[theme.breakpoints.down('md')]: {
 			display: 'none',

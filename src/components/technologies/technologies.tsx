@@ -8,8 +8,8 @@ import { useQuery } from '@tanstack/react-query'
 import type { ITechnology } from '@/types/respones'
 import { IconEllipse } from '@/assets/icons/ellipse'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
+import { useState, useEffect, SyntheticEvent } from 'react'
 import { REACT_QUERY_KEYS } from '@/constants/react-query-keys'
-import { useState, SyntheticEvent, useLayoutEffect } from 'react'
 import MuiTooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip'
 import {
 	Tr,
@@ -52,7 +52,7 @@ export const Technologies = () => {
 	})
 	const [value, setValue] = useState(String(data[0]?.id))
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (value === String(data[0]?.id)) {
 			setValue(String(data[0]?.id))
 		}

@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Logo } from '@/components/logo'
-import { Follow } from '@/components/follow'
 import { Navbar } from '@/components/navbar'
 import { useTranslation } from 'next-i18next'
 import { Socials } from '@/components/socials'
@@ -77,13 +76,6 @@ export const Footer = () => {
 						</WrapContact>
 					</Box>
 					<Box className='wrap-up'>
-						<Typography variant='title' component='h2'>
-							{t('submit_an_application')}
-						</Typography>
-						<Typography m='12px 0 24px' variant='text' component='h3'>
-							{t('leave_your_email_and_we_will_get_back_to_you_soon')}
-						</Typography>
-						<Follow />
 						<WrapDesktopSocial>
 							<Socials variant='footer' />
 						</WrapDesktopSocial>
