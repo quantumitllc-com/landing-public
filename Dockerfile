@@ -8,6 +8,8 @@ WORKDIR /app
 
 RUN npm install
 
+RUN npm build
+
 CMD ["npm", "start"]
 
 
