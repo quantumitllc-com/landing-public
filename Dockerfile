@@ -10,8 +10,6 @@ RUN npm install
 
 RUN yarn build
 
-COPY --from=build /app /app
-
 CMD ["yarn", "start"]
 
 
