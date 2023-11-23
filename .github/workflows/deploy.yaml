@@ -29,21 +29,17 @@ jobs:
     - name: Log in to Server and Restarting Kubernetes
       uses: appleboy/ssh-action@master
       with:
-        host: 161.35.235.214
+        host: 142.93.77.97
         username: root
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          cd /root/Projects/quantumitllc/frontend
+          cd /root/quantumitllc/frontend
           ls
           kubectl delete -f quantumitllc.yaml
           kubectl apply -f quantumitllc.yaml
 
     
-          
-    - name: Configuration Git
-      run: git config --global user.email "zeromax.adm@gmail.com" && git config --global user.name "zeromaxinc"
- 
     - name: Notification Slack
       uses: rtCamp/action-slack-notify@v2
       env:
