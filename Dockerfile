@@ -8,9 +8,7 @@ WORKDIR /app
 
 RUN npm install
 
-RUN yarn build
-
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
 
 
 
