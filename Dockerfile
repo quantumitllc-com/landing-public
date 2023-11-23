@@ -1,13 +1,11 @@
 FROM node:latest
 
-WORKDIR /app
-
-COPY package.json yarn.lock /app/
-
-RUN yarn install
+RUN mkdir /app
 
 COPY . /app
 
-RUN yarn build
+WORKDIR /app
 
-CMD ["yarn", "start"]
+RUN npm install -f
+
+CMD npm run dev
