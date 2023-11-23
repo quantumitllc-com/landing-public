@@ -1,19 +1,14 @@
-FROM node:latest AS build
+FROM node:latest
+
+RUN mkdir /app
+
+COPY . /app
 
 WORKDIR /app
-
-COPY package.json /app/
 
 RUN npm install
 
-COPY . /app/
-
 RUN yarn build
-
-# Final stage
-FROM node:latest
-
-WORKDIR /app
 
 COPY --from=build /app /app
 
