@@ -1,11 +1,12 @@
-name: Deployment workflow
+name: Pull Request
 on:
-  push:
-    branches: [ "main" ]
-
+  pull_request:
+    types:
+      - opened
+      
 jobs:
   deployment:
-    name: Deploy
+    name: Pull Request
     runs-on: ubuntu-latest
 
     services:
@@ -73,8 +74,8 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: markdown
         message: |
-          ${{ github.actor }} successfully created commit ✅✅✅:
-            Commit message: ${{ github.event.commits[0].message }}
+          ${{ github.actor }} successfully created Pull Request!!! ✅✅✅:
+            Pull Request message: ${{ github.event.commits[0].message }}
             Repository: ${{ github.repository }}
             See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
 
@@ -87,7 +88,7 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: markdown
         message: |
-          ${{ github.actor }} failed created commit ❌❌❌:
-            Commit message: ${{ github.event.commits[0].message }}
+          ${{ github.actor }} failed created Pull Request!!! ❌❌❌:
+            Pull Request message: ${{ github.event.commits[0].message }}
             Repository: ${{ github.repository }}
             See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
