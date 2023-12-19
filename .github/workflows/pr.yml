@@ -1,8 +1,7 @@
 name: Pull Request
 on:
   pull_request:
-    types:
-      - opened
+
       
 jobs:
   deployment:
@@ -21,74 +20,52 @@ jobs:
 
     steps: 
 
-    - uses: actions/checkout@v2
-    - name: Log in to Docker Hub
-      if: ${{ success() }}
-      env:
-        DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
-      run: |
-        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-    
-    - name: Build the Docker image
-      if: ${{ success() }}
-      run: docker build -t quantum_front . && docker tag quantum_front zeromaxinc/quantum_front
-  
-    - name: Docker push
-      if: ${{ success() }}
-      run: docker push zeromaxinc/quantum_front
+      - uses: actions/checkout@v2
+      - name: Notification Slack
+        if: ${{ success() }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: QuantumITLLC
+          SLACK_TITLE: About Project
+          SLACK_USERNAME: Quantum'sBot
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_MESSAGE: "${{ github.actor }} successfully created Pull Request!!! ✅✅✅:  Pull Request message: ${{ github.event.commits[0].message }}"
 
 
-    
-    - name: Log in to Server and Restarting Kubernetes
-      if: ${{ success() }}
-      uses: appleboy/ssh-action@master
-      with:
-        host: 142.93.77.97
-        username: root
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
-          cd /root/quantumitllc/frontend
-          ls
-          kubectl delete -f quantumitllc.yaml
-          kubectl apply -f quantumitllc.yaml
-
-    
-    - name: Notification Slack
-      if: ${{ success() }}
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_CHANNEL: QuantumITLLC
-        SLACK_TITLE: About Project
-        SLACK_USERNAME: Quantum'sBot
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_MESSAGE: "${{ github.actor }} created commit:  Commit message: ${{ github.event.commits[0].message }}"
-        
-        
-    - name: Telegram Notifications on Success
-      if: ${{ success() }}
-      uses: appleboy/telegram-action@master
-      with:
-        to: ${{ secrets.TELEGRAM_CHAT_ID }}
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        format: markdown
-        message: |
-          ${{ github.actor }} successfully created Pull Request!!! ✅✅✅:
-            Pull Request message: ${{ github.event.commits[0].message }}
-            Repository: ${{ github.repository }}
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+      - name: Notification Slack
+        if: ${{ failure() }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: QuantumITLLC
+          SLACK_TITLE: About Project
+          SLACK_USERNAME: Quantum'sBot
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_MESSAGE: "${{ github.actor }}  failed created Pull Request!!! ❌❌❌:  Pull Request message: ${{ github.event.commits[0].message }}"
+          
+          
+      - name: Telegram Notifications on Success
+        if: ${{ success() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          message: |
+            ${{ github.actor }} successfully created Pull Request!!! ✅✅✅:
+              Pull Request message: ${{ github.event.commits[0].message }}
+              Repository: ${{ github.repository }}
+              See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
 
 
-    - name: Telegram Notifications on Failure
-      if: ${{ failure() }}
-      uses: appleboy/telegram-action@master
-      with:
-        to: ${{ secrets.TELEGRAM_CHAT_ID }}
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        format: markdown
-        message: |
-          ${{ github.actor }} failed created Pull Request!!! ❌❌❌:
-            Pull Request message: ${{ github.event.commits[0].message }}
-            Repository: ${{ github.repository }}
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+      - name: Telegram Notifications on Failure
+        if: ${{ failure() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          message: |
+            ${{ github.actor }} failed created Pull Request!!! ❌❌❌:
+              Pull Request message: ${{ github.event.commits[0].message }}
+              Repository: ${{ github.repository }}
+              See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
